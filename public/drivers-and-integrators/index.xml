@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drivers &amp; Integrators on GridDB</title>
+    <link>http://example.org/drivers-and-integrators/</link>
+    <description>Recent content in Drivers &amp; Integrators on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/drivers-and-integrators/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JDBC Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-1_jdbc-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-1_jdbc-connector/</guid>
+      <description>Overview of GridDB AE JDBC driver An interface that can access GridDB data using SQL is provided in the GridDB Advanced Edition (GridDB AE). This chapter provides an overview and specifications of the Java API (JBDC) used to access databases supported by the GridDB AE.
+This chapter also consists of a description of the specified format and data types that can be used in a program using JDBC parameters, and the points to note during use.</description>
+    </item>
+    
+    <item>
+      <title>ODBC Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-2_odbc-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-2_odbc-connector/</guid>
+      <description>Operating Environment The ODBC driver used in GridDB AE (Advanced Edition) can be used with the following operating systems:
+ Windows Server 2012 R2 Windows Server 2008 R2 Windows 8 Windows 7  Overview of ODBC
+ODBC (Open Database Connectivity) is a standard interface for accessing database management systems (DBMS) from Windows-compatible applications advocated by Microsoft
+ ODBC-compatible application (Windows) For ODBC functions invoked from an ODBC-compatible application, the OS will control the connection to a specific database of the specified ODBC data source.</description>
+    </item>
+    
+    <item>
+      <title>Hadoop and Spark Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-3_hadoop-and-spark-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-3_hadoop-and-spark-connector/</guid>
+      <description>Overview The Hadoop MapReduce GridDB connector is a Java library for using GridDB as an input source and output destination for Hadoop MapReduce jobs. This library allows the GridDB performance to be used directly by MapReduce jobs through in-memory processing.
+Operating Environment Building of the library and execution of the sample programs are checked in the environment below.
+OS: CentOS6.7(x64) Java: JDK 1.8.0_60 Maven: apache-maven-3.3.9 Hadoop: CDH5.7.1(YARN)
+QuickStart Preparations Build a GridDB Java client and place the created gridstore.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/drivers-and-integrators/7-4_grafana-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-4_grafana-connector/</guid>
+      <description>Table of Contents
+7.4 Grafana Connector* TBD</description>
+    </item>
+    
+  </channel>
+</rss>

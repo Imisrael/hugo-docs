@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Modeling on GridDB</title>
+    <link>http://example.org/data-modeling/</link>
+    <description>Recent content in Data Modeling on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/data-modeling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Modeling Basics</title>
+      <link>http://example.org/data-modeling/4-1_data-modeling-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-1_data-modeling-basics/</guid>
+      <description>GridDB is a unique Key-Container data model that resembles Key-Value. It has the following features.
+ A concept resembling a RDB table that is a container for grouping Key-Value. A schema to define the data type for the container can be set. An index can be set in a column. Transactions can be carried out on a row basis within the container. In addition, ACID is guaranteed on a container basis.</description>
+    </item>
+    
+    <item>
+      <title>Data Modeling Using GridDB</title>
+      <link>http://example.org/data-modeling/4-2_data-modeling-using-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-2_data-modeling-using-griddb/</guid>
+      <description>Storing Data in Collection
+The flow of storing data in a Collection is shown below. First, if there is no Collection to store data in, create a new Collection following the procedure below:
+ Get a GridStore instance. Create a Collection.  You can store data in an existing Collection with the following procedure:
+ Get a GridStore instance. Get a collection. Set operation parameters Create indexes. Create values to be stored.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/data-modeling/4-3_modeling-relationships/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-3_modeling-relationships/</guid>
+      <description>4 Data Modeling &amp;gt;
+4.3 Modeling Relationships What are Modeling Relationships? Though GridDB does not employ strict schemas overall, it is important to have some semblance of foresight when dealing with the cluster&amp;rsquo;s data. Utilizing data to its potential is the end-goal when choosing a database, and so when setting up the data for the first time, it is important to make certain decisions.
+Relationships between data and how they are organized are very important for both analytics and performance.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/</guid>
+      <description> 4 Data Modeling &amp;gt;
+4.4 Possibilities and Variations of Data Models in GridDB T.B.D </description>
+    </item>
+    
+  </channel>
+</rss>

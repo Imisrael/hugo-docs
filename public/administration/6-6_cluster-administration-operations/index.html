@@ -1,0 +1,5994 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.48" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Cluster Administration &amp; Operations :: GridDB</title>
+
+    
+    <link href="/css/nucleus.css?1536883882" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1536883882" rel="stylesheet">
+    <link href="/css/hybrid.css?1536883882" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1536883882" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1536883882" rel="stylesheet">
+    <link href="/css/auto-complete.css?1536883882" rel="stylesheet">
+    <link href="/css/theme.css?1536883882" rel="stylesheet">
+	<link href="/css/hugo-theme.css?1536883882" rel="stylesheet">
+	<link href="/css/style-griddb.css?1536883882" rel="stylesheet">
+    
+      <link href="/css/theme-griddb.css?1536883882" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1536883882"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<header id="header2"> 
+        
+        
+    <div class="header-inner">
+        
+        <div id="collapse-button" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+        
+        
+    
+        <span class="switch-mobile" style="display:none">
+            <div class="ui dropdown">
+              <input name="Language">
+              <i class="dropdown icon"></i>
+              <div class="default text"><i class="us flag"> </i></div>
+              <div class="menu">
+                <a class="item ja" href="javascript:void(0)" id="ja"> <i class="jp flag"></i>Japanese</a>
+                <a class="item" data-value="Japanese"><i class="us flag"></i>English</a>
+              </div>
+            </div>   
+        </span>
+    
+    
+    
+    <nav id="nav" class="main-navigation" role="navigation" style="">
+    <div class="menu-topnav-container"><ul id="menu-topnav" class="nav-menu"><li id="menu-item-581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-581"><a href="/en/docs/documents/1-1_what-is-griddb.php">Docs</a></li>
+    <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="/en/faq/">FAQ</a></li>
+    <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="/en/community/">Community</a></li>
+    <li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="/en/forums/forum/top/">Forum</a></li>
+    <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="/en/blog">Blog</a></li>
+
+    </ul>
+
+    </div>
+        
+        <li style="list-style:none"><a href="/en/downloads/"> <span class="download-button4" style="display:none"> DOWNLOAD</span></a></li>
+        
+            
+           <a href="/en/downloads/"> <span id="download-button"> Download</span></a>
+      
+        
+    </nav>
+    
+         
+    </div>        
+        
+    </header>
+    
+    
+  </head>
+  <body class="" data-url="/administration/6-6_cluster-administration-operations/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+          <img src="/images/logo.png"></img>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1536883882"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1536883882"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1536883882"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-1_what-is-griddb/" title="What is GridDB" class="dd-item ">
+        <a href="/introduction/1-1_what-is-griddb/">
+        What is GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-2_griddb-edition/" title="GridDB Editions" class="dd-item ">
+        <a href="/introduction/1-2_griddb-edition/">
+        GridDB Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          <b>2. </b>Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-1_system-requirements/" title="System Requirements" class="dd-item ">
+        <a href="/getting-started/2-1_system-requirements/">
+        System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-2_installation/" title="Installation" class="dd-item ">
+        <a href="/getting-started/2-2_installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-3_run-your-first-griddb-node-cluster/" title="Run your First GridDB Node/Cluster" class="dd-item ">
+        <a href="/getting-started/2-3_run-your-first-griddb-node-cluster/">
+        Run your First GridDB Node/Cluster
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-4_run-a-sample-java-client-app/" title="Run a Sample Java Client App" class="dd-item ">
+        <a href="/getting-started/2-4_run-a-sample-java-client-app/">
+        Run a Sample Java Client App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/technical-architecture-and-guide/" title="Technical Architecture and Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/technical-architecture-and-guide/">
+          <b>3. </b>Technical Architecture and Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-1_griddb-technical-overview/" title="GridDB Technical Overview" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-1_griddb-technical-overview/">
+        GridDB Technical Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-2_key-container-model/" title="Key Container Model" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-2_key-container-model/">
+        Key Container Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-3_tql/" title="TQL" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-3_tql/">
+        TQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-4_crud-operations/" title="CRUD Operations" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-4_crud-operations/">
+        CRUD Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-5_transactions-and-acid/">
+        Transactions and ACID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-6_indexes/" title="Indexes" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-6_indexes/">
+        Indexes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-7_storage-architecture/" title="Storage Architecture" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-7_storage-architecture/">
+        Storage Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-8_replication-distribution/" title="Replication &amp; Distribution" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-8_replication-distribution/">
+        Replication &amp; Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-9_sharding/" title="Sharding" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-9_sharding/">
+        Sharding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/data-modeling/" title="Data Modeling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/data-modeling/">
+          <b>4. </b>Data Modeling
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics" class="dd-item ">
+        <a href="/data-modeling/4-1_data-modeling-basics/">
+        Data Modeling Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-2_data-modeling-using-griddb/" title="Data Modeling Using GridDB" class="dd-item ">
+        <a href="/data-modeling/4-2_data-modeling-using-griddb/">
+        Data Modeling Using GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-3_modeling-relationships/" title="" class="dd-item ">
+        <a href="/data-modeling/4-3_modeling-relationships/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/" title="" class="dd-item ">
+        <a href="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/" title="Sample Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/">
+          <b>5. </b>Sample Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/basics/">
+          <b>5.1 </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-10_collection-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-10_collection-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-11_collection-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-11_collection-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-12_timeseries-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-12_timeseries-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-13_timeseries-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-13_timeseries-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-14_timeseries-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-14_timeseries-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-15_timeseries-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-15_timeseries-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-16_tql/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-16_tql/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-17_trigger-rest/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-17_trigger-rest/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-18_trigger-jms/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-18_trigger-jms/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-19_multiput/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-19_multiput/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-1_introduction/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-1_introduction/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-20_multiquery/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-20_multiquery/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-21_multiget/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-21_multiget/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-2_griddb-basics/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-2_griddb-basics/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-3_prepare-server/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-3_prepare-server/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-4_prepare-client/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-4_prepare-client/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-5_connection/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-5_connection/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-6_container-schema/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-6_container-schema/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-7_container-create-drop/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-7_container-create-drop/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-8_collection-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-8_collection-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-9_collection-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-9_collection-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/administration/" title="Administration" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/administration/">
+          <b>6. </b>Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-1_supported-os-platforms-and-system-requirements/" title="Supported OS, Platforms and System Requirements" class="dd-item ">
+        <a href="/administration/6-1_supported-os-platforms-and-system-requirements/">
+        Supported OS, Platforms and System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling" class="dd-item ">
+        <a href="/administration/6-2_sizing-and-scaling/">
+        Sizing and Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-3_installing/" title="Installing" class="dd-item ">
+        <a href="/administration/6-3_installing/">
+        Installing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" class="dd-item ">
+        <a href="/administration/6-4_upgrading-the-editions/">
+        Upgrading Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases" class="dd-item ">
+        <a href="/administration/6-5_migration-from-other-databases/">
+        Migration from Other Databases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" class="dd-item active">
+        <a href="/administration/6-6_cluster-administration-operations/">
+        Cluster Administration &amp; Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" class="dd-item ">
+        <a href="/administration/6-7_monitoring-troubleshooting/">
+        Monitoring &amp; Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-8_tuning/" title="Tuning" class="dd-item ">
+        <a href="/administration/6-8_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/drivers-and-integrators/" title="Drivers &amp; Integrators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/drivers-and-integrators/">
+          <b>7. </b>Drivers &amp; Integrators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-1_jdbc-connector/" title="JDBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-1_jdbc-connector/">
+        JDBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-2_odbc-connector/" title="ODBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-2_odbc-connector/">
+        ODBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-3_hadoop-and-spark-connector/" title="Hadoop and Spark Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-3_hadoop-and-spark-connector/">
+        Hadoop and Spark Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-4_grafana-connector/" title="" class="dd-item ">
+        <a href="/drivers-and-integrators/7-4_grafana-connector/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>GridDB</a> > <a href='/administration/'>Administration</a> > Cluster Administration & Operations
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#using-gs-sh">Using gs_sh</a></li>
+<li><a href="#preliminary-preparations">Preliminary Preparations</a></li>
+<li><a href="#gs-sh-start-up">gs_sh start-up</a></li>
+<li><a href="#definition-of-a-griddb-cluster">Definition of a GridDB Cluster</a></li>
+<li><a href="#definition-of-node-variable">Definition of Node Variable</a></li>
+<li><a href="#definition-of-cluster-variable">Definition of Cluster Variable</a></li>
+<li><a href="#defining-the-sql-connection-destination-of-a-cluster">Defining the SQL Connection Destination of a Cluster</a></li>
+<li><a href="#definition-of-a-user">Definition of a user</a></li>
+<li><a href="#definition-of-arbitrary-variables">Definition of arbitrary variables</a></li>
+<li><a href="#displaying-the-variable-definition">Displaying the variable definition</a></li>
+<li><a href="#saving-a-variable-definition-in-a-script-file">Saving a variable definition in a script file</a></li>
+<li><a href="#executing-a-script-file">Executing a script file</a></li>
+<li><a href="#griddb-cluster-operation-controls">GridDB cluster operation controls</a></li>
+<li><a href="#cluster-status">Cluster status</a></li>
+<li><a href="#starting-a-node">Starting a node</a></li>
+<li><a href="#stopping-a-node">Stopping a node</a></li>
+<li><a href="#batch-entry-of-nodes-in-a-cluster">Batch entry of nodes in a cluster</a></li>
+<li><a href="#batch-detachment-of-nodes-from-a-cluster">Batch detachment of nodes from a cluster</a></li>
+<li><a href="#node-entry-in-a-cluster">Node entry in a cluster</a></li>
+<li><a href="#detaching-a-node-from-a-cluster">Detaching a node from a cluster</a></li>
+<li><a href="#adding-a-note-to-a-cluster">Adding a note to a cluster</a></li>
+<li><a href="#displaying-cluster-status-data">Displaying cluster status data</a></li>
+<li><a href="#display-of-configuration-data">Display of configuration data</a></li>
+<li><a href="#status-display">Status display</a></li>
+<li><a href="#log-display">Log display</a></li>
+<li><a href="#data-operation-in-a-database">Data Operation in a Database</a></li>
+<li><a href="#connecting-to-a-cluster">Connecting to a Cluster</a></li>
+<li><a href="#search-tql">Search (TQL)</a></li>
+<li><a href="#sql-command-execution">SQL Command Execution</a></li>
+<li><a href="#getting-search-results">Getting Search Results</a></li>
+<li><a href="#getting-the-execution-plan">Getting the Execution Plan</a></li>
+<li><a href="#discarding-search-results">Discarding Search Results</a></li>
+<li><a href="#disconnecting-from-a-cluster">Disconnecting from a Cluster</a></li>
+<li><a href="#database-management">Database Management</a></li>
+<li><a href="#creating-a-database">Creating a Database</a></li>
+<li><a href="#deleting-a-database">Deleting a Database</a></li>
+<li><a href="#current-db-display">Current DB Display</a></li>
+<li><a href="#database-list">Database List</a></li>
+<li><a href="#assignment-of-access-rights">Assignment of Access Rights</a></li>
+<li><a href="#revoking-of-access-rights">Revoking of Access Rights</a></li>
+<li><a href="#user-management">User Management</a></li>
+<li><a href="#creating-a-general-user">Creating a General User</a></li>
+<li><a href="#deleting-a-general-user">Deleting a General User</a></li>
+<li><a href="#update-password">Update Password</a></li>
+<li><a href="#general-user-list">General User List</a></li>
+<li><a href="#container-management">Container Management</a></li>
+<li><a href="#container-creation">Container Creation</a></li>
+<li><a href="#container-deletion">Container Deletion</a></li>
+<li><a href="#container-indication">Container Indication</a></li>
+<li><a href="#displaying-a-table">Displaying a Table</a></li>
+<li><a href="#creation-of-index">Creation of Index</a></li>
+<li><a href="#deletion-of-index">Deletion of Index</a></li>
+<li><a href="#deletion-of-trigger">Deletion of Trigger</a></li>
+<li><a href="#display-of-trigger">Display of Trigger</a></li>
+<li><a href="#other-operations">Other Operations</a></li>
+<li><a href="#echo-back-setting">Echo Back Setting</a></li>
+<li><a href="#message-display">Message Display</a></li>
+<li><a href="#sleep">Sleep</a></li>
+<li><a href="#execution-of-external-commands">Execution of External Commands</a></li>
+<li><a href="#terminating-gs-sh">Terminating gs_sh</a></li>
+<li><a href="#help">Help</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#options-and-subcommand-specifications">Options and Subcommand Specifications</a></li>
+<li><a href="#options">Options</a></li>
+<li><a href="#sub-command-list">Sub-command List</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Cluster Administration &amp; Operations</h1>
+          
+
+        
+
+
+
+
+<p>The cluster operation control command interpreter (hereinafter referred to gs_sh) is a command line interface tool to manage GridDB cluster operations and data operations.</p>
+
+<p>The following can be carried out by gs_sh.</p>
+
+<ul>
+<li>Operation control of GridDB cluster
+
+<ul>
+<li>Definition of GridDB cluster</li>
+<li>Starting and stopping a GridDB node and cluster</li>
+<li>Status, log display</li>
+</ul></li>
+<li>GridDB cluster data operation
+
+<ul>
+<li>Database and user management</li>
+<li>Collection, trigger display</li>
+<li>Index setting, deletion</li>
+<li>Search using a tql/sql</li>
+</ul></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>All functions provided in the GridDB operating commands are planned to be provided as gs_sh subcommands. Where possible, use of gs_sh is recommended as there is a possibility that the operating commands may be deleted in future releases. See the chapter on “Operating Commands” for details of the operating commands.</li>
+</ul>
+
+<h3 id="using-gs-sh">Using gs_sh</h3>
+
+<h3 id="preliminary-preparations">Preliminary Preparations</h3>
+
+<p>Carry out the following preparations before using gs_sh.</p>
+
+<ul>
+<li><p>GridDB setup</p>
+
+<ul>
+<li>Installation of GridDB node, client library</li>
+<li>User creation</li>
+<li>Network setting (GridDB cluster definition file, node definition file)
+<br /></li>
+</ul>
+
+<p>　See the chapter on “System Design &amp; Construction” in the “GridDB Quick Start Guide” (<a href="/en/docs/manuals/v3.1/GridDB_QuickStartGuide.html">GridDB_QuickStartGuide.html</a>) for details on the procedure.</p></li>
+
+<li><p>Remote connection setting using SSH</p>
+
+<ul>
+<li>This setting is necessary in order to connect to each GridDB node execution environment from the gs_sh execution environment as an OS user “gsadm”.
+<br /></li>
+</ul>
+
+<p>　*See the manual of each OS for details on the SSH connection procedure.</p></li>
+</ul>
+
+<h3 id="gs-sh-start-up">gs_sh start-up</h3>
+
+<p>There are two types of start modes in gs_sh.</p>
+
+<ul>
+<li><p>Startup in interactive mode</p>
+
+<ul>
+<li>The interactive mode is started when gs_sh is executed without any arguments. The gs_sh prompt will appear, allowing subcommands to be entered.</li>
+<li>Example:
+<br /></li>
+</ul>
+
+<p>$ gs_sh
+// execution of subcommand “version”
+gs&gt; version
+gs_sh version 2.0.0</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When a subcommand is started in the interactive mode,
+
+<ul>
+<li>a .gssh_history file is created in the home directory of the execution user and saved in the history.</li>
+<li>Click the arrow key to display/execute up to 20 subcommands started earlier.</li>
+<li>Enter some of the subcommands and click the Tab key to display a list of the subcommand input candidates.</li>
+</ul></li>
+</ul></li>
+
+<li><p>Startup in batch mode</p>
+
+<ul>
+<li>When the script file for user creation is specified in gs_sh, the system will be started in the batch mode. Batch processing of a series of subcommands described in the script file will be carried out. gs_sh will terminate at the end of the batch processing.</li>
+<li>Example:
+<br /></li>
+</ul>
+
+<p>// specify the script file (test.gsh) and execute
+$ gs_sh test.gsh</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Execute gs_sh commands as the OS user “gsadm”.</li>
+<li>During gs_sh startup, .gsshrc script files under the gsadm user home directory are imported automatically. The .gsshrc contents will also be imported to the destination from other script files.</li>
+<li>Extension of script file is gsh.</li>
+<li>A script file is described using the character code UTF-8.</li>
+</ul>
+
+<h3 id="definition-of-a-griddb-cluster">Definition of a GridDB Cluster</h3>
+
+<p>The definition below is required in advance when executing a GridDB cluster operation control or data operation.</p>
+
+<ul>
+<li>Define each node data in the node variable</li>
+<li>Use the node variable to define the GridDB cluster configuration in the cluster variable</li>
+<li>Define the user data of the GridDB cluster</li>
+</ul>
+
+<p>An explanation of node variables, cluster variables, and how to define user data is given below. An explanation of the definition of an arbitrary variable, display of variable definition details, and how to save and import variable definition details in a script file is also given below.</p>
+
+<h3 id="definition-of-node-variable">Definition of Node Variable</h3>
+
+<p>Define the IP address and port no. of a GridDB node in the node variable.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>setnode</p>
+
+<p>Node variable name IP address and port no. [SSH port no.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable name</p>
+
+<p>Specify the node variable name. If the same variable name already exists, its definition will be overwritten.</p>
+
+<p>IP address</p>
+
+<p>Specify the IP address of the GridDB node (for connecting operation control tools).</p>
+
+<p>Port no.</p>
+
+<p>Specify the port no. of the GridDB node (for connecting operation control tools).</p>
+
+<p>SSH port no.</p>
+
+<p>Specify the SSH port number. Number 22 is used by default.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Define 4 GridDB nodes
+gs&gt; setnode node0 192.168.0.1 10000
+gs&gt; setnode node1 192.168.0.2 10000
+gs&gt; setnode node2 192.168.0.3 10000
+gs&gt; setnode node3 192.168.0.4 10000</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Only single-byte alphanumeric characters and the symbol &ldquo;_&rdquo; can be used in the node variable name.</li>
+<li>Check the GridDB node “IP address” and “port no. ” for connecting the operation control tools in the node definition file of each tool.
+
+<ul>
+<li>“IP address”: /system/serviceAddress</li>
+<li>“Port no.” : /system/servicePort</li>
+</ul></li>
+</ul>
+
+<h3 id="definition-of-cluster-variable">Definition of Cluster Variable</h3>
+
+<p>Define the GridDB cluster configuration in the cluster variable.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>setcluster</p>
+
+<p><Cluster variable name> <Cluster name> <Multicast address> <Port no.> [&lt; Node variable&gt;&hellip;]</p>
+
+<p>setcluster</p>
+
+<p><Cluster variable name> <Cluster name> FIXED_LIST &lt; Address list of fixed list method&gt; [<Node variable>&hellip;]</p>
+
+<p>setcluster</p>
+
+<p><Cluster variable name> <Cluster name> PROVIDER <URL of provider method> [<Node variable>&hellip;]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable name</p>
+
+<p>Specify the cluster variable name. If the same variable name already exists, its definition will be overwritten.</p>
+
+<p>Cluster name</p>
+
+<p>Specify the cluster name.</p>
+
+<p>Multicast address</p>
+
+<p>[For the multicast method] Specify the GridDB cluster multicast address (for client connection).</p>
+
+<p>Port no.</p>
+
+<p>[For the multicast method] Specify the GridDB cluster multicast port no. (for client connection).</p>
+
+<p>Node variable</p>
+
+<p>Specify the nodes constituting a GridDB cluster with a node variable.</p>
+
+<p>When using a cluster variable in a data operation subcommand, the node variable may be omitted.</p>
+
+<p>Address list of fixed list method</p>
+
+<p>[For fixed list method] Specify the list of transaction addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:10001,192.168.15.11:10001</p>
+
+<p>URL of provider method</p>
+
+<p>[For provider method] Specify the value of cluster.notificationProvider in gs_cluster.json.</p></li>
+
+<li><p>Example:</p>
+
+<p>// define the GridDB cluster configuration
+gs&gt; setcluster cluster0 name 200.0.0.1 1000 $node0 $node1 $node2</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Only single-byte alphanumeric characters and the symbol &ldquo;_&rdquo; can be used in the cluster variable name.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a node variable.</li>
+
+<li><p>Check the “cluster name”, “multicast address” and “port no.” defined in a cluster variable in the cluster definition file of each GridDB node.</p>
+
+<ul>
+<li>“Cluster name”: /clustergs/clusterName</li>
+<li>“Multicast address”: /transaction/notificationAddress</li>
+<li>“Port no.”: /transaction/notificationPort
+<br /></li>
+</ul>
+
+<p>*All settings in the cluster definition file of a node constituting a GridDB cluster have to be configured the same way. If the settings are configured differently, the cluster cannot be composed.</p></li>
+</ul>
+
+<p>In addition, node variables can be added or deleted for a defined cluster variable.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>modcluster</p>
+
+<p>Add cluster variable name｜remove node variable name&hellip;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable name</p>
+
+<p>Specify the name of a cluster variable to add or delete a node.</p>
+
+<p>add｜remove</p>
+
+<p>Specify add when adding a node variable, and remove when deleting a node variable.</p>
+
+<p>Node variable</p>
+
+<p>Specify a node variable to add or delete a cluster variable.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Add a node to a defined GridDB cluster configuration
+gs&gt; modcluster cluster0 add $node3
+//Delete a node from a defined GridDB cluster configuration
+gs&gt; modcluster cluster0 remove $node3</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a node variable.</li>
+</ul>
+
+<h3 id="defining-the-sql-connection-destination-of-a-cluster">Defining the SQL Connection Destination of a Cluster</h3>
+
+<p>Define the SQL connection destination in the GridDB cluster configuration. This is set up only when using the GridDB Advanced Edition NewSQL interface.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>setclustersql</p>
+
+<p><Cluster variable name> <Cluster name> <SQL address> <SQL port no.></p>
+
+<p>setclustersql</p>
+
+<p><Cluster variable name> <Cluster name> FIXED_LIST &lt; SQL address list of fixed list method&gt;</p>
+
+<p>setclustersql</p>
+
+<p><Cluster variable name> <Cluster name> PROVIDER <URL of provider method></p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable name</p>
+
+<p>Specify the cluster variable name. If the same variable name already exists, the SQL connection data will be overwritten.</p>
+
+<p>Cluster name</p>
+
+<p>Specify the cluster name.</p>
+
+<p>SQL address</p>
+
+<p>[For multicast method] Specify the reception address for the SQL client connection.</p>
+
+<p>SQL port no.</p>
+
+<p>[For multicast method] Specify the port no. for the SQL client connection.</p>
+
+<p>SQL address list of fixed list method</p>
+
+<p>[For fixed list method] Specify the list of sql addresses and ports for cluster.notificationMember in gs_cluster.json Example: 192.168.15.10:20001,192.168.15.11:20001</p>
+
+<p>URL of provider method</p>
+
+<p>[For provider method] Specify the value of cluster.notificationProvider in gs_cluster.json.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Definition method when using both NoSQL interface and NewSQL interface to connect to a NewSQL server
+gs&gt; setcluster    cluster0 name 239.0.0.1 31999 $node0 $node1 $node2
+gs&gt; setclustersql cluster0 name 239.0.0.1 41999</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Only single-byte alphanumeric characters and the symbol &ldquo;_&rdquo; can be used in the cluster variable name.</li>
+<li>This is set up only when using the GridDB Advanced Edition NewSQL interface.</li>
+<li>When an existing cluster variable name is specified, only the section containing SQL connection data will be overwritten. When overwriting, the same method as the existing connection method needs to be specified.</li>
+<li>Execute only this command when using SQL only.</li>
+<li>Check the “SQL address” and “SQL port no.” defined in a cluster variable in the cluster definition file of each GridDB node.
+
+<ul>
+<li>“SQL address”: /sql/notificationAddress</li>
+<li>“SQL port no.”: /sql/notificationPort</li>
+</ul></li>
+</ul>
+
+<h3 id="definition-of-a-user">Definition of a user</h3>
+
+<p>Define the user and password to access the GridDB cluster.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>setuser</p>
+
+<p>User name and password [gsadm password]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user accessing the GridDB cluster.</p>
+
+<p>Password</p>
+
+<p>Specify the corresponding password.</p>
+
+<p>gsadm password</p>
+
+<p>Specify the password of the OS user gs_admin.</p>
+
+<p>This may be omitted if start node (startnode subcommand) is not going to be executed.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Define the user, password and gsadm password to access a GridDB cluster
+gs&gt; setuser admin admin gsadm</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li><p>The user definition is divided and stored in the variable below.</p>
+
+<p>Variable Name</p>
+
+<p>Storage data</p>
+
+<p>user</p>
+
+<p>User name</p>
+
+<p>password</p>
+
+<p>Password</p>
+
+<p>ospassword</p>
+
+<p>gsadm password</p></li>
+
+<li><p>Multiple users cannot be defined. The user and password defined earlier will be overwritten. When operating multiple GridDB clusters in gs_sh, reset the user and password with the setuser subcommand every time the connection destination cluster is changed.</p></li>
+</ul>
+
+<h3 id="definition-of-arbitrary-variables">Definition of arbitrary variables</h3>
+
+<p>Define an arbitrary variable.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>set</p>
+
+<p>Variable name [value]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Variable Name</p>
+
+<p>Specify the variable name.</p>
+
+<p>Value</p>
+
+<p>Specify the setting value. The setting value of the variable concerned can be cleared by omitting the specification.</p></li>
+
+<li><p>Example:</p>
+
+<p>// define variable
+gs&gt; set GS_PORT 10000
+// clear variable settings
+gs&gt; set GS_PORT</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Node variable and cluster variable settings can also be cleared with the set subcommand.</li>
+<li>Only single-byte alphanumeric characters and the symbol &ldquo;_&rdquo; can be used in the variable name.</li>
+</ul>
+
+<h3 id="displaying-the-variable-definition">Displaying the variable definition</h3>
+
+<p>Display the detailed definition of the specified variable.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>show</p>
+
+<p>[Variable name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Variable Name</p>
+
+<p>Specify the name of the variable to display the definition details. If the name is not specified, details of all defined variables will be displayed.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Display all defined variables
+gs&gt; show
+Node variable:
+  node0=Node[192.168.0.1:10000,ssh=22]
+  node1=Node[192.168.0.2:10000,ssh=22]
+  node2=Node[192.168.0.3:10000,ssh=22]
+  node3=Node[192.168.0.4:10000,ssh=22]
+Cluster variable:
+  cluster0=Cluster[name=name,200.0.0.1:1000,nodes = (node0,node1,node2
+Other variables:
+  user=admin
+  password=*****
+  ospassword=*****</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Password character string will not appear. Display replaced by &ldquo;*****&ldquo;.</li>
+</ul>
+
+<h3 id="saving-a-variable-definition-in-a-script-file">Saving a variable definition in a script file</h3>
+
+<p>Save the variable definition details in the script file.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>save</p>
+
+<p>[Script file name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Script file name</p>
+
+<p>Specify the name of the script file serving as the storage destination. Extension of script file is gsh.</p>
+
+<p>If the name is not specified, the data will be saved in the .gsshrc file in the gsadm user home directory.</p></li>
+
+<li><p>Example:</p>
+
+<p>// Save the defined variable in a file
+gs&gt; save test.gsh</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>If the storage destination script file does not exist, a new file will be created. If the storage destination script file exists, the contents will be overwritten.</li>
+<li>A script file is described using the character code UTF-8.</li>
+<li>Contents related to the user definition (user, password, gsadm password) will not be output to the script file.</li>
+<li>Contents in the .gsshrc script file will be automatically imported during gs_sh start-up.</li>
+</ul>
+
+<h3 id="executing-a-script-file">Executing a script file</h3>
+
+<p>Execute a read script file.</p>
+
+<ul>
+<li><p>Subcommand</p>
+
+<p>load</p>
+
+<p>[Script file name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Script file name</p>
+
+<p>Specify the script file to execute.</p>
+
+<p>If the script file is not specified, the .gsshrc file in the gsadm user home directory will be imported again.</p></li>
+
+<li><p>Example:</p>
+
+<p>//execute script file
+gs&gt; load test.gsh</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Extension of script file is gsh.</li>
+<li>A script file is described using the character code UTF-8.</li>
+</ul>
+
+<h3 id="griddb-cluster-operation-controls">GridDB cluster operation controls</h3>
+
+<p>The following operations can be executed by the administrator user only as functions to manage GridDB cluster operations.</p>
+
+<ul>
+<li>GridDB node start, stop, join cluster, leave cluster (startnode/stopnode/joincluster/leavecluster)</li>
+<li>GridDB cluster operation start, operation stop (startcluster/stopcluster)</li>
+<li>Increase the number of new nodes in a GridDB cluster (appendcluster)</li>
+<li>Get various data</li>
+</ul>
+
+<h3 id="cluster-status">Cluster status</h3>
+
+<p>This section explains the status of a GridDB node and GridDB cluster.</p>
+
+<p>A cluster is composed of 1 or more nodes.<br />
+The node status represents the status of the node itself e.g. start or stop etc.<br />
+The cluster status represents the acceptance status of data operations from a client. Cluster statuses are determined according to the status of the node group constituting the cluster.</p>
+
+<p>An example of the change in the node status and cluster status due to a gs_sh subcommand operation is shown below.<br />
+A cluster is composed of 4 nodes.<br />
+When the nodes constituting the cluster are started (startnode), the node status changes to “Start”. When the cluster is started after starting the nodes (startcluster), each node status changes to “Join”, and the cluster status also changes to “In Operation”.</p>
+
+<p><img src="img/statusSample.png" alt="Status example" /></p>
+
+<p>Status example</p>
+
+<p>A detailed explanation of the node status and cluster status is given below.</p>
+
+<ul>
+<li>Node status</li>
+</ul>
+
+<p>Node status changes to “Stop”, “Start” or “Join” depending on whether a node is being started, stopped, joined or detached.<br />
+If a node has joined a cluster, there are 2 types of node status depending on the status of the joined cluster.</p>
+
+<p><img src="img/nodeStatus.png" alt="Node status" /></p>
+
+<p>Node status</p>
+
+<p>Status</p>
+
+<p>Status name</p>
+
+<p>Description</p>
+
+<p>Join</p>
+
+<p>SERVICING</p>
+
+<p>Node is joined to the cluster, and the status of the joined cluster is “In Operation”</p>
+
+<p>WAIT</p>
+
+<p>Node is joined to the cluster, and the status of the joined cluster is “Halted”</p>
+
+<p>Start</p>
+
+<p>STARTED</p>
+
+<p>Node is started but has not joined a cluster</p>
+
+<p>STARTING</p>
+
+<p>Starting node</p>
+
+<p>Stop</p>
+
+<p>STOP</p>
+
+<p>Stop node</p>
+
+<p>STOPPING</p>
+
+<p>Stopping node</p>
+
+<p>　</p>
+
+<ul>
+<li><p>Cluster status</p>
+
+<p>GridDB cluster status changes to “Stop”, “Halted” or “In Operation” depending on the operation start/stop status of the GridDB cluster or the join/leave operation of the GridDB node. Data operations from the client can be accepted only when the GridDB cluster status is “In Operation”.</p>
+
+<p><img src="img/clusterStatus.png" alt="Cluster status" /></p>
+
+<p>Cluster status</p>
+
+<p>Status</p>
+
+<p>Status name</p>
+
+<p>Description</p>
+
+<p>Operation</p>
+
+<p>SERVICE_STABLE</p>
+
+<p>All nodes defined in the cluster configuration have joined the cluster</p>
+
+<p>SERVICE_UNSTABLE</p>
+
+<p>More than half the nodes defined in the cluster configuration have joined the cluster</p>
+
+<p>Halted</p>
+
+<p>WAIT</p>
+
+<p>More than half the nodes defined in the cluster configuration have left the cluster</p>
+
+<p>INIT_WAIT</p>
+
+<p>1 or more of the nodes defined in the cluster configuration have left the cluster (when the cluster is operated for the first time, the status will not change to “In Operation” unless all nodes have joined the cluster)</p>
+
+<p>Stop</p>
+
+<p>STOP</p>
+
+<p>All nodes defined in the cluster configuration have left the cluster</p>
+
+<p>The GridDB cluster status will change from “Stop” to “In Operation” when all nodes constituting the GridDB cluster are allowed to join the cluster. In addition, the GridDB cluster status will change to “Halted” when more than half the nodes have left the cluster, and “Stop” when all the nodes have left the cluster.</p>
+
+<p>Join and leave operations (which affect the cluster status) can be applied in batch to all the nodes in the cluster, or to individual node.</p>
+
+<p>When all nodes are subject to the operation</p>
+
+<p>When the operating target is a single node</p>
+
+<p>Operation</p>
+
+<p>Join</p>
+
+<p><a href="#*GridDBクラスタへノード一括参加">startcluster</a> Batch entry of a group of nodes that are already operating but have not joined the cluster yet.</p>
+
+<p><a href="#*GridDBクラスタへノード参加">joincluster</a> Entry by a node that is in operation but has not joined the cluster yet.</p>
+
+<p>Left</p>
+
+<p><a href="#*GridDBクラスタからノード一括離脱">stopcluster</a> Batch detachment of a group of nodes attached to a cluster.</p>
+
+<p><a href="#*GridDBクラスタからノード離脱">leavecluster</a> Detachment of a node attached to a cluster.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Join and leave cluster operations can be carried out on nodes that are in operation only.</li>
+<li>A node which has failed will be detached automatically from the GridDB cluster.</li>
+<li>The GridDB cluster status can be checked with the cluster status data display subcommand (<a href="#sec-4.4.9">configcluster</a>).</li>
+</ul>
+
+<p>Details of the various operating methods are explained below.　</p>
+
+<h3 id="starting-a-node">Starting a node</h3>
+
+<p>Explanation on how to start a node is shown below.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>startnode</p>
+
+<p>node variable｜cluster variable [timeout time in sec]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable｜cluster variable</p>
+
+<p>Specify the node to start by its node variable or cluster variable.</p>
+
+<p>If the cluster variable is specified, all nodes defined in the cluster variable will be started.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// start node
+gs&gt; startnode $node1
+Node  Start node 1.
+All nodes have been started.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>The cluster start process (startcluster subcommand) can be executed in batches by waiting for the start process to complete.</li>
+</ul>
+
+<h3 id="stopping-a-node">Stopping a node</h3>
+
+<p>Explanation on how to stop a node is shown below.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>stopnode</p>
+
+<p>Node｜cluster variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>node｜cluster variable</p>
+
+<p>Specify the node to stop by its node variable or cluster variable.</p>
+
+<p>If the cluster variable is specified, all nodes defined in the cluster variable will be stopped.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// stop node
+gs&gt; stopnode $node1
+Node Stop Node 1.
+Node 1 has started the stop process.
+Waiting for the node stop process to end.
+All nodes have been stopped.</p></li>
+</ul>
+
+<p>In addition, a specified node can be forced to stop as well.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>stopnodeforce</p>
+
+<p>Node｜cluster variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>node｜cluster variable</p>
+
+<p>Specify the node to stop by force by its node variable or cluster variable.</p>
+
+<p>If the cluster variable is specified, all nodes defined in the cluster variable will be stopped by force.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// stop node by force
+gs&gt; stopnodeforce $node1
+Node Stop Node 1.
+Node 1 has started the stop process.
+Waiting for the node stop process to end.
+All nodes have been stopped.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>In a stopnode sub-command, nodes which have joined the GridDB cluster cannot be stopped. In a stopnodeforce command, nodes which have joined the GridDB cluster can also be stopped but data may be lost.</li>
+</ul>
+
+<h3 id="batch-entry-of-nodes-in-a-cluster">Batch entry of nodes in a cluster</h3>
+
+<p>Explanation on how to add batch nodes into a cluster is shown below. In this case when a group of unattached but operating nodes are added to the cluster, the cluster status will change to In Operation.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>startcluster</p>
+
+<p>Cluster variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster by its cluster variable.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// start GridDB cluster
+gs&gt; startcluster $cluster1
+Waiting for cluster to start.
+Cluster has started.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>To change the status of a GridDB cluster from “Stop” to “In Operation”, all nodes must be allowed to join the cluster. Check beforehand that all nodes constituting the GridDB cluster are in operation.</li>
+</ul>
+
+<h3 id="batch-detachment-of-nodes-from-a-cluster">Batch detachment of nodes from a cluster</h3>
+
+<p>Explanation on how to perform batch detachment of nodes in the cluster is shown below. To stop a GridDB cluster, simply make the attached nodes leave the cluster using the stopluster command.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>stopcluster</p>
+
+<p>Cluster variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster by its cluster variable.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// stop GridDB cluster
+gs&gt; stopcluster $cluster1
+Waiting for a cluster to stop.
+Cluster has stopped.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+</ul>
+
+<h3 id="node-entry-in-a-cluster">Node entry in a cluster</h3>
+
+<p>Explanation on how to attach a node into a cluster is shown below. Use the joincluster command to attach the node.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>joincluster</p>
+
+<p>Cluster variable node variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster by its cluster variable.</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to join with the node variable.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// start node
+gs&gt; startnode $node2
+Node  Start node 2.
+All nodes have been started.
+// join node
+joincluster $cluster1 $node2
+Waiting for a node to be joined to a cluster.
+Node has joined the cluster.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>Only nodes that are in operation can join a GridDB cluster. Check that the nodes joining a cluster are in operation.</li>
+<li>Use the appendcluster sub-command when adding a node that is not yet defined in the cluster’s configuration to the cluster (the node is not part of the cluster).</li>
+</ul>
+
+<h3 id="detaching-a-node-from-a-cluster">Detaching a node from a cluster</h3>
+
+<p>Explanation on how to remove a node from a cluster is shown below. Use the leavecluster or leavecluster force command to detach the node.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>leavecluster</p>
+
+<p>Node variable [Timeout time in sec.]</p>
+
+<p>leaveclusterforce</p>
+
+<p>Node variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to detach with the node variable.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// leave node
+gs&gt; leavecluster $node2
+Waiting for node to separate from cluster
+Node has separated from cluster.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>A node can safely leave a GridDB cluster only when the data has been duplicated in other nodes. However, a leavecluster subcommand forces a node to leave regardless of whether the data has been duplicated or not and so there is always a risk of data loss. Use the gs_leavecluster command to detach a node. See the section on “System Design &amp; Construction - Designing Tuning Parameters” in the “GridDB Quick Start Guide” (<a href="/en/docs/manuals/v3.1/GridDB_QuickStartGuide.html">GridDB_QuickStartGuide.html</a>) for details regarding data duplication.</li>
+<li>A leaveclusterforce command forces a node to leave a cluster even if there is a risk that data may be lost due to the detachment.</li>
+</ul>
+
+<h3 id="adding-a-note-to-a-cluster">Adding a note to a cluster</h3>
+
+<p>Explanation on how to append a node to a pre-defined cluster is shown below. Use the appendcluster command to add the node.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>appendcluster</p>
+
+<p>Cluster variable node variable [Timeout time in sec.]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster by its cluster variable.</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to join with the node variable.</p>
+
+<p>Timeout time in sec.</p>
+
+<p>Specify the wait time after node start-up is completed.</p>
+
+<p>Immediate recovery if -1 is specified. Wait with no time limit if nothing is specified, or 0 is specified.</p></li>
+
+<li><p>Example:</p>
+
+<p>// define node
+gs&gt; setnode node5 192.168.0.5 10044
+// start node
+gs&gt; startnode $node5
+// increase no. of nodes
+gs&gt; appendcluster $cluster1 $node5
+Waiting for a node to be added to a cluster.
+A node has been added to the cluster.
+Add node variables$ node5 to cluster variable $cluster1. (Execute a save command when saving changes to a variable. )</p>
+
+<p>Cluster[name=name1,239.0.5.111:33333,nodes=($node1,$node2,$node3,$node4,$node5)]</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>To increase the number of new nodes, all nodes that constitute a GridDB cluster needs to join the cluster. If there is any node detached from the GridDB cluster, re-attach the nodes first. In addition, check that the new node to be added is in operation.</li>
+<li>When executing an appendcluster subcommand, the node variable to be added is added to the cluster variable automatically. There is no need to manually change the cluster variable definition.</li>
+<li>If a variable is changed, execute a save command to save the data. Unsaved contents will be discarded.</li>
+<li>See the chapter on “System Design &amp; Construction” in the “GridDB Quick Start Guide” (<a href="/en/docs/manuals/v3.1/GridDB_QuickStartGuide.html">GridDB_QuickStartGuide.html</a>) for details on how to set up a new node.</li>
+</ul>
+
+<h3 id="displaying-cluster-status-data">Displaying cluster status data</h3>
+
+<p>The following command displays the status of a GridDB cluster and each node constituting the cluster.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>configcluster</p>
+
+<p>Cluster variable</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster by its cluster variable.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display cluster data
+gs&gt; configcluster $cluster1
+Name                  : cluster1
+ClusterName           : defaultCluster
+Designated Node Count : 4
+Active Node Count     : 4
+ClusterStatus         : SERVICE_STABLE</p>
+
+<p>Nodes:
+  Name    Role Host:Port              Status
+-------------------------------------------------
+  node1     F  10.45.237.151:10040    SERVICING
+  node2     F  10.45.237.152:10040    SERVICING
+  node3     M  10.45.237.153:10040    SERVICING
+  node4     F  10.45.237.154:10040    SERVICING</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>ClusterStatus will be one of the following.
+
+<ul>
+<li>INIT_WAIT: Waiting for cluster to be composed</li>
+<li>SERVICE_STABLE: In operation</li>
+<li>SERVICE_UNSTABLE: Halted (specified number of nodes constituting a cluster has not been reached)</li>
+</ul></li>
+<li>Role will be one of the following.
+
+<ul>
+<li>M: MASTER (master)</li>
+<li>F: FOLLOWER (follower)</li>
+<li>S: SUB_CLUSTER (temporary status in a potential master candidate)</li>
+<li>-: Not in operation</li>
+</ul></li>
+</ul>
+
+<h3 id="display-of-configuration-data">Display of configuration data</h3>
+
+<p>The following command displays the GridDB cluster configuration data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>config</p>
+
+<p>Node variable</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable</p>
+
+<p>Specify the node belonging to a GridDB cluster to be displayed with a node variable.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display cluster configuration data
+gs&gt; config $node1
+{
+  &ldquo;follower&rdquo; : [ {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.151&rdquo;,
+    &ldquo;port&rdquo; : 10040
+  }, {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.152&rdquo;,
+    &ldquo;port&rdquo; : 10040
+  }, {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.153&rdquo;,
+    &ldquo;port&rdquo; : 10040
+  }, {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.154&rdquo;,
+    &ldquo;port&rdquo; : 10040
+  } ],
+  &ldquo;master&rdquo; : {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.155&rdquo;,
+    &ldquo;port&rdquo; : 10040
+  },
+  &ldquo;multicast&rdquo; : {
+    &ldquo;address&rdquo; : &ldquo;239.0.5.111&rdquo;,
+    &ldquo;port&rdquo; : 33333
+  },
+  &ldquo;self&rdquo; : {
+    &ldquo;address&rdquo; : &ldquo;10.45.237.150&rdquo;,
+    &ldquo;port&rdquo; : 10040,
+    &ldquo;status&rdquo; : &ldquo;ACTIVE&rdquo;
+  }
+}</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>The output contents differ depending on the version of the GridDB node. Check with the support desk for details.</li>
+</ul>
+
+<h3 id="status-display">Status display</h3>
+
+<p>The following command displays the status of the specified node and the statistical data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>stat</p>
+
+<p>Node variable</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to display by its node variable.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display node status, statistical data
+gs&gt; stat $node1
+{
+  &ldquo;checkpoint&rdquo; : {
+    &ldquo;archiveLog&rdquo; : 0,
+    &ldquo;backupOperation&rdquo; : 0,
+    &ldquo;duplicateLog&rdquo; : 0,
+    &ldquo;endTime&rdquo; : 1413852025843,
+    &ldquo;mode&rdquo; : &ldquo;NORMAL_CHECKPOINT&rdquo;,
+             :
+             :
+}</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>The output contents differ depending on the version of the GridDB node.</li>
+</ul>
+
+<h3 id="log-display">Log display</h3>
+
+<p>The following command displays the log of the specified node.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>logs</p>
+
+<p>Node variable</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to display by its node variable.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display log of node
+gs&gt; logs $node0
+2013-02-26T13:45:58.613+0900 c63x64n1 4051 INFO SYSTEM_SERVICE ../server/system_service.cpp void SystemService::joinCluster(const char8_t<em>, uint32_t) line=179 : joinCluster requested (clusterName=&ldquo;defaultCluster&rdquo;, minNodeNum=1)
+2013-02-26T13:45:58.616+0900 c63x64n1 4050 INFO SYSTEM_SERVICE ../server/system_service.cpp virtual void SystemService::JoinClusterHandler::callback(EventEngine&amp;, util::StackAllocator&amp;, Event</em>, NodeDescriptor) line=813 : ShutdownClusterHandler called g
+2013-02-26T13:45:58.617+0900 c63x64n1 4050 INFO SYSTEM_SERVICE ../server/system_service.cpp void SystemService::completeClusterJoin() line=639 : completeClusterJoin requested
+2013-02-26T13:45:58.617+0900 c63x64n1 4050 INFO SYSTEM_SERVICE ../server/system_service.cpp virtual void SystemService::CompleteClusterJoinHandler::callback(EventEngine&amp;, util::StackAllocator&amp;, Event*, NodeDescriptor) line=929 : CompleteClusterJoinHandler called</p></li>
+</ul>
+
+<p>In addition, the log output level can be displayed and changed.</p>
+
+<p>logconf</p>
+
+<p>Node variable [category name [log level]]</p>
+
+<ul>
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Node variable</p>
+
+<p>Specify the node to operate by its node variable.</p>
+
+<p>Category name</p>
+
+<p>Specify the log category name subject to the operation. Output level of all log categories will be displayed by default.</p>
+
+<p>Log level</p>
+
+<p>Specify the log level to change the log level of the specified category.</p>
+
+<p>Log level of the specified category will be displayed by default.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display log level of node
+gs&gt; logconf $node0
+{
+  &ldquo;CHECKPOINT_SERVICE&rdquo; : &ldquo;INFO&rdquo;,
+  &ldquo;CHUNK_MANAGER&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;CLUSTER_OPERATION&rdquo; : &ldquo;INFO&rdquo;,
+  &ldquo;CLUSTER_SERVICE&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;COLLECTION&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;DATA_STORE&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;EVENT_ENGINE&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;HASH_MAP&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;IO_MONITOR&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;LOG_MANAGER&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;MAIN&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;OBJECT_MANAGER&rdquo; : &ldquo;INFO&rdquo;,
+  &ldquo;RECOVERY_MANAGER&rdquo; : &ldquo;INFO&rdquo;,
+  &ldquo;REPLICATION&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;REPLICATION_TIMEOUT&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;SESSION_TIMEOUT&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;SYNC_SERVICE&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;SYSTEM_SERVICE&rdquo; : &ldquo;INFO&rdquo;,
+  &ldquo;TIME_SERIES&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;TRANSACTION_MANAGER&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;TRANSACTION_SERVICE&rdquo; : &ldquo;ERROR&rdquo;,
+  &ldquo;TRANSACTION_TIMEOUT&rdquo; : &ldquo;WARNING&rdquo;,
+  &ldquo;TRIGGER_SERVICE&rdquo; : &ldquo;ERROR&rdquo;
+}</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Log levels are ERROR, WARNING, INFO, and DEBUG. Be sure to follow the instructions of the support desk when changing the log level.</li>
+<li>Log level is initialized by restarting the node. Changes to the log level are not saved.</li>
+<li>Batch changes cannot be made to the log level of multiple categories.</li>
+<li>The output contents differ depending on the version of the GridDB node. Check with the support desk for details.</li>
+</ul>
+
+<h3 id="data-operation-in-a-database">Data Operation in a Database</h3>
+
+<p>To execute a data operation, there is a need to connect to the cluster subject to the operation.<br />
+Data in the database configured during the connection (“public” when the database name is omitted) will be subject to the operation.</p>
+
+<h3 id="connecting-to-a-cluster">Connecting to a Cluster</h3>
+
+<p>The following command establishes connection to a GridDB cluster to execute a data operation.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>connect</p>
+
+<p>Cluster variable [database name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Cluster variable</p>
+
+<p>Specify a GridDB cluster serving as the connection destination by its cluster variable.</p>
+
+<p>Database name</p>
+
+<p>Specify the database name.</p></li>
+
+<li><p>Example:</p>
+
+<p>// connect to GridDB cluster
+// for NoSQL
+gs&gt; connect $cluster1
+Connection successful (NoSQL).
+gs[public]&gt;</p>
+
+<p>gs&gt; connect $cluster1 userDB
+Connection successful (NoSQL).
+gs[userDB]&gt;</p>
+
+<p>// for NewSQL (configure both NoSQL/NewSQL interfaces)
+gs&gt; connect $cluster1
+Connection successful (NoSQL).
+Connection successful (NewSQL).
+gs[public]&gt;</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Connect to the database when the database name is specified. Connect to the “public” database if the database name is omitted.</li>
+<li>If the connection is successful, the connection destination database name appears in the prompt.</li>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+<li>When executing a data operation subcommand, it is necessary to connect to a GridDB cluster.</li>
+<li>If the SQL connection destination is specified (execution of setclustersql sub-command), SQL connection is also carried out.</li>
+</ul>
+
+<h3 id="search-tql">Search (TQL)</h3>
+
+<p>The following command will execute a search and retain the search results.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>tql</p>
+
+<p>Container name query;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the container subject to the search.</p>
+
+<p>Query;</p>
+
+<p>Specify the TQL command to execute. A semicolon (;) is required at the end of a TQL command.</p></li>
+
+<li><p>Example:</p>
+
+<p>// execute search
+gs[public]&gt; tql c001 select *;
+5 hits located.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executing a data operation subcommand, it is necessary to connect to a GridDB cluster.</li>
+<li>A return can be inserted in the middle of a TQL command.</li>
+<li>Retain the latest search result. Search results are discarded when a tql or sql subcommand is executed.</li>
+<li>See the chapter on “TQL Syntax &amp; Operating Functions” in the “GridDB API Reference” (<a href="/en/docs/manuals/v3.1/GridDB_API_Reference.html">GridDB_API_Reference.html</a>) for the TQL details.</li>
+</ul>
+
+<h3 id="sql-command-execution">SQL Command Execution</h3>
+
+<p>The following command executes an SQL command and retains the search result. This function can be executed in the GridDB Advanced Edition only.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>sql</p>
+
+<p>SQL command;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>SQL command;</p>
+
+<p>Specify the SQL command to execute. A semicolon (;) is required at the end of the SQL command.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; sql select * from con1; → search for SQL
+10,000 hits located.
+gs[public]&gt; get 1 → display SQL results
+id,name
+----------------------
+0,tanaka</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Can be executed in the GridDB Advanced Edition only.</li>
+<li>Before executing a sql command, there is a need to specify the SQL connection destination and perform a connection first.</li>
+<li>Retain the latest search result. Search results are discarded when a sql or tql sub-command is executed.</li>
+
+<li><p>The following results will appear depending on the type of SQL command.</p>
+
+<p>Process</p>
+
+<p>Execution results when terminated normally</p>
+
+<p>Search SELECT</p>
+
+<p>Display the no. of search results found. Search results are displayed in sub-command get/getcsv/getnoprint.</p>
+
+<p>Update INSERT/UPDATE/DELETE</p>
+
+<p>Display the no. of rows updated.</p>
+
+<p>DDL text</p>
+
+<p>Nothing is displayed.</p></li>
+
+<li><p>See “GridDB API Reference” (<a href="/en/docs/manuals/v3.1/GridDB_API_Reference.html">GridDB_API_Reference.html</a>) for the SQL details.</p></li>
+</ul>
+
+<h3 id="getting-search-results">Getting Search Results</h3>
+
+<p>The following command gets the inquiry results and presents them in different formats. There are 3 ways to output the results as listed below.</p>
+
+<p>(A) Display the results obtained in a standard output.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>get</p>
+
+<p>[No. of cases acquired]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>No. of cases acquired</p>
+
+<p>Specify the number of search results to be acquired. All search results will be obtained and displayed by default.</p></li>
+</ul>
+
+<p>(B) Save the results obtained in a file in the CSV format.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>getcsv</p>
+
+<p>CSV file name [No. of search results found]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>File name</p>
+
+<p>Specify the name of the file where the search results are saved.</p>
+
+<p>No. of cases acquired</p>
+
+<p>Specify the number of search results to be acquired. All search results will be obtained and saved in the file by default.</p></li>
+</ul>
+
+<p>Results obtained in &copy; will not be output.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>getnoprint</p>
+
+<p>[No. of cases acquired]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>No. of cases acquired</p>
+
+<p>Specify the number of search results to be acquired. All search results will be obtained by default.</p></li>
+
+<li><p>Example:</p>
+
+<p>// execute search
+gs[public]&gt; tql c001 select *;
+5 hits located.</p>
+
+<p>//Get first result and display
+gs[public]&gt; get 1
+name,status,count
+mie,true,2
+Acquisition of one result completed.</p>
+
+<p>//Get second and third results and save them in a file
+gs[public]&gt; getcsv /var/lib/gridstore/test2.csv 2
+Acquisition of 2 results completed.</p>
+
+<p>//Get fourth result
+gs[public]&gt; getnoprint 1
+Acquisition of one result completed.</p>
+
+<p>//Get fifth result and display
+gs[public]&gt; get 1
+name,status,count
+akita,true,45
+Acquisition of one result completed.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executing a data operation subcommand, it is necessary to connect to a GridDB cluster.</li>
+<li>Output the column name to the first row of the search results</li>
+<li>An error will occur if the search results are obtained when a search has not been conducted, or after all search results have been obtained or discarded.</li>
+</ul>
+
+<h3 id="getting-the-execution-plan">Getting the Execution Plan</h3>
+
+<p>The following command displays the execution plan of the specified TQL command. Search is not executed.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>tqlexplain</p>
+
+<p>Container name query;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the target container.</p>
+
+<p>Query;</p>
+
+<p>Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Get execution plan
+gs[public]&gt; tqlexplain c001 select * ;
+0       0       SELECTION       CONDITION       NULL
+1       1       INDEX   BTREE   ROWMAP
+2       0       QUERY_EXECUTE_RESULT_ROWS       INTEGER 0</p></li>
+</ul>
+
+<p>In addition, the actual measurement values such as the number of processing rows etc. can also be displayed together with the executive plan by actually executing the specified TQL command.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>tqlanalyze</p>
+
+<p>Container name query;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the target container.</p>
+
+<p>Query;</p>
+
+<p>Specify the TQL command to get the execution plan. A semicolon (;) is required at the end of a TQL command.</p></li>
+
+<li><p>Example:</p>
+
+<p>// Execute search to get execution plan
+gs[public]&gt; tqlanalyze c001 select *;
+0       0       SELECTION       CONDITION       NULL
+1       1       INDEX   BTREE   ROWMAP
+2       0       QUERY_EXECUTE_RESULT_ROWS       INTEGER 5
+3       0       QUERY_RESULT_TYPE       STRING  RESULT_ROW_ID_SET
+4       0       QUERY_RESULT_ROWS       INTEGER 5</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executing a data operation sub-command, it is necessary to connect to a GridDB cluster.</li>
+<li>See the chapter on “TQL Syntax &amp; Operating Functions” in the “GridDB API Reference” (<a href="/en/docs/manuals/v3.1/GridDB_API_Reference.html">GridDB_API_Reference.html</a>) for the detailed execution plan.</li>
+<li>Since search results are not retained, search results cannot be acquired and thus there is also no need to execute a tqlclose subcommand. When the search results are required, execute a query with the tql subcommand.</li>
+</ul>
+
+<h3 id="discarding-search-results">Discarding Search Results</h3>
+
+<p>Close the tql and discard the search results saved.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>tqlclose</p></li>
+</ul>
+
+<p>Close query. Discard the search results retained. 。</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>queryclose</p></li>
+
+<li><p>Example:</p>
+
+<p>//Discard search results
+gs[public]&gt; tqlclose</p>
+
+<p>gs[public]&gt; queryclose</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Search results are discarded at the following timing.
+
+<ul>
+<li>When a tqlclose or query close sub-command is executed</li>
+<li>When executing a new search using a tql or sql sub-command</li>
+<li>When disconnecting from a GridDB cluster using a disconnect sub-command</li>
+</ul></li>
+<li>An error will occur if search results are acquired (get sub-command, etc.) after they have been discarded.</li>
+</ul>
+
+<h3 id="disconnecting-from-a-cluster">Disconnecting from a Cluster</h3>
+
+<p>The following command disconnect user from a GridDB cluster.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>disconnect</p></li>
+
+<li><p>Example:</p>
+
+<p>//Disconnect from a GridDB cluster
+gs[public]&gt; disconnect
+gs&gt;</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Retained search results are discarded.</li>
+<li>When disconnected, the connection database name will disappear from the prompt.</li>
+</ul>
+
+<h3 id="database-management">Database Management</h3>
+
+<p>This section explains the available sub-commands that can be used for database management. Connect to the cluster first prior to performing database management (sub-command connect).</p>
+
+<h3 id="creating-a-database">Creating a Database</h3>
+
+<p>The following command is used to create a database.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>createdatabase</p>
+
+<p>Database name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Database name</p>
+
+<p>Specify the name of the database to be created.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Create a database with the name “db1”
+gs[public]&gt; createdatabase db1</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>Only the administrator user can access a database immediately after it has been created. Assign access rights to general users where necessary.</li>
+</ul>
+
+<h3 id="deleting-a-database">Deleting a Database</h3>
+
+<p>The following command is used to delete a database.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>dropdatabase</p>
+
+<p>Database name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Database name</p>
+
+<p>Specify the name of the database to be deleted.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Delete databases like those shown below
+//db1: No container exists in the database
+//db2: Database does not exist
+//db3: Container exists in the database</p>
+
+<p>gs[public]&gt; dropdatabase db1　　　　　　　　　// normal termination
+gs[public]&gt; dropdatabase db2　　　　　　　　　// abnormal termination
+D20340: Database &ldquo;db2&rdquo; does not exist.
+gs[public]&gt; dropdatabase db3　　　　　　　　　// abnormal termination
+D20336: Error occurred in deleting the database : msg=[[145045:JC_DATABASE_NOT_EMPTY] Illegal target error by non-empty database.]</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>A public database which is a default connection destination cannot be deleted.</li>
+</ul>
+
+<h3 id="current-db-display">Current DB Display</h3>
+
+<p>The following command is used to display the current database name.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>getcurrentdatabase</p>
+
+<p>　</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[db1]&gt; getcurrentdatabase
+db1</p></li>
+</ul>
+
+<h3 id="database-list">Database List</h3>
+
+<p>The following command is used to display the database list and access rights data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showdatabase</p>
+
+<p>[Database name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Database name</p>
+
+<p>Specify the name of the database to be displayed.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; showdatabase
+database     ACL
+----------------------------
+public       ALL_USER
+db1          user1
+db2          user1
+db3          user3</p>
+
+<p>gs[public]&gt; showdatabase db1
+database     ACL
+----------------------------
+public       ALL_USER
+db1          user1</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>For general users, only databases for which access rights have been assigned will be displayed. For administrator users, a list of all the databases will be displayed.</li>
+</ul>
+
+<h3 id="assignment-of-access-rights">Assignment of Access Rights</h3>
+
+<p>The following command is used to assign access rights to the database.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>grant</p>
+
+<p>Database name user name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Database name</p>
+
+<p>Specify the name of the database for which access rights are going to be assigned</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user to assign access rights to.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; grant db1 user001</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>An error will occur if access rights have already been assigned (only 1 user can be assigned access rights to each database). Execute this command after revoking the access rights (&ldquo;revoke&rdquo; command).</li>
+</ul>
+
+<h3 id="revoking-of-access-rights">Revoking of Access Rights</h3>
+
+<p>The following command is used to revoke access rights to the database.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>revoke</p>
+
+<p>Database name user name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Database name</p>
+
+<p>Specify the name of the database for which access rights are going to be revoked.</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user whose access rights are going to be revoked.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; revoke db1 user001</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+</ul>
+
+<h3 id="user-management">User Management</h3>
+
+<p>This section explains the available sub-commands that can be used to perform user management. Connect to the cluster first prior to performing user management (sub-command connect).</p>
+
+<h3 id="creating-a-general-user">Creating a General User</h3>
+
+<p>The following command is used to create a general user (username and password).</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>createuser</p>
+
+<p>User name password</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user to be created.</p>
+
+<p>Password</p>
+
+<p>Specify the password of the user to be created.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; createuser user01 pass001</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+<li>A name starting with &ldquo;gs#&rdquo; cannot be specified as the name of a general user as it is reserved for use by the administrator user.</li>
+<li>When creating an administrator user, use the gs_adduser command in all the nodes constituting the cluster.</li>
+</ul>
+
+<h3 id="deleting-a-general-user">Deleting a General User</h3>
+
+<p>The following command is used to delete a user.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>dropuser</p>
+
+<p>User name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user to be deleted.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; dropuer user01</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+</ul>
+
+<h3 id="update-password">Update Password</h3>
+
+<p>The following command is used to update the user password.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>setpassword</p>
+
+<p>　Password (general user only)</p>
+
+<p>setpassword</p>
+
+<p>　User name password (administrator user only)</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Password</p>
+
+<p>Specify the password to change.</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user whose password is going to be changed.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The general user can change its own password only.</li>
+
+<li><p>An administrator user can change the passwords of other general users only.</p>
+
+<ul>
+<li>Example:
+<br /></li>
+</ul>
+
+<p>gs[public]&gt; setpassword newPass009</p></li>
+</ul>
+
+<h3 id="general-user-list">General User List</h3>
+
+<p>The following command displays the user data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showuser</p>
+
+<p>[User name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>User name</p>
+
+<p>Specify the name of the user to be displayed.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; showuser
+UserName
+------------------------------------
+user002
+user001
+user003</p>
+
+<p>gs[public]&gt; showuser user001
+Name     : user001
+GrantedDB: public, userDB</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Command can be executed by an administrator user only.</li>
+</ul>
+
+<h3 id="container-management">Container Management</h3>
+
+<p>This section explains the available sub-commands that can be used when performing container operations. Connect to the cluster first before performing container management. Containers in the database at the (sub-command connect) connection destination will be subject to the operation.</p>
+
+<h3 id="container-creation">Container Creation</h3>
+
+<p>Create a container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<ul>
+<li><p>Simplified version</p>
+
+<p>Container (collection)</p>
+
+<p>　createcollection</p>
+
+<p>Container name Column name Type [Column name Type …]</p>
+
+<p>Container (time series container)</p>
+
+<p>　createtimeseries</p>
+
+<p>Container name Compression method Column name type [Column name Type …]</p></li>
+
+<li><p>Detailed version</p>
+
+<p>　createcontainer</p>
+
+<p>Container data file [Container name]</p></li>
+</ul></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created.</p>
+
+<p>Column name</p>
+
+<p>Specify the column name.</p>
+
+<p>Type</p>
+
+<p>Specify the column type.</p>
+
+<p>Compression method</p>
+
+<p>For time series data, specify the data compression method.</p>
+
+<p>Container definition file</p>
+
+<p>Specify the file storing the container data in JSON format.</p>
+
+<p><strong>Simplified version</strong></p>
+
+<p>Specify the container name and column data (column name and type) to create the container. The compression type can also be specified for time series containers only.</p>
+
+<ul>
+<li>Specify &ldquo;NO&rdquo;, &ldquo;SS&rdquo; for the compression method. Use the detailed version if &ldquo;HI&rdquo; is specified.</li>
+<li>The collection will be created with a specified row key. The first column will become the row key.
+<br /></li>
+</ul>
+
+<p><strong>Detailed version</strong></p>
+
+<p>Specify the container definition data in the json file to create a container.</p>
+
+<ul>
+<li>The container definition data has the same definition as the metadata file output by the export tool. See <a href="#impexp_metadata">Metadata files</a> with <a href="#container_dataform">the container data file format</a> for the column type and data compression method, container definition format, etc. However, the following data will be invalid in this command even though it is defined in the metadata file of the export command.
+
+<ul>
+<li>version Export tool version</li>
+<li>database Database name</li>
+<li>containerFileType Export data file type</li>
+<li>containerFile Export file name</li>
+<li>partitionNo Partition no.</li>
+</ul></li>
+<li>Describe a single container definition in a single container definition file.</li>
+<li>If the container name is omitted in the argument, create the container with the name described in the container definition file.</li>
+<li>If the container name is omitted in the argument, ignore the container name in the container definition file and create the container with the name described in the argument.</li>
+<li>An error will not result even if the database name is described in the container definition file but the name will be ignored and the container will be created in the database currently being connected.</li>
+<li>When using the container definition file, <a href="#impexp_export">the metadata file will be output when the &ndash;out option is specified in the export function</a>. The output metadata file can be edited and used as a container definition file.</li>
+</ul></li>
+</ul>
+
+<p>　　Example: When using the output metadata file as a container definition file</p>
+
+<p>{
+    &ldquo;version&rdquo;:&ldquo;2.1.00&rdquo;,　　　　　　　　　　　　　　　←invalid
+    &ldquo;container&rdquo;:&ldquo;container_354&rdquo;,
+    &ldquo;database&rdquo;:&ldquo;db2&rdquo;,　　　　　　　　　　　　　　　　←invalid
+    &ldquo;containerType&rdquo;:&ldquo;TIME_SERIES&rdquo;,
+    &ldquo;containerFileType&rdquo;:&ldquo;binary&rdquo;,　　　　　　　　　　←invalid
+    &ldquo;containerFile&rdquo;:&ldquo;20141219_114232_098_div1.mc&rdquo;, 　←invalid
+    &ldquo;rowKeyAssigned&rdquo;:true,
+    &ldquo;partitionNo&rdquo;:0,　　　　　　　　　　　　　　　　 ←invalid
+    &ldquo;columnSet&rdquo;:[
+        {
+            &ldquo;columnName&rdquo;:&ldquo;timestamp&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;timestamp&rdquo;
+        },
+        {
+            &ldquo;columnName&rdquo;:&ldquo;active&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;boolean&rdquo;
+        },
+        {
+            &ldquo;columnName&rdquo;:&ldquo;voltage&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;double&rdquo;
+        }
+    ],
+    &ldquo;timeSeriesProperties&rdquo;:{
+        &ldquo;compressionMethod&rdquo;:&ldquo;NO&rdquo;,
+        &ldquo;compressionWindowSize&rdquo;:-1,
+        &ldquo;compressionWindowSizeUnit&rdquo;:&ldquo;null&rdquo;,
+        &ldquo;expirationDivisionCount&rdquo;:8,
+        &ldquo;rowExpirationElapsedTime&rdquo;:-1,
+        &ldquo;rowExpirationTimeUnit&rdquo;:&ldquo;null&rdquo;
+    },
+    &ldquo;compressionInfoSet&rdquo;:[
+    ]</p>
+
+<h3 id="container-deletion">Container Deletion</h3>
+
+<p>The following command is used to delete a container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>dropcontainer</p>
+
+<p>Container name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the name of the container to be deleted.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; dropcontainer　Con001</p></li>
+</ul>
+
+<h3 id="container-indication">Container Indication</h3>
+
+<p>The following command is used to display the container data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showcontainer</p>
+
+<p>Container name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the container name to be displayed. Display a list of all containers if omitted.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display container list
+gs[userDB]&gt; showcontainer
+Database : userDB
+Name                  Type         PartitionId
+------------------------------------------------
+cont001               COLLECTION            10
+col00a                COLLECTION             3
+time02                TIME_SERIES            5
+cont003               COLLECTION            15
+cont005               TIME_SERIES           17</p>
+
+<p>// display data of specified container
+gs[public]&gt; showcontainer cont003
+Database    : userDB
+Name : cont003
+Type : COLLECTION
+Partition ID: 15
+DataAffinity: -</p>
+
+<p>Columns:
+No  Name                  Type            Index
+------------------------------------------------------------
+ 0  col1                  INTEGER         [TREE] (RowKey)
+ 1  col2                  STRING          []
+ 2  col3                  TIMESTAMP       []</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The data displayed in a container list are the “Container name”, “Container type” and “Partition ID”.</li>
+<li>The data displayed in the specified container are the “Container name”, “Container type”, “Partition ID”, “Defined column name”, “Column data type” and “Column index setting”.</li>
+<li>Container data of the current DB will be displayed.</li>
+</ul>
+
+<h3 id="displaying-a-table">Displaying a Table</h3>
+
+<p>The following command is used to display the table data. This function can be used in the GridDB Advanced Edition only.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showtable</p>
+
+<p>Table name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Table name</p>
+
+<p>Specify the table name to be displayed. Display a list of all tables if omitted.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display table list
+gs[userdb]&gt; showtable
+Database : userdb
+Name           PartitionId
+------------------------------
+table09                  3
+table02                  7
+table03                 12</p>
+
+<p>Total Count: 3</p>
+
+<p>//Display the specified table data
+gs[userdb]&gt; showtable table09
+Database    : userdb
+Name        : table09
+Partition ID: 3</p>
+
+<p>Columns:
+No  Name            Type            Index
+---------------------------------------------------
+ 0  col1            INTEGER         [TREE]
+ 1  col2            STRING          []
+ 2  col3            STRING          []</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The data displayed in a table list are the “Table name“ and “Partition ID”.</li>
+<li>The data displayed in the specified table are the “Table name“, “Partition ID”, “Defined column name“, “Column data type“ and “Column index setting”.</li>
+<li>Table data of the current DB will be displayed.</li>
+</ul>
+
+<h3 id="creation-of-index">Creation of Index</h3>
+
+<p>The following command is used to create an index in the column of a specified container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>createindex</p>
+
+<p>Container name Column name Index type&hellip;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the name of container that the column subject to the index operation belongs to.</p>
+
+<p>Column name</p>
+
+<p>Specify the name of the column subject to the index operation.</p>
+
+<p>Index type&hellip;</p>
+
+<p>Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type</p></li>
+
+<li><p>Example:</p>
+
+<p>// create index
+gs[public]&gt; createindex cont003 col2 tree hash</p>
+
+<p>gs[public]&gt; showcontainer cont003
+Database    : public
+Name : cont003
+Type : COLLECTION
+Partition ID: 15
+DataAffinity: -</p>
+
+<p>Columns:
+No  Name                  Type            Index
+------------------------------------------------------------
+ 0  col1                  INTEGER         [TREE] (RowKey)
+ 1  col2                  STRING          [TREE, HASH]
+ 2  col3                  TIMESTAMP       []</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>An error will not occur even if an index that has already been created is specified.</li>
+</ul>
+
+<h3 id="deletion-of-index">Deletion of Index</h3>
+
+<p>The following command is used to delete the index in the column of a specified container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>dropindex</p>
+
+<p>Container name Column name Index type&hellip;</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the name of container that the column subject to the index operation belongs to.</p>
+
+<p>Column name</p>
+
+<p>Specify the name of the column subject to the index operation.</p>
+
+<p>Index type&hellip;</p>
+
+<p>Specify the index type. Specify TREE, HASH or SPATIAL (or multiple) for the index type</p></li>
+
+<li><p>Example:</p>
+
+<p>//deletion of index
+gs[public]&gt; showcontainer cont003
+Database    : public
+Name : cont003
+Type : COLLECTION
+Partition ID: 15
+DataAffinity: -</p>
+
+<p>Columns:
+No  Name                  Type            Index
+------------------------------------------------------------
+ 0  col1                  INTEGER         [TREE] (RowKey)
+ 1  col2                  STRING          [TREE, HASH]
+ 2  col3                  TIMESTAMP       [HASH]</p>
+
+<p>gs[public]&gt; dropindex cont003 col2 hash</p>
+
+<p>gs[public]&gt; showcontainer cont003
+Database    : public
+Name : cont003
+Type : COLLECTION
+Partition ID: 15
+DataAffinity: -</p>
+
+<p>Columns:
+No  Name                  Type            Index
+------------------------------------------------------------
+ 0  col1                  INTEGER         [TREE] (RowKey)
+ 1  col2                  STRING          [TREE]
+ 2  col3                  TIMESTAMP       [HASH]</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>An error will not occur even if an index that has not been created is specified.</li>
+</ul>
+
+<h3 id="deletion-of-trigger">Deletion of Trigger</h3>
+
+<p>The following command is used to delete the trigger of a specified container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>droptrigger</p>
+
+<p>Container name Trigger name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container</p>
+
+<p>Specify the name of the container whose trigger is going to be deleted.</p>
+
+<p>Trigger name</p>
+
+<p>Specify the trigger name to delete.</p></li>
+
+<li><p>Example:</p>
+
+<p>gs[public]&gt; droptrigger con01 tri03</p></li>
+</ul>
+
+<h3 id="display-of-trigger">Display of Trigger</h3>
+
+<p>The following command is used to display the trigger data of a specified container.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showtrigger</p>
+
+<p>Container name [trigger name]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container</p>
+
+<p>Specify the container name to be displayed.</p>
+
+<p>Trigger name</p>
+
+<p>Specify the trigger name to be displayed. Display a list of all trigger data if omitted.</p></li>
+
+<li><p>Example:</p>
+
+<p>//Display the trigger data list of the specified container
+gs[public]&gt; showtrigger cont003
+Name                 Type  Columns              Events
+---------------------------------------------------------------
+rtrig01              REST  [col1, col3]         [PUT]</p>
+
+<p>gs[public]&gt; showtrigger cont003 rtrig01
+Name : rtrig01
+Type          : REST
+Target Columns: [col1, col3]
+Target Events : [PUT]</p>
+
+<p>Destination URI: <a href="http://example.com">http://example.com</a></p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The data displayed in a trigger list are the “Trigger name”, “Notification method”, “Column to be notified”, “Operation to be monitored (create new or update, delete a row)”.</li>
+<li>The data displayed in the specified trigger data are the “Trigger name”, “Notification method”, “Column to be notified”, “Operation to be monitored” and “Notification destination URI”. In addition, the “Destination name”, “Destination type“, “User“ and “Password” are also displayed together in a JMS notification.</li>
+<li>See the chapter on “Trigger Function” in the “GridDB API Reference” (<a href="/en/docs/manuals/v3.1/GridDB_API_Reference.html">GridDB_API_Reference.html</a>) for the trigger function details.</li>
+</ul>
+
+<h3 id="other-operations">Other Operations</h3>
+
+<p>This section explains the sub-commands for other operations.</p>
+
+<h3 id="echo-back-setting">Echo Back Setting</h3>
+
+<p>The following command is used to display the executed sub-command in the standard output.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>echo</p>
+
+<p>boolean</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>boolean</p>
+
+<p>Display the executed subcommand in the standard output when TRUE is specified Prescribed value is FALSE.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display the executed subcommand in the standard output
+gs&gt; echo TRUE</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>gs_sh prompt &ldquo;gs&gt;&rdquo; always appear in the standard output.</li>
+</ul>
+
+<h3 id="message-display">Message Display</h3>
+
+<p>The following command is used to display the definition details of the specified character string or variable.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>print</p>
+
+<p>Message</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Message</p>
+
+<p>Specify the character string or variable to display.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display of character string
+gs&gt; print  print executed.
+Print executed.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Append &ldquo;$&rdquo; in front of the variable name when using a variable.</li>
+</ul>
+
+<h3 id="sleep">Sleep</h3>
+
+<p>The following command can be used to set the time for the sleeping function.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>sleep</p>
+
+<p>No. of sec</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>No. of sec</p>
+
+<p>Specify the no. of sec to go to sleep.</p></li>
+
+<li><p>Example:</p>
+
+<p>// sleep for 10 sec
+gs&gt; sleep 10</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Specify a positive integer for the no. of sec number.</li>
+</ul>
+
+<h3 id="execution-of-external-commands">Execution of External Commands</h3>
+
+<p>The following command is used to execute an external command.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>exec</p>
+
+<p>External command [External command argument]</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>External command</p>
+
+<p>Specify an external command.</p>
+
+<p>External command argument</p>
+
+<p>Specify the argument of an external command.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display the file data of the current directory
+gs&gt; exec ls -la</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Pipe, redirect, hear document cannot be used.</li>
+</ul>
+
+<h3 id="terminating-gs-sh">Terminating gs_sh</h3>
+
+<p>The following command is used to terminate gs_sh.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>exit</p>
+
+<p>quit</p></li>
+
+<li><p>Example:</p>
+
+<p>// terminate gs_sh.
+gs&gt; exit</p></li>
+</ul>
+
+<p>　In addition, if an error occurs in the sub-command, the setting can be configured to end gs_sh.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>errexit</p>
+
+<p>boolean</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>boolean</p>
+
+<p>If TRUE is specified, gs_sh ends when an error occurs in the sub-command. Default is FALSE.</p></li>
+
+<li><p>Example:</p>
+
+<p>// configure the setting so as to end gs_sh when an error occurs in the sub-command
+gs&gt; errexit TRUE</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>There is no functional difference between the exit sub-command and quit sub-command.</li>
+</ul>
+
+<h3 id="help">Help</h3>
+
+<p>The following command is used to display a description of the sub-command. - subcommand</p>
+
+<p>help</p>
+
+<p>[Sub-command name]</p>
+
+<ul>
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Sub-command name</p>
+
+<p>Specify the subcommand name to display the description Display a list of the subcommands if omitted.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display the description of the subcommand
+gs&gt; help exit
+exit
+The following command is used to terminate gs_sh.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>A description of gs_sh can be obtained with the command “gh_sh &ndash;help”.</li>
+</ul>
+
+<h3 id="version">Version</h3>
+
+<p>The following command is used to display the version of gs_sh.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>version</p></li>
+
+<li><p>Example:</p>
+
+<p>// display of version
+gs&gt; version
+gs_sh version 2.0.0</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The gs_sh version data can be obtained with the command “gh_sh &ndash;version” as well.</li>
+</ul>
+
+<h3 id="options-and-subcommand-specifications">Options and Subcommand Specifications</h3>
+
+<h3 id="options">Options</h3>
+
+<ul>
+<li><p>Command list</p>
+
+<p>gs_sh</p>
+
+<p>[Script file]</p>
+
+<p>gs_sh</p>
+
+<p>-v｜&ndash;version</p>
+
+<p>gs_sh</p>
+
+<p>-h｜&ndash;help</p></li>
+
+<li><p>Optional specifications</p>
+
+<p>Optional</p>
+
+<p>Essential</p>
+
+<p>Description</p>
+
+<p>-v｜&ndash;version</p>
+
+<p>Display the version of the tool.</p>
+
+<p>-h｜&ndash;help</p>
+
+<p>Display the command list as a help message.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>In order to batch process the gs_sh sub-command, a script file can be created. Extension of the script file is gsh.</li>
+<li>During gs_sh startup, .gsshrc script files under the gsadm user home directory are imported automatically. The .gsshrc contents will also be imported to the destination from other script files.</li>
+</ul>
+
+<h3 id="sub-command-list">Sub-command List</h3>
+
+<ul>
+<li><p>GridDB cluster definition sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　setnode</p>
+
+<p>Node variables name IP address</p>
+
+<p>Define the node variable.</p>
+
+<p>　　Port no. [SSH port no.]</p>
+
+<p>　　setcluster</p>
+
+<p>Cluster variable name cluster name　</p>
+
+<p>Define the cluster variable.</p>
+
+<p>　　Multicast address port no.</p>
+
+<p>　　[Node variable&hellip; ]</p>
+
+<p>　　setclustersql</p>
+
+<p>Cluster variable name cluster name</p>
+
+<p>Define the SQL connection destination in the cluster configuration.</p>
+
+<p>　　SQL address SQL port no.</p>
+
+<p>　　modcluster 　</p>
+
+<p>Cluster variable name</p>
+
+<p>Add or delete a node variable to or from the cluster variable.</p>
+
+<p>　　 add｜remove node variable&hellip;</p>
+
+<p>　　setuser</p>
+
+<p>User name password　</p>
+
+<p>Define the user and password to access the cluster.</p>
+
+<p>　　[Password of OS user gsadm]</p>
+
+<p>　　set</p>
+
+<p>Variable name [value]</p>
+
+<p>Define an arbitrary variable.</p>
+
+<p>　　show</p>
+
+<p>[Variable name]</p>
+
+<p>Display the detailed definition of the variable.</p>
+
+<p>　　save</p>
+
+<p>[Script file name]</p>
+
+<p>Save the variable definition in the script file.</p>
+
+<p>　　load</p>
+
+<p>[Script file name]</p>
+
+<p>Execute a read script file.</p></li>
+
+<li><p>GridDB cluster operation sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　startnode</p>
+
+<p>Node｜cluster variable [Timeout time in sec.]</p>
+
+<p>Explanation on how to start a node is shown below.</p>
+
+<p>*</p>
+
+<p>　　stopnode</p>
+
+<p>Node｜cluster variable [Timeout time in sec.]</p>
+
+<p>Explanation on how to stop a node is shown below.</p>
+
+<p>*</p>
+
+<p>　　stopnodeforce</p>
+
+<p>Node｜cluster variable [Timeout time in sec.]</p>
+
+<p>Stop the specified node by force.</p>
+
+<p>*</p>
+
+<p>　　startcluster</p>
+
+<p>Cluster variable [Timeout time in sec.]</p>
+
+<p>Attach the active node groups to a cluster, together at once.</p>
+
+<p>*</p>
+
+<p>　　stopcluster</p>
+
+<p>Cluster variable [Timeout time in sec.]</p>
+
+<p>Detach all of the currently attached nodes from a cluster, together at once.</p>
+
+<p>*</p>
+
+<p>　　joincluster</p>
+
+<p>Cluster variable node variable [Timeout time in sec.]</p>
+
+<p>Attach a node individually to a cluster.</p>
+
+<p>*</p>
+
+<p>　　leavecluster</p>
+
+<p>Node variable [Timeout time in sec.]</p>
+
+<p>Detach a node individually from a cluster.</p>
+
+<p>*</p>
+
+<p>　　leaveclusterforce</p>
+
+<p>Node variable [Timeout time in sec.]</p>
+
+<p>Force the specified node to leave/get detached from a cluster.</p>
+
+<p>*</p>
+
+<p>　　appendcluster</p>
+
+<p>Cluster variable node variable [Timeout time in sec.]</p>
+
+<p>Add an undefined node to a pre-defined cluster.</p>
+
+<p>*</p>
+
+<p>　　configcluster</p>
+
+<p>Cluster variable</p>
+
+<p>Display the cluster status data.</p>
+
+<p>*</p>
+
+<p>　　config</p>
+
+<p>Node variable</p>
+
+<p>Display the cluster configuration data.</p>
+
+<p>*</p>
+
+<p>　　stat</p>
+
+<p>Node variable</p>
+
+<p>Display the status of the specified node.</p>
+
+<p>*</p>
+
+<p>　　logs</p>
+
+<p>Node variable</p>
+
+<p>The following command displays the log of the specified node.</p>
+
+<p>*</p>
+
+<p>　　logconf</p>
+
+<p>Node variable [category name [output level]]</p>
+
+<p>Display and change the log settings.</p>
+
+<p>*</p></li>
+</ul>
+
+<p>　　　　*1: Commands marked with an * can be executed by an administrator user only.</p>
+
+<ul>
+<li><p>Data operation sub-command list in database</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　connect</p>
+
+<p>Cluster variable [database name]</p>
+
+<p>Connect to a GridDB cluster.</p>
+
+<p>　　tql</p>
+
+<p>Container name query;</p>
+
+<p>The following command will execute a search and retain the search results.</p>
+
+<p>　　get</p>
+
+<p>[No. of cases acquired]</p>
+
+<p>Get the search results and display them in a standard output.</p>
+
+<p>　　getcsv</p>
+
+<p>CSV file name [No. of search results found]</p>
+
+<p>Get the search results and save them in a file in the CSV format.</p>
+
+<p>　　getnoprint</p>
+
+<p>[No. of cases acquired]</p>
+
+<p>Get the query results but do not display them in a standard output.</p>
+
+<p>　　tqlclose</p>
+
+<p>Discard the search results retained.</p>
+
+<p>　　tqlanalyze</p>
+
+<p>Container name query;</p>
+
+<p>The following command displays the execution plan of the specified TQL command.</p>
+
+<p>　　tqlexplain</p>
+
+<p>Container name query;</p>
+
+<p>Execute the specified TQL command and display the execution plan and actual measurement values such as the number of cases processed etc.</p>
+
+<p>　　sql</p>
+
+<p>SQL command;</p>
+
+<p>The following command executes an SQL command and retains the search result.</p>
+
+<p>　　queryclose</p>
+
+<p>Close SQL.</p>
+
+<p>　　disconnect</p>
+
+<p>The following command disconnect user from a GridDB cluster.</p></li>
+</ul>
+
+<p>　　　　 *1: Commands marked with an * can be executed by an administrator user only.</p>
+
+<ul>
+<li><p>Database management sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　createdatabase</p>
+
+<p>Database name</p>
+
+<p>Create a database.</p>
+
+<p>*</p>
+
+<p>　　dropdatabase</p>
+
+<p>Database name</p>
+
+<p>Delete a database.</p>
+
+<p>*</p>
+
+<p>　　getcurrentdatabase</p>
+
+<p>Display the current database name.</p>
+
+<p>　　showdatabase</p>
+
+<p>[Database name]</p>
+
+<p>The following command is used to display the database list and access rights data.</p>
+
+<p>　　grant</p>
+
+<p>Database name user name</p>
+
+<p>The following command is used to assign access rights to the database.</p>
+
+<p>*</p>
+
+<p>　　revoke</p>
+
+<p>Database name user name</p>
+
+<p>The following command is used to revoke access rights to the database.</p>
+
+<p>*</p></li>
+</ul>
+
+<p>　　　　 *1: Commands marked with an * can be executed by an administrator user only.</p>
+
+<ul>
+<li><p>User management sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　createuser</p>
+
+<p>User name password</p>
+
+<p>Create a general user.</p>
+
+<p>*</p>
+
+<p>　　dropuser</p>
+
+<p>User name</p>
+
+<p>Delete a general user.</p>
+
+<p>*</p>
+
+<p>　　setpassword</p>
+
+<p>Password</p>
+
+<p>Change your own password.</p>
+
+<p>　　setpassword</p>
+
+<p>User name password</p>
+
+<p>Change the password of a general user.</p>
+
+<p>　　showuser</p>
+
+<p>[User name]</p>
+
+<p>The following command displays the user data.</p></li>
+</ul>
+
+<p>　　　　 *1: Commands marked with an * can be executed by an administrator user only.</p>
+
+<ul>
+<li><p>Container management sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　createcollection</p>
+
+<p>Container name Column name Type [Column name Type …]</p>
+
+<p>Create a container (collection),</p>
+
+<p>　　createtimeseries</p>
+
+<p>Container name Compression method Column name type [Column name Type …]</p>
+
+<p>Create a container (time series container).</p>
+
+<p>　　createcontainer</p>
+
+<p>Container data file [Container name]</p>
+
+<p>Create a container from the container data file.</p>
+
+<p>　　dropcontainer</p>
+
+<p>Container name</p>
+
+<p>The following command is used to delete a container.</p>
+
+<p>　　showcontainer</p>
+
+<p>[Container name]</p>
+
+<p>The following command is used to display the container data.</p>
+
+<p>　　showtable</p>
+
+<p>[Table name]</p>
+
+<p>The following command is used to display the table data.</p>
+
+<p>　　createindex</p>
+
+<p>Container name Column name Index type&hellip;</p>
+
+<p>Create an index in the specified column.</p>
+
+<p>　　dropindex</p>
+
+<p>Container name Column name Index type&hellip;</p>
+
+<p>Delete an index of the specified column.</p>
+
+<p>　　droptrigger</p>
+
+<p>Container name Trigger name</p>
+
+<p>Delete the trigger data.</p>
+
+<p>　　showtrigger</p>
+
+<p>Container name [trigger name]</p>
+
+<p>Display the trigger data.</p></li>
+</ul>
+
+<p>　　　　 *1: Commands marked with an * can be executed by an administrator user only.</p>
+
+<ul>
+<li><p>Other operation sub-command list</p>
+
+<p>Sub-command</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>*1</p>
+
+<p>　　echo</p>
+
+<p>boolean</p>
+
+<p>Set whether to echo back.</p>
+
+<p>　　print</p>
+
+<p>Message</p>
+
+<p>The following command is used to display the definition details of the specified character string or variable.</p>
+
+<p>　　sleep</p>
+
+<p>No. of sec</p>
+
+<p>The following command can be used to set the time for the sleeping function.</p>
+
+<p>　　exec</p>
+
+<p>External command [External command argument]</p>
+
+<p>The following command is used to execute an external command.</p>
+
+<p>　　exit</p>
+
+<p>The following command is used to terminate gs_sh.</p>
+
+<p>　　quit</p>
+
+<p>The following command is used to terminate gs_sh.</p>
+
+<p>　　errexit</p>
+
+<p>boolean</p>
+
+<p>Set whether to terminate gs_sh when an error occurs.</p>
+
+<p>　　help</p>
+
+<p>[Subcommand name]</p>
+
+<p>The following command is used to display a description of the sub-command.</p>
+
+<p>　　version</p>
+
+<p>Display the version data.</p></li>
+</ul>
+
+<p>　　　　 *1: Commands marked with an * can be executed by an administrator user only.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1536883882"></script>
+    <script src="/js/jquery.sticky.js?1536883882"></script>
+    <script src="/js/featherlight.min.js?1536883882"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1536883882"></script>
+    <script src="/js/highlight.pack.js?1536883882"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1536883882"></script>
+    <script src="/js/learn.js?1536883882"></script>
+    <script src="/js/hugo-learn.js?1536883882"></script>
+
+    <link href="/mermaid/mermaid.css?1536883882" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1536883882"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

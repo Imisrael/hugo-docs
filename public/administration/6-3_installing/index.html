@@ -1,0 +1,3358 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.48" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Installing :: GridDB</title>
+
+    
+    <link href="/css/nucleus.css?1536883882" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1536883882" rel="stylesheet">
+    <link href="/css/hybrid.css?1536883882" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1536883882" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1536883882" rel="stylesheet">
+    <link href="/css/auto-complete.css?1536883882" rel="stylesheet">
+    <link href="/css/theme.css?1536883882" rel="stylesheet">
+	<link href="/css/hugo-theme.css?1536883882" rel="stylesheet">
+	<link href="/css/style-griddb.css?1536883882" rel="stylesheet">
+    
+      <link href="/css/theme-griddb.css?1536883882" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1536883882"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<header id="header2"> 
+        
+        
+    <div class="header-inner">
+        
+        <div id="collapse-button" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+        
+        
+    
+        <span class="switch-mobile" style="display:none">
+            <div class="ui dropdown">
+              <input name="Language">
+              <i class="dropdown icon"></i>
+              <div class="default text"><i class="us flag"> </i></div>
+              <div class="menu">
+                <a class="item ja" href="javascript:void(0)" id="ja"> <i class="jp flag"></i>Japanese</a>
+                <a class="item" data-value="Japanese"><i class="us flag"></i>English</a>
+              </div>
+            </div>   
+        </span>
+    
+    
+    
+    <nav id="nav" class="main-navigation" role="navigation" style="">
+    <div class="menu-topnav-container"><ul id="menu-topnav" class="nav-menu"><li id="menu-item-581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-581"><a href="/en/docs/documents/1-1_what-is-griddb.php">Docs</a></li>
+    <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="/en/faq/">FAQ</a></li>
+    <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="/en/community/">Community</a></li>
+    <li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="/en/forums/forum/top/">Forum</a></li>
+    <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="/en/blog">Blog</a></li>
+
+    </ul>
+
+    </div>
+        
+        <li style="list-style:none"><a href="/en/downloads/"> <span class="download-button4" style="display:none"> DOWNLOAD</span></a></li>
+        
+            
+           <a href="/en/downloads/"> <span id="download-button"> Download</span></a>
+      
+        
+    </nav>
+    
+         
+    </div>        
+        
+    </header>
+    
+    
+  </head>
+  <body class="" data-url="/administration/6-3_installing/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+          <img src="/images/logo.png"></img>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1536883882"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1536883882"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1536883882"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-1_what-is-griddb/" title="What is GridDB" class="dd-item ">
+        <a href="/introduction/1-1_what-is-griddb/">
+        What is GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-2_griddb-edition/" title="GridDB Editions" class="dd-item ">
+        <a href="/introduction/1-2_griddb-edition/">
+        GridDB Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          <b>2. </b>Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-1_system-requirements/" title="System Requirements" class="dd-item ">
+        <a href="/getting-started/2-1_system-requirements/">
+        System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-2_installation/" title="Installation" class="dd-item ">
+        <a href="/getting-started/2-2_installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-3_run-your-first-griddb-node-cluster/" title="Run your First GridDB Node/Cluster" class="dd-item ">
+        <a href="/getting-started/2-3_run-your-first-griddb-node-cluster/">
+        Run your First GridDB Node/Cluster
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-4_run-a-sample-java-client-app/" title="Run a Sample Java Client App" class="dd-item ">
+        <a href="/getting-started/2-4_run-a-sample-java-client-app/">
+        Run a Sample Java Client App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/technical-architecture-and-guide/" title="Technical Architecture and Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/technical-architecture-and-guide/">
+          <b>3. </b>Technical Architecture and Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-1_griddb-technical-overview/" title="GridDB Technical Overview" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-1_griddb-technical-overview/">
+        GridDB Technical Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-2_key-container-model/" title="Key Container Model" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-2_key-container-model/">
+        Key Container Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-3_tql/" title="TQL" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-3_tql/">
+        TQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-4_crud-operations/" title="CRUD Operations" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-4_crud-operations/">
+        CRUD Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-5_transactions-and-acid/">
+        Transactions and ACID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-6_indexes/" title="Indexes" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-6_indexes/">
+        Indexes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-7_storage-architecture/" title="Storage Architecture" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-7_storage-architecture/">
+        Storage Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-8_replication-distribution/" title="Replication &amp; Distribution" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-8_replication-distribution/">
+        Replication &amp; Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-9_sharding/" title="Sharding" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-9_sharding/">
+        Sharding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/data-modeling/" title="Data Modeling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/data-modeling/">
+          <b>4. </b>Data Modeling
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics" class="dd-item ">
+        <a href="/data-modeling/4-1_data-modeling-basics/">
+        Data Modeling Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-2_data-modeling-using-griddb/" title="Data Modeling Using GridDB" class="dd-item ">
+        <a href="/data-modeling/4-2_data-modeling-using-griddb/">
+        Data Modeling Using GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-3_modeling-relationships/" title="" class="dd-item ">
+        <a href="/data-modeling/4-3_modeling-relationships/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/" title="" class="dd-item ">
+        <a href="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/" title="Sample Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/">
+          <b>5. </b>Sample Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/basics/">
+          <b>5.1 </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-10_collection-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-10_collection-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-11_collection-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-11_collection-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-12_timeseries-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-12_timeseries-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-13_timeseries-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-13_timeseries-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-14_timeseries-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-14_timeseries-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-15_timeseries-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-15_timeseries-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-16_tql/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-16_tql/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-17_trigger-rest/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-17_trigger-rest/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-18_trigger-jms/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-18_trigger-jms/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-19_multiput/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-19_multiput/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-1_introduction/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-1_introduction/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-20_multiquery/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-20_multiquery/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-21_multiget/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-21_multiget/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-2_griddb-basics/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-2_griddb-basics/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-3_prepare-server/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-3_prepare-server/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-4_prepare-client/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-4_prepare-client/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-5_connection/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-5_connection/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-6_container-schema/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-6_container-schema/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-7_container-create-drop/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-7_container-create-drop/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-8_collection-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-8_collection-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-9_collection-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-9_collection-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/administration/" title="Administration" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/administration/">
+          <b>6. </b>Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-1_supported-os-platforms-and-system-requirements/" title="Supported OS, Platforms and System Requirements" class="dd-item ">
+        <a href="/administration/6-1_supported-os-platforms-and-system-requirements/">
+        Supported OS, Platforms and System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling" class="dd-item ">
+        <a href="/administration/6-2_sizing-and-scaling/">
+        Sizing and Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-3_installing/" title="Installing" class="dd-item active">
+        <a href="/administration/6-3_installing/">
+        Installing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" class="dd-item ">
+        <a href="/administration/6-4_upgrading-the-editions/">
+        Upgrading Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases" class="dd-item ">
+        <a href="/administration/6-5_migration-from-other-databases/">
+        Migration from Other Databases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" class="dd-item ">
+        <a href="/administration/6-6_cluster-administration-operations/">
+        Cluster Administration &amp; Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" class="dd-item ">
+        <a href="/administration/6-7_monitoring-troubleshooting/">
+        Monitoring &amp; Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-8_tuning/" title="Tuning" class="dd-item ">
+        <a href="/administration/6-8_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/drivers-and-integrators/" title="Drivers &amp; Integrators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/drivers-and-integrators/">
+          <b>7. </b>Drivers &amp; Integrators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-1_jdbc-connector/" title="JDBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-1_jdbc-connector/">
+        JDBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-2_odbc-connector/" title="ODBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-2_odbc-connector/">
+        ODBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-3_hadoop-and-spark-connector/" title="Hadoop and Spark Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-3_hadoop-and-spark-connector/">
+        Hadoop and Spark Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-4_grafana-connector/" title="" class="dd-item ">
+        <a href="/drivers-and-integrators/7-4_grafana-connector/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>GridDB</a> > <a href='/administration/'>Administration</a> > Installing
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#on-premises">On Premises</a>
+<ul>
+<li><a href="#post-installation-checks">Post-installation checks</a></li>
+<li><a href="#setting-up-an-administrator-user">Setting up an Administrator User</a></li>
+<li><a href="#setting-the-environment-dependent-parameters">Setting the environment-dependent parameters</a></li>
+<li><a href="#network-environment-settings-essential">Network environment settings (essential)</a></li>
+<li><a href="#cluster-name-settings-essential">Cluster name settings (essential)</a></li>
+<li><a href="#settings-of-other-cluster-configuration-methods">Settings of other cluster configuration methods</a></li>
+<li><a href="#installation-and-setup-client">Installation and setup (client)</a></li>
+<li><a href="#installing-the-client-library">Installing the client library</a></li>
+<li><a href="#setting-up-a-library">Setting up a library</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Installing</h1>
+          
+
+        
+
+
+
+
+<p>The following chapter will discuss how to install GridDB (Standard Edition). Instructions for installing on the cloud can be found <a href="#online">below</a></p>
+
+<h3 id="on-premises">On Premises</h3>
+
+<p>The following 3 RPM packages are needed when installing a GridDB node. Place these packages anywhere in the machine.</p>
+
+<p>Package name</p>
+
+<p>File name</p>
+
+<p>Description</p>
+
+<p>griddb-server</p>
+
+<p>griddb-server-X.X.X-linux.x86_64.rpm</p>
+
+<p>The start and other commands for the GridDB node module and server are included.</p>
+
+<p>griddb-client</p>
+
+<p>griddb-client-X.X.X-linux.x86_64.rpm</p>
+
+<p>One set of operating commands except start node is included.</p>
+
+<p>griddb-docs</p>
+
+<p>griddb-docs-X.X.X-linux.x86_64.rpm</p>
+
+<p>GridDB manual and program samples are included.</p>
+
+<p>*: X.X.X is the GridDB version</p>
+
+<p>Install using the rpm command as a root user.</p>
+
+<p>$ su
+# rpm -Uvh griddb-server-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+User gsadm and group gridstore have been registered.
+GridStore uses new user and group.
+   1:griddb-server                 ########################################### [100%]
+# rpm -Uvh griddb-client-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+User and group has already been registered correctly.
+GridStore uses existing user and group.
+   1:griddb-client                  ########################################### [100%]
+# rpm -Uvh griddb-docs-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+   1:griddb-docs                   ########################################### [100%]</p>
+
+<p>When you install the package, the following group and user are created in the OS. This OS user is set as the operator of GridDB.</p>
+
+<p>Group</p>
+
+<p>User</p>
+
+<p>Home directory</p>
+
+<p>gridstore</p>
+
+<p>gsadm</p>
+
+<p>/var/lib/gridstore</p>
+
+<p>The following environment variables are defined in this gsadm user.</p>
+
+<p>Environment variables</p>
+
+<p>Value</p>
+
+<p>Meaning</p>
+
+<p>GS_HOME</p>
+
+<p>/var/lib/gridstore</p>
+
+<p>gsadm/GridDB home directory</p>
+
+<p>GS_LOG</p>
+
+<p>/var/lib/gridstore/log</p>
+
+<p>Event log file output directory</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>These environment variables are used in the operating commands described later.</li>
+<li>The password of the gsadm user has not been set. With the root user privilege, please set the password appropriately.
+
+<ul>
+<li>Some of the functions of the operation tools may be necessary.</li>
+</ul></li>
+</ul>
+
+<p>In addition, when the GridDB node module is installed, services that are executed automatically upon startup of the OS will be registered.</p>
+
+<p>Service name</p>
+
+<p>Run level</p>
+
+<p>gridstore</p>
+
+<p>3,4,5</p>
+
+<p>The service registration data can be checked with the following command.</p>
+
+<p># /sbin/chkconfig &ndash;list | grep gridstore
+gridstore 0:off 1:off 2:off 3:on 4:on 5:on 6:off</p>
+
+<p>The GridDB node will be started automatically by this service during OS startup.</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>Services will not start automatically immediately after installation.</li>
+</ul>
+
+<p>To stop auto startup of a service, use the command below.</p>
+
+<p># /sbin/chkconfig gridstore off</p>
+
+<p>See the chapter on services in “GridDB Operational Management Guide” (<a href="https://griddb.net/en/docs/manuals/v3.1/GridDB_OperationGuide.html">GridDB_OperationGuide.html</a>) for details of the services.</p>
+
+<h4 id="post-installation-checks">Post-installation checks</h4>
+
+<p>Check the directory configuration of the installed GridDB node.</p>
+
+<p>First, check that the GridDB home directory, and related directory and files have been created.</p>
+
+<p><strong>GridDB home directory</strong></p>
+
+<p>/var/lib/gridstore/                      # GridDB home directory
+                   admin/                # integrated operational management GUI home directory
+                   backup/               # backup directory
+                   conf/                 # definition file directory
+                        gs_cluster.json  # cluster definition file
+                        gs_node.json     # node definition file
+                        password         # user definition file
+                   data/                 # database file directory
+                   log/                  # log directory</p>
+
+<p>Confirm with the following command.</p>
+
+<p>$ ls /var/lib/gridstore/
+admin backup conf data log</p>
+
+<p>Next, check that the installation directory has been created</p>
+
+<p><strong>Installation directory</strong></p>
+
+<p>/usr/gridstore-X.X.X/              # installation directory
+                     Fixlist.pdf   # revision record
+                     Readme.txt    # release instructions
+                     bin/          # operation command, module directory
+                     conf/         # definition file sample directory
+                     docs/         # document directory
+                     etc/
+                     lib/          # library directory
+                     license/      # license directory
+                     prop/         # configuration file directory
+                     web/          # integrated operational management GUI file directory</p>
+
+<p>Confirm with the following command.</p>
+
+<p>$ ls /usr/gridstore-X.X.X/
+Fixlist.pdf Readme.txt bin conf etc lib license prop web</p>
+
+<p>All documents have been compressed into a single ZIP file. Decompress and refer to the documents where appropriate as shown below.</p>
+
+<p>$ cd /usr/gridstore-X.X.X/docs
+$ unzip griddb-documents-X.X.X.zip</p>
+
+<p>In addition, the following symbolic links are created as shown below in a few directories under the installation directory for greater convenience.</p>
+
+<p>$ ls /usr/gridstore/
+conf lib prop web</p>
+
+<p>Lastly, confirm the version of the server module installed with the following command.</p>
+
+<p>$ gsserver &ndash;version
+GridDB version X.X.X build XXXXX</p>
+
+<p><strong>Points to note</strong></p>
+
+<p>The following files are created when GridDB is operated according to the following procedure.</p>
+
+<p>[Database file]</p>
+
+<p>/var/lib/gridstore/                     # GridDB home directory
+                   data/                # database file directory
+                        gs_log_n_m.log  # log file to record the transaction logs (n, m are numbers)
+                        gs_cp_n_p.dat   # checkpoint file to record data regularly (n, p are numbers)</p>
+
+<p>[Log file]</p>
+
+<p>/var/lib/gridstore/                            # GridDB home directory
+                   log/                        # log directory
+                       gridstore-%Y%m%d-n.log  # event log file
+                       gs_XXXX.log             # operation tool log file</p>
+
+<p>The directory where these files are created can be changed by the parameter settings in the node definition file.</p>
+
+<p>*: gs_XXXX is an operation tool name. (Example: gs_startnode.log)</p>
+
+<h4 id="setting-up-an-administrator-user">Setting up an Administrator User</h4>
+
+<p>Administrator privilege is used for authentication related matter within the nodes and clusters. Creation date of administrator user is saved in the <strong>user definition file</strong>. The default file is as shown below.</p>
+
+<ul>
+<li>/var/lib/gridstore/conf/password</li>
+</ul>
+
+<p>The default user below exists immediately after installation.</p>
+
+<p>User</p>
+
+<p>Password</p>
+
+<p>Example of proper use</p>
+
+<p>admin</p>
+
+<p>admin</p>
+
+<p>For authentication of operation administrator user, operation commands</p>
+
+<p>system</p>
+
+<p>manager</p>
+
+<p>For authentication of application user, client execution</p>
+
+<p>Administrator user information including the above-mentioned default users can be changed using the user administration command in the operating commands.</p>
+
+<p>Command</p>
+
+<p>Function</p>
+
+<p>gs_adduser</p>
+
+<p>Add an administrator user</p>
+
+<p>gs_deluser</p>
+
+<p>Delete an administrator user</p>
+
+<p>gs_passwd</p>
+
+<p>Change the password of administrator user</p>
+
+<p>Change the password as shown below when using a default user. The password is encrypted during registration.</p>
+
+<p>$ gs_passwd admin
+Password: (enter password)
+Retype password: (re-enter password)</p>
+
+<p>When adding a new administrator user except a default user, the user name has to start with gs#.</p>
+
+<p>One or more ASCII alphanumeric characters and the underscore sign “_” can be used after gs#.</p>
+
+<p>An example on adding a new administrator user is shown below.</p>
+
+<p>$ gs_adduser gs#newuser
+Password: (enter password)
+Retype password: (re-enter password)</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>A GridDB administrator user is different from the OS user gsadm created during installation.</li>
+<li>A change in the administrator user information using a user administration command becomes valid when a node is restarted.</li>
+<li>In order to use it for authentication purposes in the client, the same user data needs to be registered in all the nodes. Copy the <strong>user definition file</strong> and make sure the same user data can be referred to in all the nodes.</li>
+<li>Execute the operating command as a gsadm user.</li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>See “GridDB Operational Management Guide” (<a href="https://griddb.net/en/docs/manuals/v3.1/GridDB_OperationGuide.html">GridDB_OperationGuide.html</a>) for details of the user management commands.</li>
+</ul>
+
+<h4 id="setting-the-environment-dependent-parameters">Setting the environment-dependent parameters</h4>
+
+<p>After installation, the following settings are necessary in order to operate GridDB.</p>
+
+<ol>
+<li>Network environment settings</li>
+<li>Cluster name settings</li>
+</ol>
+
+<p>GridDB settings are configured by editing 2 types of definition files.</p>
+
+<ul>
+<li>Cluster definition file (gs_cluster.json)</li>
+<li>Node definition file (gs_node.json)</li>
+</ul>
+
+<p>The cluster definition file defines the parameters that are common in the entire clusters.</p>
+
+<p>The node definition files define the parameters for the different settings in each node.</p>
+
+<p>These definition file samples are installed as follows.</p>
+
+<p>/usr/gridstore/                     # installation directory
+               conf/                # definition file directory
+                    gs_cluster.json # cluster definition file sample
+                    gs_node.json    # node definition file sample</p>
+
+<p>In a new installation, the same files are also placed in the conf directory under the GridDB home directory.</p>
+
+<p>/var/lib/gridstore/                     # GridDB home directory
+                   conf/                # definition file directory
+                        gs_cluster.json # (edited) cluster definition file
+                        gs_node.json    # (edited) node definition file</p>
+
+<p>During operations, edit these definition files.</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>When the GridDB version is upgraded, compare the newly installed sample with these definition files to adequately reflect the parameters added.</li>
+<li>A cluster definition file defines the parameters that are common in the entire clusters. As a result, the settings must be the same in all of the nodes in the cluster. Nodes with different settings will get an error upon joining the cluster and prevented from participating in the cluster. Further details will be explained in the later chapter.</li>
+</ul>
+
+<h4 id="network-environment-settings-essential">Network environment settings (essential)</h4>
+
+<p>First, set up the network environment.</p>
+
+<p>An explanation of the recommended configuration method in an environment that allows a multicast to be used is given below. In an environment which does not allow a multicast to be used, or an environment in which communications between fellow nodes cannot be established in a multicast, a cluster configuration method other than the multicast method has to be used. See <a href="#other_mode">Other cluster configuration method settings</a> for the details.</p>
+
+<p>The configuration items can be broadly divided as follows.</p>
+
+<ul>
+<li>(1) Address information serving as an interface with the client</li>
+<li>(2) Address information for cluster administration and processing</li>
+<li>(3) Address information serving as an interface with the JDBC client (GridDB Advanced Edition only)</li>
+</ul>
+
+<p>Although these settings need to be set to match the environment, basically default settings will also work.</p>
+
+<p>However, an IP address derived in reverse from the host name of the machine needs to be an address that allows it to be connected from the outside regardless of whether the GridDB cluster has a multiple node configuration or a single node configuration.</p>
+
+<p>Normally, this can be set by stating the host name and the corresponding IP address in the /etc/hosts file.</p>
+
+<p><strong>/etc/hosts setting</strong></p>
+
+<p>First, check with the following command to see whether the setting has been configured. If the IP address appears, it means that the setting has already been configured.</p>
+
+<p>$ hostname -i
+192.168.11.10</p>
+
+<p>The setting has not been configured in the following cases.</p>
+
+<p>$ hostname -i
+hostname: no address corresponding to name</p>
+
+<p>In addition, a loopback address that cannot be connected from the outside may appear.</p>
+
+<p>$ hostname -i
+127.0.0.1</p>
+
+<p>If the setting has not been configured or if a loopback address appears, use the following example as a reference to configure /etc/hosts. The host name and IP address, and the appropriate network interface card (NIC) differ depending on the environment.</p>
+
+<ol>
+<li><p>Check the host name and IP address.</p>
+
+<p>$ hostname
+GS_HOST
+$ ip route | grep eth0 | cut -f 12 -d &ldquo; &rdquo; | tr -d &ldquo;\n&rdquo;
+192.168.11.10</p></li>
+
+<li><p>Add the IP address and corresponding host name checked by the root user to the /etc/hosts file.</p>
+
+<p>192.168.11.10 GS_HOST</p></li>
+
+<li><p>Check that the settings have been configured correctly.</p>
+
+<p>$ hostname -i
+192.168.11.10</p></li>
+</ol>
+
+<p>*If the displayed setting remains the same as before, it means that a setting higher in priority is given in the /etc/hosts file. Change the priority order appropriately.</p>
+
+<p>Proceed to the next setting after you have confirmed that /etc/hosts has been configured correctly.</p>
+
+<p><strong>(1) Address information serving as an interface with the client</strong></p>
+
+<p>In the address data serving as an interface with the client, there are configuration items in the <strong>node definition file</strong> and <strong>cluster definition file</strong>.</p>
+
+<p><strong>Node definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/transaction/serviceAddress</p>
+
+<p>string</p>
+
+<p>Reception address of transaction process</p>
+
+<p>/transaction/servicePort</p>
+
+<p>string</p>
+
+<p>Reception port of transaction process</p>
+
+<p>/system/serviceAddress</p>
+
+<p>string</p>
+
+<p>Connection address of operation command</p>
+
+<p>/system/servicePort</p>
+
+<p>string</p>
+
+<p>Connection port of operation command</p>
+
+<p>The reception address and port of transaction processes are used to connect individual client to the nodes in the cluster, and to request for the transaction process from the cluster. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.</p>
+
+<p>The connection address and port of the operating command are used to specify the process request destination of the operation command, as well as the repository information of the integrated operation control GUI.</p>
+
+<p>These reception/connection addresses need not be set so long as there is no need to use/separate the use of multiple interfaces.</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/transaction/notificationAddress</p>
+
+<p>string</p>
+
+<p>Interface address between client and cluster</p>
+
+<p>/transaction/notificationPort</p>
+
+<p>string</p>
+
+<p>Interface port between client and cluster</p>
+
+<p>A multi-cast address and port are specified in the interface address between a client and cluster. This is used by a GridDB cluster to send cluster information to its clients and for the clients to send processing requests via the API to the cluster. See the description of GridStoreFactory class/method in “GridDB API reference” (<a href="http://www.griddb.org/griddb_nosql/manual/GridDB_API_Reference.html">GridDB_API_Reference.html</a>) for details.</p>
+
+<p>It is also used as a connection destination address of the export/import tool, or as repository data of the integrated operation control GUI.</p>
+
+<p><strong>(2) Address information for cluster administration and processing</strong></p>
+
+<p>In the address data for a cluster to autonomously perform cluster administration and processing, there are configuration items in the <strong>node definition file</strong> and <strong>cluster definition file</strong>. These addresses are used internally by GridDB to exchange the heart beat (live check among clusters) and information among the clusters. These settings are not necessary so long as the address used is not duplicated with other systems on the same network or when using multiple network interface cards.</p>
+
+<p><strong>Node definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/cluster/serviceAddress</p>
+
+<p>string</p>
+
+<p>Reception address used for cluster administration</p>
+
+<p>/cluster/servicePort</p>
+
+<p>string</p>
+
+<p>Reception port used for cluster administration</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/cluster/notificationAddress</p>
+
+<p>string</p>
+
+<p>Multicast address for cluster administration</p>
+
+<p>/cluster/notificationPort</p>
+
+<p>string</p>
+
+<p>Multicast port for cluster administration</p>
+
+<ul>
+<li>Although a synchronization process is carried out with a replica when the cluster configuration is changed, a timeout time can be set for the process.
+
+<ul>
+<li>/sync/timeoutInterval</li>
+</ul></li>
+</ul>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>An address or port that is not in use except in GridDB has to be set.</li>
+<li>The same address can be set for the node definition file gs_node.json /transaction/serviceAddress, /system/serviceAddress, and /cluster/serviceAddress for operations to be performed. If a machine has multiple network interfaces, the bandwidth can be increased by assigning a separate address to each respective interface.</li>
+</ul>
+
+<p>The following settings are applicable in the GridDB Advanced Edition only.</p>
+
+<p><strong>(3) Address information serving as an interface with the JDBC client</strong></p>
+
+<p>In the address data serving as an interface with the JDBC/ODBC client, there are configuration items in the <strong>node definition file</strong> and <strong>cluster definition file</strong>.</p>
+
+<p><strong>Node definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/sql/serviceAddress</p>
+
+<p>string</p>
+
+<p>Reception address for JDBC/ODBC client connection</p>
+
+<p>/sql/servicePort</p>
+
+<p>int</p>
+
+<p>Reception port for JDBC/ODBC client connection</p>
+
+<p>The reception address and port of JDBC/ODBC client connection are used to connect JDBC/ODBC individual client to the nodes in the cluster, and to access the cluster data in SQL. This address is used when configuring a cluster with a single node, but in the case where multiple nodes are present through API, the address is not used explicitly.</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/sql/notificationAddress</p>
+
+<p>string</p>
+
+<p>Address for multi-cast distribution to JDBC/ODBC client</p>
+
+<p>/sql/notificationPort</p>
+
+<p>int</p>
+
+<p>Multicast port to JDBC/ODBC client</p>
+
+<p>The address and port used for multicast distribution to a JDBC/ODBC client are used for the GridDB cluster to notify the JDBC/ODBC client of cluster data, and to access the cluster data in SQL with the JDBC/ODBC client.</p>
+
+<p>Refer to Annex <a href="#param_list">Parameter List</a> for the other parameters and default values.</p>
+
+<h4 id="cluster-name-settings-essential">Cluster name settings (essential)</h4>
+
+<p>Set the name of the cluster to be composed by the target nodes in advance. The name set will be checked to see if it matches the value specified in the command to compose the cluster. As a result, this prevents a different node and cluster from being composed when there is an error in specifying the command.</p>
+
+<p>The cluster name is specified in the following configuration items of the <strong>cluster definition file</strong>.</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/cluster/clusterName</p>
+
+<p>string</p>
+
+<p>Name of cluster to create</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>Node failed to start with default value (&ldquo;&rdquo;).</li>
+<li>A unique name on the sub-network is recommended.</li>
+<li>A cluster name is a string composed of 1 or more ASCII alphanumeric characters and the underscore “_”. However, the first character cannot be a number. The name is also not case-sensitive. In addition, it has to be specified within 64 characters.</li>
+</ul>
+
+<h4 id="settings-of-other-cluster-configuration-methods">Settings of other cluster configuration methods</h4>
+
+<p>In an environment which does not allow the multicast method to be used, configure the cluster using the fixed list method or provider method. An explanation of the respective network settings in the fixed list method and provider method is given below.</p>
+
+<p>When using the multicast method, proceed to <a href="#tune-up_params">Setting the tuning parameters</a>.</p>
+
+<p><strong>(1) Fixed list method</strong></p>
+
+<p>When a fixed address list is given to start a node, the list is used to compose the cluster.</p>
+
+<p>When composing a cluster using the fixed list method, configure the parameters in the cluster definition file.</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/cluster/notificationMember</p>
+
+<p>string</p>
+
+<p>Specify the address list when using the fixed list method as the cluster configuration method.</p>
+
+<p>A configuration example of a cluster definition file is shown below.</p>
+
+<p>{
+                             :
+                             :
+    &ldquo;cluster&rdquo;:{
+        &ldquo;clusterName&rdquo;:&ldquo;yourClusterName&rdquo;,
+        &ldquo;replicationNum&rdquo;:2,
+        &ldquo;heartbeatInterval&rdquo;:&ldquo;5s&rdquo;,
+        &ldquo;loadbalanceCheckInterval&rdquo;:&ldquo;180s&rdquo;,
+        &ldquo;notificationMember&rdquo;: [
+            {
+                &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10010},
+                &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10020},
+                &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10040},
+                &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10001},
+                &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:20001}
+            },
+            {
+                &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10010},
+                &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10020},
+                &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10040},
+                &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10001},
+                &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:20001}
+            },
+            {
+                &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10010},
+                &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10020},
+                &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10040},
+                &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10001},
+                &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:20001}
+            }
+        ]
+    },
+                             :
+                             :
+}</p>
+
+<p><strong>(2) Provider method</strong></p>
+
+<p>Get the address list supplied by the address provider to perform cluster configuration.</p>
+
+<p>When composing a cluster using the provider method, configure the parameters in the cluster definition file.</p>
+
+<p><strong>Cluster definition file</strong></p>
+
+<p>Parameters</p>
+
+<p>Data type</p>
+
+<p>Meaning</p>
+
+<p>/cluster/notificationProvider/url</p>
+
+<p>string</p>
+
+<p>Specify the URL of the address provider when using the provider method as the cluster configuration method.</p>
+
+<p>/cluster/notificationProvider/updateInterval</p>
+
+<p>string</p>
+
+<p>Specify the interval to get the list from the address provider. Specify a value that is 1s or higher and less than 2^31s.</p>
+
+<p>A configuration example of a cluster definition file is shown below.</p>
+
+<p>{
+                             :
+                             :
+    &ldquo;cluster&rdquo;:{
+        &ldquo;clusterName&rdquo;:&ldquo;yourClusterName&rdquo;,
+        &ldquo;replicationNum&rdquo;:2,
+        &ldquo;heartbeatInterval&rdquo;:&ldquo;5s&rdquo;,
+        &ldquo;loadbalanceCheckInterval&rdquo;:&ldquo;180s&rdquo;,
+        &ldquo;notificationProvider&rdquo;:{
+            &ldquo;url&rdquo;:&ldquo;<a href="http://example.com/notification/provider&quot;">http://example.com/notification/provider&quot;</a>,
+            &ldquo;updateInterval&rdquo;:&ldquo;30s&rdquo;
+        }
+    },
+                             :
+                             :
+}</p>
+
+<p>The address provider can be configured as a Web service or as a static content. The specifications below need to be satisfied.</p>
+
+<ul>
+<li>Compatible with the GET method.</li>
+<li>When accessing the URL, the node address list of the cluster containing the cluster definition file in which the URL is written is returned as a response.
+
+<ul>
+<li>Response body: Same JSON as the contents of the node list specified in the fixed list method</li>
+<li>Response header: Including Content-Type:application/json</li>
+</ul></li>
+</ul>
+
+<p>An example of a response sent from the address provider is as follows.</p>
+
+<p>$ curl <a href="http://example.com/notification/provider">http://example.com/notification/provider</a>
+[
+    {
+        &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10010},
+        &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10020},
+        &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10040},
+        &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:10001},
+        &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.44&rdquo;, &ldquo;port&rdquo;:20001}
+    },
+    {
+        &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10010},
+        &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10020},
+        &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10040},
+        &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:10001},
+        &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.45&rdquo;, &ldquo;port&rdquo;:20001}
+    },
+    {
+        &ldquo;cluster&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10010},
+        &ldquo;sync&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10020},
+        &ldquo;system&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10040},
+        &ldquo;transaction&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:10001},
+        &ldquo;sql&rdquo;: {&ldquo;address&rdquo;:&ldquo;172.17.0.46&rdquo;, &ldquo;port&rdquo;:20001}
+    }
+]</p>
+
+<p>[Memo]</p>
+
+<ul>
+<li>Specify the serviceAddress and servicePort of the node definition file in each module (cluster,sync etc.) for each address and port.</li>
+<li>sql items are required in the GridDB Advanced Edition only.</li>
+<li>Set either the /cluster/notificationAddress, /cluster/notificationMember, /cluster/notificationProvider in the cluster definition file to match the cluster configuration method used.</li>
+<li>See “GridDB technical reference” (<a href="https://griddb.net/en/docs/manuals/v3.1/GridDB_TechnicalReference.html">GridDB_TechnicalReference.html</a>) for details on the cluster configuration method.</li>
+</ul>
+
+<h4 id="installation-and-setup-client">Installation and setup (client)</h4>
+
+<p>This chapter explains the installation procedure of the client library. There are 2 types of client library in GridDB, Java and C. Only the Java version supports the GridDB Advanced Edition NewSQL interface.</p>
+
+<p><strong>[Points to note]</strong></p>
+
+<ul>
+<li>When choosing the OS package group during OS installation, please choose the minimum version or lower.
+
+<ul>
+<li>Software Development WorkStation</li>
+</ul></li>
+</ul>
+
+<p>The following needs to be installed as a Java language development environment.</p>
+
+<ul>
+<li>Oracle Java 6/7/8</li>
+<li>Only 64-bit Java is supported by the GridDB Advanced Edition NewSQL interface.</li>
+</ul>
+
+<p>$ java -version
+java version &ldquo;1.7.0_79&rdquo;
+Java&trade; SE Runtime Environment (build 1.7.0_79-b15)
+Java HotSpot&trade; 64-Bit Server VM (build 24.79-b02, mixed mode)</p>
+
+<h4 id="installing-the-client-library">Installing the client library</h4>
+
+<p>The following 4 RPM packages are required for the installation of the GridDB client library. Place the packages anywhere in the machine.</p>
+
+<p>The griddb-newsql package is only available in GridDB Advanced Edition.</p>
+
+<p>Package name</p>
+
+<p>File name</p>
+
+<p>Description</p>
+
+<p>griddb-java_lib</p>
+
+<p>griddb-java_lib-X.X.X-linux.x86_64.rpm</p>
+
+<p>Java library is included.</p>
+
+<p>(/usr/share/java/gridstore.jar)</p>
+
+<p>griddb-c_lib</p>
+
+<p>griddb-c_lib-X.X.X-linux.x86_64.rpm</p>
+
+<p>C header file and library are included.</p>
+
+<p>(/usr/include/gridstore.h and /usr/lib64/libgridstore.so)</p>
+
+<p>griddb-docs</p>
+
+<p>griddb-docs-X.X.X-linux.x86_64.rpm</p>
+
+<p>GridDB manual and program samples are included.</p>
+
+<p>griddb-newsql</p>
+
+<p>griddb-newsql-X.X.X-linux.x86_64.rpm</p>
+
+<p>NewSQL interface library is included.</p>
+
+<p>Install using the rpm command as a root user.</p>
+
+<p>$ su
+# rpm -ivh griddb-c_lib-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+   1:griddb-c_lib                  ########################################### [100%]
+# rpm -ivh griddb-java_lib-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+   1:griddb-java_lib               ########################################### [100%]
+# rpm -ivh griddb-docs-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+   1:griddb-docs                   ########################################### [100%]
+# rpm -ivh griddb-newsql-X.X.X-linux.x86_64.rpm
+Under preparation&hellip;           ########################################### [100%]
+   1:griddb-newsql                 ########################################### [100%]</p>
+
+<h4 id="setting-up-a-library">Setting up a library</h4>
+
+<p>When the Java version of the client is used, add the client library to CLASSPATH.</p>
+
+<p>$ export CLASSPATH=${CLASSPATH}:/usr/share/java/gridstore.jar</p>
+
+<p>When the C version is used instead, add the client library to LD_LIBRARY_PATH.</p>
+
+<p>$ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib64</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1536883882"></script>
+    <script src="/js/jquery.sticky.js?1536883882"></script>
+    <script src="/js/featherlight.min.js?1536883882"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1536883882"></script>
+    <script src="/js/highlight.pack.js?1536883882"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1536883882"></script>
+    <script src="/js/learn.js?1536883882"></script>
+    <script src="/js/hugo-learn.js?1536883882"></script>
+
+    <link href="/mermaid/mermaid.css?1536883882" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1536883882"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

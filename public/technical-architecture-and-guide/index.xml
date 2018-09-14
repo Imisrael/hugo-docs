@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical Architecture and Guide on GridDB</title>
+    <link>http://example.org/technical-architecture-and-guide/</link>
+    <description>Recent content in Technical Architecture and Guide on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/technical-architecture-and-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GridDB Technical Overview</title>
+      <link>http://example.org/technical-architecture-and-guide/3-1_griddb-technical-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-1_griddb-technical-overview/</guid>
+      <description>NoSQL databases are a relatively modern phenomenon that have permeated throughout the industry very quickly. The current data models being used most frequently in NoSQL databases are: Key-Value, Document, Graph, and Column-Oriented. With the advent of GridDB, a new structure is being introduced: Key-Container. Every method of organizing data has its own set of merits and features. In this chapter, we will address some of these merits.
+Scaling In addition to supplying the 3 Vs (volume, variety, velocity) required in big data solutions, GridDB also provides data reliability/availability.</description>
+    </item>
+    
+    <item>
+      <title>Key Container Model</title>
+      <link>http://example.org/technical-architecture-and-guide/3-2_key-container-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-2_key-container-model/</guid>
+      <description>GridDB data adopts a Key-Container data model that is expanded from a Key-Value model. Data is stored in a &amp;ldquo;container&amp;rdquo;, which acts similarly to a RDB table. In fact, a container can be considered a RDB table for easier understanding and to help conceptualizing. When accessing data in GridDB, the model allows data to be short-listed with a key thanks to its Key-Value database structure, allowing processing to be carried out at the highest speed.</description>
+    </item>
+    
+    <item>
+      <title>TQL</title>
+      <link>http://example.org/technical-architecture-and-guide/3-3_tql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-3_tql/</guid>
+      <description>TQL in NoSQL products and SQL-92 compliant SQL in NewSQL products are supported as database access languages.
+ What is TQL?
+A simplified version of SQL prepared for NoSQL products. The support range is limited to functions such as search, aggregation, etc., using a container as a unit. TQL is employed by using the client API (Java, C language) of NoSQL products.
+ What is SQL?
+SQL stands for &amp;ldquo;Structured Query Language&amp;rdquo;, and it has been the standard query language for RDMS systems for years.</description>
+    </item>
+    
+    <item>
+      <title>CRUD Operations</title>
+      <link>http://example.org/technical-architecture-and-guide/3-4_crud-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-4_crud-operations/</guid>
+      <description>CRUD operations are present in all databases as the foundational actions that allow the most basic of actions. GridDB&amp;rsquo;s CRUD operations are most easily executed by using its very own Java-based API, though it does also accept TQL.
+What is CRUD?
+ Create: writing new data (containers, rows, etc) Read: viewing, or &amp;ldquo;pulling up&amp;rdquo; any data Update: to modify already existing data (as opposed to writing NEW data) to reflect changes Delete: erasing or removing data from a container or row  Native API GridDB can be accessed using TQL or through its native API.</description>
+    </item>
+    
+    <item>
+      <title>Transactions and ACID</title>
+      <link>http://example.org/technical-architecture-and-guide/3-5_transactions-and-acid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-5_transactions-and-acid/</guid>
+      <description>GridDB supports transaction processing on a container basis and ACID (atomictity, consistency, isolation, durability) characteristics which are generally known as transaction characteristics. The supporting functions in a transaction process are explained in detail below.
+What is ACID?
+Relational Databases long-reign of dominance can be somewhat attributed to them being ACID compliant. Financial transactions, for example, need ACID compliance to function with a degree of confidence and usability. Here is a more detailed look at each component of ACID:</description>
+    </item>
+    
+    <item>
+      <title>Indexes</title>
+      <link>http://example.org/technical-architecture-and-guide/3-6_indexes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-6_indexes/</guid>
+      <description>Indexes exist to make queries and searches more efficient. When dealing with very large data sets, these indexes save on precious time and resources. A condition-based search can be processed quickly by creating an index for the columns of a container. There are 3 types of index - hash index (HASH), tree index (TREE) and space index (SPATIAL). A hash index is used in an equivalent-value search when searching with a query in a container.</description>
+    </item>
+    
+    <item>
+      <title>Storage Architecture</title>
+      <link>http://example.org/technical-architecture-and-guide/3-7_storage-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-7_storage-architecture/</guid>
+      <description>GridDB Nodes GridDB is operated by clusters which are composed of multiple nodes. To access the database from an application system, the nodes have to be started up and the cluster has to be constituted (cluster service is executed). A cluster is formed and cluster service is started when a number of nodes specified by the user joins the cluster. Cluster service will not be started and access from the application will not be possible until all nodes constituting a cluster have joined the cluster.</description>
+    </item>
+    
+    <item>
+      <title>Replication &amp; Distribution</title>
+      <link>http://example.org/technical-architecture-and-guide/3-8_replication-distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-8_replication-distribution/</guid>
+      <description>Data replicas are created on a partition basis in accordance with the number of replications set by the user. A process can be continued non-stop even when a node failure occurs by maintaining replicas of the data among scattered nodes. In the client API, when a node failure is detected, the client automatically switches access to another node where the replica is maintained.
+The default number of replications is 2, allowing data to be replicated twice when operating in a cluster configuration with multiple nodes.</description>
+    </item>
+    
+    <item>
+      <title>Sharding</title>
+      <link>http://example.org/technical-architecture-and-guide/3-9_sharding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-9_sharding/</guid>
+      <description>System expansion can be carried out online with a scale-out approach. As a result, a system in operation can be supported without having to stop it as it will support the increasing volume of data as the system grows.
+In the scale-out approach, data is arranged in an appropriate manner according to the load of the system in the nodes built into the system. As GridDB will optimize the load balance, the application administrator does not need to worry about the data arrangement.</description>
+    </item>
+    
+  </channel>
+</rss>

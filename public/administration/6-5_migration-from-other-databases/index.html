@@ -1,0 +1,5204 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.48" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Migration from Other Databases :: GridDB</title>
+
+    
+    <link href="/css/nucleus.css?1536883882" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1536883882" rel="stylesheet">
+    <link href="/css/hybrid.css?1536883882" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1536883882" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1536883882" rel="stylesheet">
+    <link href="/css/auto-complete.css?1536883882" rel="stylesheet">
+    <link href="/css/theme.css?1536883882" rel="stylesheet">
+	<link href="/css/hugo-theme.css?1536883882" rel="stylesheet">
+	<link href="/css/style-griddb.css?1536883882" rel="stylesheet">
+    
+      <link href="/css/theme-griddb.css?1536883882" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1536883882"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<header id="header2"> 
+        
+        
+    <div class="header-inner">
+        
+        <div id="collapse-button" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+        
+        
+    
+        <span class="switch-mobile" style="display:none">
+            <div class="ui dropdown">
+              <input name="Language">
+              <i class="dropdown icon"></i>
+              <div class="default text"><i class="us flag"> </i></div>
+              <div class="menu">
+                <a class="item ja" href="javascript:void(0)" id="ja"> <i class="jp flag"></i>Japanese</a>
+                <a class="item" data-value="Japanese"><i class="us flag"></i>English</a>
+              </div>
+            </div>   
+        </span>
+    
+    
+    
+    <nav id="nav" class="main-navigation" role="navigation" style="">
+    <div class="menu-topnav-container"><ul id="menu-topnav" class="nav-menu"><li id="menu-item-581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-581"><a href="/en/docs/documents/1-1_what-is-griddb.php">Docs</a></li>
+    <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="/en/faq/">FAQ</a></li>
+    <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="/en/community/">Community</a></li>
+    <li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="/en/forums/forum/top/">Forum</a></li>
+    <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="/en/blog">Blog</a></li>
+
+    </ul>
+
+    </div>
+        
+        <li style="list-style:none"><a href="/en/downloads/"> <span class="download-button4" style="display:none"> DOWNLOAD</span></a></li>
+        
+            
+           <a href="/en/downloads/"> <span id="download-button"> Download</span></a>
+      
+        
+    </nav>
+    
+         
+    </div>        
+        
+    </header>
+    
+    
+  </head>
+  <body class="" data-url="/administration/6-5_migration-from-other-databases/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+          <img src="/images/logo.png"></img>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1536883882"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1536883882"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1536883882"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-1_what-is-griddb/" title="What is GridDB" class="dd-item ">
+        <a href="/introduction/1-1_what-is-griddb/">
+        What is GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-2_griddb-edition/" title="GridDB Editions" class="dd-item ">
+        <a href="/introduction/1-2_griddb-edition/">
+        GridDB Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          <b>2. </b>Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-1_system-requirements/" title="System Requirements" class="dd-item ">
+        <a href="/getting-started/2-1_system-requirements/">
+        System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-2_installation/" title="Installation" class="dd-item ">
+        <a href="/getting-started/2-2_installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-3_run-your-first-griddb-node-cluster/" title="Run your First GridDB Node/Cluster" class="dd-item ">
+        <a href="/getting-started/2-3_run-your-first-griddb-node-cluster/">
+        Run your First GridDB Node/Cluster
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-4_run-a-sample-java-client-app/" title="Run a Sample Java Client App" class="dd-item ">
+        <a href="/getting-started/2-4_run-a-sample-java-client-app/">
+        Run a Sample Java Client App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/technical-architecture-and-guide/" title="Technical Architecture and Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/technical-architecture-and-guide/">
+          <b>3. </b>Technical Architecture and Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-1_griddb-technical-overview/" title="GridDB Technical Overview" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-1_griddb-technical-overview/">
+        GridDB Technical Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-2_key-container-model/" title="Key Container Model" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-2_key-container-model/">
+        Key Container Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-3_tql/" title="TQL" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-3_tql/">
+        TQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-4_crud-operations/" title="CRUD Operations" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-4_crud-operations/">
+        CRUD Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-5_transactions-and-acid/">
+        Transactions and ACID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-6_indexes/" title="Indexes" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-6_indexes/">
+        Indexes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-7_storage-architecture/" title="Storage Architecture" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-7_storage-architecture/">
+        Storage Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-8_replication-distribution/" title="Replication &amp; Distribution" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-8_replication-distribution/">
+        Replication &amp; Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-9_sharding/" title="Sharding" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-9_sharding/">
+        Sharding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/data-modeling/" title="Data Modeling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/data-modeling/">
+          <b>4. </b>Data Modeling
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics" class="dd-item ">
+        <a href="/data-modeling/4-1_data-modeling-basics/">
+        Data Modeling Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-2_data-modeling-using-griddb/" title="Data Modeling Using GridDB" class="dd-item ">
+        <a href="/data-modeling/4-2_data-modeling-using-griddb/">
+        Data Modeling Using GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-3_modeling-relationships/" title="" class="dd-item ">
+        <a href="/data-modeling/4-3_modeling-relationships/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/" title="" class="dd-item ">
+        <a href="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/" title="Sample Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/">
+          <b>5. </b>Sample Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/basics/">
+          <b>5.1 </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-10_collection-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-10_collection-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-11_collection-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-11_collection-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-12_timeseries-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-12_timeseries-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-13_timeseries-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-13_timeseries-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-14_timeseries-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-14_timeseries-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-15_timeseries-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-15_timeseries-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-16_tql/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-16_tql/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-17_trigger-rest/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-17_trigger-rest/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-18_trigger-jms/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-18_trigger-jms/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-19_multiput/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-19_multiput/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-1_introduction/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-1_introduction/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-20_multiquery/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-20_multiquery/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-21_multiget/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-21_multiget/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-2_griddb-basics/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-2_griddb-basics/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-3_prepare-server/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-3_prepare-server/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-4_prepare-client/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-4_prepare-client/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-5_connection/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-5_connection/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-6_container-schema/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-6_container-schema/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-7_container-create-drop/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-7_container-create-drop/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-8_collection-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-8_collection-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-9_collection-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-9_collection-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/administration/" title="Administration" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/administration/">
+          <b>6. </b>Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-1_supported-os-platforms-and-system-requirements/" title="Supported OS, Platforms and System Requirements" class="dd-item ">
+        <a href="/administration/6-1_supported-os-platforms-and-system-requirements/">
+        Supported OS, Platforms and System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling" class="dd-item ">
+        <a href="/administration/6-2_sizing-and-scaling/">
+        Sizing and Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-3_installing/" title="Installing" class="dd-item ">
+        <a href="/administration/6-3_installing/">
+        Installing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" class="dd-item ">
+        <a href="/administration/6-4_upgrading-the-editions/">
+        Upgrading Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases" class="dd-item active">
+        <a href="/administration/6-5_migration-from-other-databases/">
+        Migration from Other Databases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" class="dd-item ">
+        <a href="/administration/6-6_cluster-administration-operations/">
+        Cluster Administration &amp; Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" class="dd-item ">
+        <a href="/administration/6-7_monitoring-troubleshooting/">
+        Monitoring &amp; Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-8_tuning/" title="Tuning" class="dd-item ">
+        <a href="/administration/6-8_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/drivers-and-integrators/" title="Drivers &amp; Integrators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/drivers-and-integrators/">
+          <b>7. </b>Drivers &amp; Integrators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-1_jdbc-connector/" title="JDBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-1_jdbc-connector/">
+        JDBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-2_odbc-connector/" title="ODBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-2_odbc-connector/">
+        ODBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-3_hadoop-and-spark-connector/" title="Hadoop and Spark Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-3_hadoop-and-spark-connector/">
+        Hadoop and Spark Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-4_grafana-connector/" title="" class="dd-item ">
+        <a href="/drivers-and-integrators/7-4_grafana-connector/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>GridDB</a> > <a href='/administration/'>Administration</a> > Migration from Other Databases
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#what-is-a-container-data-file">What is a container data file?</a></li>
+<li><a href="#what-is-an-export-execution-data-file">&gt; What is an export execution data file?</a></li>
+</ul></li>
+<li><a href="#configuration-of-export-import-execution-environment">Configuration of export/import execution environment</a>
+<ul>
+<li><a href="#rpm-package-installation">RPM package installation</a></li>
+<li><a href="#property-file-settings">Property file settings</a></li>
+<li><a href="#export-function">Export function</a></li>
+<li><a href="#specify-process-target">Specify process target</a></li>
+<li><a href="#specifying-the-output-format-of-a-row-data-file">Specifying the output format of a row data file</a></li>
+<li><a href="#specifying-the-output-configuration-of-container-data-file">Specifying the output configuration of container data file</a></li>
+<li><a href="#specifying-the-output-destination">Specifying the output destination</a></li>
+<li><a href="#specifying-the-number-parallel-executions">Specifying the number parallel executions</a></li>
+<li><a href="#test-execution-function">Test execution function</a></li>
+<li><a href="#error-continuation-specification">Error continuation specification</a></li>
+<li><a href="#other-functions">Other functions</a></li>
+</ul></li>
+<li><a href="#import-function">Import function</a>
+<ul>
+<li><a href="#types-of-import-original-data-source">Types of import original data source</a></li>
+<li><a href="#importing-from-a-container-data-file">Importing from a container data file</a></li>
+<li><a href="#importing-from-rdb">Importing from RDB</a>
+<ul>
+<li><a href="#table-association">Table association</a></li>
+</ul></li>
+<li><a href="#data-registration-option">Data registration option</a></li>
+<li><a href="#error-continuation-specification-1">Error continuation specification</a></li>
+<li><a href="#other-functions-1">Other functions</a></li>
+<li><a href="#command-option-specifications">Command/option specifications</a></li>
+<li><a href="#export-command">Export command</a></li>
+<li><a href="#import-command">Import command</a></li>
+<li><a href="#format-of-container-data-file">Format of container data file</a></li>
+<li><a href="#metadata-file">Metadata file</a></li>
+<li><a href="#row-data-file-binary-data-file">Row data file (binary data file)</a></li>
+<li><a href="#row-data-file-csv-data-file">Row data file (CSV data file)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Migration from Other Databases</h1>
+          
+
+        
+
+
+
+
+<p>In the GridDB export/import tools, to recover a database from local damages or the database migration process, save/recovery functions are provided in the database and container unit.</p>
+
+<p>In addition, there is also a function to link up with RDBs, and RDB data can also be collected and registered in GridDB.</p>
+
+<h3 id="overview">Overview</h3>
+
+<p>In a GridDB cluster, container data is automatically arranged in a node within a cluster. The user does not need to know how the data is arranged in the node (data position transmission).</p>
+
+<p>There is also no need to be aware of the arrangement position in data extraction and registration during export/import as well. The export/import configuration is as follows.</p>
+
+<p><img src="img/expimp.png" alt=" Export/import configuration" /></p>
+
+<p>Export/import configuration</p>
+
+<p>[Export]</p>
+
+<p>(1) Save the container and row data of a GridDB cluster in the file below. A specific container can also be exported by specifying its name.</p>
+
+<ul>
+<li>Container data file
+
+<ul>
+<li>Save GridDB container data and row data.</li>
+<li>There are 2 types of format available, one for saving data in a container unit and the other for consolidating and saving data in multiple containers.</li>
+</ul></li>
+<li>Export execution data file
+
+<ul>
+<li>Save the data during export execution. This is required to directly recover exported data in a GridDB cluster.</li>
+</ul></li>
+</ul>
+
+<p>　*See the various sections in “<a href="#container_datafile">What is a container data file</a>” and “<a href="#export_execinfo">What is an export execution data file</a>” for details.</p>
+
+<p>[Import]</p>
+
+<p>(2) Import the <em>container</em> and <em>export execution</em> data file, and recover the container and row data in GridDB. A specific container data can also be imported as well.</p>
+
+<p>(3) Import container data files created by the user, and register the container and row data.</p>
+
+<p>(4) Import RDB (Oracle) data, then correlate and register data from an RDB table to a GridDB container.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>An exported container data file has the same format as the container data file created by a user.</li>
+</ul>
+
+<h3 id="what-is-a-container-data-file">What is a container data file?</h3>
+
+<p>A container data file is composed of a metadata file and a row data file.</p>
+
+<p>A metadata file is a file in the json format which contains the container type and schema, the index set up, and the trigger data.</p>
+
+<p>There are 2 types of row data files, one of which is the CSV data file, in which container data is stored in the CSV format, and the other is the binary data file in which data is stored in a zip format.</p>
+
+<ul>
+<li>CSV data file:
+
+<ul>
+<li>Stores container row data as CSV data. Readability is high, and the file can be imported and edited with generic tools.</li>
+<li>If the row data is a specific data type such as BLOB, spatial data, array etc., the data is stored in an external object file while only the external object file name is stored in a CSV data file. An external object file is created for each row data.</li>
+</ul></li>
+<li>Binary data file:
+
+<ul>
+<li>Stores container row data in the zip format. Can be created with the command gs_export only. The file size is smaller when compared to a CSV data file. In addition, the number of files can be reduced as there is no need to create external object files. However, binary data files are not readable and cannot be edited.</li>
+</ul></li>
+</ul>
+
+<p>See <a href="#container_dataform">Format of a container data file</a> for details of the contents described in each file.</p>
+
+<p>In addition, there are 2 types of container data files as shown below depending on the number of containers to be listed.</p>
+
+<ul>
+<li>Single container configuration: holds 1 container data file for each container.</li>
+<li>Multi-container configuration: consolidates multiple containers into a single container data file.</li>
+</ul>
+
+<p>Hereinafter, container data files of various configurations will be written as single container data file and multi-container data file.</p>
+
+<p><img src="https://www.griddb.net/en/docs/img/cDatafile.png" alt="Container data file" /></p>
+
+<p>Container data file</p>
+
+<p>When a large container is specified as a single container data file and export is executed, management becomes troublesome as a large amount of metadata files and row data files are created. On the other hand, even if a large container is specified as a multi-container data file, only 1 metadata file and row data file is output.</p>
+
+<p>Therefore, it is recommended that these 2 configurations be used differently depending on the application.</p>
+
+<p>A single container data file is used in the following cases.</p>
+
+<ul>
+<li>When you want to output the current data of a specific container to perform data analysis.</li>
+<li>When you want to create many containers with the same schema as existing containers to register data.</li>
+</ul>
+
+<p>A multi-container data file is used in the following cases.</p>
+
+<ul>
+<li>You want to backup a specific container group.</li>
+<li>You want to move a database to a different GridDB cluster.</li>
+</ul>
+
+<h3 id="what-is-an-export-execution-data-file">&gt; What is an export execution data file?</h3>
+
+<p>Data such as the export date and time, the number of containers, the container name etc. are saved in the export execution data file. This file is required to directly recover exported data in a GridDB cluster.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The file name of an export execution data file is gs_export.json.</li>
+<li>Delete the export execution data if an exported container data file is edited manually. A registration error may occur due to discrepancies in the data.</li>
+<li>When importing without any export execution data file, it is essential that the container metadata file be specified. If not, the import will fail.</li>
+<li>When importing from an RDB, the export execution data file is not required.</li>
+</ul>
+
+<h2 id="configuration-of-export-import-execution-environment">Configuration of export/import execution environment</h2>
+
+<p>The following settings are required to execute an export/import command.</p>
+
+<h3 id="rpm-package-installation">RPM package installation</h3>
+
+<p>The client package containing the export/import functions and Java library package need to be installed.</p>
+
+<p>[Example]</p>
+
+<p># rpm -Uvh griddb-client-X.X.X-linux.x86_64.rpm
+Under preparation&hellip; ########################################### [100%]
+User and group has already been registered correctly.
+GridDB uses existing user and group.
+   1:griddb-client       ########################################### [100%]</p>
+
+<p># rpm -Uvh griddb-java_lib-X.X.X-linux.x86_64.rpm
+Under preparation&hellip; ########################################### [100%]
+   1:griddb-java_lib     ########################################### [100%]</p>
+
+<h3 id="property-file-settings">Property file settings</h3>
+
+<p>Configuration file is /usr/gridstore/prop/gs_expimp.properties. Set together with the GridDB cluster configuration used as a gsadm user.</p>
+
+<p>gs_expimp.properties contains the following settings.</p>
+
+<p>Parameters　</p>
+
+<p>Default</p>
+
+<p>Description</p>
+
+<p>mode</p>
+
+<p>MULTICAST</p>
+
+<p>Specify the type of connection method. If the method is not specified, the method used will be the multicast method.</p>
+
+<p>MULTICAST ・・ multicast method</p>
+
+<p>FIXED_LIST・・ fixed list method</p>
+
+<p>PROVIDER ・・ provider method</p>
+
+<p>hostAddress</p>
+
+<p>239.0.0.1</p>
+
+<p>Specify the /transaction/notificationAddress in the GridDB cluster definition file (gs_cluster.json). Multicast address used by the export/import tool to access a cluster.</p>
+
+<p>hostPort</p>
+
+<p>31999</p>
+
+<p>Specify the /transaction/notificationPort in the GridDB cluster definition file (gs_cluster.json). Port of multicast address used by the export/import tool to access a cluster.</p>
+
+<p>notificationProvider.url</p>
+
+<p>-</p>
+
+<p>Specify /cluster/notificationProvide/url of the cluster definition file (gs_cluster.json) when using the provider method to connect.</p>
+
+<p>notificationMember</p>
+
+<p>-</p>
+
+<p>Specify /cluster/notificationMember/transaction of the cluster definition file (gs_cluster.json) when using the fixed list method to connect. Connect address and port with a “:” in the description. For multiple nodes, link them up using commas.</p>
+
+<p>Example)192.168.0.100:10001,192.168.0.101:10001</p>
+
+<p>restAddress</p>
+
+<p>127.0.0.1</p>
+
+<p>Specify /system/listenerAddress of the GridDB node definition file (gs_node.json). Parameter for future expansion.</p>
+
+<p>restPort</p>
+
+<p>10040</p>
+
+<p>Specify /system/listenerPort of the GridDB node definition file (gs_node.json). Parameter for future expansion.</p>
+
+<p>clusterName</p>
+
+<p>defaultCluster</p>
+
+<p>Specify the cluster name specified when forming a cluster name configuration (specify with the gs_joincluster command).</p>
+
+<p>logPath</p>
+
+<p>/var/lib/gridstore/log</p>
+
+<p>Specify the directory to output the error data and other logs when using the export/import tools Log is output in gs_expimp-YYYYMMDD0.log under the directory.</p>
+
+<p>getCount</p>
+
+<p>1000</p>
+
+<p>Specify the number of rows as a unit to export data when exporting container data with the export tool. When the numerical value becomes larger, the buffer for data processing becomes larger. If the row size is small, raise the numerical value, and if the row size is large, lower the numerical value. The parameter affects the fetch performance for data export.</p>
+
+<p>commitCount</p>
+
+<p>1000</p>
+
+<p>Specify the number of rows as a unit to register data when registering container data with the import tool. When the numerical value becomes larger, the buffer for data processing gets larger too. If the row size is small, raise the numerical value, and if the row size is large, lower the numerical value. The parameter affects the registration performance for data import.</p>
+
+<p>transactionTimeout</p>
+
+<p>2147483647</p>
+
+<p>Specify the time allowed from the start until the end of a transaction. When registering or acquiring a large volume of data, a large numerical value matching the data volume needs to be set. A maximum value has been specified for processing a large volume of data by default. (Unit: second)</p>
+
+<p>failoverTimeout</p>
+
+<p>10</p>
+
+<p>Specify the failover time to repeat retry starting from the time a node failure is detected. This is also used in the timeout of the initial connection to the cluster subject to import/export. Increase the value when performing a process such as registering/acquiring a large volume of data in/from a container. (Unit: second)</p>
+
+<p>rdb.driver</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the path of the JDBC driver.</p>
+
+<p>rdb.kind</p>
+
+<p>oracle</p>
+
+<p>Parameter for RDB linkage. Specify the type of RDB &ldquo;oracle&rdquo;.</p>
+
+<p>rdb.host</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the host name (address)) used to access RDB.</p>
+
+<p>rdb.port</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the port no. used to access RDB.</p>
+
+<p>rdb.database</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the applicable database name.</p>
+
+<p>rdb.url</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the connection character string when accessing the RDB. Specify a set of the host, port and database or the url in the RDB connection destination.</p>
+
+<p>rdb.user</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the user to access the target database.</p>
+
+<p>rdb.password</p>
+
+<p>-</p>
+
+<p>Parameter for RDB linkage. Specify the password of the user to access the target database.</p>
+
+<p>load.input.threadNum</p>
+
+<p>1</p>
+
+<p>Parameter for RDB linkage. Specify the number of processing threads to collect from RDB. (1-64)</p>
+
+<p>load.output.threadNum</p>
+
+<p>1</p>
+
+<p>Parameter for RDB linkage. Specify the number of processing threads to register in GridDB. (1-16)</p>
+
+<p>storeBlockSize</p>
+
+<p>64KB</p>
+
+<p>Specify the block size specified in a GridDB cluster. The upper limit of the string data and binary data that can be registered in GridDB differs depending on the block size.</p>
+
+<p>maxJobBufferSize</p>
+
+<p>512</p>
+
+<p>Specify the buffer size (in MB) to hold collection and registration data.</p>
+
+<p>*<strong><em>[Memo]</em></strong>*</p>
+
+<ul>
+<li>When the GridDB version is upgraded, the definition file (/usr/gridstore/prop/gs_expimp.properties) is replaced by a new one.<br />
+The following message appears when upgrading the version.<br />
+<code>Warning: /usr/gridstore-X.X.X/prop/gs_expimp.properties has been saved as /usr/gridstore-X.X.X/prop/gs_expimp.properties.rpmsave.</code><br />
+The symbolic link of the directory referenced as the GridDB installation directory (_usr/gridstore) will be compared to the newly installed directory, and the definition file used will be saved as gs<em>expimp.properties.rpmsave in the location where the file was actually located (/usr/gridstore-X.X.X/prop</em>).<br />
+Compare the definition file used (/usr/gridstore-X.X.X/prop/gs_expimp.properties.rpmsave) and the newly installed definition file (/usr/gridstore-X.X.X/prop/gs_expimp.properties) and reflect the changes appropriately.<br />
+(gridstore-X.X.X is the GridDB version installed before version upgrade. )</li>
+</ul>
+
+<h3 id="export-function">Export function</h3>
+
+<p>The options that can be specified when using the export function is explained here (based on usage examples of the export function).</p>
+
+<h3 id="specify-process-target">Specify process target</h3>
+
+<p>1. How to specify a container</p>
+
+<p>There are 3 ways to remove a container from a GridDB cluster, by specifying all the containers of the cluster: by specifying the database, and by specifying the container individually.</p>
+
+<p>　　(1) Specify all containers</p>
+
+<ul>
+<li>The entirety of the containers and databases in the cluster are applicable.</li>
+<li>&ndash;Specify all options.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;all -u admin/admin</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executed by a general user, all the containers in the database (in which the general user has access rights to) will be applicable.
+
+<br />
+<br /></li>
+</ul>
+
+<p>　　(2) Specify the database</p>
+
+<ul>
+<li>All containers in the specified database are applicable.</li>
+<li>Specify the database name with the &ndash;db option. Multiple database names can also be specified repeatedly by separating the names with a &ldquo; &rdquo; (blank).</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;db db001 db002 -u admin/admin　//Enumerate DB name. Container in the DB</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executed by a general user, an error will occur if the general user has no access rights to the database specified in &ndash;db. (&ndash;Process can continue if executed by force. )
+
+<br />
+<br /></li>
+</ul>
+
+<p>　　(3) Specify container individually</p>
+
+<ul>
+<li>Specified container is applicable.</li>
+<li>Enumerate the container name.
+
+<ul>
+<li>&ndash;Separate multiple container names with &ldquo; &rdquo; (blank) and specify them repeatedly in the container option.</li>
+</ul></li>
+<li>Regular expression and specification of the container name
+
+<ul>
+<li>&ndash;Specify part of the container name with a container option. A Java regular expression can be used in the specification. Enclose the specification with &ldquo;&rdquo; (double quotation) when specifying with a regular expression.</li>
+</ul></li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;container c001 c002 -u admin/admin　//Enumerate container name
+$ gs_export &ndash;container &ldquo;^c0&rdquo; -u admin/admin　　　//regular expression specification: Specify containers whose container name start with c0</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Specify the name of the applicable database with the &ndash;prefixdb option in the &ndash;container option. If the &ndash;prefixdb option is omitted, the container in the default connection destination database “public” will be processed.</li>
+<li>When executed by a general user, an error will occur if the general user has no access rights to the database where the container specified in the &ndash;container option is stored. (&ndash;Process can continue if executed by force. )</li>
+</ul>
+
+<p>2. How to specify a row</p>
+
+<p>Rows located by a search query can be exported by specifying a search query to remove rows from a container.<br />
+All rows stored in a container which has not been specified in the search query will be exported.</p>
+
+<p>　Specify search query</p>
+
+<ul>
+<li><p>Specify the definition file describing the container name and search query with the&ndash;filterfile option. Describe the search query and its corresponding container in the definition file.</p>
+
+<p>[Example] Execution example</p>
+
+<p>$ gs_export -c c001 c002 -u admin/admin &ndash;filterfile filter1.txt
+　　
+$ gs_export &ndash;all -u admin/admin &ndash;filterfile filter2.txt</p>
+
+<p>[Example] Description of definition file</p>
+
+<p>^cont_month     :select * where time &gt; 100  [return]
+^cont_minutes_.*:select * where flag = 0    [return]
+cont_year2014   :select * where timestamp &gt; TIMESTAMP(&lsquo;2014-05-21T08:00:00.000Z&rsquo;) [line return]</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Specify the container with a regular Java expression. Example: If &ldquo;container 1&rdquo; is used in the description, all containers containing container 1 will be relevant (container 10, container 12 etc.). If fully consistent, use &ldquo;^container1$&rdquo; in the description.</li>
+<li>Among the containers subject to export which are specified in the &ndash;all and -c options, all rows in containers which the definition described in the definition file does not apply to will be exported.</li>
+<li>To describe the container and search query in 1 line, use a &ldquo;:&rdquo; for the separation.</li>
+<li>If the container applies to multiple definitions, the definition described at the beginning will be applied.</li>
+<li>Describe the file in the UTF-8 format.</li>
+<li>Execute the export test function to check whether the description of the definition file is correct.</li>
+</ul>
+
+<p>3. How to specify user access rights</p>
+
+<p>Information on GridDB cluster users and their access rights can also be exported. Use the following command when migrating all data in the cluster.</p>
+
+<ul>
+<li><p>Specify a &ndash;all option and &ndash;acl option. However, only user information of a general user can be exported. Migrate the data on the administrator user separately (copy the user definition file).</p>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;all -u admin/admin &ndash;acl</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The command needs to be executed by an administrator user.</li>
+</ul>
+
+<h3 id="specifying-the-output-format-of-a-row-data-file">Specifying the output format of a row data file</h3>
+
+<p>A CSV data file or binary data file can be specified as the output format of a row data file.</p>
+
+<p>　Output in the CSV data file</p>
+
+<ul>
+<li>Execute an export command without specifying the &ndash;binary option</li>
+</ul>
+
+<p>　Output in the binary data file</p>
+
+<ul>
+<li>Specify the &ndash;binary [file size upper limit] option. Split the binary data file using the specified file size upper limit and export the file. The file size upper limit is specified in Mbytes. If the file size upper limit is not specified, the size upper limit will be 10 Mbytes. The maximum file size that can be specified is 1,000 Mbytes.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export -c c001 c002 -u admin/admin &ndash;binary
+　　
+$ gs_export &ndash;all -u admin/admin &ndash;binary 500       //divide binary data file into 500 Mbytes each</p>
+
+<h3 id="specifying-the-output-configuration-of-container-data-file">Specifying the output configuration of container data file</h3>
+
+<p>A single container data file to create container data file in a container unit, or a multi-container data file to output all containers to a single container data file can be specified.</p>
+
+<p>　Output using a single container data file</p>
+
+<ul>
+<li>If the &ndash;out option is not specified during export, the data will be output using a single container data file.</li>
+</ul>
+
+<p>　Output using a multi-container data file</p>
+
+<ul>
+<li>It specifies the &ndash;out [file identifier] option. By specifying the file identifier, the file name of the meta data file will become “file identifier_properties.json”. The file will be named “file identifier.csv” or “file identifier.mc” if the multi-container data file format is CSV, or binary respectively.</li>
+<li>If the file identifier is omitted in the &ndash;out [file identifier] option, a multi-container data file with time-stamp will be created. (Example: 20131031_155015_810_properties.json, 20131031_155015_810.csv)</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export -c c001 c002 -u admin/admin &ndash;out test
+　　
+$ gs_export &ndash;all -u admin/admin &ndash;out           //file is created with the date</p>
+
+<h3 id="specifying-the-output-destination">Specifying the output destination</h3>
+
+<p>The directory of the container data file can be specified as the output destination. Create a directory if the specified directory does not exist. If the directory is not specified, data will be output to the current directory when a command is executed. Use the -d option to specify the output destination.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;all -u admin/admin &ndash;out test -d /tmp</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>A directory which already contains container data files cannot be specified.</li>
+</ul>
+
+<h3 id="specifying-the-number-parallel-executions">Specifying the number parallel executions</h3>
+
+<p>Get data to access a cluster in parallel with the export tool. If a command is executed in parallel on a cluster composed of multiple nodes, data can be acquired at a high speed as each node is accessed in parallel.</p>
+
+<ul>
+<li><p>Execute in parallel for the specified number by specifying the &ndash;parallel option. When executed in parallel, the export data will be divided by the same number as the number of parallel executions. A range from 2 to 32 can be specified.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The &ndash;parallel option can be specified only if the binary format (&ndash;binary option) and multi-container format (&ndash;out option) are specified.
+<br /></li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;all -u admin/admin &ndash;binary &ndash;out &ndash;parallel 4</p></li>
+</ul>
+
+<h3 id="test-execution-function">Test execution function</h3>
+
+<p>Before exporting a container, the user can assess whether the export can be carried out correctly.</p>
+
+<p>　Specify test execution</p>
+
+<ul>
+<li>The export sequence can be checked simply by adding the &ndash;test option to the export command. No files will be created as the process simply checks but does not actually acquire any data.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export -u admin/admin &ndash;all &ndash;test
+Start export
+[Test mode]
+Output directory: /var/lib/gridstore/export
+Number of target containers: 5</p>
+
+<p>container_2 : 10
+container_3 : 10
+container_0 : 10
+container_1 : 10
+container_4 : 10</p>
+
+<p>Number of target containers: 5 (Success: 5 Failure: 0)
+Export terminated</p>
+
+<h3 id="error-continuation-specification">Error continuation specification</h3>
+
+<p>Export processing can be continued even if a row data acquisition error were to occur due to a lock conflict with another application.</p>
+
+<ul>
+<li><p>By specifying the &ndash;force option, the export process will continue from the row data of the next container even if an acquisition error were to occur in a row data.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_export &ndash;all -u admin/admin &ndash;force</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Regarding containers which skipped the processing due to an error, data will still be output to the container data file even though it is not complete. However, import processing will not be carried out as the data will not be recorded in the export execution file. After resolving the row data acquisition error, execute the export process for the relevant container again.</li>
+</ul></li>
+</ul>
+
+<h3 id="other-functions">Other functions</h3>
+
+<p><strong>Detailed settings in the operating display</strong></p>
+
+<ul>
+<li>&ndash;Processing details can be displayed by specifying the verbose option.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export -c &ldquo;^c0&rdquo; -u admin/admin &ndash;verbose
+Start export
+Connected to server:/239.0.0.15:31999
+Container name list obtained from Gridstore
+Container name list subject to processing acquired
+File name list to store container data created
+Get row data from container data
+Start CSV format row data file output process: /data/exp/c001.csv
+Process the next container: c001
+Start CSV format row data file output process: /data/exp/c002.csv
+Process the next container: c002
+Start CSV format row data file output process: /data/exp/c010.csv
+Process the next container: c010
+Start CSV format row data file output process: /data/exp/c003.csv
+Process the next container: c003
+Acquisition of row data completed
+Output container data to metadata file
+Start metadata file creation process for a single container
+Metadata file creation process for a single container terminated
+Output of container data to metadata file completed</p>
+
+<p>Export completed</p>
+
+<p>Success: 4  Failure: 0</p>
+
+<p><strong>Detailed settings in the operating display</strong></p>
+
+<ul>
+<li>The processing status display can be suppressed by specifying the silent option.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_export -c c002 c001 -u admin/admin &ndash;silent</p>
+
+<h2 id="import-function">Import function</h2>
+
+<p>Import the CSV file format or RDB data into the GridDB cluster.</p>
+
+<h3 id="types-of-import-original-data-source">Types of import original data source</h3>
+
+<p>The input data sources used by the import tool are as follows.</p>
+
+<ul>
+<li>Container data file: container data saved by the export function, or container data created by the user</li>
+
+<li><p>RDB: Oracle database data</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>RDB(Oracle) can specify only input destination with the import tool. It cannot specify an output destination with the export tool.</li>
+</ul></li>
+</ul>
+
+<h3 id="importing-from-a-container-data-file">Importing from a container data file</h3>
+
+<p>Use the export function to import data in the exported data format into a GridDB cluster.</p>
+
+<p>Specify process target</p>
+
+<p>　Processing data to be imported from the container data file needs to be specified.</p>
+
+<p>1. How to specify a container</p>
+
+<p>There are 3 ways to specify a container, by specifying all the containers in the container data file, by specifying the database, and by specifying the container individually.</p>
+
+<p>(1) Specify all containers</p>
+
+<ul>
+<li>All containers in all the databases are applicable.</li>
+<li>&ndash;Specify all options.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;all -u admin/admin</p>
+
+<p>(2) Specify the database</p>
+
+<ul>
+<li>All containers in the specified database are applicable.</li>
+<li>Enumerate a database name
+
+<ul>
+<li>Specify multiple database names repeatedly by separating the names with a &ldquo; &rdquo; (blank) in the &ndash;db option.</li>
+</ul></li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;db db001 db002 -u admin/admin　//Enumerate DB name. Container in the DB</p>
+
+<p>　　(3) Specify container individually</p>
+
+<ul>
+<li>Specified container is applicable.</li>
+<li>Enumerate the container name.
+
+<ul>
+<li>&ndash;Separate multiple container names with &ldquo; &rdquo; (blank) and specify them repeatedly in the container option.</li>
+</ul></li>
+<li>Regular expression and specification of the container name
+
+<ul>
+<li>&ndash;Specify part of the container name with a container option. A Java regular expression can be used in the specification. Enclose the specification with &ldquo;&rdquo; (double quotation) when specifying with a regular expression.</li>
+</ul></li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;container c001 c002 -u admin/admin　//Enumerat container name
+$ gs_import &ndash;container &ldquo;^c0&rdquo; -u admin/admin　　　//regular expression specification: Specify containers whose container name start with c0</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When executed by an administrator user, a database will be created if the database does not exist at the storage location of the container.</li>
+<li>When executed by a general user, an error will occur if the general user has no access rights, or if the database does not exist at the storage location of the container. (&ndash;Process can continue if executed by force. )</li>
+<li>Specify the name of the applicable database with the &ndash;prefixdb option if the &ndash;container option is specified. If the &ndash;prefixdb option is omitted, the default connection destination database “public” will be processed.</li>
+<li>When importing NewSQL data, import the data with no NewSQL data existing in the database at the import destination. An error will occur if NewSQL data exists in the database at the import destination. (If the &ndash;force option is appended, the NewSQL data causing the error will be skipped)</li>
+<li>Check the container list stored in the container data file with the &ndash;list option.</li>
+</ul>
+
+<p>If data is exported by specifying the &ndash;acl option in the export function, data on the user and access rights can also be imported. Use the following command when migrating all data in the cluster.</p>
+
+<ul>
+<li><p>Specify a &ndash;all option and &ndash;acl option.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;all &ndash;acl -u admin/admin</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The command needs to be executed by an administrator user.</li>
+<li>Use the following command when migrating all data in the cluster. Execute the command without any databases and general users existing in the migration destination.</li>
+</ul>
+
+<p>Specifying the container data file</p>
+
+<p>Specify the container data file. If this is not specified, the file in the current directory will be processed.</p>
+
+<ul>
+<li><p>Specify the directory</p>
+
+<ul>
+<li>Specify the directory address of the container data file using the –d optional command.</li>
+<li>If the directory is not specified, the container data file in the current directory will be chosen instead.
+<br /></li>
+</ul>
+
+<p>[Example]</p>
+
+<p>//Specify all containers from the current directory
+$ gs_import &ndash;all -u admin/admin</p>
+
+<p>//Specify multiple databases from a specific directory
+$ gs_import &ndash;db db002 db001 -u admin/admin -d /data/expdata</p>
+
+<p>//Specify multiple containers from a specific directory
+$ gs_import -c c002 c001 -u min/admin -d /data/expdata</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>If the export execution data file (gs_export.json) does not exist, e.g. because the container data file is created manually; specify the metadata file (XXXXX_properties.json) using the -f optional command. If the -f command is not specified, import will fail</li>
+</ul>
+
+<p>Get container list</p>
+
+<p>The container data can be checked before it is imported.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;list
+Display the container list of the export data file.
+DB            Name              Type            FileName
+public        container_2       COLLECTION      container_2.csv
+public        container_0       TIME_SERIES     container_0.csv
+public        container_1       COLLECTION      container_1.csv
+userDB        container_1_db    TIME_SERIES     userDB.container_1_db.csv
+userDB        container_2_db    TIME_SERIES     userDB.container_2_db.csv
+userDB container_0_db COLLECTION userDB.container_0_db.csv</p>
+
+<h3 id="importing-from-rdb">Importing from RDB</h3>
+
+<p>The following section explains how to import RDB (Oracle) data to a GridDB cluster.</p>
+
+<p>Summary</p>
+
+<p>Basically, importing from RDB is simply done by connecting to the Oracle database, collecting data with a SQL command from the specified table, and registering the data in a GridDB container.</p>
+
+<p><img src="https://www.griddb.net/en/docs/img/gs_expimp-rdb.png" alt="" /></p>
+
+<p>Import from RDB</p>
+
+<p>Data can be imported from RDB with the command below.</p>
+
+<p>$ gs_import -u admin/admin &ndash;srcfile resource definition file</p>
+
+<p>Specify the association between the Oracle table and GridDB container (mapping) in the <a href="#impexp_resource">resource definition file</a>.</p>
+
+<p><a href="#impexp_resource">The following 4 settings can be specified in the json format in the resource definition file</a>. <a href="#impexp_resource">The resource definition file</a> is created in the RDB collection source unit.</p>
+
+<ul>
+<li>Connection information of RDB collection source/GridDB recovery destination</li>
+<li>RDB collection target table</li>
+<li>GridDB registered container</li>
+<li>Mapping data</li>
+</ul>
+
+<p>Specify the connection information of the RDB collection source/GridDB recovery destination</p>
+
+<p>　Configure the RDB connection data serving as the collection source (address, port no., etc.), JDBC driver data, and GridDB recovery destination connection data.</p>
+
+<p>Path of JDBC driver　　　　　　　</p>
+
+<p>Property file</p>
+
+<p>RDB connection data of collection source　　　　　　</p>
+
+<p>Property file or resource definition file</p>
+
+<p>GridDB connection data of recovery destination　　　</p>
+
+<p>Property file or resource definition file</p>
+
+<p>　<strong>[Memo]</strong></p>
+
+<ul>
+<li>If the connection data has been configured in the <a href="#impexp_resource">resource definition file</a>, use the data in the resource definition file. If the setting is omitted, use the data listed in the <a href="#impexp_property">property file</a>.</li>
+<li>See the <a href="#impexp_property">property file</a> and <a href="#impexp_resource">resource definition file</a> for the description format.</li>
+</ul>
+
+<p>Specifying the RDB collection target table</p>
+
+<p>Specify the processing data to be imported from the Oracle database.</p>
+
+<p>　(1) Specify the table name</p>
+
+<ul>
+<li>All columns in the specified table will be applicable.</li>
+<li>If the items select, where, orderby are specified, the data can also be narrowed down by using column filters and conditional filters.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>&ldquo;table&rdquo; : &ldquo;customers&rdquo;,
+&ldquo;select&rdquo; : &ldquo;id, name&rdquo;,
+&ldquo;where&rdquo; : &ldquo;id &gt; 5000&rdquo;</p>
+
+<p>The SQL to be executed is “select id, name from customers where id &gt; 5000”.</p>
+
+<p>　(2) Specify the SQL command</p>
+
+<ul>
+<li>SQL execution result is applicable.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>select * from table　　　　　　　　　→all columns in a table
+select id, name, data from customer　→　id, name, data column</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>About the column order when registered in GridDB
+
+<ul>
+<li>If a table is specified: it will have the same column order as an Oracle table</li>
+<li>If a SQL command is specified: it will have the same column order as specified in SQL</li>
+</ul></li>
+<li>If you want to change the Oracle table column order and the GridDB column order, either choose &ldquo;select&rdquo; for the table specified, or specify the order of the column name by specifying a SQL command.</li>
+<li>Note the column specification order in GridDB as only the first column can be set as the row key.</li>
+<li>The settings in (1) and (2) cannot be used together.</li>
+<li>If the SQL command is specified, the container division to be described later cannot be used.</li>
+</ul>
+
+<p>Specifying a container subject to GridDB registration</p>
+
+<p>Specify a GridDB container at the registration destination.</p>
+
+<ul>
+<li>Container name</li>
+<li>Container type</li>
+<li>Row key</li>
+<li>Index</li>
+<li>Trigger</li>
+<li>Time series data (if the container type is a time series container)</li>
+</ul>
+
+<p>All registration destination data can be omitted, and association is also possible through automatic conversion of the mapping.</p>
+
+<p>However, if a processing table is specified in a SQL command, the container name must also be specified.</p>
+
+<p>Specifying mapping data</p>
+
+<p>Perform data association between Oracle and GridDB.</p>
+
+<p>1. Auto conversion</p>
+
+<p>Oracle tables will be associated with GridDB containers according to the default rules. The user does not need to perform definition of the conversion.</p>
+
+<p>[Default rules]</p>
+
+<p>Item</p>
+
+<p>Description</p>
+
+<p>Remarks</p>
+
+<p>Container name</p>
+
+<p>Specified table name if the table name is specified</p>
+
+<p>Specified container name if the SQL is specified</p>
+
+<p>Container type</p>
+
+<p>Collection</p>
+
+<p>Column</p>
+
+<p>Name by column in SQL execution results. Specify the column name if names by column do not exist.</p>
+
+<p>Column data type</p>
+
+<p>Data type associated with the RDB column data type.</p>
+
+<ul>
+<li>An error will occur if the Oracle table name and column name do not satisfy the GridDB naming rules (see below).
+
+<ul>
+<li>Kanji, hiragana and katakana characters are used</li>
+<li>code $ # are used</li>
+</ul></li>
+
+<li><p>If the above-mentioned naming rules are not satisfied, append another name to the column by following the procedure in “Specifying the processing table”.<br />
+[Example]</p>
+
+<p>select price as price from table</p></li>
+</ul>
+
+<p>Perform association between Oracle data type and GridDB data type as shown below.</p>
+
+<p>Data type</p>
+
+<p>Oracle</p>
+
+<p>GridDB</p>
+
+<p>Remarks</p>
+
+<p>Text data type</p>
+
+<p>CHAR</p>
+
+<p>STRING</p>
+
+<p>VARCHAR2</p>
+
+<p>STRING</p>
+
+<p>Numerical value data type</p>
+
+<p>NUMBER (maximum accuracy, digit)</p>
+
+<p>DOUBLE</p>
+
+<p>NUMBER (maximum accuracy)</p>
+
+<p>LONG</p>
+
+<p>Date data type</p>
+
+<p>DATE</p>
+
+<p>TIMESTAMP</p>
+
+<p>TIMESTAMP</p>
+
+<p>TIMESTAMP</p>
+
+<p>LOB data type</p>
+
+<p>CLOB</p>
+
+<p>STRING</p>
+
+<p>BLOB</p>
+
+<p>BLOB</p>
+
+<p>RAW type</p>
+
+<p>RAW</p>
+
+<p>STRING</p>
+
+<p>ROWID type</p>
+
+<p>ROWID</p>
+
+<p>STRING</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Not compatible with the Oracle extension data type.</li>
+<li>If the data type of the column is an unsupported data type, it will behave as follows.
+
+<ul>
+<li>If all columns are specified by specifying the tables subject to collection (&ldquo;table&rdquo; only specification, or &ldquo;select&rdquo; is &ldquo;*&rdquo; in a &ldquo;table&rdquo; specification), columns with unsupported data types will be skipped, and all other columns will be subject to acquisition.</li>
+<li>For all other cases, an error will occur if there are columns with unsupported data types. However, if a &ndash;force option is used, columns with unsupported data types will be ignored and only columns with supported data types will be registered.</li>
+</ul></li>
+</ul>
+
+<p><strong>2. User definition conversion</strong></p>
+
+<p>The user can define the conversion rules.</p>
+
+<p>Association between Oracle and GridDB is described in the <a href="#impexp_resource">resource definition file</a>.</p>
+
+<ul>
+<li>The name and type (collection/time series container) of a GridDB container to store table data and SQL result data can be specified by the user.</li>
+<li>The name and data type of a GridDB column can be specified by the user.</li>
+</ul>
+
+<p>The following association can be specified for the data type.</p>
+
+<p>Data type</p>
+
+<p>Oracle</p>
+
+<p>GridDB</p>
+
+<p>Remarks</p>
+
+<p>Text data type</p>
+
+<p>CHAR</p>
+
+<p>STRING, INTEGER</p>
+
+<p>An error will occur if conversion to an INTEGER conversion failed.</p>
+
+<p>VARCHAR2</p>
+
+<p>STRING, INTEGER</p>
+
+<p>An error will occur if conversion to an INTEGER conversion failed.</p>
+
+<p>Numerical value data type</p>
+
+<p>NUMBER (maximum accuracy, digit)</p>
+
+<p>BYTE, SHORT, INTEGER, LONG, FLOAT, DOUBLE</p>
+
+<p>Digits may be dropped if the correct data type is not selected.</p>
+
+<p>NUMBER (maximum accuracy)</p>
+
+<p>BYTE, SHORT, INTEGER, LONG, FLOAT, DOUBLE</p>
+
+<p>Digits may be dropped if the correct data type is not selected.</p>
+
+<p>Date data type</p>
+
+<p>DATE</p>
+
+<p>TIMESTAMP</p>
+
+<p>TIMESTAMP</p>
+
+<p>TIMESTAMP</p>
+
+<p>LOB data type</p>
+
+<p>CLOB</p>
+
+<p>STRING</p>
+
+<p>BLOB</p>
+
+<p>BLOB</p>
+
+<p>RAW type</p>
+
+<p>RAW</p>
+
+<p>STRING</p>
+
+<p>ROWID type</p>
+
+<p>ROWID</p>
+
+<p>STRING</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When converting a NUMBER, the data type can be specified as BYTE/SHORT/INTEGER/LONG/FLOAT/DOUBLE. Digits may be dropped if the correct data type is not selected.</li>
+<li>Data of the character data type and LOB data type data can be stored in GridDB as long as the size allows it. The size of the data that can be stored in GridDB is dependent on the block size of the node (64KB or 1MB). Set the block size of the node in the <a href="#gs_cluster.json">cluster definition file (gs_cluster.json)</a>, and a value that is the same as the setting in the <a href="#impexp_property">property file</a>.</li>
+<li>If the data type of the column is an unsupported data type, it will behave as follows.
+
+<ul>
+<li>If all columns are specified by specifying the tables subject to collection (&ldquo;table&rdquo; only specification, or &ldquo;select&rdquo; is &ldquo;*&rdquo; in a &ldquo;table&rdquo; specification), columns with unsupported data types will be skipped, and all other columns will be subject to acquisition.</li>
+<li>For all other cases, an error will occur if there are columns with unsupported data types. However, if a &ndash;force option is used, columns with unsupported data types will be ignored and only columns with supported data types will be registered.</li>
+</ul></li>
+</ul>
+
+<h4 id="table-association">Table association</h4>
+
+<p>An Oracle table can be associated with a GridDB containe either:</p>
+
+<ul>
+<li><p>　<strong>(1) 1-to-1</strong></p></li>
+
+<li><p>An Oracle table can be associated with a GridDB container on a 1-to-1 basis.</p></li>
+
+<li><p>　<strong>(2) 1-to-many</strong></p></li>
+
+<li><p>An Oracle table can be associated with multiple GridDB containers.</p></li>
+</ul>
+
+<p>There are 2 types of 1-to-many association as shown below.</p>
+
+<ul>
+<li><p>Column value split: Split a container by the row value</p>
+
+<p>Classify data by the specified row value and store the data in a container for each value. The row value is appended at the end of the container name. (&ldquo;Container name_row value&rdquo;)</p>
+
+<p>Since the row value is assigned to the container name, the value has to be made up of alphanumeric characters and the underscore character only. If the name contains a different character type, an error will occur in the check process when a command is executed. An error will not result in the middle of creating a container as the check process is carried out before the container is created. The only row data types that can be specified in a column value split are NUMBER, CHAR and VARCHAR2.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When specifying a column value split, specify the processing target by the table name.</li>
+<li>For the column to be specified in a column value split, specify the column existing in the processing table, and the column included in the processing column.</li>
+<li>If the value of the column is Null, the name of the container where the data is stored will be &ldquo;Container name_null&rdquo;.
+<br /></li>
+</ul>
+
+<p>[Example] Split the list of sensor data into containers according to the sensor ID</p></li>
+</ul>
+
+<p><img src="https://www.griddb.net/en/docs/img/gs_expimp-colsplit.png" alt="img/gs_expimp-colsplit.png" /></p>
+
+<p>1-to-many: Column value split</p>
+
+<ul>
+<li><p>Record number split: Split a container by the number of records</p>
+
+<p>Specify the upper limit of a row to be stored in a single container If the upper limit is exceeded, the data is stored in a new container.</p>
+
+<p>A serial number (integer starting from 0) is appended at the end of the container name. &ldquo;Container name_serial no.&rdquo; (container_0, container_1, …)</p>
+
+<p>[Example] Split the list of sensor data into containers with 10,000 rows each</p></li>
+</ul>
+
+<p><img src="https://www.griddb.net/en/docs/img/gs_expimp-numsplit.png" alt="img/gs_expimp-numsplit.png" /></p>
+
+<p>1-to-many: Record number split</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Both column value split and record number split can be specified. In this case, processing is carried out by the column value split first followed by record number split.</li>
+<li>In the case of a container split, an error will occur if a container with the same name already exists. Re-registration (&ndash;replace) is not possible even if data is added to an existing container (&ndash;append) or an existing container is deleted. Invalid even if the &ndash;append, &ndash;replace option is specified.</li>
+</ul>
+
+<p>● Column association</p>
+
+<p>　An Oracle column can be associated with a GridDB column on a 1-to-1 basis.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>If complex association including row consolidation and operation is necessary, create a view according to the conditions on the Oracle DB side and use the view as the acquisition target.</li>
+</ul>
+
+<p><strong>Resource definition file settings</strong></p>
+
+<p>Resource definition files are written in the json format. Specify the RDB (Oracle) data to be connected and the container data which is the recovery destination.</p>
+
+<p>The settings required to connect and import data, to and from RDB (Oracle) are as follows.</p>
+
+<p>Parameters</p>
+
+<p>Description</p>
+
+<p>/inputSource</p>
+
+<p>　　/type</p>
+
+<p>Specify &ldquo;rdb&rdquo; when using a RDB link</p>
+
+<p>　　/server</p>
+
+<p>Can be omitted. RDB connection destination of the property file is used by default. *1</p>
+
+<p>　　　　/kind</p>
+
+<p>Specify the type of RDB. Specify &ldquo;oracle&rdquo;</p>
+
+<p>　　　　/host</p>
+
+<p>Specify the address used to access RDB.</p>
+
+<p>　　　　/port</p>
+
+<p>Specify the port of the address used to access RDB.</p>
+
+<p>　　　　/database</p>
+
+<p>Specify the database name (SID)</p>
+
+<p>　　　　/url</p>
+
+<p>Specify the connection character string when accessing the RDB. (Specify the host, port, database or url.</p>
+
+<p>　　　　/user</p>
+
+<p>Specify the user to access the database.</p>
+
+<p>　　　　/password</p>
+
+<p>Specify the user password to access the database.</p>
+
+<p>/outputSource</p>
+
+<p>Can be omitted. GridDB connection destination of the property file is used by default</p>
+
+<p>　　/type</p>
+
+<p>Specify &ldquo;gridstore&rdquo; when registering in GridDB</p>
+
+<p>　　/server</p>
+
+<p>*1</p>
+
+<p>　　　　/host</p>
+
+<p>Specify the address used to access GridDB.</p>
+
+<p>　　　　/port</p>
+
+<p>Specify the port of the address used to access GridDB.</p>
+
+<p>　　　　/clusterName</p>
+
+<p>　　　　/user</p>
+
+<p>Specify the user to access the database.</p>
+
+<p>　　　　/password</p>
+
+<p>Specify the user password to access the database.</p>
+
+<p>/targetList</p>
+
+<p>The following can be specified repeatedly in an array</p>
+
+<p>　　/rdb</p>
+
+<p>Specify the RDB collection targets. Either &ldquo;table&rdquo; or &ldquo;sql&rdquo; is required</p>
+
+<p>　　　　/table</p>
+
+<p>Specify the table name.</p>
+
+<p>　　　　/sql</p>
+
+<p>Specify a SQL command</p>
+
+<p>　　　　/select</p>
+
+<p>Specify column if the table name is specified</p>
+
+<p>　　　　/where</p>
+
+<p>Filter the columns by conditions if the table name is specified</p>
+
+<p>　　　　/orderby</p>
+
+<p>Sort the specified columns if the table name is specified.</p>
+
+<p>　　　　/partitionTable</p>
+
+<p>Specify true when accessing partition tables in parallel</p>
+
+<p>　　/gridstore</p>
+
+<p>Specify a GridDB container at the registration destination.</p>
+
+<p>　　　　/database</p>
+
+<p>Specify the database name. Registered in the public database &ldquo;public&rdquo; by default.</p>
+
+<p>　　　　/name</p>
+
+<p>Specify the container name.</p>
+
+<p>Container name may be omitted if the RDB collection target specifies the table name The table name will become the container name.</p>
+
+<p>Container name is required when specifying a SQL command</p>
+
+<p>　　　　/type</p>
+
+<p>Specify the container type (COLLECTION/TIME_SERIES)</p>
+
+<p>Container type is a collection by default..</p>
+
+<p>　　　　/rowKeyAssigned</p>
+
+<p>Specify whether there is any row key (true/false/omit. *2</p>
+
+<p>　　　　/dataAffinity</p>
+
+<p>Specify the data affinity name. Maximum 8 characters</p>
+
+<p>　　　　/indexSet</p>
+
+<p>Specify the index. *3</p>
+
+<p>　　　　/triggerInfoSet</p>
+
+<p>Specify a trigger. *3</p>
+
+<p>　　　　/compressionInfoSet</p>
+
+<p>The compression method (NO/SS) can be specified for time series containers only *3</p>
+
+<p>　　/mapping</p>
+
+<p>Can be omitted, and the following can be specified repeatedly.</p>
+
+<p>　　　　/column</p>
+
+<p>　The following can be specified repeatedly</p>
+
+<p>　　　　　　/rdb</p>
+
+<p>Specify the RDB column name.</p>
+
+<p>　　　　　　/gridstore</p>
+
+<p>Specify the GridDB column name</p>
+
+<p>　　　　　　/type</p>
+
+<p>Specify the GridDB column type</p>
+
+<p>　　　　/containerSplit</p>
+
+<p>Specify the container split method.</p>
+
+<p>　　　　　　/type</p>
+
+<p>Specify the column value split &ldquo;columnValue&rdquo; or record number split &ldquo;dataNumber&rdquo;.</p>
+
+<p>　　　　　　/column</p>
+
+<p>For column value split, specify the column value to split.</p>
+
+<p>　　　　　　/number</p>
+
+<p>For record number split, specify the number of records to split.</p>
+
+<p>*1:/inputSource/server/type,host,port,database,user,password<br />
+　　Set whether to configure all settings or not for the groups in /inputSource/server.</p>
+
+<p>*2:/targetList/gridstore/rowKeyAssigned<br />
+　　true: first column is set as the row key. An error will occur if the data type is not suitable for the row key.<br />
+　　false or omitted: No row key will be set.</p>
+
+<p>*3: See <a href="#impexp_metadata">Metadata file</a> for the description format of each item.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Either the &ldquo;table&rdquo; specified in the table name or the &ldquo;sql&rdquo; specified in the SQL command is required.</li>
+<li>&ldquo;sql&rdquo; and &ldquo;table&rdquo;,&ldquo;select&rdquo;,&ldquo;where&rdquo;,&ldquo;orderby&rdquo; cannot be specified at the same time.</li>
+<li>When &ldquo;sql&rdquo; is specified in the SQL command, the GridDB container name cannot be omitted.</li>
+<li>For partition table (&ldquo;partitionTable&rdquo;: true), specify &ldquo;table&rdquo; in the table name.</li>
+</ul>
+
+<p><a href="#impexp_resource">An example of a resource definition file</a> is shown below. Connection data shall be specified in the <a href="#impexp_property">property file</a>.</p>
+
+<ul>
+<li><p>[Example] When specifying the table name only</p>
+
+<p>{
+    &ldquo;inputSource&rdquo; : {
+        &ldquo;type&rdquo; : &ldquo;rdb&rdquo;
+    },
+    &ldquo;targetList&rdquo; : [
+        {
+            &ldquo;rdb&rdquo; : {
+                &ldquo;table&rdquo; : &ldquo;sample_table&rdquo;
+            }
+        }
+    ]
+}</p></li>
+
+<li><p>[Example] When specifying a SQL command to perform column mapping</p>
+
+<p>{
+    &ldquo;inputSource&rdquo; : {
+        &ldquo;type&rdquo; : &ldquo;rdb&rdquo;
+    },
+    &ldquo;targetList&rdquo; : [
+        {
+            &ldquo;rdb&rdquo; : {
+                &ldquo;sql&rdquo; : &ldquo;select * from sample_table order by id&rdquo;
+            },
+            &ldquo;gridstore&rdquo; : {
+                &ldquo;name&rdquo; : &ldquo;sample_collection&rdquo;
+            },
+            &ldquo;mapping&rdquo; : {
+                &ldquo;column&rdquo; : [
+                    {&ldquo;rdb&rdquo;: &ldquo;id&rdquo;, &ldquo;gridstore&rdquo;:&ldquo;sensor_id&rdquo;, &ldquo;type&rdquo; : &ldquo;integer&rdquo;},
+                    {&ldquo;rdb&rdquo;: &ldquo;value&rdquo;, &ldquo;gridstore&rdquo;:&ldquo;sensor_value&rdquo;, &ldquo;type&rdquo; : &ldquo;double&rdquo;}
+                ]
+            }
+        }
+    ]
+}</p></li>
+
+<li><p>[Example] When attaching acquisition conditions targeting multiple tables in the respective table</p>
+
+<p>{
+    &ldquo;inputSource&rdquo; : {
+        &ldquo;type&rdquo; : &ldquo;rdb&rdquo;
+    },
+    &ldquo;targetList&rdquo; : [
+        {
+            &ldquo;rdb&rdquo; : {
+                &ldquo;table&rdquo; : &ldquo;sample_table&rdquo;,
+                &ldquo;select&rdquo; : &ldquo;id, value&rdquo;,
+                &ldquo;where&rdquo; : &ldquo;id &gt; 100&rdquo;,
+                &ldquo;orderby&rdquo; : &ldquo;id&rdquo;
+            }
+        },
+        {
+            &ldquo;rdb&rdquo; : {
+                &ldquo;table&rdquo; : &ldquo;sample_table2&rdquo;,
+                &ldquo;select&rdquo; : &ldquo;*&ldquo;,
+                &ldquo;where&rdquo; : &ldquo;value &gt; 1000&rdquo;,
+                &ldquo;orderby&rdquo; : &ldquo;id&rdquo;
+            }
+        }
+    ]
+}</p></li>
+
+<li><p>[Example] When dividing a table by the column value in the id column, and then further dividing it into 300 records at a time</p>
+
+<p>{
+    &ldquo;inputSource&rdquo; : {
+        &ldquo;type&rdquo; : &ldquo;rdb&rdquo;
+    },
+    &ldquo;targetList&rdquo; : [
+        {
+            &ldquo;rdb&rdquo; : {
+                &ldquo;table&rdquo; : &ldquo;sample_table&rdquo;,
+                &ldquo;orderby&rdquo; : &ldquo;id&rdquo;
+            },
+            &ldquo;mapping&rdquo; : {
+                &ldquo;containerSplit&rdquo; : [
+                    {&ldquo;type&rdquo;:&ldquo;columnValue&rdquo;, &ldquo;column&rdquo;:&ldquo;id&rdquo;},
+                    {&ldquo;type&rdquo;:&ldquo;dataNumber&rdquo;, &ldquo;number&rdquo;:300}
+                ]
+            }
+        }
+    ]
+}</p></li>
+</ul>
+
+<p>Partition table</p>
+
+<p>For Oracle partition tables, the partition unit (sub-partition unit in the case of a composite type) can be accessed in parallel. Using this, data of a partition table can be acquired at a high speed.</p>
+
+<p>When processing a partition table in parallel, <a href="#impexp_resource">set the &ldquo;partitionTable&rdquo; item to true in the collection target settings of the resource definition file</a>.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>When processing a partition table in parallel, a sort specified by a &lsquo;order by&rsquo; will be carried out on a partition basis and registered in GridDB. As a result, the sorting order of all the tables will not be guaranteed.
+
+<ul>
+<li>If there is a need to maintain the sorting order for all the tables, do not configure the parallel processing settings for the partition tables (specify false or do not specify the &ldquo;partitionTable&rdquo; item). In this case, since the process will not be executed in parallel on a partition basis, the import time may become longer.</li>
+</ul></li>
+</ul>
+
+<p>Concurrency</p>
+
+<p>The import process can be executed at a higher speed by making access to RDB and GridDB parallel.</p>
+
+<p>When performing parallel processing, specify the &ndash;parallel option in the command line.</p>
+
+<p>Collection from RDB and registration in GridDB will be executed respectively with a degree of parallelism that is specified in &ndash;parallel. If the degree of parallelism is not specified, the number of GridDB clusters and nodes will automatically become the degree of parallelism</p>
+
+<ul>
+<li><p>When you want to set in detail the collection parallelism (access to Oracle) and the registration parallelism (access to GridDB), list them down in the <a href="#impexp_property">property file</a>.</p>
+
+<p>load.input.threadNum=64
+load.output.threadNum=16</p></li>
+
+<li><p>The registration parallelism (access to GridDB) is best set at the following range: number of GridDB nodes &lt; = N &lt; = (number of GridDB nodes x node concurrency). Set it according to the machine environment.</p></li>
+</ul>
+
+<p><Example></p>
+
+<p>Command line</p>
+
+<p>Property file</p>
+
+<p>No. of collected threads</p>
+
+<p>No. of registered threads</p>
+
+<p>gs_import</p>
+
+<p>-</p>
+
+<p>→</p>
+
+<p>1</p>
+
+<p>1</p>
+
+<p>gs_import &ndash;parallel 3</p>
+
+<p>-</p>
+
+<p>→</p>
+
+<p>3</p>
+
+<p>3</p>
+
+<p>gs_import &ndash;parallel</p>
+
+<p>input.threadNum=16</p>
+
+<p>→</p>
+
+<p>16</p>
+
+<p>3</p>
+
+<p>output.threadNum=3</p>
+
+<p>gs_import &ndash;parallel</p>
+
+<p>Not specified　</p>
+
+<p>→</p>
+
+<p>No. of GridDB nodes</p>
+
+<p>No. of GridDB nodes</p>
+
+<p>Preliminary checks and test run</p>
+
+<p>The following items are checked prior to collection and registration processing. <a href="#impexp_resource">Preliminary checks on descriptive errors in the resource definition file</a> and conformity of the specified data are carried out. If an error were to occur in the following checks, the processing of the tools will stop. &ndash;The process cannot be continued even if the force option is selected.</p>
+
+<p>Preliminary check items</p>
+
+<ul>
+<li><a href="#impexp_resource">Resource definition file</a>
+
+<ul>
+<li>Errors in the description format</li>
+<li>Omissions of essential items</li>
+<li>Conformity of combination of definitions</li>
+</ul></li>
+<li>RDB
+
+<ul>
+<li>Is the table name or column name a valid character string for a container name?</li>
+<li>Data type of column</li>
+<li>In the case of a column value split, is the column name a valid character string for a container name?</li>
+</ul></li>
+</ul>
+
+<p>Perform a test run if you want to conduct a preliminary check to check out the operation only. Although communications between Oracle and GridDB are carried out during a test run, data registration will not be carried out in GridDB.</p>
+
+<p>To perform a test run, specify the &ndash;test option together with the &ndash;srcfile option.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_import -u admin/admin &ndash;srcfile partition_table.json &ndash;test
+Start import
+[Test mode]
+Import test execution terminated. No. of SQL subject to processing: 1920
+Import terminated</p>
+
+<p>If an error occurs in the preliminary checks, the following display will appear.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_import -u admin/admin &ndash;srcfile not_found_column.json &ndash;test
+Start import
+[Test mode]
+D00C0C: A non-existent column has been specified in the mapping definition. : sql=[SELECT * FROM mytable], column=[NOT_FOUND_COLUMN]</p>
+
+<p>SmartEDA/DDS linkage</p>
+
+<p>Data can be registered from Oracle to GridDB by linking the data collection/event processing base SmartEDA with the data collection server (DDS). Data is collected from Oracle using the import tool and sent to the DDS via HTTP The DDS then registers the data received in GridDB. Data can be imported even if it exists in a subnet that does not allow multicast communications between the GridDB cluster and Oracle and the Import tools.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>See /usr/gridstore/misc/dds-plugin/Readme.txt for the operating procedure.</li>
+<li>Data collection/event processing base SmartEDA products are required separately.</li>
+<li>Only the multicast method can be used for connecting a GridDB cluster.</li>
+</ul>
+
+<h3 id="data-registration-option">Data registration option</h3>
+
+<p>When importing, if a specific option is not specified, an error will occur if the container that you are trying to register already exists in the GridDB cluster. Data can be added or replaced by specifying the next option. During data registration, the number of containers registered successfully and the number of containers which failed to be registered are shown.</p>
+
+<p>　Add/update data</p>
+
+<ul>
+<li>Data can be registered and updated in an existing container by specifying the &ndash;append option</li>
+<li>Data can be added, registered or updated only if the schema, index and trigger setting data of the container that you are trying to register are the same as the existing container.</li>
+
+<li><p>The registration procedure according to the type of container is as follows.</p>
+
+<p>Type of container</p>
+
+<p>Rowkey designation</p>
+
+<p>Operation</p>
+
+<p>Collection</p>
+
+<p>Yes</p>
+
+<p>Columns with the same key will be updated while data with different keys will be added.</p>
+
+<p>None</p>
+
+<p>All row data will be added and registered.</p>
+
+<p>Time series container</p>
+
+<p>Yes</p>
+
+<p>If compression is not specified, the time will be added and registered if it is newer than the existing registration data.</p>
+
+<p>If the time is the same as the existing data, the column data will be updated.</p>
+
+<p>If compression is specified, only rows newer than the existing data can be added.</p></li>
+</ul>
+
+<p>　Replace container</p>
+
+<ul>
+<li>Delete the existing container, create a new container, and register data in it by specifying the &ndash;replace option.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import -c c002 c001 -u admin/min &ndash;append
+.. Start import (addition mode)
+Import completed
+Success: 2  Failure: 0
+　
+$ gs_import -c c002 c001 -u admin/admin &ndash;replace　　 //From a specific directory
+.. Start import (re-arrangement mode)
+Import completed
+Success: 2  Failure: 0
+　
+$ gs_import &ndash;all  -u admin/admin  -d /datat/expdata   &ndash;replace</p>
+
+<h3 id="error-continuation-specification-1">Error continuation specification</h3>
+
+<p>The import process can be continued even if a registration error were to occur in a specific row data due to a user editing error in the container data file.</p>
+
+<ul>
+<li><p>By specifying the &ndash;force option, the import process will continue from the row data of the next container even if a registration error were to occur in the row data.</p>
+
+<p>[Example]</p>
+
+<p>$ gs_import &ndash;all -u admin/admin -d /data/expdata &ndash;force</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Specify the container replacement option (&ndash;replace) to re-register a collection in which an error has occurred after revising the container data file.</li>
+</ul>
+
+<h3 id="other-functions-1">Other functions</h3>
+
+<p>　The following section explains the settings in the operating display in detail.</p>
+
+<ul>
+<li>&ndash;Processing details can be displayed by specifying the verbose option.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import -c c002 c001 -u admin/admin &ndash;append &ndash;verbose
+The next character string has been recognized as the container name character string: c002
+The next character string has been recognized as the container name character string: c001
+Start import (addition mode)
+Import completed</p>
+
+<p>Success: 2  Failure: 0</p>
+
+<p>　The following section explains the settings in the operating display in detail.</p>
+
+<ul>
+<li>&ndash;The processing status display can be suppressed by specifying the silent option.</li>
+</ul>
+
+<p>[Example]</p>
+
+<p>$ gs_import -c c002 c001 -u admin/admin &ndash;append &ndash;silent</p>
+
+<h3 id="command-option-specifications">Command/option specifications</h3>
+
+<h3 id="export-command">Export command</h3>
+
+<ul>
+<li><p>Command list</p>
+
+<p>gs_export</p>
+
+<p>-u｜&ndash;user user name/password</p>
+
+<p>&ndash;all｜&ndash;container [container name] …｜&ndash;db database name [database name]</p>
+
+<p>[-d｜&ndash;directory output destination directory path]</p>
+
+<p>[&ndash;out [file identifier]</p>
+
+<p>[&ndash;binary [file size]]</p>
+
+<p>[&ndash;filterfile definition file name]</p>
+
+<p>[&ndash;count no. of acquisitions]</p>
+
+<p>[&ndash;parallel no. of parallel executions]</p>
+
+<p>[&ndash;acl]</p>
+
+<p>[&ndash;prefixdb database name]</p>
+
+<p>[&ndash;force]</p>
+
+<p>[-t｜&ndash;test]</p>
+
+<p>[-v｜&ndash;verbose]</p>
+
+<p>[&ndash;silent]</p>
+
+<p>gs_export</p>
+
+<p>&ndash;version</p>
+
+<p>gs_export</p>
+
+<p>[-h｜&ndash;help]</p></li>
+
+<li><p>Optional specifications</p>
+
+<p>Optional</p>
+
+<p>Essential</p>
+
+<p>Description</p>
+
+<p>-u｜&ndash;user user/password</p>
+
+<p>〇</p>
+
+<p>Specify the user and password used for authentication purposes.</p>
+
+<p>&ndash;all</p>
+
+<p>〇</p>
+
+<p>All containers of the cluster shall be exported. Either &ndash;all, &ndash;container or &ndash;db option needs to be specified.</p>
+
+<p>-c｜&ndash;container container name …</p>
+
+<p>〇</p>
+
+<p>Specify the container to be exported. Multiple specifications are allowed by separating them with blanks. When using a regular expression, enclose it within double quotations to specify it. Either &ndash;all, &ndash;container or &ndash;db option needs to be specified.</p>
+
+<p>&ndash;db</p>
+
+<p>〇</p>
+
+<p>All containers in the specified database shall be exported. Either &ndash;all, &ndash;container, &ndash;db option needs to be specified.</p>
+
+<p>-d｜&ndash;directory output destination directory path</p>
+
+<p>Specify the directory path of the export destination. Default is the current directory.</p>
+
+<p>&ndash;out [file identifier]</p>
+
+<p>Specify this when using the multi-container format for the file format of the output data. The single container format will be used by default.</p>
+
+<p>If the file identifier is specified, the file identifier will be used as the file name, and if it is omitted, the output start date and time will be used as the file name.</p>
+
+<p>&ndash;binary [file size]</p>
+
+<p>Specify this when using the binary format for the output format of the row data file. The CSV format will be used by default.</p>
+
+<p>Specify the output file size in MB. Default is 100MB. A range from 1 to 1000 (1GB) can be specified.</p>
+
+<p>&ndash;filterfile definition file name</p>
+
+<p>Specify the definition file in which the search query used to export rows is described. All rows are exported by default.</p>
+
+<p>&ndash;count Acquisition count</p>
+
+<p>Specify the number of data to be acquired each time when acquiring data from a container. The value of gs_expimp.properties will be valid by default.</p>
+
+<p>&ndash;parallel No. of parallel executions</p>
+
+<p>Execute in parallel for the specified number. When executed in parallel, the export data will be divided by the same number as the number of parallel executions. This can be specified only for the multi-container format (when the &ndash;out option is specified). A range from 2 to 32 can be specified.</p>
+
+<p>&ndash;acl</p>
+
+<p>Data on the database, user, access rights will also be exported. This can be specified only if the user is an administrator user and &ndash;all option is specified.</p>
+
+<p>&ndash;prefixdb database name</p>
+
+<p>&ndash;If a container option is specified, specify the database name of the container. The containers in the default database will be processed if they are omitted.</p>
+
+<p>&ndash;force</p>
+
+<p>Processing is forced to continue even if an error occurs. Error descriptions are displayed in a list after processing ends.</p>
+
+<p>-t｜&ndash;test</p>
+
+<p>Execute the tool in the test mode.</p>
+
+<p>-v｜&ndash;verbose</p>
+
+<p>Output the operating display details.</p>
+
+<p>&ndash;silent</p>
+
+<p>Operating display is not output.</p>
+
+<p>&ndash;version</p>
+
+<p>Display the version of the tool.</p>
+
+<p>-h｜&ndash;help</p>
+
+<p>Display the command list as a help message. 　</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>- If the t (&ndash;test) option is specified, a query will be executed until the data is fetched. Container data file will not be created.</li>
+<li>- If the v (&ndash;verbose) option is specified, a message will appear during processing. If omitted, a message will appear only when there is an error.</li>
+<li>Create the respective directory and file if the specified directory path does not exist in the -d (&ndash;directory) option, and the specified file name does not exist in the &ndash;out option.</li>
+<li>-If a c (&ndash;container) option is specified, a Java regular expression can be specified in the container name. See the Java “Class Pattern” for details.</li>
+</ul>
+
+<h3 id="import-command">Import command</h3>
+
+<ul>
+<li><p>Command list</p>
+
+<p>gs_import</p>
+
+<p>-u｜&ndash;user user name/password</p>
+
+<p>&ndash;all｜&ndash;container container name [container name …]｜&ndash;db database name [database name]</p>
+
+<p>[&ndash;append｜&ndash;replace]</p>
+
+<p>[-d｜&ndash;directory import target directory path]</p>
+
+<p>[-f｜&ndash;file file name [file name…]]</p>
+
+<p>[&ndash;count no. of commit]</p>
+
+<p>[&ndash;acl]</p>
+
+<p>[&ndash;prefixdb database name]</p>
+
+<p>[&ndash;force]</p>
+
+<p>[-v｜&ndash;verbose]</p>
+
+<p>[&ndash;silent]</p>
+
+<p>When the input source is other resources:</p>
+
+<p>　　　　[&ndash;srcfile file path [&ndash;test]]</p>
+
+<p>gs_import</p>
+
+<p>-l｜&ndash;list</p>
+
+<p>[-d｜&ndash;directory directory path]</p>
+
+<p>[-f｜&ndash;file file name [file name…]]</p>
+
+<p>gs_import</p>
+
+<p>&ndash;version</p>
+
+<p>gs_import</p>
+
+<p>[-h｜&ndash;help]</p></li>
+
+<li><p>Optional specifications</p>
+
+<p>Optional</p>
+
+<p>Essential</p>
+
+<p>Description</p>
+
+<p>-u｜&ndash;user user/password</p>
+
+<p>〇</p>
+
+<p>Specify the user and password used for authentication purposes.</p>
+
+<p>&ndash;all</p>
+
+<p>〇</p>
+
+<p>All containers in the import source file shall be imported. Either &ndash;all, &ndash;container or &ndash;db option needs to be specified.</p>
+
+<p>-c｜&ndash;container container name …</p>
+
+<p>〇</p>
+
+<p>Specify the container subject to import. Multiple specifications are allowed by separating them with blanks. When using a regular expression, enclose it within double quotations to specify it. Either &ndash;all, &ndash;container or &ndash;db option needs to be specified.</p>
+
+<p>&ndash;db</p>
+
+<p>〇</p>
+
+<p>All containers in the specified database shall be imported. Either &ndash;all, &ndash;container, &ndash;db option needs to be specified.</p>
+
+<p>-d｜&ndash;directory directory path</p>
+
+<p>Specify the directory path of the import source. Default is the current directory.</p>
+
+<p>-f｜&ndash;file [file name]</p>
+
+<p>Specify the container data file to be imported. Multiple specifications allowed. All container data files of the current directory or directory specified in d (&ndash;directory) will be applicable by default.</p>
+
+<p>&ndash;count no. of commit</p>
+
+<p>Specify the number of input cases until the input data is committed together.</p>
+
+<p>&ndash;acl</p>
+
+<p>Data on the database, user, access rights will also be imported. This can be specified only if the user is an administrator user and the &ndash;all option is specified for data exported by specifying the &ndash;acl option.</p>
+
+<p>&ndash;prefixdb database name</p>
+
+<p>&ndash;If a container option is specified, specify the database name of the container. The containers in the default database will be processed if they are omitted.</p>
+
+<p>&ndash;force</p>
+
+<p>Processing is forced to continue even if an error occurs. Error descriptions are displayed in a list after processing ends.</p>
+
+<p>-v｜&ndash;verbose</p>
+
+<p>Output the operating display details.</p>
+
+<p>&ndash;silent</p>
+
+<p>Operating display is not output.</p>
+
+<p>&ndash;srcfile resource definition file path</p>
+
+<p>Set up the path of the resource definition file. Specify when importing from RDB.</p>
+
+<p>-l｜&ndash;list</p>
+
+<p>Display a list of the specified containers to be imported.</p>
+
+<p>&ndash;version</p>
+
+<p>Display the version of the tool.</p>
+
+<p>-h｜&ndash;help</p>
+
+<p>Display the command list as a help message.</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>If -l (&ndash;list) is specified, and options other than the -d (&ndash;directory) and -f (&ndash;file) option are specified, an option argument error will occur.</li>
+<li>- If the v (&ndash;verbose) option is specified, a message will appear during processing. If omitted, a message will appear only when there is an error.</li>
+<li>-If a c (&ndash;container) option is specified, a Java regular expression can be specified in the container name. See the Java “Class Pattern” for details.</li>
+</ul>
+
+<h3 id="format-of-container-data-file">Format of container data file</h3>
+
+<p>The respective file formats to configure container data files are shown below.</p>
+
+<h3 id="metadata-file">Metadata file</h3>
+
+<p>The metadata file stores the container data in the JSON format.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>A metadata file is described using the UTF-8 character code.</li>
+</ul>
+
+<p>Container data to be stored is shown below.</p>
+
+<p>Item</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Name of the container.</p>
+
+<p>Container type</p>
+
+<p>Refers to a collection or time series container.</p>
+
+<p>Schema data</p>
+
+<p>Data of a group of columns constituting a row. A column name is combined with a data type to form a group.</p>
+
+<p>Compression configuration data</p>
+
+<p>Compression type data to be configured in a Time series data. Set up thinning compression with error, thinning compression without error, or no compression.</p>
+
+<p>Index setting data</p>
+
+<p>Index type data set in a container. Availability of index settings. Specify the type of index e.g. hash index, spatial index, tree index, etc.</p>
+
+<p>Trigger (event notification) data</p>
+
+<p>Notification is triggered when a container is updated (PUT/DELETE) by the JMS or REST interface.</p>
+
+<p>Row key setting data</p>
+
+<p>Set up a row key when collection container is used. For time series containers, either there is no row key set or the default value, if set, will be valid.</p>
+
+<p>The tag and data items of the metadata in the JSON format are shown below. Tags that are essential for new creations by the user are also listed (tag setting condition).</p>
+
+<p>Tag name　　　　　　</p>
+
+<p>Item　　　　　　</p>
+
+<p>Description　　　　　　　　　　　　　　</p>
+
+<p>Setting conditions　　　　　　　　　</p>
+
+<p>Common parameters</p>
+
+<p>　</p>
+
+<p>　</p>
+
+<p>　</p>
+
+<p>container</p>
+
+<p>Container name</p>
+
+<p>Container name</p>
+
+<p>Essential</p>
+
+<p>containerType</p>
+
+<p>Container type</p>
+
+<p>Specify either COLLECTION or TIME_SERIES</p>
+
+<p>Essential</p>
+
+<p>containerFileType</p>
+
+<p>Container file type</p>
+
+<p>Specify either csv or binary</p>
+
+<p>Essential</p>
+
+<p>containerFile</p>
+
+<p>Container file name</p>
+
+<p>File name</p>
+
+<p>Essential</p>
+
+<p>dataAffinity</p>
+
+<p>Data affinity name</p>
+
+<p>Specify the data affinity name. Maximum length of 8 characters. (Valid for TIME_SERIES data only)</p>
+
+<p>Any</p>
+
+<p>rowKeyAssigned</p>
+
+<p>Row key setting</p>
+
+<p>Specify either true/false</p>
+
+<p>True if there is no arbitrary key word</p>
+
+<p>partitionNo</p>
+
+<p>Partition</p>
+
+<p>Empty character string that has not been set yet</p>
+
+<p>Arbitrary, output during export. (Need not be specified during import. Value is not used even if it is specified.)</p>
+
+<p>columnSet</p>
+
+<p>Column data set, (schema data)</p>
+
+<p>Column data needs to match when adding data to an existing container</p>
+
+<p>Essential</p>
+
+<p>　　columnName</p>
+
+<p>Column name</p>
+
+<p>Essential</p>
+
+<p>　　type</p>
+
+<p>Data type</p>
+
+<p>BOOLEAN/ STRING/ BYTE/ SHORT/ INTEGER/ LONG/ FLOAT/ DOUBLE/ TIMESTAMP/ GEOMETRY/ BLOB/ BOOLEAN[]/ STRING[]/ BYTE[]/ SHORT[]/ INTEGER[]/ LONG[]/ FLOAT[]/ DOUBLE[]/ TIMESTAMP[]</p>
+
+<p>Essential</p>
+
+<p>indexSet</p>
+
+<p>Index data set</p>
+
+<p>Can be set for each column. Non-existent column name will be ignored or an error will be output</p>
+
+<p>Any</p>
+
+<p>　　columnName</p>
+
+<p>Column name</p>
+
+<p>Arbitrary (essential when indexSet is specified)</p>
+
+<p>　　IndexType</p>
+
+<p>Index type</p>
+
+<p>HASH ( STRING/ BOOLEAN/ BYTE/ SHORT/ INTEGER/ LONG/ FLOAT/ DOUBLE/ TIMESTAMP ) SPATIAL ( GEOMETRY ) , TREE ( STRING/ BOOLEAN/ BYTE/ SHORT/ INTEGER/ LONG/ FLOAT/ DOUBLE/ TIMESTAMP )</p>
+
+<p>Arbitrary (essential when indexSet is specified)</p>
+
+<p>triggerInfoSet</p>
+
+<p>Trigger setting</p>
+
+<p>Any</p>
+
+<p>　　eventName</p>
+
+<p>Trigger name</p>
+
+<p>Trigger name</p>
+
+<p>Arbitrary (essential when triggerInfoSet is specified))</p>
+
+<p>　　notificationType</p>
+
+<p>Notification method</p>
+
+<p>JMS/REST</p>
+
+<p>Arbitrary (essential when triggerInfoSet is specified))</p>
+
+<p>　　targetEvents</p>
+
+<p>Operations subject to monitoring</p>
+
+<p>PUT/DELETE</p>
+
+<p>Arbitrary (essential when triggerInfoSet is specified</p>
+
+<p>　　targetColumnNames</p>
+
+<p>Column name</p>
+
+<p>Arbitrary column subject to notification (multiple columns can be specified using commas to separate them), BLOB/GEOMETRY/ARRAY data types can be set but these will not work. The “,” (comma) separator is used, and an error will occur if a non-existent column name is specified.</p>
+
+<p>　　Notification URI</p>
+
+<p>Notification destination URI</p>
+
+<p>Arbitrary (essential when triggerInfoSet is specified</p>
+
+<p>　　JmsDestinationType</p>
+
+<p>Destination type</p>
+
+<p>Specify either “topic” or “queue”</p>
+
+<p>Valid for JMS only</p>
+
+<p>　　JmsDestinationName</p>
+
+<p>Destination name</p>
+
+<p>Arbitrary (essential when notificationType is JMS) Specify for JMS only</p>
+
+<p>　　user</p>
+
+<p>User name</p>
+
+<p>Arbitrary (essential when notificationType is JMS) Specify for JMS only</p>
+
+<p>　　password</p>
+
+<p>Password</p>
+
+<p>Arbitrary (essential when notificationType is JMS) Specify for JMS only</p>
+
+<p>TIME_SERIES only parameter</p>
+
+<p>timeSeriesProperties</p>
+
+<p>Compression data setting</p>
+
+<p>Only data whose containerType is TIME_SERIES can be specified</p>
+
+<p>Any</p>
+
+<p>compressionMethod</p>
+
+<p>NO, SS, HI</p>
+
+<p>Any</p>
+
+<p>compressionWindowSize</p>
+
+<p>Maximum period of a row</p>
+
+<p>Specify an integer value</p>
+
+<p>Any</p>
+
+<p>compressionWindowSizeUnit</p>
+
+<p>Time data ENUM</p>
+
+<p>DAY/ HOUR/ MILLISECOND/ MINUTE/ MONTH/ SECOND/ YEAR</p>
+
+<p>Any</p>
+
+<p>expirationDivisionCount</p>
+
+<p>Division count of period release</p>
+
+<p>Specify the division count of period release</p>
+
+<p>Any</p>
+
+<p>rowExpirationElapsedTime</p>
+
+<p>Elapsed period</p>
+
+<p>Specify an integer value</p>
+
+<p>Any</p>
+
+<p>rowExpirationTimeUnit</p>
+
+<p>Time data ENUM</p>
+
+<p>DAY/ HOUR/ MILLISECOND/ MINUTE/ MONTH/ SECOND/ YEAR</p>
+
+<p>Any</p>
+
+<p>compressionInfoSet</p>
+
+<p>Settings for each column</p>
+
+<p>Only Hi can be specified for the compressionMethod</p>
+
+<p>Any</p>
+
+<p>　　columnName</p>
+
+<p>Column name</p>
+
+<p>Any</p>
+
+<p>　　compressionType</p>
+
+<p>Absolute value/relative value</p>
+
+<p>RELATIVE: Relative value, ABSOLUTE: Absolute value</p>
+
+<p>Any</p>
+
+<p>　　Width</p>
+
+<p>Absolute error exists. Thinning and compression parameters</p>
+
+<p>Can be specified by a floating-point number</p>
+
+<p>Any Essential for specified column Error when specified at the same time as Rate/Span</p>
+
+<p>　　Rate</p>
+
+<p>Relative error exists. Thinning and compression parameters</p>
+
+<p>Can be specified by a floating-point number</p>
+
+<p>Any can be set only when compressionMethod is set to HI. In SS/NO, error is ignored/output. Error occurs if width is specified at the same time</p>
+
+<p>　　Span</p>
+
+<p>Relative error exists. Thinning and compression parameters</p>
+
+<p>Can be specified by a floating-point number</p>
+
+<p>Any can be set only when compressionMethod is set to HI. In SS/NO, error is ignored/output. Error occurs if width is specified at the same time</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>Container metadata is described in the json format in the metadata file of a single container data file.</li>
+<li>Container metadata is described in a json array in the metadata file of a multi-container data file.</li>
+<li>Met data file name of a single container data file
+
+<ul>
+<li>Container name_properties.json</li>
+</ul></li>
+
+<li><p>Metadata file name of a multi-container data file</p>
+
+<ul>
+<li><p>Specify a file identifier with an &ndash;out option: file identifier_properties.json</p></li>
+
+<li><p>Omit the file identifier with an &ndash;out option: Date and time_properties.json</p></li>
+</ul></li>
+</ul>
+
+<p>[Points to note]</p>
+
+<ul>
+<li>Do not edit metadata files if row data files are exported in the binary format.</li>
+</ul>
+
+<p>[Example1] Example of a collection in a single container file (c001_properties.json)</p>
+
+<ul>
+<li>A single collection is described.</li>
+</ul>
+
+<p>1: {
+ 2:    &ldquo;container&rdquo;: &ldquo;c001&rdquo;,
+ 3:    &ldquo;containerFile&rdquo;: &ldquo;c001.csv&rdquo;,
+ 4:    &ldquo;containerFileType&rdquo;: &ldquo;csv&rdquo;,
+ 5:    &ldquo;containerType&rdquo;: &ldquo;COLLECTION&rdquo;,
+ 6:    &ldquo;columnSet&rdquo;: [
+ 7:        { &ldquo;columnName&rdquo;: &ldquo;COLUMN_ID&rdquo;,  &ldquo;type&rdquo;: &ldquo;INTEGER&rdquo; },
+ 8:        { &ldquo;columnName&rdquo;: &ldquo;COLUMN_STRING&rdquo;, &ldquo;type&rdquo;: &ldquo;STRING&rdquo;}
+ 9:    ],
+10:      &ldquo;indexSet&rdquo;: [
+11:          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_ID&rdquo;, &ldquo;type&rdquo;: &ldquo;TREE&rdquo;},
+12:          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_ID&rdquo;, &ldquo;type&rdquo;: &ldquo;HASH&rdquo;},
+13:          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_STRING&rdquo;, &ldquo;type&rdquo;: &ldquo;HASH&rdquo; }
+14:      ],
+15:      &ldquo;rowKeyAssigned&rdquo;: true
+16: }
+17:</p>
+
+<p>[Example 2] Example of a collection and time series container in a multi-container file (container01_properties.json)</p>
+
+<ul>
+<li>For collections and time series containers</li>
+</ul>
+
+<p>1:
+ 2: [
+ 3:        {
+ 4:                &ldquo;container&rdquo;: &ldquo;c001&rdquo;,
+ 5: &ldquo;containerType&rdquo;: &ldquo;collection&rdquo;, //for collection
+ 6:                &ldquo;containerFileType&rdquo;:&ldquo;csv&rdquo;,
+ 7:                &ldquo;containerFile&rdquo;:&ldquo;container01.csv&rdquo;,
+ 8:                &ldquo;rowKeyAssigned&rdquo;:true,
+ 9:                &ldquo;columnSet&rdquo;: [
+10:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_FLAG&rdquo;, &ldquo;type&rdquo;: &ldquo;BOOLEAN&rdquo; },
+11:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_BLOB_DATA&rdquo;, &ldquo;type&rdquo;: &ldquo;BLOB&rdquo; },
+12:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_STRING&rdquo;, &ldquo;type&rdquo;: &ldquo;STRING&rdquo; }
+13:                  ],
+14:                  &ldquo;indexSet&rdquo;:[
+15:                          { &ldquo;columnName&rdquo;:&rdquo; COLUMN_STRING &ldquo;, &ldquo;indexType&rdquo;: &ldquo;HASH&rdquo; }
+16:                  ],
+17:                  &ldquo;triggerInfoSet&rdquo;:[
+18:                          {  &ldquo;eventName&rdquo;:&rdquo; FLAG_EVENT&rdquo;, &ldquo;notificationType&rdquo;:&ldquo;JMS&rdquo;,
+19:                                  &ldquo;targetEvents&rdquo;:&ldquo;DELETE&rdquo;, &ldquo;targetColumnNames&rdquo;:&ldquo;COLUMN_FLAG&rdquo;,
+20:                                  &ldquo;notificationURI&rdquo;:&ldquo;<a href="http://example.com&quot;">http://example.com&quot;</a>,
+21:                                  &ldquo;JmsDestinationType&rdquo;:&ldquo;&rdquo;, &ldquo;JmsDestinationName&rdquo;:&ldquo;&rdquo;,
+22:                                  &ldquo;JmsUser&rdquo;:&ldquo;&rdquo;, &ldquo;JmsPassword&rdquo;:&ldquo;&rdquo; },
+23:                          {  &ldquo;eventName&rdquo;:&ldquo;STRING_EVENT&rdquo;, &ldquo;notificationType&rdquo;:&ldquo;REST&rdquo;,
+24:                                  &ldquo;targetEvents&rdquo;:&ldquo;PUT&rdquo;, &ldquo;targetColumnNames&rdquo;:&ldquo;COLUMN_STRING&rdquo;,
+25:                                  &ldquo;notificationURI&rdquo;:&ldquo;&rdquo; }
+26:                  ]
+27:          },
+28:          {
+29:                  &ldquo;container&rdquo;: &ldquo;c002&rdquo;,
+30:  &ldquo;containerType&rdquo;: &ldquo;timeSeries&rdquo;, //for time series container
+31:                  &ldquo;containerFileType&rdquo;:&ldquo;csv&rdquo;,
+32:                  &ldquo;containerFile&rdquo;:&ldquo;container01.csv&rdquo;,
+33:                  &ldquo;rowKeyAssigned&rdquo;:true,
+34:                  &ldquo;dataAffinity&rdquo;:&ldquo;month&rdquo;,
+35:                  &ldquo;columnSet&rdquo;: [
+36:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_TIMESTAMP&rdquo;, &ldquo;type&rdquo;: &ldquo;TIMESTAMP&rdquo; },
+37:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_FLAG&rdquo;, &ldquo;type&rdquo;: &ldquo;BOOLEAN&rdquo; },
+38:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_BLOB_DATA&rdquo;, &ldquo;type&rdquo;: &ldquo;BLOB&rdquo; },
+39:                          { &ldquo;columnName&rdquo;: &ldquo;COLUMN_INTEGER&rdquo;, &ldquo;type&rdquo;: &ldquo;INTEGER&rdquo; }
+40:                  ],
+41:                  &ldquo;indexSet&rdquo;:[
+42:                          { &ldquo;columnName&rdquo;:&rdquo; COLUMN_FLAG &ldquo;, &ldquo;indexType&rdquo;: &ldquo;TREE&rdquo; }
+43:                  ],
+44:                  &ldquo;triggerInfoSet&rdquo;:[
+45:                          {  &ldquo;eventName&rdquo;:&ldquo;TIMESTAMP_EVENT&rdquo;, &ldquo;notificationType&rdquo;:&ldquo;REST&rdquo;,
+46:                                  &ldquo;targetEvents&rdquo;:&ldquo;DELETE&rdquo;, &ldquo;targetColumnNames&rdquo;:&ldquo;COLUMN_TIMESTAMP&rdquo;,
+47:                                  &ldquo;notificationURI&rdquo;:&ldquo;&rdquo;,
+48:                                  &ldquo;JmsDestinationType&rdquo;:&ldquo;&rdquo;, &ldquo;JmsDestinationName&rdquo;:&ldquo;&rdquo;,
+49:                                  &ldquo;JmsUser&rdquo;:&ldquo;&rdquo;, &ldquo;JmsPassword&rdquo;:&ldquo;&rdquo; }
+50:                  ],
+51:                  &ldquo;timeSeriesProperties&rdquo;:[
+52:                          { &ldquo;compressMethod&rdquo;: &ldquo;HI&rdquo;,
+53:                           &ldquo;compressionWindowSize&rdquo;:10, &ldquo;compressionWindowSizeUnit&rdquo;:&ldquo;SECOND&rdquo;,
+54:                           &ldquo;expirationDivisionCount&rdquo;:12,
+55:                           &ldquo;rowExpirationElapsedTime”: 1, &ldquo;rowExpirationTimeUnit&rdquo;: “DAY”}
+56:                   ],
+57:                   &ldquo;compressionInfoSet&rdquo;:[
+58:                          { “columnName”:COLUMN_INTEGER”, ”compressionType”:&ldquo;RELATIVE&rdquo;,
+59:                          &ldquo;rate&rdquo;:”1.0E2”, &ldquo;span&rdquo;:”1.0E2” }
+60:                   ]
+61:          }
+62: ]
+63:</p>
+
+<h3 id="row-data-file-binary-data-file">Row data file (binary data file)</h3>
+
+<p>The row data file in the binary format can be created in the zip format by gs_export only. No readability, and cannot be edited as well. No readability, and cannot be edited as well.</p>
+
+<h3 id="row-data-file-csv-data-file">Row data file (CSV data file)</h3>
+
+<p>The row data file in the CSV format describes the references to the metadata file which is the definition of a row in the container data file information section.</p>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>A CSV data file is described using the UTF-8 character code.</li>
+</ul>
+
+<p><CSV data file format></p>
+
+<p>1. Header section (1st - 2nd row)</p>
+
+<p>Header section contains data output during export. Header data is not required during import.</p>
+
+<ul>
+<li><p>Assign a “#” at the beginning of the command to differentiate it. The format will be as follows.</p>
+
+<p>&rdquo;# (Date and time data) (blank)GridDB release version&rdquo;
+&ldquo;#User: (user name)&rdquo;</p>
+
+<p>[Example]</p>
+
+<p>&rdquo;#2013-06-14T17:34:36.520+0900 GridStore V1.5.00&rdquo;
+&ldquo;#User:admin &ldquo;</p></li>
+</ul>
+
+<p>2. Container data file data section (3rd and subsequent rows)</p>
+
+<p>Describe the references to the metadata file.</p>
+
+<ul>
+<li><p>Assign a “%” at the beginning of the command to differentiate it. The format of one row will be as follows.</p>
+
+<p>&rdquo;%&ldquo;,&rdquo;(container name)_properties.json&rdquo;</p></li>
+</ul>
+
+<p>3. Row data section (container data and subsequent sections)</p>
+
+<p>The following section describes the row data.</p>
+
+<ul>
+<li>Assign a “$” at the beginning of the container name and describe the row data for the number of cases that you want to register in the container.</li>
+
+<li><p>Separate the row data of the column with commas and describe them in one line of the CSV file.</p>
+
+<p>&rdquo;$&ldquo;,&rdquo;(Container name)&rdquo;
+&ldquo;value&rdquo;,&ldquo;value&rdquo;,&ldquo;value&rdquo;,．． (number of column definitions)
+&ldquo;value&rdquo;,&ldquo;value&rdquo;,&ldquo;value&rdquo;,．． (number of column definitions)
+　　:
+　　: 　　　　//Describe the number of row cases you want to register
+　　:</p></li>
+</ul>
+
+<p>4. Comments section</p>
+
+<p>The comment section can be described anywhere in the CSV data file except the header section.</p>
+
+<ul>
+<li>Assign a “#” at the beginning of the command to differentiate it.</li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The CSV data file of a single container data file is configured as follows.
+
+<ul>
+<li>　1. Header section, 2. Container data file data section, 3. Row data section</li>
+</ul></li>
+<li>The CSV data file of a multi-container data file is configured as follows.
+
+<ul>
+<li>　1. Header section, 2. Container data file data section, 3. Row data section (multiple)</li>
+</ul></li>
+</ul>
+
+<p><File name format></p>
+
+<p>The name of the CSV data file output by the export tool is as follows.</p>
+
+<ul>
+<li>　container_name.csv for single container data files</li>
+<li>　file_identifier.csv for multi-container data files and when the file identifier is specified in the &ndash;out option</li>
+<li>　date&amp;time.csv for multi-container data files and when the file identifier is omitted in the &ndash;out option</li>
+</ul>
+
+<p>[Example] Description of a CSV data file (including external object file) Data description of a metadata file in Example 1</p>
+
+<p>&rdquo;#2013-11-01T11:19:03.437+0900  GridStore V1.5.00&rdquo;
+&ldquo;#User:admin&rdquo;
+&ldquo;%&rdquo;,&ldquo;c001_properties.json&rdquo;
+&ldquo;$&rdquo;,&ldquo;c001&rdquo;
+&ldquo;1&rdquo;,&ldquo;Tokyo&rdquo;
+&ldquo;2&rdquo;,&ldquo;Kanagawa&rdquo;
+&ldquo;3&rdquo;,&ldquo;Osaka&rdquo;</p>
+
+<p>When the data below is included in some of the rows of the CSV data file, prepare an external object file separate from the CSV data file as an external object. List the references of the external data file in the target column of the CSV file. &ldquo;@data type:” (file name)</p>
+
+<ul>
+<li>BLOB data
+
+<ul>
+<li>List “@BLOB:” + (file name) as BLOB data in the “value” section of the relevant column.</li>
+<li>The file naming section has a format which is the file name + “.blob”.</li>
+<li>The binary file is located according to the rules of the file naming section.</li>
+</ul></li>
+<li>Spatial data
+
+<ul>
+<li>List “@GEOMETRY:” + (file name) as GEOMETRY data in the relevant “value” section.</li>
+<li>The file naming section has a format which is the file name + “.geometry”.</li>
+<li>List a spatial column in the external object file.</li>
+<li>Describe using character code UTF-8.</li>
+</ul></li>
+<li>Array (BOOLEAN[]/ STRING[]/ BYTE[]/ SHORT[]/ INTEGER[]/ LONG[]/ FLOAT[]/ DOUBLE[]/ TIMESTAMP[])
+
+<ul>
+<li>List “@(Data Type)_ARRAY:” + (file name) as ARRAY data in the relevant “value” section.</li>
+<li>The file naming section has a format which is the file name + “.(data type)_array”.</li>
+<li>If the length of the character string exceeds 100 characters, list down array data in the external object file.</li>
+<li>Describe using character code UTF-8.</li>
+</ul></li>
+<li>Character string data
+
+<ul>
+<li>List “@STRING:” + (file name) as STRING data in the relevant “value” section.</li>
+<li>The file naming section has a format which is the file name + “.string”.</li>
+<li>If the length of the character string exceeds 100 characters, or if it includes a line return (\r), list down string data in the external object file.</li>
+<li>Describe using character code UTF-8.</li>
+</ul></li>
+</ul>
+
+<p>When an external object file is exported, the external object file name is created in accordance with the following rules during export.</p>
+
+<ul>
+<li>For single container data files
+
+<ul>
+<li>Container name_Container name_ROW No. _COLUMN No.data type</li>
+<li>If the container column is a Byte array, the name of the external object file will be Container name_Container name_ROW no. _COLUMN no. .byte_array.</li>
+<li>The ROW no. and COLUMN no. shows the sequence no. of the container data and they are numbered starting from 0.</li>
+</ul></li>
+<li>When the format is a multi-container format
+
+<ul>
+<li>File identifier specified in the &ndash;out option File identifier_Container name_ROW no. _COLUMN no.data type</li>
+<li>File identifier omitted in &ndash;out option Date and time_Container name_ROW no. _COLUMN no.data type</li>
+</ul></li>
+</ul>
+
+<p>For import purposes, any file name can be used for the external object file. List down the CSV data file with a file name of any data type in the relevant column.</p>
+
+<p>[Example] Naming example of an external object file</p>
+
+<p>　//When a collection (colb) having a BYTE array in the 3rd column is exported
+　
+　　Oct 4 12:51 2013 colb.csv
+　　Oct 4 12:51 2013 colb_colb_0_3.byte_array　
+　　Oct 4 12:51 2013 colb_colb_1_3.byte_array　
+　　Oct 4 12:51 2013 colb_colb_2_3.byte_array
+　　Oct 4 12:51 2013 colb_colb_3_3.byte_array
+　　Oct 4 12:51 2013 colb_colb_4_3.byte_array
+　　Oct 4 12:51 2013 colb_properties.json</p>
+
+<p>[Example] Description of an external object file in a single container data file is shown below.</p>
+
+<p>　// meta data file col01_properties.json</p>
+
+<p>{
+        &ldquo;container&rdquo;: &ldquo;col01&rdquo;,
+        &ldquo;containerFile&rdquo;: &ldquo;col01.csv&rdquo;,
+        &ldquo;containerFileType&rdquo;: &ldquo;csv&rdquo;,
+        &ldquo;containerType&rdquo;: &ldquo;COLLECTION&rdquo;,
+        &ldquo;columnSet&rdquo;: [
+            { &ldquo;columnName&rdquo;: &ldquo;name&rdquo;,&ldquo;type&rdquo;: &ldquo;string&rdquo;  },
+            {&ldquo;columnName&rdquo;: &ldquo;status&rdquo;, &ldquo;type&rdquo;: &ldquo;boolean&rdquo;},
+            {  &ldquo;columnName&rdquo;: &ldquo;count&rdquo;, &ldquo;type&rdquo;: &ldquo;long&rdquo; },
+            { &ldquo;columnName&rdquo;: &ldquo;lob&rdquo;, &ldquo;type&rdquo;: &ldquo;byte[]&ldquo;
+            }
+        ],<br />
+        &ldquo;indexSet&rdquo;: [
+            {
+                &ldquo;columnName&rdquo;: &ldquo;name&rdquo;,
+                &ldquo;type&rdquo;: &ldquo;TREE&rdquo;
+            },
+            {
+                &ldquo;columnName&rdquo;: &ldquo;count&rdquo;,
+                &ldquo;type&rdquo;: &ldquo;TREE&rdquo;
+            }
+        ],
+        &ldquo;rowKeyAssigned&rdquo;: true
+}</p>
+
+<p>　//CSV data file col01.csv</p>
+
+<p>&rdquo;#2013-11-01T19:41:35.320+0900  GridStore V1.5.00&rdquo;
+&ldquo;#User:admin&rdquo;
+&ldquo;%&rdquo;,&ldquo;col01_properties.json&rdquo;　
+&ldquo;$&rdquo;,&ldquo;col01&rdquo;
+&ldquo;name02&rdquo;,&ldquo;false&rdquo;,&ldquo;2&rdquo;,&ldquo;@BYTE_ARRAY:col101_col01_0_3.byte_array&rdquo;</p>
+
+<p>　// external object file col01_col01_0_3.byte_array</p>
+
+<p>1,10,15,20,40,70,71,72,73,74</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1536883882"></script>
+    <script src="/js/jquery.sticky.js?1536883882"></script>
+    <script src="/js/featherlight.min.js?1536883882"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1536883882"></script>
+    <script src="/js/highlight.pack.js?1536883882"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1536883882"></script>
+    <script src="/js/learn.js?1536883882"></script>
+    <script src="/js/hugo-learn.js?1536883882"></script>
+
+    <link href="/mermaid/mermaid.css?1536883882" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1536883882"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

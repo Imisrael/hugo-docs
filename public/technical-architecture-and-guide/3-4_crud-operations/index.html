@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.48" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>CRUD Operations :: GridDB</title>
+
+    
+    <link href="/css/nucleus.css?1536883882" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1536883882" rel="stylesheet">
+    <link href="/css/hybrid.css?1536883882" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1536883882" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1536883882" rel="stylesheet">
+    <link href="/css/auto-complete.css?1536883882" rel="stylesheet">
+    <link href="/css/theme.css?1536883882" rel="stylesheet">
+	<link href="/css/hugo-theme.css?1536883882" rel="stylesheet">
+	<link href="/css/style-griddb.css?1536883882" rel="stylesheet">
+    
+      <link href="/css/theme-griddb.css?1536883882" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1536883882"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<header id="header2"> 
+        
+        
+    <div class="header-inner">
+        
+        <div id="collapse-button" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+        
+        
+    
+        <span class="switch-mobile" style="display:none">
+            <div class="ui dropdown">
+              <input name="Language">
+              <i class="dropdown icon"></i>
+              <div class="default text"><i class="us flag"> </i></div>
+              <div class="menu">
+                <a class="item ja" href="javascript:void(0)" id="ja"> <i class="jp flag"></i>Japanese</a>
+                <a class="item" data-value="Japanese"><i class="us flag"></i>English</a>
+              </div>
+            </div>   
+        </span>
+    
+    
+    
+    <nav id="nav" class="main-navigation" role="navigation" style="">
+    <div class="menu-topnav-container"><ul id="menu-topnav" class="nav-menu"><li id="menu-item-581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-581"><a href="/en/docs/documents/1-1_what-is-griddb.php">Docs</a></li>
+    <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="/en/faq/">FAQ</a></li>
+    <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="/en/community/">Community</a></li>
+    <li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="/en/forums/forum/top/">Forum</a></li>
+    <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="/en/blog">Blog</a></li>
+
+    </ul>
+
+    </div>
+        
+        <li style="list-style:none"><a href="/en/downloads/"> <span class="download-button4" style="display:none"> DOWNLOAD</span></a></li>
+        
+            
+           <a href="/en/downloads/"> <span id="download-button"> Download</span></a>
+      
+        
+    </nav>
+    
+         
+    </div>        
+        
+    </header>
+    
+    
+  </head>
+  <body class="" data-url="/technical-architecture-and-guide/3-4_crud-operations/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+          <img src="/images/logo.png"></img>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1536883882"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1536883882"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1536883882"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-1_what-is-griddb/" title="What is GridDB" class="dd-item ">
+        <a href="/introduction/1-1_what-is-griddb/">
+        What is GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-2_griddb-edition/" title="GridDB Editions" class="dd-item ">
+        <a href="/introduction/1-2_griddb-edition/">
+        GridDB Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          <b>2. </b>Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-1_system-requirements/" title="System Requirements" class="dd-item ">
+        <a href="/getting-started/2-1_system-requirements/">
+        System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-2_installation/" title="Installation" class="dd-item ">
+        <a href="/getting-started/2-2_installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-3_run-your-first-griddb-node-cluster/" title="Run your First GridDB Node/Cluster" class="dd-item ">
+        <a href="/getting-started/2-3_run-your-first-griddb-node-cluster/">
+        Run your First GridDB Node/Cluster
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-4_run-a-sample-java-client-app/" title="Run a Sample Java Client App" class="dd-item ">
+        <a href="/getting-started/2-4_run-a-sample-java-client-app/">
+        Run a Sample Java Client App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/technical-architecture-and-guide/" title="Technical Architecture and Guide" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/technical-architecture-and-guide/">
+          <b>3. </b>Technical Architecture and Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-1_griddb-technical-overview/" title="GridDB Technical Overview" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-1_griddb-technical-overview/">
+        GridDB Technical Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-2_key-container-model/" title="Key Container Model" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-2_key-container-model/">
+        Key Container Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-3_tql/" title="TQL" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-3_tql/">
+        TQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-4_crud-operations/" title="CRUD Operations" class="dd-item active">
+        <a href="/technical-architecture-and-guide/3-4_crud-operations/">
+        CRUD Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-5_transactions-and-acid/">
+        Transactions and ACID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-6_indexes/" title="Indexes" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-6_indexes/">
+        Indexes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-7_storage-architecture/" title="Storage Architecture" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-7_storage-architecture/">
+        Storage Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-8_replication-distribution/" title="Replication &amp; Distribution" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-8_replication-distribution/">
+        Replication &amp; Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-9_sharding/" title="Sharding" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-9_sharding/">
+        Sharding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/data-modeling/" title="Data Modeling" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/data-modeling/">
+          <b>4. </b>Data Modeling
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics" class="dd-item ">
+        <a href="/data-modeling/4-1_data-modeling-basics/">
+        Data Modeling Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-2_data-modeling-using-griddb/" title="Data Modeling Using GridDB" class="dd-item ">
+        <a href="/data-modeling/4-2_data-modeling-using-griddb/">
+        Data Modeling Using GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-3_modeling-relationships/" title="" class="dd-item ">
+        <a href="/data-modeling/4-3_modeling-relationships/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/" title="" class="dd-item ">
+        <a href="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/" title="Sample Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/">
+          <b>5. </b>Sample Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/basics/">
+          <b>5.1 </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-10_collection-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-10_collection-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-11_collection-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-11_collection-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-12_timeseries-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-12_timeseries-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-13_timeseries-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-13_timeseries-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-14_timeseries-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-14_timeseries-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-15_timeseries-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-15_timeseries-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-16_tql/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-16_tql/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-17_trigger-rest/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-17_trigger-rest/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-18_trigger-jms/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-18_trigger-jms/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-19_multiput/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-19_multiput/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-1_introduction/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-1_introduction/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-20_multiquery/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-20_multiquery/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-21_multiget/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-21_multiget/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-2_griddb-basics/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-2_griddb-basics/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-3_prepare-server/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-3_prepare-server/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-4_prepare-client/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-4_prepare-client/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-5_connection/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-5_connection/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-6_container-schema/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-6_container-schema/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-7_container-create-drop/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-7_container-create-drop/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-8_collection-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-8_collection-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-9_collection-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-9_collection-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/administration/" title="Administration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/administration/">
+          <b>6. </b>Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-1_supported-os-platforms-and-system-requirements/" title="Supported OS, Platforms and System Requirements" class="dd-item ">
+        <a href="/administration/6-1_supported-os-platforms-and-system-requirements/">
+        Supported OS, Platforms and System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling" class="dd-item ">
+        <a href="/administration/6-2_sizing-and-scaling/">
+        Sizing and Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-3_installing/" title="Installing" class="dd-item ">
+        <a href="/administration/6-3_installing/">
+        Installing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" class="dd-item ">
+        <a href="/administration/6-4_upgrading-the-editions/">
+        Upgrading Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases" class="dd-item ">
+        <a href="/administration/6-5_migration-from-other-databases/">
+        Migration from Other Databases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" class="dd-item ">
+        <a href="/administration/6-6_cluster-administration-operations/">
+        Cluster Administration &amp; Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" class="dd-item ">
+        <a href="/administration/6-7_monitoring-troubleshooting/">
+        Monitoring &amp; Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-8_tuning/" title="Tuning" class="dd-item ">
+        <a href="/administration/6-8_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/drivers-and-integrators/" title="Drivers &amp; Integrators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/drivers-and-integrators/">
+          <b>7. </b>Drivers &amp; Integrators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-1_jdbc-connector/" title="JDBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-1_jdbc-connector/">
+        JDBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-2_odbc-connector/" title="ODBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-2_odbc-connector/">
+        ODBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-3_hadoop-and-spark-connector/" title="Hadoop and Spark Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-3_hadoop-and-spark-connector/">
+        Hadoop and Spark Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-4_grafana-connector/" title="" class="dd-item ">
+        <a href="/drivers-and-integrators/7-4_grafana-connector/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>GridDB</a> > <a href='/technical-architecture-and-guide/'>Technical Architecture and Guide</a> > CRUD Operations
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#native-api">Native API</a></li>
+<li><a href="#tql">TQL</a></li>
+<li><a href="#sample-of-collection-operations-java">Sample of Collection Operations (Java)</a></li>
+<li><a href="#sample-of-timeseries-operations-0-storage-and-extraction-of-specific-range-java">Sample of TimeSeries Operations 0 Storage and Extraction of Specific Range (Java)</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>CRUD Operations</h1>
+          
+
+        
+
+
+
+
+<p>CRUD operations are present in all databases as the foundational actions that allow the most basic of actions. GridDB&rsquo;s CRUD operations are most easily executed by using its very own Java-based API, though it does also accept TQL.</p>
+
+<p><strong>What is CRUD?</strong></p>
+
+<ul>
+<li><strong>Create:</strong> writing new data (containers, rows, etc)</li>
+<li><strong>Read:</strong> viewing, or &ldquo;pulling up&rdquo; any data</li>
+<li><strong>Update:</strong> to modify already existing data (as opposed to writing NEW data) to reflect changes</li>
+<li><strong>Delete:</strong> erasing or removing data from a container or row</li>
+</ul>
+
+<h3 id="native-api">Native API</h3>
+
+<p>GridDB can be accessed using TQL or through its native API. The native API willl be looked at first, followed by some examples of use with TQL.</p>
+
+<p><strong>Creating a Container</strong></p>
+
+<p>Containers can be made easily by defining the data as a class.</p>
+
+<p>// Create Collection
+Collection weatherStationCol =
+        store.putCollection(&ldquo;weather_station&rdquo;, WeatherStation.class);
+return weatherStationCol;</p>
+
+<p>34-35 line: create the collection by using the GridStore.putCollection (String, Class) method. The String Specifies the name of the container. The Class specifies the WeatherStation class that was created in the schema definition.</p>
+
+<p>**</p>
+
+<p>Register the Data</p>
+
+<p>**</p>
+
+<p>Ready access to GridDB in the above process is now ready. Let&rsquo;s try to register the data in GridDB.</p>
+
+<p>// Set the value to Row data
+WeatherStation weatherStation1 = new WeatherStation ();
+weatherStation1.id = &ldquo;1&rdquo;;
+weatherStation1.name = &ldquo;WeatherStation 01&rdquo;;
+weatherStation1.latitude = 35.68944;
+weatherStation1.longitude = 139.69167;
+weatherStation1.hasCamera = true;</p>
+
+<p>WeatherStation weatherStation2 = new WeatherStation ();
+weatherStation2.id = &ldquo;2&rdquo;;
+weatherStation2.name = &ldquo;WeatherStation 02&rdquo;;
+weatherStation2.latitude = 35.02139;
+weatherStation2.longitude = 135.75556;
+weatherStation2.hasCamera = false;</p>
+
+<p>// Register Collection
+weatherStationCol.put (weatherStation1);
+weatherStationCol.put (weatherStation2);</p>
+
+<p>* 30-42 line: Set the values of the data to be registered.<br />
+* 45-46 line: Pack data and register it in the container</p>
+
+<p><strong>Read The Data (Retrieval)</strong></p>
+
+<p>Now the registered data can be retrieved from the GridDB server.</p>
+
+<p><strong>List.6 data acquisition process</strong> (FirstGridDB.java)</p>
+
+<p>// Retrieve Collection
+System.out.println(&ldquo;get by key&rdquo;);
+System.out.println(&ldquo;ID\tName\t\t\tLongitude\tLatitude\tCamera&rdquo;);
+weatherStationCol = store.getCollection(&ldquo;weather_station&rdquo;, WeatherStation.class);</p>
+
+<p>for (int i = 0; i &lt;2; i ++) {
+    WeatherStation weatherStation = weatherStationCol.get (String.valueOf (i + 1));
+    System.out.println (String.format(&ldquo;% - 3s\t% -20s\t% s\t% s\t% -5s&rdquo;, weatherStation.id,
+            weatherStation.name, weatherStation.latitude, weatherStation.longitude,
+            weatherStation.hasCamera));
+}</p>
+
+<p>* 51 line: First get the container by specifying the container name and class.<br />
+* 54 line: Then get row data by specifying the key.<br />
+Here is the output:</p>
+
+<p><strong>List.7 data acquisition result</strong></p>
+
+<p>get by key
+ID Name Longitude Latitude Camera
+1 WeatherStation 01 35.68944 139.69167 true
+2 WeatherStation 02 35.02139 135.75556 false</p>
+
+<p>**</p>
+
+<p>Deleting A Container</p>
+
+<p>**</p>
+
+<p>The command to delete a container looks like this:</p>
+
+<p>Container.dropCollection (String)</p>
+
+<h3 id="tql">TQL</h3>
+
+<p>Put simply, TQL is a simplified SQL prepared for NoSQL products. The support range is limited to functions such as search, aggregation, etc. TQL is employed by using the client API (Java, C language). To register and search for data in GridDB, a container or table (NewSQL products only) needs to be created to store the data. This section describes the data types that can be registered in a container or table, data size, index and data management functions.</p>
+
+<p>The naming rules for containers and tables are the same as those for databases.</p>
+
+<ul>
+<li>A string consisting of alphanumeric characters and the underscore mark can be specified. However, the first character cannot be a number.</li>
+<li>Although the case sensitivity of the name is maintained, a container (table) which has the same name when it is not case-sensitive cannot be created.</li>
+</ul>
+
+<p><strong>Container Creation</strong></p>
+
+<p>Container (collection)<br />
+createcollection    Container name Column name Type [Column name Type …]
+Container (time series container)<br />
+createtimeseries    Container name Compression method Column name type [Column name Type …]</p>
+
+<ul>
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the name of the container to be created. If the name is omitted in the createcontainer command, a container with the name given in the container data file will be created.</p>
+
+<p>Column name</p>
+
+<p>Specify the column name.</p>
+
+<p>Type</p>
+
+<p>Specify the column type.</p>
+
+<p>Compression method</p>
+
+<p>For TimeSeries data, specify the data compression method.</p>
+
+<p>Container definition file</p>
+
+<p>Specify the file storing the container data in JSON format.</p>
+
+<p><strong>Detailed version</strong></p>
+
+<p>Specify the container definition data in the json file to create a container.</p>
+
+<ul>
+<li>The container definition data has the same definition as the metadata file output by the export tool. See <a href="#impexp_metadata">Metadata files</a> with <a href="#container_dataform">the container data file format</a> for the column type and data compression method, container definition format, etc. However, the following data will be invalid in this command even though it is defined in the metadata file of the export command.
+
+<ul>
+<li>version Export tool version</li>
+<li>database Database name</li>
+<li>containerFileType Export data file type</li>
+<li>containerFile Export file name</li>
+<li>partitionNo Partition no.</li>
+</ul></li>
+<li>Describe a single container definition in a single container definition file.</li>
+<li>If the container name is omitted in the argument, create the container with the name described in the container definition file.</li>
+<li>If the container name is omitted in the argument, ignore the container name in the container definition file and create the container with the name described in the argument.</li>
+<li>An error will not result even if the database name is described in the container definition file but the name will be ignored and the container will be created in the database currently being connected.</li>
+<li>When using the container definition file, <a href="#impexp_export">the metadata file will be output when the &ndash;out option is specified in the export function</a>. The output metadata file can be edited and used as a container definition file.</li>
+</ul></li>
+</ul>
+
+<p>　　Example: When using the output metadata file as a container definition file</p>
+
+<p>{
+    &ldquo;version&rdquo;:&ldquo;2.1.00&rdquo;,　　　　　　　　　　　　　　　←invalid
+    &ldquo;container&rdquo;:&ldquo;container_354&rdquo;,
+    &ldquo;database&rdquo;:&ldquo;db2&rdquo;,　　　　　　　　　　　　　　　　←invalid
+    &ldquo;containerType&rdquo;:&ldquo;TIME_SERIES&rdquo;,
+    &ldquo;containerFileType&rdquo;:&ldquo;binary&rdquo;,　　　　　　　　　　←invalid
+    &ldquo;containerFile&rdquo;:&ldquo;20141219_114232_098_div1.mc&rdquo;, 　←invalid
+    &ldquo;rowKeyAssigned&rdquo;:true,
+    &ldquo;partitionNo&rdquo;:0,　　　　　　　　　　　　　　　　 ←invalid
+    &ldquo;columnSet&rdquo;:[
+        {
+            &ldquo;columnName&rdquo;:&ldquo;timestamp&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;timestamp&rdquo;
+        },
+        {
+            &ldquo;columnName&rdquo;:&ldquo;active&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;boolean&rdquo;
+        },
+        {
+            &ldquo;columnName&rdquo;:&ldquo;voltage&rdquo;,
+            &ldquo;type&rdquo;:&ldquo;double&rdquo;
+        }
+    ],
+    &ldquo;timeSeriesProperties&rdquo;:{
+        &ldquo;compressionMethod&rdquo;:&ldquo;NO&rdquo;,
+        &ldquo;compressionWindowSize&rdquo;:-1,
+        &ldquo;compressionWindowSizeUnit&rdquo;:&ldquo;null&rdquo;,
+        &ldquo;expirationDivisionCount&rdquo;:8,
+        &ldquo;rowExpirationElapsedTime&rdquo;:-1,
+        &ldquo;rowExpirationTimeUnit&rdquo;:&ldquo;null&rdquo;
+    },
+    &ldquo;compressionInfoSet&rdquo;:[
+    ]</p>
+
+<p><strong>Container Deletion</strong></p>
+
+<ul>
+<li><p>Example:</p>
+
+<p>gs[public]&gt; dropcontainer　Con001</p></li>
+</ul>
+
+<p><strong>Container Indication</strong></p>
+
+<p>The following command is used to display the container data.</p>
+
+<ul>
+<li><p>Sub-command</p>
+
+<p>showcontainer</p>
+
+<p>Container name</p></li>
+
+<li><p>Description of each argument</p>
+
+<p>Argument</p>
+
+<p>Description</p>
+
+<p>Container name</p>
+
+<p>Specify the container name to be displayed. Display a list of all containers if omitted.</p></li>
+
+<li><p>Example:</p>
+
+<p>// display container list
+gs[userDB]&gt; showcontainer
+Database : userDB
+Name                  Type         PartitionId
+------------------------------------------------
+cont001               COLLECTION            10
+col00a                COLLECTION             3
+time02                TIME_SERIES            5
+cont003               COLLECTION            15
+cont005               TIME_SERIES           17</p>
+
+<p>// display data of specified container
+gs[public]&gt; showcontainer cont003
+Database    : userDB
+Name : cont003
+Type : COLLECTION
+Partition ID: 15
+DataAffinity: -</p>
+
+<p>Columns:
+No  Name                  Type            Index
+------------------------------------------------------------
+ 0  col1                  INTEGER         [TREE] (RowKey)
+ 1  col2                  STRING          []
+ 2  col3                  TIMESTAMP       []</p></li>
+</ul>
+
+<p><strong>[Memo]</strong></p>
+
+<ul>
+<li>The data displayed in a container list are the “Container name”, “Container type” and “Partition ID”.</li>
+<li>The data displayed in the specified container are the “Container name”, “Container type”, “Partition ID”, “Defined column name”, “Column data type” and “Column index setting”.</li>
+<li>Container data of the current DB will be displayed.</li>
+</ul>
+
+<p><strong>Container ROWKEY</strong></p>
+
+<p>A ROWKEY is the data set in the row of a container. The uniqueness of a row with a set ROWKEY is guaranteed. A ROWKEY can be set in the first column of the row. (This is set in Column No. 0 since columns start from 0 in GridDB.)</p>
+
+<ul>
+<li><p>For a timeseries container</p></li>
+
+<li><p>ROWKEY is a TIMESTAMP</p></li>
+
+<li><p>Must be specified.</p></li>
+
+<li><p>For a collection container</p></li>
+
+<li><p>A ROWKEY is either a STRING, INTEGER, LONG, or TIMESTAMP column.</p></li>
+
+<li><p>Need not be specified</p></li>
+</ul>
+
+<p>A default index prescribed in advance according to the column data type can be set in a column set in ROWKEY. In the current version, the default index of all STRING, INTEGER, LONG or TIMESTAMP data that can be specified in a ROWKEY is the TREE index.</p>
+
+<h3 id="sample-of-collection-operations-java">Sample of Collection Operations (Java)</h3>
+
+<p>package test;</p>
+
+<p>import java.util.Arrays;
+import java.util.Properties;</p>
+
+<p>import com.toshiba.mwcloud.gs.Collection;
+import com.toshiba.mwcloud.gs.GSException;
+import com.toshiba.mwcloud.gs.GridStore;
+import com.toshiba.mwcloud.gs.GridStoreFactory;
+import com.toshiba.mwcloud.gs.Query;
+import com.toshiba.mwcloud.gs.RowKey;
+import com.toshiba.mwcloud.gs.RowSet;</p>
+
+<p>// Operaton on Collection data
+public class Sample1 {</p>
+
+<pre><code>static class Person {
+    @RowKey String name;
+    boolean status;
+    long count;
+    byte\[\] lob;
+}
+
+public static void main(String\[\] args) throws GSException {
+
+    // Get a GridStore instance
+    Properties props = new Properties();
+    props.setProperty(&quot;notificationAddress&quot;, args\[0\]);
+    props.setProperty(&quot;notificationPort&quot;, args\[1\]);
+    props.setProperty(&quot;clusterName&quot;, args\[2\]);
+    props.setProperty(&quot;user&quot;, &quot;system&quot;);
+    props.setProperty(&quot;password&quot;, &quot;manager&quot;);
+    GridStore store = GridStoreFactory.getInstance().getGridStore(props);
+
+    // Create a Collection (Delete if schema setting is NULL)
+    Collection&lt;String, Person&gt; col = store.putCollection(&quot;col01&quot;, Person.class);
+
+    // Set an index on the Row-key Column
+    col.createIndex(&quot;name&quot;);
+
+    // Set an index on the Column
+    col.createIndex(&quot;count&quot;);
+
+    // Set the autocommit mode to OFF
+    col.setAutoCommit(false);
+
+    // Prepare data for a Row
+    Person person = new Person();
+    person.name = &quot;name01&quot;;
+    person.status = false;
+    person.count = 1;
+    person.lob = new byte\[\] { 65, 66, 67, 68, 69, 70, 71, 72, 73, 74 };
+
+    // Operate a Row on a K-V basis: RowKey = &quot;name01&quot;
+    boolean update = true;
+    col.put(person);    // Add a Row
+    person = col.get(person.name, update);  // Obtain the Row (acquiring a lock for update)
+    col.remove(person.name);    // Delete the Row
+
+    // Operate a Row on a K-V basis: RowKey = &quot;name02&quot;
+    col.put(&quot;name02&quot;, person);  // Add a Row (specifying RowKey)
+
+    // Commit the transaction (Release the lock)
+    col.commit();
+
+    // Search the Collection for a Row
+    Query&lt;Person&gt; query = col.query(&quot;select * where name = 'name02'&quot;);
+
+    // Fetch and update the searched Row
+    RowSet&lt;Person&gt; rs = query.fetch(update);
+    while (rs.hasNext()) {
+        // Update the searched Row
+        Person person1 = rs.next();
+        person1.count += 1;
+        rs.update(person1);
+
+        System.out.println(&quot;Person: &quot; +
+                &quot; name=&quot; + person1.name +
+                &quot; status=&quot; + person1.status +
+                &quot; count=&quot; + person1.count +
+                &quot; lob=&quot; + Arrays.toString(person1.lob));
+    }
+
+    // Commit the transaction
+    col.commit();
+
+    // Release the resource
+    store.close();
+}
+</code></pre>
+
+<p>}</p>
+
+<h3 id="sample-of-timeseries-operations-0-storage-and-extraction-of-specific-range-java">Sample of TimeSeries Operations 0 Storage and Extraction of Specific Range (Java)</h3>
+
+<p>package test;</p>
+
+<p>import java.util.Date;
+import java.util.Properties;</p>
+
+<p>import com.toshiba.mwcloud.gs.GSException;
+import com.toshiba.mwcloud.gs.GridStore;
+import com.toshiba.mwcloud.gs.GridStoreFactory;
+import com.toshiba.mwcloud.gs.RowKey;
+import com.toshiba.mwcloud.gs.RowSet;
+import com.toshiba.mwcloud.gs.TimeSeries;
+import com.toshiba.mwcloud.gs.TimestampUtils;
+import com.toshiba.mwcloud.gs.TimeUnit;</p>
+
+<p>// Storage and extraction of a specific range of time-series data
+public class Sample2 {</p>
+
+<pre><code>static class Point {
+    @RowKey Date timestamp;
+    boolean active;
+    double voltage;
+}
+
+public static void main(String\[\] args) throws GSException {
+
+    // Get a GridStore instance
+    Properties props = new Properties();
+    props.setProperty(&quot;notificationAddress&quot;, args\[0\]);
+    props.setProperty(&quot;notificationPort&quot;, args\[1\]);
+    props.setProperty(&quot;clusterName&quot;, args\[2\]);
+    props.setProperty(&quot;user&quot;, &quot;system&quot;);
+    props.setProperty(&quot;password&quot;, &quot;manager&quot;);
+    GridStore store = GridStoreFactory.getInstance().getGridStore(props);
+
+    // Create a TimeSeries (Only obtain the specified TimeSeries if it already exists)
+    TimeSeries&lt;Point&gt; ts = store.putTimeSeries(&quot;point01&quot;, Point.class);
+
+    // Prepare time-series element data
+    Point point = new Point();
+    point.active = false;
+    point.voltage = 100;
+
+    // Store the time-series element (GridStore sets its timestamp)
+    ts.append(point);
+
+    // Extract the specified range of time-series elements: last six hours
+    Date now = TimestampUtils.current();
+    Date before = TimestampUtils.add(now, -6, TimeUnit.HOUR);
+
+    RowSet&lt;Point&gt; rs = ts.query(before, now).fetch();
+
+    while (rs.hasNext()) {
+        point = rs.next();
+
+        System.out.println(
+                &quot;Time=&quot; + TimestampUtils.format(point.timestamp) +
+                &quot; Active=&quot; + point.active +
+                &quot; Voltage=&quot; + point.voltage);
+    }
+
+    // Release the resource
+    store.close();
+}
+</code></pre>
+
+<p>}</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/technical-architecture-and-guide/3-3_tql/" title="TQL"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1536883882"></script>
+    <script src="/js/jquery.sticky.js?1536883882"></script>
+    <script src="/js/featherlight.min.js?1536883882"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1536883882"></script>
+    <script src="/js/highlight.pack.js?1536883882"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1536883882"></script>
+    <script src="/js/learn.js?1536883882"></script>
+    <script src="/js/hugo-learn.js?1536883882"></script>
+
+    <link href="/mermaid/mermaid.css?1536883882" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1536883882"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

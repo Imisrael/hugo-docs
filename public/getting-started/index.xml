@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on GridDB</title>
+    <link>http://example.org/getting-started/</link>
+    <description>Recent content in Getting Started on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>System Requirements</title>
+      <link>http://example.org/getting-started/2-1_system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-1_system-requirements/</guid>
+      <description>Checking the Required Resources GridDB is a scale-out database that &amp;ndash; unlike a conventional database &amp;ndash; pre-planning of the system design and sizing is not required in order to achieve non-stop operation. However, the following points should be considered as guidelines in the initial system design:
+ Memory usage Number of nodes in a cluster Disk usage  The estimation method is explained in sequence below.
+Functions to increase the capacity by using external storage devices such as SSDs, etc.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>http://example.org/getting-started/2-2_installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-2_installation/</guid>
+      <description>The following instructions are for the Standard Edition of GridDB. Instructions for the Community Edition can be found below
+Setup This chapter explains the installation of a node onto a single machine. See the chapter on operations for the cluster configuration.
+// The lsb_release command prints certain LSB (Linux Standard Base) and Distribution information. $ lsb_release -id Distributor ID: CentOS Description: CentOS release 6.3 (Final)   Installing a Node</description>
+    </item>
+    
+    <item>
+      <title>Run your First GridDB Node/Cluster</title>
+      <link>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</guid>
+      <description>Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.
+Start a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log
+$ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #&amp;ldquo;clusterName&amp;rdquo;:&amp;ldquo;your_clustername&amp;rdquo; #&amp;lt;&amp;ndash; input your_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs_joincluster -c your_clustername -u admin/your_password</description>
+    </item>
+    
+    <item>
+      <title>Run a Sample Java Client App</title>
+      <link>http://example.org/getting-started/2-4_run-a-sample-java-client-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-4_run-a-sample-java-client-app/</guid>
+      <description> Build a Client $ ant -f java_client/build.xml  Execute a sample program $ export CLASSPATH=${CLASSPATH}:$GS_HOME/bin/gridstore.jar $ mkdir gsSample $ cp $GS_HOME/docs/sample/program/Sample1.java gsSample/. $ javac gsSample/Sample1.java $ java gsSample/Sample1 239.0.0.1 31999 your_clustername admin your_password --&amp;gt; Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]  </description>
+    </item>
+    
+  </channel>
+</rss>

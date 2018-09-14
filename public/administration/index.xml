@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Administration on GridDB</title>
+    <link>http://example.org/administration/</link>
+    <description>Recent content in Administration on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/administration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Supported OS, Platforms and System Requirements</title>
+      <link>http://example.org/administration/6-1_supported-os-platforms-and-system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-1_supported-os-platforms-and-system-requirements/</guid>
+      <description>Supported Environments The following Linux distributions are tested and will work with GridDB
+ OS: Red Hat Enterprise Linux 6.2 / 6.3 / 6.4 / 6.5 (x86_64) CentOS 6.2 / 6.3 / 6.4 / 6.5 (x86_64)  Hardware Requirements As GridDB is a scale-out database, it is easy to add more machines to the cluster to increase both computing power and storage space simultaneously. Some basic hardware requirements look like this:</description>
+    </item>
+    
+    <item>
+      <title>Sizing and Scaling</title>
+      <link>http://example.org/administration/6-2_sizing-and-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-2_sizing-and-scaling/</guid>
+      <description>GridDB is a scale-out database that unlike a conventional DB, careful system design and sizing is not required in order to achieve non-stop operation. However, the following points should be considered as guidelines in the initial system design.
+ Memory usage Number of nodes in a cluster Disk usage  The estimation method is explained in sequence below.
+Functions to increase the capacity by using external storage devices such as SSDs etc.</description>
+    </item>
+    
+    <item>
+      <title>Installing</title>
+      <link>http://example.org/administration/6-3_installing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-3_installing/</guid>
+      <description>The following chapter will discuss how to install GridDB (Standard Edition). Instructions for installing on the cloud can be found below
+On Premises The following 3 RPM packages are needed when installing a GridDB node. Place these packages anywhere in the machine.
+Package name
+File name
+Description
+griddb-server
+griddb-server-X.X.X-linux.x86_64.rpm
+The start and other commands for the GridDB node module and server are included.
+griddb-client
+griddb-client-X.X.X-linux.x86_64.rpm
+One set of operating commands except start node is included.</description>
+    </item>
+    
+    <item>
+      <title>Upgrading Editions</title>
+      <link>http://example.org/administration/6-4_upgrading-the-editions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-4_upgrading-the-editions/</guid>
+      <description>Follow the procedure below to update the software.
+ Stop the cluster Stop the node Make a backup copy of the definition file, database file and event log file Update the software Start the node Configure the cluster  An example of the command execution in a machine in which the nodes have been started is shown below.
+[Command execution example]
+$ gs_stopcluster -u admin/admin $ gs_stopnode -u admin/admin $ cp -rp /var/lib/gridstore/data /xxx/shelter # copy just in case $ cp -rp /var/lib/gridstore/log /xxx/shelter # copy just in case $ cp -rp /var/lib/gridstore/conf /xxx/shelter # copy just in case $ su # rpm -Uvh griddb-server-Y.</description>
+    </item>
+    
+    <item>
+      <title>Migration from Other Databases</title>
+      <link>http://example.org/administration/6-5_migration-from-other-databases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-5_migration-from-other-databases/</guid>
+      <description>In the GridDB export/import tools, to recover a database from local damages or the database migration process, save/recovery functions are provided in the database and container unit.
+In addition, there is also a function to link up with RDBs, and RDB data can also be collected and registered in GridDB.
+Overview In a GridDB cluster, container data is automatically arranged in a node within a cluster. The user does not need to know how the data is arranged in the node (data position transmission).</description>
+    </item>
+    
+    <item>
+      <title>Cluster Administration &amp; Operations</title>
+      <link>http://example.org/administration/6-6_cluster-administration-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-6_cluster-administration-operations/</guid>
+      <description>The cluster operation control command interpreter (hereinafter referred to gs_sh) is a command line interface tool to manage GridDB cluster operations and data operations.
+The following can be carried out by gs_sh.
+ Operation control of GridDB cluster  Definition of GridDB cluster Starting and stopping a GridDB node and cluster Status, log display  GridDB cluster data operation  Database and user management Collection, trigger display Index setting, deletion Search using a tql/sql   [Memo]</description>
+    </item>
+    
+    <item>
+      <title>Monitoring &amp; Troubleshooting</title>
+      <link>http://example.org/administration/6-7_monitoring-troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-7_monitoring-troubleshooting/</guid>
+      <description>This chapter describes the troubleshooting procedures of GridDB. It contains information on how to resolve problems which occur when constructing and operating a GridDB’s system.
+This chapter is written for developers, users and system administrators responsible for GridDB’s operation management.
+The following subjects are covered in this chapter.
+ Introduction Verification of the circumstances under which problems occurred: explains how to check the detailed circumstances (log file). Countermeasures to be adopted when problems occur: contains a list of expected problems and their countermeasures.</description>
+    </item>
+    
+    <item>
+      <title>Tuning</title>
+      <link>http://example.org/administration/6-8_tuning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-8_tuning/</guid>
+      <description>After installation, the following settings are necessary in order to operate GridDB.
+ Network environment settings Cluster name settings  GridDB settings are configured by editing 2 types of definition files.
+ Cluster definition file (gs_cluster.json) Node definition file (gs_node.json)  The cluster definition file defines the parameters that are common in the entire clusters.
+The node definition files define the parameters for the different settings in each node.</description>
+    </item>
+    
+  </channel>
+</rss>

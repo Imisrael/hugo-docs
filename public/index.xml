@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GridDB</title>
+    <link>http://example.org/</link>
+    <description>Recent content on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Modeling Basics</title>
+      <link>http://example.org/data-modeling/4-1_data-modeling-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-1_data-modeling-basics/</guid>
+      <description>GridDB is a unique Key-Container data model that resembles Key-Value. It has the following features.
+ A concept resembling a RDB table that is a container for grouping Key-Value. A schema to define the data type for the container can be set. An index can be set in a column. Transactions can be carried out on a row basis within the container. In addition, ACID is guaranteed on a container basis.</description>
+    </item>
+    
+    <item>
+      <title>GridDB Technical Overview</title>
+      <link>http://example.org/technical-architecture-and-guide/3-1_griddb-technical-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-1_griddb-technical-overview/</guid>
+      <description>NoSQL databases are a relatively modern phenomenon that have permeated throughout the industry very quickly. The current data models being used most frequently in NoSQL databases are: Key-Value, Document, Graph, and Column-Oriented. With the advent of GridDB, a new structure is being introduced: Key-Container. Every method of organizing data has its own set of merits and features. In this chapter, we will address some of these merits.
+Scaling In addition to supplying the 3 Vs (volume, variety, velocity) required in big data solutions, GridDB also provides data reliability/availability.</description>
+    </item>
+    
+    <item>
+      <title>JDBC Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-1_jdbc-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-1_jdbc-connector/</guid>
+      <description>Overview of GridDB AE JDBC driver An interface that can access GridDB data using SQL is provided in the GridDB Advanced Edition (GridDB AE). This chapter provides an overview and specifications of the Java API (JBDC) used to access databases supported by the GridDB AE.
+This chapter also consists of a description of the specified format and data types that can be used in a program using JDBC parameters, and the points to note during use.</description>
+    </item>
+    
+    <item>
+      <title>Supported OS, Platforms and System Requirements</title>
+      <link>http://example.org/administration/6-1_supported-os-platforms-and-system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-1_supported-os-platforms-and-system-requirements/</guid>
+      <description>Supported Environments The following Linux distributions are tested and will work with GridDB
+ OS: Red Hat Enterprise Linux 6.2 / 6.3 / 6.4 / 6.5 (x86_64) CentOS 6.2 / 6.3 / 6.4 / 6.5 (x86_64)  Hardware Requirements As GridDB is a scale-out database, it is easy to add more machines to the cluster to increase both computing power and storage space simultaneously. Some basic hardware requirements look like this:</description>
+    </item>
+    
+    <item>
+      <title>System Requirements</title>
+      <link>http://example.org/getting-started/2-1_system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-1_system-requirements/</guid>
+      <description>Checking the Required Resources GridDB is a scale-out database that &amp;ndash; unlike a conventional database &amp;ndash; pre-planning of the system design and sizing is not required in order to achieve non-stop operation. However, the following points should be considered as guidelines in the initial system design:
+ Memory usage Number of nodes in a cluster Disk usage  The estimation method is explained in sequence below.
+Functions to increase the capacity by using external storage devices such as SSDs, etc.</description>
+    </item>
+    
+    <item>
+      <title>What is GridDB</title>
+      <link>http://example.org/introduction/1-1_what-is-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/introduction/1-1_what-is-griddb/</guid>
+      <description>Toshiba GridDB™ is a highly scalable NoSQL database best suited for IoT and Big Data We live in the era of the Internet of Things (IoT) where billions of devices are interconnected and are generating petabytes of data at an increasing rate. Gaining insights and information from that data and generating value out of it gives a tangible competitive advantage to businesses, organizations, governments, and even individuals.
+Organizations should focus more on creating value from data that will enhance their core products, services or even operational processes rather than spend time in dealing with the complexity surrounding Big Data.</description>
+    </item>
+    
+    <item>
+      <title>Data Modeling Using GridDB</title>
+      <link>http://example.org/data-modeling/4-2_data-modeling-using-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-2_data-modeling-using-griddb/</guid>
+      <description>Storing Data in Collection
+The flow of storing data in a Collection is shown below. First, if there is no Collection to store data in, create a new Collection following the procedure below:
+ Get a GridStore instance. Create a Collection.  You can store data in an existing Collection with the following procedure:
+ Get a GridStore instance. Get a collection. Set operation parameters Create indexes. Create values to be stored.</description>
+    </item>
+    
+    <item>
+      <title>GridDB Editions</title>
+      <link>http://example.org/introduction/1-2_griddb-edition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/introduction/1-2_griddb-edition/</guid>
+      <description>There are currently two distinct versions of GridDB available. The information below is designed to help distinguish between the editions and help users arrive to the correct choice for their situation.
+GridDB Community Edition (GridDB CE) GridDB CE is available under the AGPLv3 as a high-performant, open-source NoSQL database built with scalability and fault tolerance in-mind. This is the only edition of GridDB that is open-source.
+GridDB Standard Edition (GridDB SE) A high-performant commerical NoSQL database.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>http://example.org/getting-started/2-2_installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-2_installation/</guid>
+      <description>The following instructions are for the Standard Edition of GridDB. Instructions for the Community Edition can be found below
+Setup This chapter explains the installation of a node onto a single machine. See the chapter on operations for the cluster configuration.
+// The lsb_release command prints certain LSB (Linux Standard Base) and Distribution information. $ lsb_release -id Distributor ID: CentOS Description: CentOS release 6.3 (Final)   Installing a Node</description>
+    </item>
+    
+    <item>
+      <title>Key Container Model</title>
+      <link>http://example.org/technical-architecture-and-guide/3-2_key-container-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-2_key-container-model/</guid>
+      <description>GridDB data adopts a Key-Container data model that is expanded from a Key-Value model. Data is stored in a &amp;ldquo;container&amp;rdquo;, which acts similarly to a RDB table. In fact, a container can be considered a RDB table for easier understanding and to help conceptualizing. When accessing data in GridDB, the model allows data to be short-listed with a key thanks to its Key-Value database structure, allowing processing to be carried out at the highest speed.</description>
+    </item>
+    
+    <item>
+      <title>ODBC Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-2_odbc-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-2_odbc-connector/</guid>
+      <description>Operating Environment The ODBC driver used in GridDB AE (Advanced Edition) can be used with the following operating systems:
+ Windows Server 2012 R2 Windows Server 2008 R2 Windows 8 Windows 7  Overview of ODBC
+ODBC (Open Database Connectivity) is a standard interface for accessing database management systems (DBMS) from Windows-compatible applications advocated by Microsoft
+ ODBC-compatible application (Windows) For ODBC functions invoked from an ODBC-compatible application, the OS will control the connection to a specific database of the specified ODBC data source.</description>
+    </item>
+    
+    <item>
+      <title>Sizing and Scaling</title>
+      <link>http://example.org/administration/6-2_sizing-and-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-2_sizing-and-scaling/</guid>
+      <description>GridDB is a scale-out database that unlike a conventional DB, careful system design and sizing is not required in order to achieve non-stop operation. However, the following points should be considered as guidelines in the initial system design.
+ Memory usage Number of nodes in a cluster Disk usage  The estimation method is explained in sequence below.
+Functions to increase the capacity by using external storage devices such as SSDs etc.</description>
+    </item>
+    
+    <item>
+      <title>Hadoop and Spark Connector</title>
+      <link>http://example.org/drivers-and-integrators/7-3_hadoop-and-spark-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-3_hadoop-and-spark-connector/</guid>
+      <description>Overview The Hadoop MapReduce GridDB connector is a Java library for using GridDB as an input source and output destination for Hadoop MapReduce jobs. This library allows the GridDB performance to be used directly by MapReduce jobs through in-memory processing.
+Operating Environment Building of the library and execution of the sample programs are checked in the environment below.
+OS: CentOS6.7(x64) Java: JDK 1.8.0_60 Maven: apache-maven-3.3.9 Hadoop: CDH5.7.1(YARN)
+QuickStart Preparations Build a GridDB Java client and place the created gridstore.</description>
+    </item>
+    
+    <item>
+      <title>Installing</title>
+      <link>http://example.org/administration/6-3_installing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-3_installing/</guid>
+      <description>The following chapter will discuss how to install GridDB (Standard Edition). Instructions for installing on the cloud can be found below
+On Premises The following 3 RPM packages are needed when installing a GridDB node. Place these packages anywhere in the machine.
+Package name
+File name
+Description
+griddb-server
+griddb-server-X.X.X-linux.x86_64.rpm
+The start and other commands for the GridDB node module and server are included.
+griddb-client
+griddb-client-X.X.X-linux.x86_64.rpm
+One set of operating commands except start node is included.</description>
+    </item>
+    
+    <item>
+      <title>Run your First GridDB Node/Cluster</title>
+      <link>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</guid>
+      <description>Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.
+Start a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log
+$ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #&amp;ldquo;clusterName&amp;rdquo;:&amp;ldquo;your_clustername&amp;rdquo; #&amp;lt;&amp;ndash; input your_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs_joincluster -c your_clustername -u admin/your_password</description>
+    </item>
+    
+    <item>
+      <title>TQL</title>
+      <link>http://example.org/technical-architecture-and-guide/3-3_tql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-3_tql/</guid>
+      <description>TQL in NoSQL products and SQL-92 compliant SQL in NewSQL products are supported as database access languages.
+ What is TQL?
+A simplified version of SQL prepared for NoSQL products. The support range is limited to functions such as search, aggregation, etc., using a container as a unit. TQL is employed by using the client API (Java, C language) of NoSQL products.
+ What is SQL?
+SQL stands for &amp;ldquo;Structured Query Language&amp;rdquo;, and it has been the standard query language for RDMS systems for years.</description>
+    </item>
+    
+    <item>
+      <title>CRUD Operations</title>
+      <link>http://example.org/technical-architecture-and-guide/3-4_crud-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-4_crud-operations/</guid>
+      <description>CRUD operations are present in all databases as the foundational actions that allow the most basic of actions. GridDB&amp;rsquo;s CRUD operations are most easily executed by using its very own Java-based API, though it does also accept TQL.
+What is CRUD?
+ Create: writing new data (containers, rows, etc) Read: viewing, or &amp;ldquo;pulling up&amp;rdquo; any data Update: to modify already existing data (as opposed to writing NEW data) to reflect changes Delete: erasing or removing data from a container or row  Native API GridDB can be accessed using TQL or through its native API.</description>
+    </item>
+    
+    <item>
+      <title>Run a Sample Java Client App</title>
+      <link>http://example.org/getting-started/2-4_run-a-sample-java-client-app/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/getting-started/2-4_run-a-sample-java-client-app/</guid>
+      <description> Build a Client $ ant -f java_client/build.xml  Execute a sample program $ export CLASSPATH=${CLASSPATH}:$GS_HOME/bin/gridstore.jar $ mkdir gsSample $ cp $GS_HOME/docs/sample/program/Sample1.java gsSample/. $ javac gsSample/Sample1.java $ java gsSample/Sample1 239.0.0.1 31999 your_clustername admin your_password --&amp;gt; Person: name=name02 status=false count=2 lob=[65, 66, 67, 68, 69, 70, 71, 72, 73, 74]  </description>
+    </item>
+    
+    <item>
+      <title>Upgrading Editions</title>
+      <link>http://example.org/administration/6-4_upgrading-the-editions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-4_upgrading-the-editions/</guid>
+      <description>Follow the procedure below to update the software.
+ Stop the cluster Stop the node Make a backup copy of the definition file, database file and event log file Update the software Start the node Configure the cluster  An example of the command execution in a machine in which the nodes have been started is shown below.
+[Command execution example]
+$ gs_stopcluster -u admin/admin $ gs_stopnode -u admin/admin $ cp -rp /var/lib/gridstore/data /xxx/shelter # copy just in case $ cp -rp /var/lib/gridstore/log /xxx/shelter # copy just in case $ cp -rp /var/lib/gridstore/conf /xxx/shelter # copy just in case $ su # rpm -Uvh griddb-server-Y.</description>
+    </item>
+    
+    <item>
+      <title>Migration from Other Databases</title>
+      <link>http://example.org/administration/6-5_migration-from-other-databases/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-5_migration-from-other-databases/</guid>
+      <description>In the GridDB export/import tools, to recover a database from local damages or the database migration process, save/recovery functions are provided in the database and container unit.
+In addition, there is also a function to link up with RDBs, and RDB data can also be collected and registered in GridDB.
+Overview In a GridDB cluster, container data is automatically arranged in a node within a cluster. The user does not need to know how the data is arranged in the node (data position transmission).</description>
+    </item>
+    
+    <item>
+      <title>Transactions and ACID</title>
+      <link>http://example.org/technical-architecture-and-guide/3-5_transactions-and-acid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-5_transactions-and-acid/</guid>
+      <description>GridDB supports transaction processing on a container basis and ACID (atomictity, consistency, isolation, durability) characteristics which are generally known as transaction characteristics. The supporting functions in a transaction process are explained in detail below.
+What is ACID?
+Relational Databases long-reign of dominance can be somewhat attributed to them being ACID compliant. Financial transactions, for example, need ACID compliance to function with a degree of confidence and usability. Here is a more detailed look at each component of ACID:</description>
+    </item>
+    
+    <item>
+      <title>Cluster Administration &amp; Operations</title>
+      <link>http://example.org/administration/6-6_cluster-administration-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-6_cluster-administration-operations/</guid>
+      <description>The cluster operation control command interpreter (hereinafter referred to gs_sh) is a command line interface tool to manage GridDB cluster operations and data operations.
+The following can be carried out by gs_sh.
+ Operation control of GridDB cluster  Definition of GridDB cluster Starting and stopping a GridDB node and cluster Status, log display  GridDB cluster data operation  Database and user management Collection, trigger display Index setting, deletion Search using a tql/sql   [Memo]</description>
+    </item>
+    
+    <item>
+      <title>Indexes</title>
+      <link>http://example.org/technical-architecture-and-guide/3-6_indexes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-6_indexes/</guid>
+      <description>Indexes exist to make queries and searches more efficient. When dealing with very large data sets, these indexes save on precious time and resources. A condition-based search can be processed quickly by creating an index for the columns of a container. There are 3 types of index - hash index (HASH), tree index (TREE) and space index (SPATIAL). A hash index is used in an equivalent-value search when searching with a query in a container.</description>
+    </item>
+    
+    <item>
+      <title>Monitoring &amp; Troubleshooting</title>
+      <link>http://example.org/administration/6-7_monitoring-troubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-7_monitoring-troubleshooting/</guid>
+      <description>This chapter describes the troubleshooting procedures of GridDB. It contains information on how to resolve problems which occur when constructing and operating a GridDB’s system.
+This chapter is written for developers, users and system administrators responsible for GridDB’s operation management.
+The following subjects are covered in this chapter.
+ Introduction Verification of the circumstances under which problems occurred: explains how to check the detailed circumstances (log file). Countermeasures to be adopted when problems occur: contains a list of expected problems and their countermeasures.</description>
+    </item>
+    
+    <item>
+      <title>Storage Architecture</title>
+      <link>http://example.org/technical-architecture-and-guide/3-7_storage-architecture/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-7_storage-architecture/</guid>
+      <description>GridDB Nodes GridDB is operated by clusters which are composed of multiple nodes. To access the database from an application system, the nodes have to be started up and the cluster has to be constituted (cluster service is executed). A cluster is formed and cluster service is started when a number of nodes specified by the user joins the cluster. Cluster service will not be started and access from the application will not be possible until all nodes constituting a cluster have joined the cluster.</description>
+    </item>
+    
+    <item>
+      <title>Replication &amp; Distribution</title>
+      <link>http://example.org/technical-architecture-and-guide/3-8_replication-distribution/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-8_replication-distribution/</guid>
+      <description>Data replicas are created on a partition basis in accordance with the number of replications set by the user. A process can be continued non-stop even when a node failure occurs by maintaining replicas of the data among scattered nodes. In the client API, when a node failure is detected, the client automatically switches access to another node where the replica is maintained.
+The default number of replications is 2, allowing data to be replicated twice when operating in a cluster configuration with multiple nodes.</description>
+    </item>
+    
+    <item>
+      <title>Tuning</title>
+      <link>http://example.org/administration/6-8_tuning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/administration/6-8_tuning/</guid>
+      <description>After installation, the following settings are necessary in order to operate GridDB.
+ Network environment settings Cluster name settings  GridDB settings are configured by editing 2 types of definition files.
+ Cluster definition file (gs_cluster.json) Node definition file (gs_node.json)  The cluster definition file defines the parameters that are common in the entire clusters.
+The node definition files define the parameters for the different settings in each node.</description>
+    </item>
+    
+    <item>
+      <title>Sharding</title>
+      <link>http://example.org/technical-architecture-and-guide/3-9_sharding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/technical-architecture-and-guide/3-9_sharding/</guid>
+      <description>System expansion can be carried out online with a scale-out approach. As a result, a system in operation can be supported without having to stop it as it will support the increasing volume of data as the system grows.
+In the scale-out approach, data is arranged in an appropriate manner according to the load of the system in the nodes built into the system. As GridDB will optimize the load balance, the application administrator does not need to worry about the data arrangement.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/data-modeling/4-3_modeling-relationships/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-3_modeling-relationships/</guid>
+      <description>4 Data Modeling &amp;gt;
+4.3 Modeling Relationships What are Modeling Relationships? Though GridDB does not employ strict schemas overall, it is important to have some semblance of foresight when dealing with the cluster&amp;rsquo;s data. Utilizing data to its potential is the end-goal when choosing a database, and so when setting up the data for the first time, it is important to make certain decisions.
+Relationships between data and how they are organized are very important for both analytics and performance.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/</guid>
+      <description> 4 Data Modeling &amp;gt;
+4.4 Possibilities and Variations of Data Models in GridDB T.B.D </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/drivers-and-integrators/7-4_grafana-connector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/drivers-and-integrators/7-4_grafana-connector/</guid>
+      <description>Table of Contents
+7.4 Grafana Connector* TBD</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-10_collection-delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-10_collection-delete/</guid>
+      <description>Table of Contents
+5.1.10 Data Deletion Overview This chapter covers deleting data from a GridDB collection.
+Delete data Delete data from a collection with specifying a Row key.
+List.1 Delete Data (CollectionDeleteRow.java)
+// Get Collection Collection weatherStationCol = store.getCollection(&amp;ldquo;weather_station&amp;rdquo;, WeatherStation.class);
+// Delete Row boolean deleteSucceed = weatherStationCol.remove(&amp;ldquo;1&amp;rdquo;); System.out.println(&amp;ldquo;Delete Succeed:&amp;rdquo; + deleteSucceed);
+System.out.println(&amp;ldquo;ID\tName\t\t\tLongitude\tLatitude\tCamera&amp;rdquo;); for (int i = 0; i &amp;lt; WeatherStationLogic.JP_PREFECTURE; i++) { // Retrieve row by key WeatherStation weatherStation = weatherStationCol.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-11_collection-modify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-11_collection-modify/</guid>
+      <description>Table of Contents
+5.1.11 Collection Modification Overview This section describes modifying the schema and the index of a GridDB collection.
+Schema Modification You can modify the schema by adding or deleting columns in a container after the container has been created.
+This example demonstrates how to modify a newly created class with a new column in addition to WeatherStation class.
+In addition, there is a way to modify the schema without creating a new class.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-12_timeseries-register/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-12_timeseries-register/</guid>
+      <description>Table of Contents
+5.1.12 Data Registration Overview This section describes the data registration for TimeSeries containers
+Sample Data Similar to collection sample, data to be registered is initially stored in a CSV file. Data must be registered in order to later read. The contents of the CSV file (Instrument_log.csv) is as follows:
+ Data held Measuring instrument ID Timestamp Temperature Live image file path   List.1 Measurement Log Contents (instrument_log.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-13_timeseries-retrieve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-13_timeseries-retrieve/</guid>
+      <description>Table of Contents
+5.1.13 Data Retrieval Overview This section describes the data acquisition of time-series container of GridDB in this chapter.
+Data Acquisition The following are methods to fetch and read TimeSeries containers:
+Specified time Time to get the data (= low) of the series container, you will need to specify the time is Rouki of time series container.
+List.1 Acquire Data for a Specified Time (TimeSeriesRetrieve.java)
+// Specify Time InstrumentLog log = logTs.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-14_timeseries-delete/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-14_timeseries-delete/</guid>
+      <description>Table of Contents
+5.1.14 TimeSeries Data Deletion Overview This section describes deleting data in a TimeSeries container.
+Data deletion To delete the data (row) in a TimeSeries container, specify the timestamp of the rows you want to delete.
+List.1 Delete TimeSeries Data (TimeSeriesDeleteRow.java)
+SimpleDateFormat format = new SimpleDateFormat(&amp;ldquo;yyyy/MM/dd HH:mm&amp;rdquo;, Locale.US);
+String containerName = &amp;ldquo;weather_station_1&amp;rdquo;; // Get TimeSeries Container TimeSeries logTs = store.getTimeSeries(containerName, InstrumentLog.class); Date deleteTime = format.parse(&amp;ldquo;2016/07/02 12:00&amp;rdquo;);
+System.out.println(containerName + &amp;ldquo; ################&amp;rdquo;); System.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-15_timeseries-modify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-15_timeseries-modify/</guid>
+      <description>Table of Contents
+5.1.15 TimeSeries Container Modification Overview This chapter describes the changing the schema of a TimeSeries container. Changing the index is same as changing the index as with a collection, please refer the Collection Modification chapter for details on that process.
+Schema Modification Like you can with Collections, you can add or remove columns after creating a TimeSeriescontainer. Create a new class with the modified columns. The following AnotherInstrumentLog class shows an example of sch a change.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-16_tql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-16_tql/</guid>
+      <description>Table of Contents
+5.1.16 TQL Overview This chapter covers the TQL query language for accessing GridDB. Only the SELECT statement is supported in TQL so no changes can be made to the database or schema. Please refer to the GridDB API reference for more information.
+Conditional Search The TQL search functionality is the same as SQL.
+List.1 Conditional Search(TqlSeach.java)
+// Get TimeSeries Container TimeSeries logTs = store.getTimeSeries(&amp;ldquo;weather_station_1&amp;rdquo;, InstrumentLog.class);
+// Seach by temperture String tql = String.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-17_trigger-rest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-17_trigger-rest/</guid>
+      <description>Table of Contents
+5.1.17 Trigger (REST) Overview This chapter describes how to notify events by REST method in trigger function.
+Trigger function A trigger function is an automatic notification function when an operation (add/update or delete) is carried out on the row data of a container. Event notifications can be received without the need to poll and monitor the database by application.
+There are 2 ways of notifying events to the application.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-18_trigger-jms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-18_trigger-jms/</guid>
+      <description>Table of Contents
+5.1.18 Trigger (JMS) Overview This section covers how to notify an application with JMS using Trigger functions. For an overview of the trigger function, please refer to the Trigger (rest) seciton.
+Setting the Trigger List.1 Setting the Trigger(TriggerJms.java)
+// Create Connection store = gridLogic.createGridStore();
+// Create Trigger Settings TriggerInfo trigger = new TriggerInfo(); trigger.setName(&amp;ldquo;InstrumentLogJMSTrigger&amp;rdquo;); trigger.setType(Type.JMS); trigger.setJMSDestinationType(&amp;ldquo;queue&amp;rdquo;); trigger.setJMSDestinationName(&amp;ldquo;jms/griddb&amp;rdquo;); trigger.setTargetEvents(EnumSet.of(EventType.PUT)); trigger.setUser(&amp;ldquo;admin&amp;rdquo;); trigger.setPassword(&amp;ldquo;admin&amp;rdquo;); trigger.setURI(URI.create(&amp;ldquo;http://127.0.0.1:7676/&amp;quot;));
+// Get TimeSeries Container TimeSeries logTs = store.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-19_multiput/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-19_multiput/</guid>
+      <description>Table of Contents
+5.1.19 Multi-Put Overview This section describes Multi-put, a method of registering batches of data at one time. It is described further in the GridDB Technical Reference.
+Batch Processing When data is sent or received in a one by one manner it is possible to reach the upper limit of network bandwidth and throughput will peak, the following GridDB API&amp;rsquo;s offer a solution to this problem with methods to work with large sets of data in an efficient manner:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-1_introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-1_introduction/</guid>
+      <description>Table of Contents
+5.1.1 Introduction Overview This document introduces the basic programming using GridDB Java APIs. For more information about the GridDB API, please refer to the GridDB API Reference.
+About the Sample application The sample application is a Weather Record Storage System, the contents of the &amp;ldquo;delivery system of weather observation data&amp;rdquo; are as follows.
+Weather Record Storage System The weather data that the measuring instrument observes is written at regular intervals to the measurement log.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-20_multiquery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-20_multiquery/</guid>
+      <description>Table of Contents
+5.1.20 Multi-Query What is Multi-Query Note: The concept of Multi-Query is described in our GridDB_TechnicalReference (Section 4.7.2)
+Create query List.1 Create query(MultiQuery.java)
+private static List&amp;gt; createQueries(TimeSeries logTs) throws ParseException, GSException { // Set TimeSeries conditions Date start = TimestampUtils.getFormat().parse(&amp;ldquo;2016-07-01T06:00:00Z&amp;rdquo;); Date end = TimestampUtils.getFormat().parse(&amp;ldquo;2016-07-01T18:00:00Z&amp;rdquo;);
+List&amp;lt;Query&amp;lt;?&amp;gt;&amp;gt; queries = new ArrayList&amp;lt;&amp;gt;(); // Get Max Temperture String maxTempertureTql = String.format( &amp;quot;SELECT MAX(temperture) WHERE&amp;quot; \+ &amp;quot; TIMESTAMP(&#39;%s&#39;) &amp;lt; timestamp AND timestamp &amp;lt; TIMESTAMP(&#39;%s&#39;)&amp;quot;, TimestampUtils.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-21_multiget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-21_multiget/</guid>
+      <description>Table of Contents
+5.1.21 Multi-Get What is Multi-Get Note: The concept of Multi-Get is described in our GridDB_TechnicalReference (Section 4.7.2)
+Create the acquisition conditions List.1 Create the acquisition conditions(MultiGet.java)
+private static Map&amp;gt; createMultiGetCondition( CollectionweatherStationCol) throws GSException, ParseException { SimpleDateFormat format = new SimpleDateFormat(&amp;ldquo;yyyy/MM/dd HH:mm&amp;rdquo;, Locale.US);
+ // Create search condition of WeatherStation RowKeyPredicate&amp;lt;String&amp;gt; wsRowKeys = RowKeyPredicate.create(String.class); // Create multiget condition Map&amp;lt;String, RowKeyPredicate&amp;lt;?&amp;gt;&amp;gt; containerPredicateMap = new HashMap&amp;lt;&amp;gt;(); for (int i = 0; i &amp;lt; 2; i++) { // Get WeatherStation WeatherStation weatherStation = weatherStationCol.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-2_griddb-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-2_griddb-basics/</guid>
+      <description>Table of Contents
+5.1.2 GridDB Basics Overview We will introduce a series of basic operations in this chapter to help better understand the overall of GridDB API. It should be noted that not all of specification information about specific GridDB API&amp;rsquo;s will be introduced. Please refer to the individual chapter for further details. In addition, this chapter uses the data described in the Introduction.
+Application Workflow The basic workflow of a GridDB application is as follows:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-3_prepare-server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-3_prepare-server/</guid>
+      <description>Table of Contents
+5.1.3 Preparation: Environment (server) Overview This chapter covers setting up a GridDB server to use while running the sample application.
+Components The environment will be configured as follows:
+Figure 1 block diagram
+Table 2 middleware version
+middleware
+version
+GridDB Community Edition
+2.8.0
+Docker
+1.12.0
+Docker Compose
+1.8.0
+The environment in which you run GridDB will be built in a container using Docker but you can apply the same concepts to other VMs or a native OS to suit your environment.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-4_prepare-client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-4_prepare-client/</guid>
+      <description>Table of Contents
+5.1.4 Preparation: Environment (client) Overview This chapter shows the procedure to build an environment where you can build and execute GridDB Java applications. These instructions are specifically use Windows 10 (64 bit) as a development environment and CentOS 7.2 (64 bit) as an execution environment but can be adapted for other operating systems as well.
+Obtaining the files First download the following the files to your build environment, the tested versions and filenames are listed in Table 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-5_connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-5_connection/</guid>
+      <description>Table of Contents
+5.1.5 Preparation: Connecting to GridDB Overview This section describes the connecting to and disconnecting from a GridDB server.
+Connecting to GridDB In order to connect with the GridDB server, we use a Property class to set the connnection details which will be used by GridStoreFactory to open a connection. Refer to Environment (server) on what these settings are configured as in your envrionment.
+List.1 Connecting to a GridDB server (GridDBLogic.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-6_container-schema/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-6_container-schema/</guid>
+      <description>Table of Contents
+5.1.6 Schema definition Overview This chapter describes the schema definition and data types.
+Schema definition Data of the measuring instruments and instrument log that will be handled in this sample application are defined in the container as follows.
+Table.1 Container Information
+Data
+Container type
+Quantity
+Container name
+Row key
+Measuring instrument
+Collection
+1
+weather_station
+Instrument ID
+Instrument log
+TimeSeries Container
+1 per instrument
+weather_station_
+(Example:weather_station_1)
+Logging date and time</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-7_container-create-drop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-7_container-create-drop/</guid>
+      <description>Table of Contents
+5.1.7 Container Creation and Deletion Overview This chapter describes how to create/delete GridDB containers.
+Collection and Timeseries Container There are 2 container types, a timeseries container and a collection.
+ Timeseries container  A container that specializes for data whcih is consisted of the pair of time and value, such as sensor data. The TIMESTAMP data can be specified in a row key. It is possible to acquire the data in a specified period of time or to aggregate the data.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-8_collection-register/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-8_collection-register/</guid>
+      <description>Table of Contents
+5.1.8 Collection Registration Overview This chapter describes registering data in a GridDB collection.
+Data to be registered Create registration data in a CSV file with the contents as follows:
+ Measuring instrument CSV file  File name  Weather_station.csv  Retention data  Row 1: measuring instrument ID Row 2: The name Row 3: installation coordinates (latitude) Row 4: installation coordinates (longitude) Row 5: camera presence     List.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://example.org/sample-applications/basics/5-1-9_collection-retrieve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/sample-applications/basics/5-1-9_collection-retrieve/</guid>
+      <description>Table of Contents
+5.1.9 Data Retrieval Overview This chapter covers retrieving data using the GridDB API.
+Retrieve data Retrieve data in a collection with specifying a Row key.
+List.1 Data Read (WeatherStationLogic.java)
+// Get Collection Collection weatherStationCol = store.getCollection(&amp;ldquo;weather_station&amp;rdquo;, WeatherStation.class); }
+ L.24-25: Retrieve a collection by specifying a container name  List.2 Data Read by Row Key(CollectionRetrieve.java)
+try { System.out.println(&amp;ldquo;ID \tName \t \t \tLongitude \tLatitude \tCamera&amp;rdquo;); for (int i=0; i &amp;lt; WeatherStationLogic.</description>
+    </item>
+    
+  </channel>
+</rss>

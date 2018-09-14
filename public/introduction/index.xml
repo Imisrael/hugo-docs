@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on GridDB</title>
+    <link>http://example.org/introduction/</link>
+    <description>Recent content in Introduction on GridDB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What is GridDB</title>
+      <link>http://example.org/introduction/1-1_what-is-griddb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/introduction/1-1_what-is-griddb/</guid>
+      <description>Toshiba GridDB™ is a highly scalable NoSQL database best suited for IoT and Big Data We live in the era of the Internet of Things (IoT) where billions of devices are interconnected and are generating petabytes of data at an increasing rate. Gaining insights and information from that data and generating value out of it gives a tangible competitive advantage to businesses, organizations, governments, and even individuals.
+Organizations should focus more on creating value from data that will enhance their core products, services or even operational processes rather than spend time in dealing with the complexity surrounding Big Data.</description>
+    </item>
+    
+    <item>
+      <title>GridDB Editions</title>
+      <link>http://example.org/introduction/1-2_griddb-edition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/introduction/1-2_griddb-edition/</guid>
+      <description>There are currently two distinct versions of GridDB available. The information below is designed to help distinguish between the editions and help users arrive to the correct choice for their situation.
+GridDB Community Edition (GridDB CE) GridDB CE is available under the AGPLv3 as a high-performant, open-source NoSQL database built with scalability and fault tolerance in-mind. This is the only edition of GridDB that is open-source.
+GridDB Standard Edition (GridDB SE) A high-performant commerical NoSQL database.</description>
+    </item>
+    
+  </channel>
+</rss>

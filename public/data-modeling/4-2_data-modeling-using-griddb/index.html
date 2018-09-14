@@ -1,0 +1,2919 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.48" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
+    <title>Data Modeling Using GridDB :: GridDB</title>
+
+    
+    <link href="/css/nucleus.css?1536883882" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1536883882" rel="stylesheet">
+    <link href="/css/hybrid.css?1536883882" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1536883882" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1536883882" rel="stylesheet">
+    <link href="/css/auto-complete.css?1536883882" rel="stylesheet">
+    <link href="/css/theme.css?1536883882" rel="stylesheet">
+	<link href="/css/hugo-theme.css?1536883882" rel="stylesheet">
+	<link href="/css/style-griddb.css?1536883882" rel="stylesheet">
+    
+      <link href="/css/theme-griddb.css?1536883882" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1536883882"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+
+<header id="header2"> 
+        
+        
+    <div class="header-inner">
+        
+        <div id="collapse-button" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+       
+        
+        
+    
+        <span class="switch-mobile" style="display:none">
+            <div class="ui dropdown">
+              <input name="Language">
+              <i class="dropdown icon"></i>
+              <div class="default text"><i class="us flag"> </i></div>
+              <div class="menu">
+                <a class="item ja" href="javascript:void(0)" id="ja"> <i class="jp flag"></i>Japanese</a>
+                <a class="item" data-value="Japanese"><i class="us flag"></i>English</a>
+              </div>
+            </div>   
+        </span>
+    
+    
+    
+    <nav id="nav" class="main-navigation" role="navigation" style="">
+    <div class="menu-topnav-container"><ul id="menu-topnav" class="nav-menu"><li id="menu-item-581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-581"><a href="/en/docs/documents/1-1_what-is-griddb.php">Docs</a></li>
+    <li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="/en/faq/">FAQ</a></li>
+    <li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="/en/community/">Community</a></li>
+    <li id="menu-item-591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-591"><a href="/en/forums/forum/top/">Forum</a></li>
+    <li id="menu-item-291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-291"><a href="/en/blog">Blog</a></li>
+
+    </ul>
+
+    </div>
+        
+        <li style="list-style:none"><a href="/en/downloads/"> <span class="download-button4" style="display:none"> DOWNLOAD</span></a></li>
+        
+            
+           <a href="/en/downloads/"> <span id="download-button"> Download</span></a>
+      
+        
+    </nav>
+    
+         
+    </div>        
+        
+    </header>
+    
+    
+  </head>
+  <body class="" data-url="/data-modeling/4-2_data-modeling-using-griddb/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+          <img src="/images/logo.png"></img>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1536883882"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1536883882"></script>
+<script type="text/javascript">
+    
+        var baseurl = '\/';
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1536883882"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/introduction/">
+          <b>1. </b>Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-1_what-is-griddb/" title="What is GridDB" class="dd-item ">
+        <a href="/introduction/1-1_what-is-griddb/">
+        What is GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/1-2_griddb-edition/" title="GridDB Editions" class="dd-item ">
+        <a href="/introduction/1-2_griddb-edition/">
+        GridDB Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting-started/" title="Getting Started" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/getting-started/">
+          <b>2. </b>Getting Started
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-1_system-requirements/" title="System Requirements" class="dd-item ">
+        <a href="/getting-started/2-1_system-requirements/">
+        System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-2_installation/" title="Installation" class="dd-item ">
+        <a href="/getting-started/2-2_installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-3_run-your-first-griddb-node-cluster/" title="Run your First GridDB Node/Cluster" class="dd-item ">
+        <a href="/getting-started/2-3_run-your-first-griddb-node-cluster/">
+        Run your First GridDB Node/Cluster
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting-started/2-4_run-a-sample-java-client-app/" title="Run a Sample Java Client App" class="dd-item ">
+        <a href="/getting-started/2-4_run-a-sample-java-client-app/">
+        Run a Sample Java Client App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/technical-architecture-and-guide/" title="Technical Architecture and Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/technical-architecture-and-guide/">
+          <b>3. </b>Technical Architecture and Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-1_griddb-technical-overview/" title="GridDB Technical Overview" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-1_griddb-technical-overview/">
+        GridDB Technical Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-2_key-container-model/" title="Key Container Model" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-2_key-container-model/">
+        Key Container Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-3_tql/" title="TQL" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-3_tql/">
+        TQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-4_crud-operations/" title="CRUD Operations" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-4_crud-operations/">
+        CRUD Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-5_transactions-and-acid/" title="Transactions and ACID" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-5_transactions-and-acid/">
+        Transactions and ACID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-6_indexes/" title="Indexes" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-6_indexes/">
+        Indexes
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-7_storage-architecture/" title="Storage Architecture" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-7_storage-architecture/">
+        Storage Architecture
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-8_replication-distribution/" title="Replication &amp; Distribution" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-8_replication-distribution/">
+        Replication &amp; Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/technical-architecture-and-guide/3-9_sharding/" title="Sharding" class="dd-item ">
+        <a href="/technical-architecture-and-guide/3-9_sharding/">
+        Sharding
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/data-modeling/" title="Data Modeling" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/data-modeling/">
+          <b>4. </b>Data Modeling
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics" class="dd-item ">
+        <a href="/data-modeling/4-1_data-modeling-basics/">
+        Data Modeling Basics
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-2_data-modeling-using-griddb/" title="Data Modeling Using GridDB" class="dd-item active">
+        <a href="/data-modeling/4-2_data-modeling-using-griddb/">
+        Data Modeling Using GridDB
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-3_modeling-relationships/" title="" class="dd-item ">
+        <a href="/data-modeling/4-3_modeling-relationships/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/" title="" class="dd-item ">
+        <a href="/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/" title="Sample Application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/">
+          <b>5. </b>Sample Application
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/sample-applications/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/sample-applications/basics/">
+          <b>5.1 </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-10_collection-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-10_collection-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-11_collection-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-11_collection-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-12_timeseries-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-12_timeseries-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-13_timeseries-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-13_timeseries-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-14_timeseries-delete/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-14_timeseries-delete/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-15_timeseries-modify/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-15_timeseries-modify/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-16_tql/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-16_tql/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-17_trigger-rest/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-17_trigger-rest/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-18_trigger-jms/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-18_trigger-jms/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-19_multiput/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-19_multiput/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-1_introduction/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-1_introduction/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-20_multiquery/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-20_multiquery/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-21_multiget/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-21_multiget/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-2_griddb-basics/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-2_griddb-basics/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-3_prepare-server/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-3_prepare-server/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-4_prepare-client/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-4_prepare-client/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-5_connection/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-5_connection/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-6_container-schema/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-6_container-schema/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-7_container-create-drop/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-7_container-create-drop/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-8_collection-register/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-8_collection-register/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/sample-applications/basics/5-1-9_collection-retrieve/" title="" class="dd-item ">
+        <a href="/sample-applications/basics/5-1-9_collection-retrieve/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/administration/" title="Administration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/administration/">
+          <b>6. </b>Administration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-1_supported-os-platforms-and-system-requirements/" title="Supported OS, Platforms and System Requirements" class="dd-item ">
+        <a href="/administration/6-1_supported-os-platforms-and-system-requirements/">
+        Supported OS, Platforms and System Requirements
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-2_sizing-and-scaling/" title="Sizing and Scaling" class="dd-item ">
+        <a href="/administration/6-2_sizing-and-scaling/">
+        Sizing and Scaling
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-3_installing/" title="Installing" class="dd-item ">
+        <a href="/administration/6-3_installing/">
+        Installing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-4_upgrading-the-editions/" title="Upgrading Editions" class="dd-item ">
+        <a href="/administration/6-4_upgrading-the-editions/">
+        Upgrading Editions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-5_migration-from-other-databases/" title="Migration from Other Databases" class="dd-item ">
+        <a href="/administration/6-5_migration-from-other-databases/">
+        Migration from Other Databases
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-6_cluster-administration-operations/" title="Cluster Administration &amp; Operations" class="dd-item ">
+        <a href="/administration/6-6_cluster-administration-operations/">
+        Cluster Administration &amp; Operations
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-7_monitoring-troubleshooting/" title="Monitoring &amp; Troubleshooting" class="dd-item ">
+        <a href="/administration/6-7_monitoring-troubleshooting/">
+        Monitoring &amp; Troubleshooting
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/administration/6-8_tuning/" title="Tuning" class="dd-item ">
+        <a href="/administration/6-8_tuning/">
+        Tuning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/drivers-and-integrators/" title="Drivers &amp; Integrators" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/drivers-and-integrators/">
+          <b>7. </b>Drivers &amp; Integrators
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-1_jdbc-connector/" title="JDBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-1_jdbc-connector/">
+        JDBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-2_odbc-connector/" title="ODBC Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-2_odbc-connector/">
+        ODBC Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-3_hadoop-and-spark-connector/" title="Hadoop and Spark Connector" class="dd-item ">
+        <a href="/drivers-and-integrators/7-3_hadoop-and-spark-connector/">
+        Hadoop and Spark Connector
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/drivers-and-integrators/7-4_grafana-connector/" title="" class="dd-item ">
+        <a href="/drivers-and-integrators/7-4_grafana-connector/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>GridDB</a> > <a href='/data-modeling/'>Data Modeling</a> > Data Modeling Using GridDB
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#4-2-1-storing-facility-information">4.2.1 Storing Facility Information</a></li>
+<li><a href="#4-2-2-storing-alarm-history">4.2.2 Storing Alarm History</a></li>
+<li><a href="#4-2-3-storing-sensor-data">4.2.3 Storing Sensor Data</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Data Modeling Using GridDB</h1>
+          
+
+        
+
+
+
+
+<p>Storing Data in Collection</p>
+
+<p>The flow of storing data in a Collection is shown below. First, if there is no Collection to store data in, create a new Collection following the procedure below:</p>
+
+<ol>
+<li>Get a GridStore instance.</li>
+<li>Create a Collection.</li>
+</ol>
+
+<p>You can store data in an existing Collection with the following procedure:</p>
+
+<ol>
+<li>Get a GridStore instance.</li>
+<li>Get a collection.</li>
+<li>Set operation parameters</li>
+<li>Create indexes.</li>
+<li>Create values to be stored.</li>
+<li>Store values in the Collection</li>
+<li>Perform a commit a proper intervals</li>
+<li>Release the GridStore instance.</li>
+</ol>
+
+<p>Storing data in a TimeSeries container follows the exact same procedure.</p>
+
+<p>This examples below are intended to provide an application which has the following capabilities:</p>
+
+<ul>
+<li>Storing facility information</li>
+<li>Storing alarm history</li>
+<li>Storing sensor data</li>
+<li>Searching for and displaying facility information and sensor data showing abnormality</li>
+</ul>
+
+<p>The following sections describe client programs which implement each capability based on the schema definitions shown in the previous chapter.</p>
+
+<h3 id="4-2-1-storing-facility-information">4.2.1 Storing Facility Information</h3>
+
+<p>Technically, in the monitoring system, the information on facility configuration and specifications needs to be stored in a database. For simplicity, however, this section shows a sample program which loads facility information collectively from a CSV file storing the data. An outline of the processing flow is shown below.</p>
+
+<ol>
+<li>Connect to a server and get a GridStore instance.</li>
+<li>Create a facility information Collection name with a specified name (&ldquo;equipment_col&rdquo;) in GridStore.</li>
+<li>Create indexes to be used for search.</li>
+<li>Store a value repeatedly while reading a CSV file, as follows:
+
+<ul>
+<li>4-1. Analyze a read CSV-formatted line and create a facility information object to store.</li>
+<li>4-2. Store (put) the created facility information object in the facility information Collection.</li>
+<li>4-3. Perform a commit if repeated the predetermined number of times.</li>
+</ul></li>
+<li>Release the GridStore instance if all CSV-formatted lines are processed.</li>
+</ol>
+
+<p>A concrete sample program is shown below:</p>
+
+<p>1:  package pvrms;
+  2:<br />
+  3:  import java.io.FileReader;
+  4:  import java.io.IOException;
+  5:  import java.text.ParseException;
+  6:  import java.util.Properties;
+  7:<br />
+  8:  import au.com.bytecode.opencsv.CSVReader;
+  9:<br />
+ 10:  import com.toshiba.mwcloud.gs.Collection;
+ 11:  import com.toshiba.mwcloud.gs.GSException;
+ 12:  import com.toshiba.mwcloud.gs.GridStore;
+ 13:  import com.toshiba.mwcloud.gs.GridStoreFactory;
+ 14:  import com.toshiba.mwcloud.gs.RowKey;
+ 15:<br />
+ 16:  // Facility information
+ 17:  class Equip {
+ 18:      @RowKey String id;
+ 19:      String   name;
+ 20:      //Blob     spec; // For simplicity, spec information is not used.
+ 21:  }
+ 22:<br />
+ 23:  public class SimplePv0 {
+ 24:<br />
+ 25:      /*
+ 26:       * Load facility information from a CSV file.
+ 27:       <em>/
+ 28:      public static void main(String[] args) throws GSException, ParseException, IOException {
+ 29:<br />
+ 30:          // Specify a server.
+ 31:          final String gsServer     = &ldquo;127.0.0.1&rdquo;;
+ 32:          final String gsPort       = &ldquo;10001&rdquo;;
+ 33:          final String user         = &ldquo;admin&rdquo;;
+ 34:          final String password     = &ldquo;admin&rdquo;;
+ 35:<br />
+ 36:          final String equipColName = &ldquo;equipment_col&rdquo;;
+ 37:<br />
+ 38:          // Get a GridStore instance.
+ 39:          final Properties prop = new Properties();
+ 40:          prop.setProperty(&ldquo;host&rdquo;, gsServer);
+ 41:          prop.setProperty(&ldquo;port&rdquo;, gsPort);
+ 42:          prop.setProperty(&ldquo;user&rdquo;, user);
+ 43:          prop.setProperty(&ldquo;password&rdquo;, password);
+ 44:          final GridStore store = GridStoreFactory.getInstance().getGridStore(prop);
+ 45:<br />
+ 46:<br />
+ 47:          // Read a CSV file.
+ 48:          String dataFileName = &ldquo;equipName.csv&rdquo;;
+ 49:          CSVReader reader = new CSVReader(new FileReader(dataFileName));
+ 50:          String[] nextLine;
+ 51:<br />
+ 52:          /</em>
+ 53:           *  Create a Collection.
+ 54:           <em>/
+ 55:          Collection equipCol = store.putCollection(equipColName, Equip.class);
+ 56:<br />
+ 57:          /</em>
+ 58:           *  Create indexes for Columns.
+ 59:           <em>/
+ 60:          equipCol.createIndex(&ldquo;id&rdquo;);
+ 61:          equipCol.createIndex(&ldquo;name&rdquo;);
+ 62:<br />
+ 63:          /</em>
+ 64:           *  Set autocommit mde to OFF.
+ 65:           <em>/
+ 66:          equipCol.setAutoCommit(false);
+ 67:<br />
+ 68:          // Commit interval
+ 69:          Long commtInterval = (long) 1;
+ 70:<br />
+ 71:          /</em>
+ 72:           *  Store a value.
+ 73:           */
+ 74:          Equip equip = new Equip();
+ 75:          Long cnt = (long) 0;
+ 76:          byte[] b = new byte[1];
+ 77:          b[0] = 1;
+ 78:          while ((nextLine = reader.readNext()) != null) {
+ 79:<br />
+ 80:              // Store facility information.
+ 81:              equip.id   = nextLine[2];
+ 82:              equip.name   = nextLine[3];
+ 83:<br />
+ 84:              equipCol.put(equip);
+ 85:<br />
+ 86:              cnt++;
+ 87:<br />
+ 88:              if(0 == cnt%commtInterval) {
+ 89:                  // Commit a transaction.
+ 90:                  equipCol.commit();
+ 91:              }
+ 92:<br />
+ 93:          }
+ 94:<br />
+ 95:          // Release a resource
+ 96:          store.close();
+ 97:          reader.close();
+ 98:<br />
+ 99:  }
+100:<br />
+101:  }</p>
+
+<h3 id="4-2-2-storing-alarm-history">4.2.2 Storing Alarm History</h3>
+
+<p>Technically, in the monitoring system, a sensor or a facility directly sends an alarm to GridDB and stores it . For simplicity&rsquo;s sake, however, this section shows a sample program which loads alarm history data collectively from a CSV file storing the data. An outline of the processing flow is shown below.</p>
+
+<ol>
+<li>Connect to a server and get a GridStore instance.</li>
+<li>Create an alert Collection with a specified name (&ldquo;alert_col&rdquo;) in GridStore and get it.</li>
+<li>Create indexes to be used for search.</li>
+<li>Store a value repeatedly while reading a CSV file, as follows:
+
+<ul>
+<li>4-1. Analyze a read CSV-formatted line and create an alert object to store.</li>
+<li>4-2. Store (put) the created alert object in the alert Collection.</li>
+<li>4-3. Perform a commit if repeated the predetermined number of times.</li>
+</ul></li>
+<li>Release the GridStore instance if all CSV-formatted lines are processed.</li>
+</ol>
+
+<p>A concrete sample program is shown below:</p>
+
+<p>1:  package pvrms;
+  2:<br />
+  3:  import java.io.FileReader;
+  4:  import java.io.IOException;
+  5:  import java.text.ParseException;
+  6:  import java.text.SimpleDateFormat;
+  7:  import java.util.Date;
+  8:  import java.util.Properties;
+  9:<br />
+ 10:  import au.com.bytecode.opencsv.CSVReader;
+ 11:<br />
+ 12:  import com.toshiba.mwcloud.gs.Collection;
+ 13:  import com.toshiba.mwcloud.gs.GSException;
+ 14:  import com.toshiba.mwcloud.gs.GridStore;
+ 15:  import com.toshiba.mwcloud.gs.GridStoreFactory;
+ 16:  import com.toshiba.mwcloud.gs.RowKey;
+ 17:<br />
+ 18:  // Alert information
+ 19:  class Alert {
+ 20:      @RowKey Long id;
+ 21:      Date    timestamp;
+ 22:      String  sensorId;
+ 23:      int     level;
+ 24:      String  detail;
+ 25:  }
+ 26:<br />
+ 27:  public class SimplePv1 {
+ 28:<br />
+ 29:      /*
+ 30:       * Load alert data from a CSV file.
+ 31:       <em>/
+ 32:      public static void main(String[] args) throws GSException, ParseException, IOException {
+ 33:<br />
+ 34:          // Specify a server.
+ 35:          final String gsServer     = &ldquo;127.0.0.1&rdquo;;
+ 36:          final String gsPort       = &ldquo;10001&rdquo;;
+ 37:          final String user         = &ldquo;admin&rdquo;;
+ 38:          final String password     = &ldquo;admin&rdquo;;
+ 39:<br />
+ 40:          final String alertColName = &ldquo;alert_col&rdquo;;
+ 41:<br />
+ 42:          // Get a GridStore instance.
+ 43:          final Properties prop = new Properties();
+ 44:          prop.setProperty(&ldquo;host&rdquo;, gsServer);
+ 45:          prop.setProperty(&ldquo;port&rdquo;, gsPort);
+ 46:          prop.setProperty(&ldquo;user&rdquo;, user);
+ 47:          prop.setProperty(&ldquo;password&rdquo;, password);
+ 48:          final GridStore store = GridStoreFactory.getInstance().getGridStore(prop);
+ 49:<br />
+ 50:          // Read a CSV file.
+ 51:          String dataFileName = &ldquo;alarmHistory.csv&rdquo;;
+ 52:          CSVReader reader = new CSVReader(new FileReader(dataFileName));
+ 53:          String[] nextLine;
+ 54:<br />
+ 55:          /</em>
+ 56:           *  Create a Collection.
+ 57:           <em>/
+ 58:          Collection alertCol = store.putCollection(alertColName, Alert.class);
+ 59:<br />
+ 60:          /</em>
+ 61:           *  Create indexes for Columns.
+ 62:           <em>/
+ 63:          alertCol.createIndex(&ldquo;timestamp&rdquo;);
+ 64:          alertCol.createIndex(&ldquo;level&rdquo;);
+ 65:<br />
+ 66:          /</em>
+ 67:           *  Set autocommit mde to OFF.
+ 68:           <em>/
+ 69:          alertCol.setAutoCommit(false);
+ 70:<br />
+ 71:          // Commit interval
+ 72:          Long commtInterval = (long) 1;
+ 73:<br />
+ 74:          /</em>
+ 75:           *  Store a value.
+ 76:           */
+ 77:          SimpleDateFormat format = new SimpleDateFormat(&ldquo;yyyy/MM/ddHH:mm:ss&rdquo;);
+ 78:          Alert alert = new Alert();
+ 79:          Long cnt = (long) 0;
+ 80:          while ((nextLine = reader.readNext()) != null) {
+ 81:<br />
+ 82:              String dateS     = nextLine[0];//2011/1/1
+ 83:              String timeS     = nextLine[1];//19 (hundred hours)
+ 84:              String datetimeS = dateS + &ldquo; &rdquo; + timeS + &ldquo;:00:00&rdquo;;
+ 85:              Date   date      = format.parse(datetimeS);
+ 86:              Long   datetime  = date.getTime();
+ 87:<br />
+ 88:              alert.id         = ++cnt;
+ 89:              alert.timestamp  = new Date(datetime);
+ 90:              alert.sensorId   = nextLine[2];
+ 91:              alert.level      = Integer.valueOf(nextLine[3]);
+ 92:              alert.detail     = nextLine[4];
+ 93:<br />
+ 94:              alertCol.put(alert);
+ 95:<br />
+ 96:              if(0 == cnt%commtInterval) {
+ 97:                  // Commit a transaction.
+ 98:                  alertCol.commit();
+ 99:              }
+100:<br />
+101:          }
+102:<br />
+103:          // Release a resource.
+104:          store.close();
+105:          reader.close();
+106:<br />
+107:  }
+108:<br />
+109:  }</p>
+
+<h3 id="4-2-3-storing-sensor-data">4.2.3 Storing Sensor Data</h3>
+
+<p>Technically, in the monitoring system, a sensor directly sends a measured value to be stored in GridStore. For simplicity, however, this section shows a sample program which loads sensor data collectively from a CSV file storing the data. An outline of a processing flow is shown below.</p>
+
+<ol>
+<li>Connect to a server and get a GridStore instance.</li>
+<li>Read the first line of a CSV file and create a set of TimeSeries to be used beforehand, as follows:
+
+<ul>
+<li>2-1. Analyze the first CSV-formatted line and obtain multiple sensor IDs (= the names of TimeSeries to be created).</li>
+<li>2-2. Create an alert Collection in GridStore for each obtained sensor ID.</li>
+</ul></li>
+<li>Store a value repeatedly, while reading the rest of the CSV file, as follows:
+
+<ul>
+<li>3-1. Analyze a read CSV-formatted file and create a Point object to store.</li>
+<li>3-2. Store (put) the created Point object in an appropriate TimeSeries.</li>
+</ul></li>
+<li>Release the GridStore instance if all CSV-formatted lines are processed.</li>
+</ol>
+
+<p>A concrete sample program is shown below:</p>
+
+<p>1:  package pvrms;
+ 2:<br />
+ 3:  import java.io.FileReader;
+ 4:  import java.io.IOException;
+ 5:  import java.text.ParseException;
+ 6:  import java.text.SimpleDateFormat;
+ 7:  import java.util.Date;
+ 8:  import java.util.Properties;
+ 9:<br />
+10:  import au.com.bytecode.opencsv.CSVReader;
+11:<br />
+12:  import com.toshiba.mwcloud.gs.GridStore;
+13:  import com.toshiba.mwcloud.gs.GridStoreFactory;
+14:  import com.toshiba.mwcloud.gs.RowKey;
+15:  import com.toshiba.mwcloud.gs.TimeSeries;
+16:<br />
+17:  // Sensor data
+18:  class Point {
+19:      @RowKey Date time;
+20:      double  value;
+21:      String  status;
+22:  }
+23:<br />
+24:  public class SimplePv2 {
+25:<br />
+26:      /*
+27:       * Load time-series data form a CSV file.
+28:       <em>/
+29:      public static void main(String[] args) throws ParseException, IOException {
+30:<br />
+31:          // Specify a server.
+32:          final String gsServer     = &ldquo;127.0.0.1&rdquo;;
+33:          final String gsPort       = &ldquo;10001&rdquo;;
+34:          final String user         = &ldquo;admin&rdquo;;
+35:          final String password     = &ldquo;admin&rdquo;;
+36:<br />
+37:          // Get a GridStore instance.
+38:          final Properties prop = new Properties();
+39:          prop.setProperty(&ldquo;host&rdquo;, gsServer);
+40:          prop.setProperty(&ldquo;port&rdquo;, gsPort);
+41:          prop.setProperty(&ldquo;user&rdquo;, user);
+42:          prop.setProperty(&ldquo;password&rdquo;, password);
+43:          final GridStore store = GridStoreFactory.getInstance().getGridStore(prop);
+44:<br />
+45:          // Read a CSV file.
+46:          String dataFileName = &ldquo;sensorHistory.csv&rdquo;;
+47:          CSVReader reader = new CSVReader(new FileReader(dataFileName));
+48:          String[] nextLine;
+49:          nextLine = reader.readNext();
+50:<br />
+51:<br />
+52:          // Presupposing that the 1st line contains sensor IDs and the rest of lines contain data.
+53:          // Presupposing that 0:date, 1:time, &hellip;
+54:<br />
+55:<br />
+56:          /</em>
+57:           *  Read a sensor ID and create a TimeSeries.
+58:           <em>/
+59:          String[] tsNameArray = new String[nextLine.length];
+60:          for(int j = 2; j &lt; nextLine.length; j++) {
+61:<br />
+62:              tsNameArray[j] = nextLine[j];
+63:              store.putTimeSeries(tsNameArray[j], Point.class);
+64:<br />
+65:          }
+66:<br />
+67:          /</em>
+68:           *  Store a value in each TimeSeries.
+69:           */
+70:          SimpleDateFormat format = new SimpleDateFormat(&ldquo;yyyy/MM/ddHH:mm:ss&rdquo;);
+71:          Point point             = new Point();
+72:          while ((nextLine = reader.readNext()) != null) {
+73:<br />
+74:              String dateS     = nextLine[0];//2011/1/1
+75:              String timeS     = nextLine[1];//19 (hundred hours)
+76:              String datetimeS = dateS + &ldquo; &rdquo; + timeS + &ldquo;:00:00&rdquo;;
+77:              Date   date      = format.parse(datetimeS);
+78:              Long   datetime  = date.getTime();
+79:<br />
+80:              for(int i = 2, j = 2; j &lt; nextLine.length; i++, j+=2) {
+81:<br />
+82:                  TimeSeries ts = store.getTimeSeries(tsNameArray[i], Point.class);
+83:<br />
+84:                  point.time   = new Date(datetime);
+85:                  point.value  = Double.valueOf(nextLine[j]);
+86:                  point.status = nextLine[j+1];
+87:<br />
+88:                  ts.append(point);
+89:              }
+90:          }
+91:<br />
+92:          // Release a resource.
+93:          store.close();
+94:          reader.close();
+95:<br />
+96:  }
+97:<br />
+98:  }</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/data-modeling/4-1_data-modeling-basics/" title="Data Modeling Basics"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/data-modeling/4-3_modeling-relationships/" title="" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.min.js?1536883882"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1536883882"></script>
+    <script src="/js/jquery.sticky.js?1536883882"></script>
+    <script src="/js/featherlight.min.js?1536883882"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1536883882"></script>
+    <script src="/js/highlight.pack.js?1536883882"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1536883882"></script>
+    <script src="/js/learn.js?1536883882"></script>
+    <script src="/js/hugo-learn.js?1536883882"></script>
+
+    <link href="/mermaid/mermaid.css?1536883882" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1536883882"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

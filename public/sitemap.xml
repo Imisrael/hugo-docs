@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/data-modeling/4-1_data-modeling-basics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-1_griddb-technical-overview/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/drivers-and-integrators/7-1_jdbc-connector/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-1_supported-os-platforms-and-system-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/getting-started/2-1_system-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/introduction/1-1_what-is-griddb/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/data-modeling/4-2_data-modeling-using-griddb/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/introduction/1-2_griddb-edition/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/getting-started/2-2_installation/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-2_key-container-model/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/drivers-and-integrators/7-2_odbc-connector/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-2_sizing-and-scaling/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/drivers-and-integrators/7-3_hadoop-and-spark-connector/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-3_installing/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-3_tql/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-4_crud-operations/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/data-modeling/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/getting-started/2-4_run-a-sample-java-client-app/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-4_upgrading-the-editions/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-5_migration-from-other-databases/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-5_transactions-and-acid/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-6_cluster-administration-operations/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-6_indexes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-7_monitoring-troubleshooting/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-7_storage-architecture/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/drivers-and-integrators/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-8_replication-distribution/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/administration/6-8_tuning/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/technical-architecture-and-guide/3-9_sharding/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/data-modeling/4-3_modeling-relationships/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/data-modeling/4-4_possibilities-and-variations-of-data-models-in-griddb/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/drivers-and-integrators/7-4_grafana-connector/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-10_collection-delete/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-11_collection-modify/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-12_timeseries-register/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-13_timeseries-retrieve/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-14_timeseries-delete/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-15_timeseries-modify/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-16_tql/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-17_trigger-rest/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-18_trigger-jms/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-19_multiput/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-1_introduction/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-20_multiquery/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-21_multiget/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-2_griddb-basics/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-3_prepare-server/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-4_prepare-client/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-5_connection/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-6_container-schema/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-7_container-create-drop/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-8_collection-register/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/sample-applications/basics/5-1-9_collection-retrieve/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,3843 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=shift_jis">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 14">
+<link rel=File-List href="trouble_guide_troubleList.files/filelist.xml">
+<style id="トラブルシューティングをhtmlとpdf形式で保存するマクロ_5062_Styles">
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+.font55062
+	{color:windowtext;
+	font-size:6.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;}
+.font65062
+	{color:windowtext;
+	font-size:6.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;}
+.xl155062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl665062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl675062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl685062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl695062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl705062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl715062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl725062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl735062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl745062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl755062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl765062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl775062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl785062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl795062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl805062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl815062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl825062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl835062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl845062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl855062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl865062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl875062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl885062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl895062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl905062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl915062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl925062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:none;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl935062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl945062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl955062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl965062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl975062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl985062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl995062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1005062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1015062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1025062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1035062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1045062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl1055062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1065062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1075062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1085062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1095062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1105062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1115062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1125062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#C5D9F1;
+	mso-pattern:black none;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl1135062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#C4D79B;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1145062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#E6B8B7;
+	mso-pattern:black none;
+	white-space:normal;}
+.xl1155062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1165062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1175062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1185062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1195062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1205062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1215062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1225062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1235062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1245062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;}
+.xl1255062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:メイリオ, monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	border:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:normal;
+	mso-text-control:shrinktofit;}
+.xl1265062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:windowtext;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ ゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1275062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1285062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1295062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:1.0pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1305062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1315062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:none;
+	border-left:.5pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1325062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:none;
+	border-left:none;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1335062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1345062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1355062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:.5pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt dotted windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1365062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1375062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:10.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt dotted windowtext;
+	background:#D9D9D9;
+	mso-pattern:black none;
+	white-space:nowrap;}
+.xl1385062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:none;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1395062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1405062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt dotted windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1415062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1425062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:1.0pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt hairline windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1435062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1445062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1455062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt dotted windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1465062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1475062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:.5pt solid windowtext;
+	border-left:.5pt hairline windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1485062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:center;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1495062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:1.0pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1505062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:.5pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt dotted windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1515062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:none;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt solid windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1525062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:11.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:left;
+	vertical-align:middle;
+	border-top:.5pt solid windowtext;
+	border-right:1.0pt solid windowtext;
+	border-bottom:1.0pt solid windowtext;
+	border-left:.5pt hairline windowtext;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+.xl1535062
+	{padding-top:1px;
+	padding-right:1px;
+	padding-left:1px;
+	mso-ignore:padding;
+	color:black;
+	font-size:12.0pt;
+	font-weight:700;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-number-format:General;
+	text-align:general;
+	vertical-align:middle;
+	mso-background-source:auto;
+	mso-pattern:auto;
+	white-space:nowrap;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:6.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:"ＭＳ Ｐゴシック", monospace;
+	mso-font-charset:128;
+	mso-char-type:katakana;}
+-->
+</style>
+</head>
+
+<body>
+<!--[if !excel]>　　<![endif]-->
+<!--次の情報は、Excel の Web ページとして発行ウィザードで生成されました。-->
+<!--同じアイテムが Excel から再発行されるとき、DIV タグ間のすべての情報が置き換えられます。-->
+<!----------------------------->
+<!--Excel の Web ページとして発行 ウィザードのアウトプットの始まり-->
+<!----------------------------->
+
+<div id="トラブルシューティングをhtmlとpdf形式で保存するマクロ_5062" align=center
+x:publishsource="Excel">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1633 style='border-collapse:
+ collapse;table-layout:fixed;width:1226pt'>
+ <col width=85 style='mso-width-source:userset;mso-width-alt:2720;width:64pt'>
+ <col width=213 style='mso-width-source:userset;mso-width-alt:6816;width:160pt'>
+ <col width=445 span=3 style='mso-width-source:userset;mso-width-alt:14240;
+ width:334pt'>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=2 width=298 style='height:19.5pt;
+  width:224pt'>　　　クラスタ構成に関するトラブル</td>
+  <td class=xl685062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl705062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl725062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl735062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl745062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl755062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl665062 style='height:56.25pt'></td>
+  <td rowspan=6 class=xl785062 width=213 style='border-top:none;width:160pt'>プロセスが正常に起動しない</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>リカバリに失敗する</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】20000～<br>
+    【内容】リカバリに関するエラー群<br>
+    【メッセージ】リカバリエラーカテゴリの書式に従う</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>操作手順誤りによるものと内部異常による原因等が考えられます。詳細は、「リカバリ処理に関するトラブル」を参照してください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>定義ファイル(gs_cluster.json, gs_node.json)の記述内容に誤りがある</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】100002, 100003, 100004, 100005<br>
+    【内容】コンフィグ設定失敗<br>
+    【メッセージ】失敗を検知した最初のエラーに関して、必要項目漏れか、値制限範囲外か、型不一致エラーかのいずれかの失敗原因を表示</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.json/gs_cluster.jsonの設定に誤りがあります。エラーメッセージ及びマニュアルを確認して、定義ファイルの必須項目漏れ、値制限、型不一致の問題が無いかを確認し、修正後、再起動してください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonに記述したサービスアドレスが、DNS名前解決で失敗する</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】130000<br>
+    【内容】サービスアドレス設定失敗<br>
+    【メッセージ】失敗したアドレス、ポート、エラー原因となったプラットフォームエラー番号(多くのケースは-2(EAI_NONAME))</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonの各serviceAddressが正常かどうか確認してください。設定していない場合は、/etc/hostsに記載されたアドレスを使いますので、こちらもご確認下さい。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonに記述したマルチキャストアドレスに誤りがある</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】130006<br>
+    【内容】マルチキャストアドレス設定失敗<br>
+    【メッセージ】失敗したアドレス、ポート、エラー原因となったプラットフォームエラー番号(22(EINVAL))</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonの各notificationAddressが正常(224.0.0.0 ～
+  239.255.255.255 )かどうか確認してください。ポートは分けることを推奨しますが、重複しても動作します。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>環境設定不備によりマルチキャストが実行できない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】130006 <br>
+    【内容】マルチキャストアドレス設定失敗<br>
+    【メッセージ】失敗したアドレス、ポート、エラー原因となったプラットフォームエラー番号(19(ENODEV))</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>最初に、ループバック(lo)以外に有効なネットワーク接続が存在し、有効であるかどうか確認してください。次に、マルチキャストルーティング設定を確認してください。特に指定しない場合はデフォルトゲートウェイ設定が使われますが、この設定が正しいかどうか確認してください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl675062 width=85 style='height:112.5pt;width:64pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>サーバとデータベース間のバージョンが一致していない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】80022<br>
+    【内容】データベースバージョン不一致<br>
+    【メッセージ】モジュール　行番号　エラーコード　ログファイルバージョン</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  エラーメッセージに記載されたバージョン番号を確認して、有効なバージョンのデータベースに移行してください。有効なバージョンに関しては「クライアントとＤＢの互換性
+  」を、移行方法については『GridStore移行手順書』を参照ください。<br>
+    </td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl815062 width=213 style='border-top:none;width:160pt'>プロセス起動中にノード状態がABNORMALになる</td>
+  <td class=xl825062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.json中のいずれかのポートがこのファイル内で重複しているか、既に同一マシンで起動中プロセスのポートと一致している</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】130024<br>
+    【内容】ソケットバインド失敗<br>
+    【メッセージ】失敗したアドレス、ポート、リトライに要した時間(デフォルト1分)<br>
+    【外部ツール】netstat, ポートスキャン等を用いて、重複チェック及び、空きポートを検索</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonに記載されたポートが被らないことを外部ツール等を用いて確認し、適切な値に修正後、再起動してください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td rowspan=5 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  width:160pt'>クラスタが一定期間経過しても構成されない</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ構成対象のノード間でgs_cluster.jsonの値もしくは、クラスタ名、構成ノード数が一致しない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】180046～180050<br>
+    【内容】クラスタ構成失敗<br>
+    【メッセージ】接続先アドレス番号、クラスタ構成できなかった原因（クラスタ名不一致、コンフィグ不一致、など）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonの全ての値、及び、gs_joinclusterで指定するクラスタ名、構成ノード数が、構成対象のノード間で全て正しいことを確認して下さい。</td>
+ </tr>
+ <tr height=100 style='page-break-before:always;height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ間のサーバの有効バイナリバージョンが不一致である</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】40044<br>
+    【内容】サーババージョン不一致<br>
+    【メッセージ】接続先アドレス番号、自分のサーババージョン番号、接続先のサーババージョン番号</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラー記載されたバージョン番号を確認して、有効なバージョンのサーババイナリを利用して、クラスタ再起動、再構成し直して下さい。</td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl665062 style='height:187.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>(同一マルチキャストアドレスで)同一クラスタ名の別クラスタが既に存在することを、現クラスタのマスタノードが検知した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】180018<br>
+    【内容】重複クラスタ検知<br>
+    【メッセージ】既存クラスタのマスタノードの接続アドレス、ポート番号</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  重複検知した状態で継続することでデータ破壊に繋がる可能性がありますので、重複を検知した側のクラスタを停止(gs_stopcluster)させるか、通知先のクラスタを停止させ、(2クラスタ以上の場合はこれを繰り返して)同一サブネット上に、同一クラスタ名のクラスタが一つになるように調整を行ってください。なお、gs_cluster.jsonのクラスタ名を設定する場合は、サブネット内でユニークとなるクラスタ名(及びマルチキャストアドレス)を設定することを強く推奨します。<br>
+    </td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl665062 style='height:56.25pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.json中のサービスアドレスが有効ではない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】トレースには特に何も残らないが、2ノード以上のクラスタが一定期間経過しても構成されない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>各サービスのアドレスの正当性を確認してください。1ノードの場合は起動しますが、2ノード以上だと、ノード間通信が行えないためにクラスタが構成されません。</td>
+ </tr>
+ <tr height=175 style='height:131.25pt'>
+  <td height=175 class=xl665062 style='height:131.25pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ構成のためのマルチキャストが物理的に届かない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【外部ツール】
+  tcpdumpやnetstatでgs_cluster.jsonの/cluster/notificationAddress,
+  notificationPortで指定したマルチキャストアドレス、ポートが受信できているかの確認</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>　<br>
+   
+  クラスタを構成する全てのノードが同一サブネット内で起動されていることを確認して下さい。もし、異なるサブネット間での接続が必要な場合は、外部ツールを用いて接続して下さい。また、該当マルチキャストがファイアウォールで遮断されている可能性もありますので、そちらの設定も確認して下さい。<br>
+    　</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td rowspan=4 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>クラスタへのクライアント接続が失敗する</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>同一ネットワーク内に同一クラスタ名を持つクラスタが存在するため、接続先が混線している</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】コンテナ取得失敗など不定だが、この場合、クラスタ中のいずれかで以下が記録される<br>
+    【サーバ】10005<br>
+    【内容】重複クラスタ検知<br>
+    【メッセージ】既存クラスタのマスタノードの接続アドレス、ポート番号</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ名が同一サブネット内でユニークであることをまず確認して下さい。その上で、そのクラスタ名が、クライアントプログラムの接続対象のクラスタ名と一致していることを確認して下さい。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアント-クラスタ間のバイナリバージョンが不一致である</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】10054<br>
+    【内容】クライアントバージョン不一致<br>
+    【メッセージ】接続先アドレス番号、自分のクライアント接続可能なバージョン番号、接続先のクライアントバージョン番号</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージに記載されたバージョン番号を確認して、有効なバージョンのクライアントを利用して下さい。有効なバージョンに関しては「クライアントとＤＢの互換性
+  」を参照してください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアントフェイルオーバータイムアウトが発生している</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】10008, 10009, 10010<br>
+    【内容】フェイルオーバー接続失敗<br>
+    【クライアント】クライアントフェイルオーバータイムアウト</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアントがリトライするたびに本トレースが記録されていることがあります。クライアントフェイルオーバータイムアウト内に接続が確立された場合は、上記ログが残りますが、問題ありません。タイムアウトが発生した場合、最後の失敗原因が記載されます。「クライアントフェイルオーバーに関するトラブル」を参照してください。</td>
+ </tr>
+ <tr height=150 style='page-break-before:always;height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアントのクラスタディスカバリのためのマルチキャストが物理的に届かない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【外部ツール】
+  tcpdumpやnetstatでgs_cluster.jsonの/transaction/notificationAddress,
+  notificationPortで指定したマルチキャストアドレス、ポートが受信できているかの確認</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタが存在するサブネットとクライアントが同一サブネット内で起動されていることを確認して下さい。もし、異なるサブネット間での接続が必要な場合は、外部ツールを用いて接続して下さい。また、該当マルチキャストがファイアウォールで遮断されている可能性もありますので、そちらの設定も確認して下さい。</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl865062 width=213 style='width:160pt'></td>
+  <td class=xl875062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=213 style='width:160pt'>データベースバージョンの不一致</td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>サーバとデータベース間のバージョンの不一致</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>【サーバ】80022<br>
+    【内容】データベースバージョン不一致<br>
+    【メッセージ】モジュール　行番号　エラーコード　ログファイルバージョン</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'><br>
+   
+  エラーメッセージに記載されたバージョン番号を確認して、有効なバージョンのデータベースに移行してください。有効なバージョンに関しては「クライアントとＤＢの互換性
+  」を、移行方法については『GridStore移行手順書』を参照ください。<br>
+    </td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=4 class=xl885062 width=1548 style='width:1162pt'>gs_node.json、gs_cluster.jsonの設定に関しては、『GridStore
+  クイックスタートガイド』の「付録」の「パラメータ一覧」を参考にしてください。</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=3>『移行手順書』は基本サポートサービスで提供されます。インストールメディアやパッケージには同梱されませんのでご注意ください。</td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=3 style='height:19.5pt'>　　　クラスタ拡張、縮小に関するトラブル</td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl915062 width=658 style='border-right:.5pt solid black;
+  width:494pt'>原因</td>
+  <td rowspan=2 class=xl935062 width=445 style='border-bottom:.5pt solid black;
+  width:334pt'>症状</td>
+  <td rowspan=2 class=xl945062 width=445 style='border-bottom:.5pt solid black;
+  width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl745062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl755062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl665062 style='height:187.5pt'></td>
+  <td rowspan=3 class=xl815062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>増設、離脱可能条件を満たしていないので、コマンドが正常に実行されない</td>
+  <td class=xl825062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>有効ノード数と構成ノード数が一致しない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】180055<br>
+    【内容】クラスタ増設/離脱可能状態ではない<br>
+    【書式】現クラスタの有効ノード数、構成ノード数<br>
+    【確認】gs_stat /cluster/activeCount != /cluster/designatedCount</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  クラスタ内のノードに障害が発生していないかどうか確認して下さい。もし、障害発生しているならば、そのノードがクラスタに復帰できるならば、まずはそれを試みてください。もし、復帰できない場合、別途新しいノードを用意して、そのノードをクラスタに参加させて下さい。この作業の後、gs_statで、有効ノード数(activeCount)と構成ノード数(designatedCount)が一致したことを確認した上で、再度クラスタ増設/離脱コマンドを実行して下さい。<br>
+    </td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>構成ノード数以上のノードを参加しようとした</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】180045<br>
+    【内容】構成ノード数以上のクラスタ構成失敗<br>
+    【書式】追加対象ノードにおいて、現クラスタの構成ノード数、マスタアドレス</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  構成中のクラスタが既にノード数上限(＝構成ノード数)に達しているため、新たなノードを参加できない状態です。更に構成ノード数を増やしたい場合は、増設対象のクラスタに参加しているノードに対して、gs_appendclusterを実行してください。<br>
+    </td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対象ノードを離脱させることで、現クラスタがデータロストする、或いは、クラスタが解散してしまう</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】180030<br>
+    【内容】そのノードが離脱できない<br>
+    【書式】離脱できない理由（対象ノードを離脱させることでクラスタが過半数ノードを維持できない、一つでもノードを離脱させることでデータロストが発生する）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_leavecluster実行によって、データロスト、或いはクラスタ解散の危険がある場合は離脱は実行されません。強制的に実行したい場合は、--forceオプションを付けて実行して下さい。但し、この場合、クラスタがリセットされたり、データロストする可能性がありますので、できるだけ--forceオプションは付けないでください。</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=3 style='height:19.5pt'>　　　クライアントフェイルオーバーに関するトラブル</td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='page-break-before:always;height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl995062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl1015062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl1025062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl1035062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl1045062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl785062 width=213 style='border-top:none;width:160pt'>リソース異常に起因するエラー</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアント・クラスタ間でネットワークに障害が発生した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】130008<br>
+    【内容】ネットワーク接続エラー<br>
+    【書式】通信失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  障害が一時的なものであれば、フェイルオーバータイムアウト期間に収まるように、タイムアウトを設定してください。定常的なものであれば、ネットワークの二重化なども検討してください。<br>
+    </td>
+ </tr>
+ <tr height=350 style='height:262.5pt'>
+  <td height=350 class=xl665062 style='height:262.5pt'></td>
+  <td rowspan=3 class=xl795062 width=213 style='border-top:none;width:160pt'>タイムアウト設定に起因するエラー</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>サーバの負荷が非常に高いか、該当トランザクション自体の負荷が高い</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】50000, 50001<br>
+    【クライアント】70000<br>
+    【内容】トランザクションタイムアウト<br>
+    【書式】タイムアウト経過期間、パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  実行対象のアプリケーションの1ステートメント実行が、トランザクションタイムアウト期間内に収まるかどうかを確認して、適切な値を設定してください。本現象は、サーバ全体として負荷が一時的に高くなっている場合でも発生します。--memoryDetailオプション付きでgs_statを実行することで、通信メッセージの総確保量(/performance/memoryDetail/work.transactionMessageTotal)が出力されますので、定常的に大きくなっていないかを確認して下さい。特に非同期レプリケーションの際、バックアップ側は、処理が一時的に集中し、負荷が高くなる可能性があります。もし、これらが原因でタイムアウトになる場合は、準同期レプリケーションモードに変更してください。<br>
+    </td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl665062 style='height:187.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>アプリケーションにおいて、デッドロック、或いは、長期間ロックを保有している</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】50000, 50001<br>
+    【クライアント】70000<br>
+    【内容】トランザクションタイムアウト<br>
+    【書式】タイムアウト経過期間、パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  --memoryDetailオプション付きでgs_statを実行することで、通信メッ+E6セージの総確保量(/performance/memoryDetail/work.transactionMessageTotal)が出力されますので、値を確認して下さい。これが定常的に減らない場合はデッドロック、或いは、ロック待ち状態が発生しています。アプリケーションを見直して、必要ならば終了させてください。無制限にした場合はサーバ側で自動でロック解放することはしませんので、適切な対応を取ってください。<br>
+    </td>
+ </tr>
+ <tr height=225 style='height:168.75pt'>
+  <td height=225 class=xl665062 style='height:168.75pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>フェイルオーバータイムアウトが発生した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【クライアント】70000<br>
+    【内容】クライアントフェイルオーバータイムアウト<br>
+    【書式】タイムアウト経過期間、パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  クラスタフェイルオーバーに時間を要するような大規模データ、特に、BLOB等一つのロウが非常に大きい場合は、フェイルオーバー(実行時の同期処理)に時間を要する場合がありますので、フェイルオーバータイムアウトを長く設定しておいてください。また、障害検知はハートビート間隔で行っていますので、ハートビート間隔が大きい場合は、検知までの時間を要するため、その場合もフェイルオーバー時間が長くなります。<br>
+    </td>
+ </tr>
+ <tr height=150 style='page-break-before:always;height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=213 style='border-top:none;width:160pt'>レプリケーション失敗に起因するエラー</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>レプリケーション処理が正常に完了しない状態で、フェイルオーバー処理が開始された</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】50002<br>
+    【内容】更新操作連続性チェックエラー<br>
+    【書式】パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>レプリケーション処理におけるメッセージ送受信と、ノード障害のタイミングにより、バックアップへのデータが欠損することで本症状が発生する場合があります。特に非同期レプリケーションの場合に発生する確率が高いため、可用性を重視するなら、性能とのトレードオフを考慮した上で準同期レプリケーションのクラスタでの運用を推奨します。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td rowspan=5 class=xl795062 width=213 style='border-top:none;width:160pt'>フェイルオーバー先のデータサービスが停止状態に起因するエラー</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>フェイルオーバー開始時点で有効であったクラスタ状態がフェイルオーバー中にリセットされ、サブクラスタ状態になっている</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】10010<br>
+    【内容】クラスタ非構成時のアクセス<br>
+    【書式】パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ障害が発生した原因については、「クラスタ障害に関するトラブル」を参照してください。もし、半数以上のノードがダウンしたことによりクラスタ構成がリセットされた場合は、新たにノードを用意して、構成ノード数のノードが確保できる状態までクラスタを戻してください。</td>
+ </tr>
+ <tr height=275 style='height:206.25pt'>
+  <td height=275 class=xl665062 style='height:206.25pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonで設定したレプリカ数以上のノードで同時にノード障害が発生した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】10007<br>
+    【内容】(データロスト検知によるデータサービス停止)<br>
+    【書式】（※マスタノードのみ）パーティション番号、該当パーティションでダウンノードも含めた最新データのLSN(Log Sequence
+  Number)、現在のクラスタにおける最大のLSN、最新データを保有していると推定されるノードアドレス(但し、確実性は保証しない)<br>
+    【コマンド確認】gs_partition --lossで上記エラー内容と同じ情報を取得できる<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>継続させることによりデータ一貫性が崩れることをクラスタが検知したため、該当パーティションに対するデータサービスを停止させた状態です。可用性と性能とのトレードオフになりますが、可用性を重視するならば、gs_cluster.jsonのレプリカ数を想定される同時ダウン数以上に設定してください。</td>
+ </tr>
+ <tr height=350 style='height:262.5pt'>
+  <td height=350 class=xl665062 style='height:262.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonで設定したレプリカ数以下のノードでの同時障害であったが、発生時点で、レプリカが一時的に不足状態していたパーティションが存在していた</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：10007<br>
+    【内容】(データロスト検知によるデータサービス停止)<br>
+   
+  【書式】（※マスタノードのみ）パーティション番号、該当パーティションでダウンノードも含めた最新データのLSN、現在のクラスタにおける最大のLSN、最新データを保有していると推定されるノードアドレス<br>
+    【コマンド確認】<br>
+    発生後は、gs_partition --lossで確認。レプリカ不足状態で稼働している場合は、gs_stat /cluster/partitionStatusで、REPLICA_LOSSと表示されているので、現在の可用性を確認する。個別のパーティション状態を知りたい場合は、gs_partitionを用いて、パーティションごとのレプリカ数を確認する<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>GridStoreではフェイルオーバー時のダウンタイムを小さくするために、あるパーティションに対する同期実行で、ある程度時間を要する(適用するログが大きいかどうかで判定)とクラスタが判定した場合、先に短期間で同期可能なノード集合だけで同期を実行して、データサービスを部分的に開始します。この場合、バックグラウンドの非同期実行で不足分のレプリカを作成しますが、復元されるまでは可用性が低下した状態になります。よって、仮にgs_cluster.jsonでレプリカ数を十分に設定していたとしても、バックグラウンドのレプリカ復元が間に合わなければこの状態になることに注意してください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ハートビートが安定しないなど、クラスタが定常的に構成異常を検知して、フェイルオーバーが繰り返される</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：50003<br>
+    【内容】(クラスタ非構成時のアクセス)<br>
+    【書式】パーティション番号、接続アドレス、失敗原因<br>
+    【サーバ】：50004<br>
+    【内容】(クラスタ構成中のアクセス)<br>
+    【書式】パーティション番号、接続アドレス、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クラスタ障害が定常的に発生しており不安定となっています。「クラスタ障害に関するトラブル」を参照してください。</td>
+ </tr>
+ <tr height=150 style='page-break-before:always;height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ネットワーク分断が発生後、過半数以上のノードが確保できるクラスタが存在したため、継続稼働したが、分散先に最新データがある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10007<br>
+    【内容】(データロスト検知によるデータサービス停止)<br>
+   
+  【書式】（※マスタノードのみ）パーティション番号、該当パーティションでダウンノードも含めた最新データのLSN、現在のクラスタにおける最大のLSN、最新データを保有していると推定されるノードアドレス</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ネットワーク分断は、分断されたノードがダウンとしたのと同じ症状になります。分断先に最新データが有る場合は、該当パーティションのデータサービスは一時的に停止されますが、分断されたネットワークが元に戻った時点で、自動的に停止させていたデータサービスが再開されます。</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl1105062 colspan=2 style='height:19.5pt'>　　　クラスタ障害に関するトラブル</td>
+  <td class=xl875062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl1085062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl995062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl1015062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl1025062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl1085062 style='height:18.75pt'></td>
+  <td class=xl1035062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl1045062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=350 style='height:262.5pt'>
+  <td height=350 class=xl1085062 style='height:262.5pt'></td>
+  <td rowspan=3 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>クラスタ構成変更は無いが、レプリカ不足状態での部分運転や、一部のパーティションのデータサービス停止となる障害が発生する</td>
+  <td class=xl815062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>現オーナ、バックアップ間の大きなレプリケーション遅延をクラスタが異常状態と判定してバックアップから除外した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10011<br>
+    【内容】(バックアップ異常検知)<br>
+    【書式】（※マスタノードのみ）パーティション番号、オーナアドレス、オーナLSN, バックアップアドレス、バックアップLSN</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>　<br>
+   
+  レプリケーション遅延は特に非同期レプリケーションモードの際に発生しやすい傾向があります。発生が頻発するようでしたら、準同期レプリケーションモードに変更する(gs_cluster.jsonファイルの/transaction/replicationMode=1にする)か、gs_cluster.jsonファイルに/cluster/ownerBackupLsnGapを追記して値をデフォルト値(50000)より大きくしてください(*1)。<br>
+    例：<br>
+    &quot;cluster&quot;:{<br>
+    　&quot;ownerBackupLsnGap&quot;:&quot;100000&quot;,<br>
+    　　　　：<br>
+    }<br>
+    　<br>
+    </td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl1085062 style='height:75.0pt'></td>
+  <td class=xl815062 width=445 style='border-left:none;width:334pt'>同期タイムアウト内に同期が完了しなかったため、(一部の)データサービスが、指定レプリカ数以下で部分運転が開始された</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10016<br>
+    【内容】(同期タイムアウト検知)<br>
+    【書式】（※オーナノードのみ）パーティション番号、部分運転開始時のオーナアドレス</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>アプリダウンタイムとのトレードオフになりますが、可用性を重視する場合は同期タイムアウト時間(gs_cluster.jsonファイルの/sync/timeoutInterval)を大きくしてください。この値は、ダウンタイムの最大値の目安になります。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl1085062 style='height:112.5pt'></td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>あるパーティションの最新データを保持するノードがダウンして、継続させた場合にデータ不整合が発生するために、該当パーティションのデータサービスを停止させた</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10007<br>
+    【内容】(データロスト検知によるデータサービス停止)<br>
+   
+  【書式】（※マスタノードのみ）パーティション番号、該当パーティションでダウンノードも含めた最新データのLSN、現在のクラスタにおける最大のLSN、最新データを保有していると推定されるノードアドレス</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>「クライアントフェイルオーバーに関するトラブル」も参照してく下さい。<br>
+   
+  また、レプリカ数を増やす、準同期レプリケーションに変更する(gs_cluster.jsonファイルの/transaction/replicationMode=1にする)ことで、発生確率を小さくすることができます。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl1085062 style='height:75.0pt'></td>
+  <td rowspan=3 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>クラスタ構成変更が必要となる障害が発生する</td>
+  <td class=xl815062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>マスタノードが、フォロワノードダウン、或いはノード状態がABNORMALへ遷移、或いはgs_leaveclusterが実行されたことを検知した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10010<br>
+    【内容】(フェイルオーバー開始)<br>
+    【書式】（※マスタノードのみ）異常を検知したノード一覧、フェイルオーバ番号</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>それぞれの異常内容については、それぞれのノードのイベントログ、エラーコードを確認して下さい。</td>
+ </tr>
+ <tr height=225 style='page-break-before:always;height:168.75pt'>
+  <td height=225 class=xl1085062 style='height:168.75pt'></td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>ネットワーク障害もしくは大きな遅延が発生したことによりハートビート異常を検知した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10008, 10009<br>
+    【内容】(ハートビートタイムアウト)<br>
+    【書式】（※マスタノードのみ）異常を検知したノード、ハートビート限界時刻、最終ハートビート到着時刻<br>
+    【外部ツール】ネットワーク帯域内か確認</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  断続的な切断でなく、定常的に発生するようでしたら、ハートビート間隔を長くして下さい。但し、ハートビート間隔を長くしすぎると、障害異常検知、及び復旧時間が遅くなるので、可用性とのトレードオフを考慮して設定してください。ネットワーク帯域による遅延であるならば、gs_cluster.jsonの各serviceAddress/servicePortを、それぞれ他ネットワークと別に設定することで発生確率を低下させることもできます。<br>
+    </td>
+ </tr>
+ <tr height=200 style='height:150.0pt'>
+  <td height=200 class=xl1085062 style='height:150.0pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ネットワーク以外のリソース高負荷によるハートビート異常が検知した</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10008, 10009<br>
+    【内容】(ハートビートタイムアウト)<br>
+    【書式】（※マスタノードのみ）異常を検知したノード、ハートビート限界時刻、最終ハートビート到着時刻<br>
+    【外部ツール】リソース検視ツール</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  断続的な切断でなく、定常的に発生するようでしたら、ハートビート間隔を長くして下さい。ネットワークと異なり、メモリ不足によるスワップ、ディスクI/O待ち、高負荷アプリケーション実行によりサーバがビジー状態、同一マシン内での別アプリ起動によるもの、等、様々な要因があります。gs_statだけでなく、該当マシン全体でのリソース状態も確認して下さい。<br>
+    </td>
+ </tr>
+ <tr height=275 style='height:206.25pt'>
+  <td height=275 class=xl1085062 style='height:206.25pt'></td>
+  <td rowspan=2 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>クラスタ構成を維持できない障害が発生する<br>
+    </td>
+  <td class=xl815062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>半数以上のノードの異常検知、或いは離脱によりクラスタがリセットされた</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：10014<br>
+    【内容】(過半数ノード確保できないためのクラスタ解散)<br>
+    【書式】（※マスタノードのみ）クラスタ維持に必要なノード数、有効ノード数<br>
+    直前にはハートビート異常検知も記録される<br>
+    【サーバ】：10008, 10009<br>
+    【内容】(ハートビートタイムアウト)<br>
+    【書式】（※マスタノードのみ）異常を検知したノード、ハートビート限界時刻、最終ハートビート到着時刻<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>障害が発生してダウンしまったノードを復旧させてください。もし、復旧不可能な場合は、別途新たなノードを起動して、構成ノード数のノードとなるようにクラスタを復元させてください。但し、ダウンしているノード内に、最新データが保持されている可能性もあるので、追加の際は”gs_partition　--loss&quot;等で確認して下さい。</td>
+ </tr>
+ <tr height=275 style='height:206.25pt'>
+  <td height=275 class=xl1085062 style='height:206.25pt'></td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>稼働中クラスタにおいてネットワーク分断が発生し、その後、クラスタ再構成を行おうとするが、どの部分クラスタも過半数ノードを確保できなかった</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：10014<br>
+    【内容】(過半数ノード確保できないためのクラスタ解散)<br>
+    【書式】（※マスタノードのみ）クラスタ維持に必要なノード数、アクティブノード数<br>
+    直前にはハートビート異常検知も記録される<br>
+    【サーバ】：10008, 10009<br>
+    【内容】(ハートビートタイムアウト)<br>
+    【書式】（※マスタノードのみ）異常を検知したノード、ハートビート限界時刻、最終ハートビート到着時刻<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ネットワーク分断の場合、分断が復旧された時点で自動的にクラスタが再開されますが、もし、分断復帰の見込みが無い場合、手動で構成台数を減らしてクラスタを再構成する必要があります。但し、分散先ノード内に、最新データが保持されている可能性もあるので、追加の際は”gs_partition　--loss&quot;等で確認して下さい。</td>
+ </tr>
+ <tr height=225 style='page-break-before:always;height:168.75pt'>
+  <td height=225 class=xl1085062 style='height:168.75pt'></td>
+  <td rowspan=2 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>リバランス(レプリカ不足ノードに対するレプリカ作成およびノード間の均等配分)に失敗する<br>
+    </td>
+  <td class=xl815062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>チェックポイント競合などが発生し、実行中のリバランス処理を継続できなかった</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10012<br>
+    【内容】(リバランス失敗)<br>
+    【書式】失敗が発生したパーティション番号、バーティショングループ番号、チェックポイント番号、失敗原因</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  リバランス実行中に、チェックポイントが実行された場合、データファイルが更新され、更にログファイル削除される場合があり、この場合、実行中のリバランス処理は途中で打ち切られます。但し、もし、打ち切られたとしても、定期的にチェックしてリトライされます。但し、時間ロスが発生するため、チェックポイント時間を大きくすることと、ログ保持個数を予め大きくしておくことで発生確率を下げることができます。<br>
+    </td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl1085062 style='height:75.0pt'></td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>リバランスタイムアウト期間内にリバランスが完了できなかった</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10014<br>
+    【内容】(リバランスタイムアウト)<br>
+    【書式】（※マスタノードのみ）タイムアウト検知したパーティション番号、タイムアウト時間</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>リバランスタイムアウト時間を長く設定してください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl1085062 style='height:56.25pt'></td>
+  <td rowspan=3 class=xl835062 width=213 style='border-bottom:.5pt solid black;
+  border-top:none;width:160pt'>クラスタノードで継続不可能な障害が発生した<br>
+    </td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ディスクフルによるノード停止</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：各プラットフォームエラー番号<br>
+    【内容】プラットフォームエラー(ディスクフル)<br>
+    【外部ツール】df, duで確認</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ディスク増設を行うか、新たなディスク領域が確保できる新規ノードを用意して下さい。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl1085062 style='height:75.0pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ディスクI/O障害によるノード停止</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：各プラットフォームエラー番号<br>
+    【内容】プラットフォームエラー(ディスクI/O)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>物理的なディスク障害や、リソース枯渇によるファイル書き込み失敗などのケースと、誤って必要ファイルを手動で削除してしまった等、幾つかのケースが考えられます。後者は、「リカバリ処理に関するトラブル」を参照してください。</td>
+ </tr>
+ <tr height=325 style='height:243.75pt'>
+  <td height=325 class=xl1085062 style='height:243.75pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>メモリ障害によるノード停止</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：各プラットフォームエラー番号<br>
+    【内容】プラットフォームエラー(メモリアロケート)<br>
+    【外部ツール】vmstat, top<br>
+    【コマンド確認】gs_stat : /performance/processMemory</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+   
+  物理メモリに対して、メモリ上限(storeMemoryLimit)を大きくしすぎていないかをまず確認して下さい(gs_stat)。また、processMemoryが肥大化している場合は、要求処理が滞留している可能性もあるので、--memoryDetailオプション付きでgs_statを実行することで出力される、通信メッセージの総確保量(/performance/memoryDetail/work.transactionMessageTotal)を確認して下さい。<br>
+    storeMemoryLimitおよびprocessMemoryは、&quot;gs_stat&quot;で確認してください。storeMemoryLimitは、gs_node.jsonを編集および&quot;gs_paramconf&quot;より変更できます。<br>
+    </td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl1085062 style='height:18.75pt'></td>
+  <td class=xl865062 width=213 style='width:160pt'>(*1)</td>
+  <td class=xl875062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl1085062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=4>gs_cluster.jsonファイルの/cluster/ownerBackupLsnGap：パーティションのバックアップの異常判定、およびオーナ（パーティションのマスタ）への昇格判定のためのLSN閾値</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl1085062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=2>将来、本パラメータは名前の変更や削除される可能性があります。</td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=2 style='height:19.5pt'>　　　リカバリ処理に関するトラブル</td>
+  <td class=xl685062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl995062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl1015062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl1025062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl1035062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl1045062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=150 style='page-break-before:always;height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td rowspan=4 class=xl835062 width=213 style='border-top:none;width:160pt'>操作エラーによる失敗</td>
+  <td rowspan=3 class=xl815062 width=445 style='border-bottom:.5pt solid black;
+  border-top:none;width:334pt'>定義ファイルの設定値とデータベースファイルの内容が一致しない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：7036, 160012, 160013<br>
+    【内容】(パーティショングループ数不一致)<br>
+    【書式】定義ファイルのパーティショングループ数、データベースファイルのパーティショングループ数</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    gs_node.jsonの/dataStore/concurrencyの値を確認します。<br>
+   
+  バックアップからのリカバリの場合、バックアップ時点の設定値(gs_backup_info.jsonの/configInfo/groupNum)と一致しているか確認してください。<br>
+    </td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：68024, 160018<br>
+    【内容】(パーティション数不一致)<br>
+    【書式】定義ファイルのパーティション数、データベースファイルのパーティション数</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonの/dataStore/partitionNumの値を確認します。<br>
+   
+  バックアップからのリカバリの場合、バックアップ時点の設定値(gs_backup_info.jsonの/configInfo/partitionNum)と一致しているか確認してください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】: 68026, 68064<br>
+    【内容】(ブロックサイズ不一致)<br>
+    【書式】定義ファイルのブロックサイズ、データベースファイルのブロックサイズ</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_cluster.jsonの/dataStore/storeBlockSizeの値を確認します。<br>
+    イベントログのactualFileSize(データベースファイルのブロックサイズ)の値と一致しているか確認してください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl815062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>リカバリに必要なファイルが存在しない</td>
+  <td class=xl835062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】: 20004～20008<br>
+    【内容】(必要ファイルチェックエラー)<br>
+    【書式】不足が確定したファイル内容</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>バックアップから起動する場合、すべてのファイルがコピーされているか確認します(&quot;gs_restore
+  --test&quot;など )。<br>
+    バックアップに関する詳細は、『GridStore バックアップガイド』を参照ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl665062 style='height:56.25pt'></td>
+  <td class=xl795062 width=213 style='width:160pt'>内部異常による失敗</td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>リカバリ処理中に継続できないエラーが発生した</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>【サーバ】:
+  20009<br>
+    【内容】(内部エラー)<br>
+    【書式】異常を検知した時点のトレースによる</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>サポートサービスにお問合せください。バックアップが存在するならばそのデータで復元することも可能です。</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=2 style='height:19.5pt'>　　　コンテナ操作に関するトラブル</td>
+  <td class=xl685062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td colspan=2 class=xl995062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl1015062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl1025062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td class=xl1115062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl1125062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='width:160pt'>全ての操作に共通する対応</td>
+  <td class=xl785062 width=445 style='border-left:none;width:334pt'>タイムアウトが発生した場合</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>クライアントフェイルオーバータイムアウト</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>「クライアントフェイルオーバーに関するトラブル」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>接続障害が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>クライアントフェイルオーバータイムアウト</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>「クライアントフェイルオーバーに関するトラブル」を参照ください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td rowspan=4 class=xl795062 width=213 style='border-top:none;width:160pt'>全ての操作に共通する対応</td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>オブジェクトのクローズ後の呼び出しに起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： <br>
+    140036/145036/<br>
+    140038/145038/<br>
+    140040/145040<br>
+    【内容】(クローズに関するエラー)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>該当操作は、(コンテナ／リソースの)クローズ処理を呼び出す前に実施して下さい。エラーメッセージを確認し対応ください。</td>
+ </tr>
+ <tr height=200 style='height:150.0pt'>
+  <td height=200 class=xl695062 width=85 style='height:150.0pt;width:64pt'></td>
+  <td class=xl785062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>登録済みコンテナに不整合が発生している場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 60151<br>
+    【内容】(コンテナに不整合が発生)<br>
+    【書式】パーティションID、コンテナ名</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    指定した操作ができません。サポートサービスにお問い合わせください。<br>
+   
+  特定のコンテナ内のデータで不整合な状態が検出されました。サービスは継続されますが、当該コンテナに関しては以降の更新操作はできません。検索結果も不正な結果になる可能性があります。<br>
+    </td>
+ </tr>
+ <tr height=100 style='page-break-before:always;height:75.0pt'>
+  <td height=100 class=xl695062 width=85 style='height:75.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>　</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：10017<br>
+    【内容】(コンテナのスキーマバージョンが不一致)<br>
+    【書式】パーティションID、コンテナ名、要求スキーマバージョンID、現スキーマバージョンID</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>コンテナオブジェクトを再取得してください。</td>
+ </tr>
+ <tr height=200 style='height:150.0pt'>
+  <td height=200 class=xl695062 width=85 style='height:150.0pt;width:64pt'></td>
+  <td class=xl1155062 width=445 style='border-left:none;width:334pt'>メモリ使用制限サイズをオーバーした場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：130033<br>
+    【内容】(メモリ上限オーバー)<br>
+    【書式】メモリ上限サイズ</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>使用可能メモリサイズの上限を上げる場合は、gs_node.jsonファイルに<br>
+   
+  /dataStore/resultSetMemoryLimitまたは/transaction/totalMemoryLimitを追記し、値をデフォルト値より大きくしてください(*1)。<br>
+    メモリサイズオーバーが検索時に発生しているのならば、ヒット件数を抑えることでメモリの使用量を減らすようにクエリを調整することも可能です。</td>
+ </tr>
+ <tr height=425 style='height:318.75pt'>
+  <td height=425 class=xl695062 width=85 style='height:318.75pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>コンテナの登録に失敗する<br>
+    GridStore::putCollection()<br>
+    GridStore::putContainer()<br>
+    GridStore::putTimeSeries()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>コンテナの制約違反が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【エラーコード】：60015<br>
+    【内容】(コンテナ制約違反)<br>
+    【書式】以下のエラー内容<br>
+    コンテナ名サイズ制限オーバー、<br>
+    カラム数制限オーバー、<br>
+    カラム名重複エラー、<br>
+    ロウキー指定エラー<br>
+    ロウキー型サポートエラー、<br>
+    ロウキー値制約エラー、<br>
+    配列型サポートエラー、<br>
+    期限解放分割値制限オーバ―、<br>
+    期限解放値範囲外エラー、<br>
+    間引き圧縮における設定カラム数制限オーバー、<br>
+    アフィニティサイズ制限オーバー、<br>
+    etc<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認し、コンテナ情報を修正ください。コンテナの設定については、『運用管理ガイド』の「クラスタ運用管理コマンド・インタプリタ(gs_sh)
+  」の「コンテナ管理」を参照ください。</td>
+ </tr>
+ <tr height=300 style='height:225.0pt'>
+  <td height=300 class=xl695062 width=85 style='height:225.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>登録済みコンテナとのスキーマの不一致が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【エラーコード】：60149/60016<br>
+    【内容】(既存コンテナとのスキーマ不一致)<br>
+    【書式】以下のエラー内容<br>
+    ロウキー定義の不一致エラー、<br>
+    同一カラム名の型不一致エラー、<br>
+    全カラム名不一致エラー、<br>
+    アフィニティ値不一致エラー、<br>
+    期限解放設定不一致エラー、<br>
+    圧縮設定不一致エラー、<br>
+    etc<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認し、不一致となっているコンテナ情報を修正ください。コンテナ情報は、統合運用管理GUI(gs_admin)
+  または&quot;gs_sh&quot;の&quot;showcontainer&quot;コマンドを利用すると確認できます。</td>
+ </tr>
+ <tr height=425 style='page-break-before:always;height:318.75pt'>
+  <td height=425 class=xl695062 width=85 style='height:318.75pt;width:64pt'></td>
+  <td rowspan=3 class=xl795062 width=213 style='border-top:none;width:160pt'>コンテナのスキーマ変更に失敗する<br>
+    GridStore::putCollection()<br>
+    GridStore::putContainer()<br>
+    GridStore::putTimeSeries()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>コンテナの制約違反が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【エラーコード】：60015<br>
+    【内容】(コンテナ制約違反)<br>
+    【書式】以下のエラー内容<br>
+    コンテナ名サイズ制限オーバー、<br>
+    カラム数制限オーバー、<br>
+    カラム名重複エラー、<br>
+    ロウキー指定エラー<br>
+    ロウキー型サポートエラー、<br>
+    ロウキー値制約エラー、<br>
+    配列型サポートエラー、<br>
+    期限解放分割値制限オーバ―、<br>
+    期限解放値範囲外エラー、<br>
+    間引き圧縮における設定カラム数制限オーバー、<br>
+    アフィニティサイズ制限オーバー、<br>
+    etc<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認し、コンテナ情報を修正ください。コンテナの設定については、『運用管理ガイド』の「クラスタ運用管理コマンド・インタプリタ(gs_sh)
+  」の「コンテナ管理」を参照ください。</td>
+ </tr>
+ <tr height=300 style='height:225.0pt'>
+  <td height=300 class=xl695062 width=85 style='height:225.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>登録済みコンテナと変更するスキーマの制約違反が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：60149<br>
+    【内容】(コンテナ制約違反)<br>
+    【書式】以下のエラー内容<br>
+    ロウキー定義の不一致エラー、<br>
+    同一カラム名の型不一致エラー、<br>
+    全カラム名不一致エラー、<br>
+    Affinity値不一致エラー、<br>
+    期限解放設定不一致エラー、<br>
+    圧縮設定不一致エラー、<br>
+    etc<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認し、不一致となっているコンテナ情報を修正ください。コンテナ情報は、統合運用管理GUI(gs_admin)
+  または&quot;gs_sh&quot;の&quot;showcontainer&quot;コマンドを利用すると確認できます。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl695062 width=85 style='height:56.25pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>スキーマ変更許可パラメータが設定されていない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 60016<br>
+    【内容】(スキーマ変更許可がない)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>既存のコンテナのカラムレイアウトの変更が許可されていません。カラムレイアウトの変更を許可するには、&quot;modifiable&quot;パラメータにtrueを設定してください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>コンテナの取得に失敗する<br>
+    GridStore::getCollection()<br>
+    GridStore::getContainer()<br>
+    GridStore::getTimeSeries()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>同名の異なるコンテナタイプが存在する場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 60026<br>
+    【内容】（コンテナタイプが不一致）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したコンテナのコンテナタイプに誤りがないかご確認ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl695062 width=85 style='height:75.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定の型が適切でない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140023/145023<br>
+    【内容】指定の型と既存のカラムレイアウトが一致しないことに起因する失敗<br>
+    指定の型がロウオブジェクトの型として適切でない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したカラムレイアウトに誤りがないかご確認ください。カラム情報は、統合運用管理GUI(gs_admin)
+  または&quot;gs_sh&quot;の&quot;showcontainer&quot;コマンドを利用すると確認できます。</td>
+ </tr>
+ <tr height=125 style='page-break-before:always;height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>コンテナの削除に失敗する<br>
+    GridStore::dropCollection()<br>
+    GridStore::dropContainer()<br>
+    GridStore::dropTimeSeries()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>同名の異なるコンテナタイプが存在する場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60026<br>
+    【内容】（コンテナタイプが不一致）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したコンテナのコンテナタイプに誤りがないかご確認ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl695062 width=85 style='height:56.25pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>索引の登録に失敗する<br>
+    Container::createIndex()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対応する名前のカラムが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140008/145008<br>
+    【内容】(不明なカラム名)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したカラム名に誤りがないかご確認ください。カラム情報は、統合運用管理GUI(gs_admin)
+  または&quot;gs_sh&quot;の&quot;showcontainer&quot;コマンドを利用すると確認できます。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl695062 width=85 style='height:56.25pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>索引設定がサポートされないカラムタイプを指定した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 1007<br>
+    【内容】（サポート外）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したカラム(カラムタイプ)に誤りがないかご確認ください。索引については、『 APIリファレンス』の「API一覧
+  (Java)」の「createIndex」を参照ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl695062 width=85 style='height:56.25pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>索引の削除に失敗する<br>
+    Container::dropIndex()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対応する名前のカラムが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140008/145008<br>
+    (不明なカラム名)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>カラム名に誤りがないか確認ください。カラム情報は、統合運用管理GUI(gs_admin)
+  または&quot;gs_sh&quot;の&quot;showcontainer&quot;コマンドを利用すると確認できます。</td>
+ </tr>
+ <tr height=350 style='height:262.5pt'>
+  <td height=350 class=xl695062 width=85 style='height:262.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>トリガーの登録に失敗する<br>
+    Container::createTrigger()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>トリガーの制約違反が発生した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：140001/145001/170003/10040<br>
+    【内容】（トリガー制約違反）<br>
+    【書式】以下のエラー内容<br>
+    トリガ名がnull、または空の場合<br>
+    監視対象更新操作の指定がない場合<br>
+    通知先URIが規定の構文に合致しない場合<br>
+    トリガ種別でJMSが指定され、かつJMSデスティネーション種別がnull、または空、または指定の書式に合致しない場合<br>
+    トリガ種別でJMSが指定され、かつJMSデスティネーション名がnull、または空の場合<br>
+    この処理のタイムアウト、このコンテナの削除、接続障害が発生した場合、またはクローズ後に呼び出された場合<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認しトリガ情報を修正ください。トリガ機能については、『APIリファレンス』の「トリガ機能」を参照ください。</td>
+ </tr>
+ <tr height=225 style='height:168.75pt'>
+  <td height=225 class=xl695062 width=85 style='height:168.75pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>トリガーの上限数を超えた場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：1008<br>
+    【内容】（トリガー上限違反）<br>
+    【書式】以下のエラー内容<br>
+    トリガー名の制限値オーバー<br>
+    トリガー名の使用禁止文字<br>
+    URIの長さの制限値オーバー<br>
+    トリガー登録数の制限値オーバー<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認しトリガ情報を修正ください。トリガ機能については、『 APIリファレンス』の「API一覧
+  (Java)」の「createTrigger」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>トリガーの削除に失敗する<br>
+    Container::dropTrigger()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>共通原因以外無</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>　</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>　</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの登録・更新に失敗する<br>
+    Container::put()<br>
+    TimeSeries::append()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロウキーに対応するカラムが存在しないにもかかわらず、キーが指定された場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140024/145024<br>
+    【内容】（キーが見つからない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたロウキーが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=175 style='page-break-before:always;height:131.25pt'>
+  <td height=175 class=xl695062 width=85 style='height:131.25pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>カラム値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60079<br>
+    【内容】（カラム制約違反）<br>
+    【書式】以下のエラー内容<br>
+    配列長制限オーバー、<br>
+    文字列、空間、BLOB等の可変長型の制限オーバー<br>
+    時刻型のサポート範囲外値、<br>
+    etc</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認しカラム値を修正ください。カラム値については、『 APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=3 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの一括登録・更新に失敗する<br>
+    Container::multiput()<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したコンテナが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 10016<br>
+    【内容】（コンテナが見つからない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したコンテナが存在しません。コンテナ名をご確認ください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl695062 width=85 style='height:112.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定の型が適切でない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【サーバ】：60015<br>
+    【内容】指定のロウの型と既存のカラムレイアウトが一致しないことに起因する失敗<br>
+    指定のロウの型がロウオブジェクトの型として適切でない場合<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>カラム情報を確認し、適切なカラムレイアウト(カラムタイプ)に修正ください。</td>
+ </tr>
+ <tr height=175 style='height:131.25pt'>
+  <td height=175 class=xl695062 width=85 style='height:131.25pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>カラム値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60079<br>
+    【内容】（カラム制約違反）<br>
+    【書式】以下のエラー内容<br>
+    配列長制限オーバー、<br>
+    文字列、空間、BLOB等の可変長型の制限オーバー<br>
+    時刻型のサポート範囲外値、<br>
+    etc</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認しカラム値を修正ください。カラム値については、『 APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=3 class=xl795062 width=213 style='border-top:none;width:160pt'>RowSet経由のロウの更新に失敗する<br>
+    RowSet::update()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対象位置のロウが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140037/145037<br>
+    【内容】（カーソルの指定先が存在しない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>RowSetのカーソル位置を確認</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロックを有効にせずに取得したRowSetに対して呼び出された場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140039/145039<br>
+    【内容】（ロックされていない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロックが必要</td>
+ </tr>
+ <tr height=175 style='height:131.25pt'>
+  <td height=175 class=xl695062 width=85 style='height:131.25pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>カラム値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60079<br>
+    【内容】（カラム制約違反）<br>
+    【書式】以下のエラー内容<br>
+    配列長制限オーバー、<br>
+    文字列、空間、BLOB等の可変長型の制限オーバー<br>
+    時刻型のサポート範囲外値、<br>
+    etc</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>エラーメッセージを確認しカラム値を修正ください。カラム値については、『 APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの削除に失敗する<br>
+    Container::remove()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロウキーに対応するカラムが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140024/145024<br>
+    【内容】（キーが見つからない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたロウキーが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>圧縮が指定されたコンテナに対してロウの削除を指定した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 60086<br>
+    【内容】（圧縮コンテナに対する操作不正）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>圧縮が指定された時系列コンテナではロウは削除できません。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>RowSet経由のロウの削除に失敗する<br>
+    RowSet::remove()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対象位置のロウが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140037/145037<br>
+    【内容】（カーソルの指定先が存在しない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>RowSetのカーソル位置を確認</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロックを有効にせずに取得したRowSetに対して呼び出された場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140039/145039<br>
+    【内容】（ロックされていない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロックが必要</td>
+ </tr>
+ <tr height=125 style='page-break-before:always;height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>Commitに失敗する<br>
+    Container::commit()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>&nbsp;自動コミットモードであるにもかかわらず呼び出した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140035/145035<br>
+    【内容】（不正なコミットモード）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonのlogWriteMode(ログ書き込みモード
+  )の値が&quot;DELAYED_SYNC&quot;の場合、指定間隔でログの書き込みを行います。明示的にコミットを実行する場合は、logWriteModeを&quot;SYNC&quot;に設定してください。<br>
+    </td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl695062 width=85 style='height:75.0pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>Abortに失敗する<br>
+    Container::abort()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>&nbsp;自動コミットモードであるにもかかわらず呼び出した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140035/145035<br>
+    【内容】（不正なコミットモード）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonのlogWriteMode(ログ書き込みモード
+  )の値が&quot;DELAYED_SYNC&quot;の場合、指定間隔でログの書き込みを行います。明示的にアボートを実行する場合は、logWriteModeを&quot;SYNC&quot;に設定してください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl695062 width=85 style='height:112.5pt;width:64pt'></td>
+  <td class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの登録・更新が反映されない<br>
+    Container::put()<br>
+    TimeSeries::append()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>圧縮が指定されたコンテナに対してロウの更新、または最新登録時刻よりも過去時刻を登録した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【トレース】<br>
+    「insert(old time)/update not support on Compression Mode」</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>圧縮が指定された時系列コンテナにおける仕様です。<br>
+   
+  圧縮オプションが設定された状態の時系列コンテナに対しては、最も新しい時刻を持つ既存ロウより新しい時刻のロウのみを新規作成できます。最も新しい時刻を持つ既存ロウの時刻が指定の時刻と一致する場合、何も変更は行わず既存ロウの内容を保持します。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=3 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウのget検索に失敗する<br>
+    Query::get()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロウキーに対応するカラムが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140024/145024<br>
+    【内容】（キーが見つからない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたロウキーが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：70002<br>
+    【内容】（キー制約違反）<br>
+    【書式】以下のエラー内容<br>
+    文字列型の制限オーバー<br>
+    時刻型のサポート範囲外値</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値が型の制約から外れないよう、エラーメッセージを確認し、設定を変更ください。設定してください。値については、『
+  APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl695062 width=85 style='height:75.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>自動コミットモードであるにもかかわらず、更新用ロックを要求しようとした場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140035/145035<br>
+    【内容】（不正なコミットモード）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>gs_node.jsonのlogWriteMode(ログ書き込みモード
+  )の値が&quot;DELAYED_SYNC&quot;の場合、指定間隔でログの書き込みを行います。更新用ロックを要求する場合は、logWriteModeを&quot;SYNC&quot;に設定してください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>複数コンテナ一括ロウ取得検索に失敗する<br>
+    Query::multiGet()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したコンテナが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 10016<br>
+    【内容】（コンテナが見つからない）</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたコンテナが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：70002<br>
+    【内容】（キー制約違反）<br>
+    【書式】以下のエラー内容<br>
+    文字列型の制限オーバー<br>
+    時刻型のサポート範囲外値</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値が型の制約から外れないよう、エラーメッセージを確認し、設定を変更ください。設定してください。値については、『
+  APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの線形補完検索に失敗する<br>
+    TimeSeries::interpolate()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>対応する名前のカラムが存在しない場合。<br>
+    また、サポートされていない型のカラムが指定された場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140008/145008<br>
+    【内容】(不明なカラム名)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ロウキーが設定されていないコンテナに対しては実施できません。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：70002<br>
+    【内容】（キー制約違反）<br>
+    【書式】以下のエラー内容<br>
+    文字列型の制限オーバー<br>
+    時刻型のサポート範囲外値</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値が型の制約から外れないよう、エラーメッセージを確認し、設定を変更ください。設定してください。値については、『
+  APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td rowspan=4 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウのサンプリング検索に失敗する<br>
+    TimeSeries::query()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>サンプリングの期間の単位に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60151<br>
+    【内容】(期間の単位がサポート範囲外)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>YEAR,MONTH,MILLISECOND以外の単位の設定が必要です。</td>
+ </tr>
+ <tr height=100 style='page-break-before:always;height:75.0pt'>
+  <td height=100 class=xl695062 width=85 style='height:75.0pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>サンプリング間隔に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：70004<br>
+    【内容】（サンプリング間隔制約違反）<br>
+    【書式】以下のエラー内容<br>
+    intervalの値が0または負の値</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>正の値を設定してください(0は含みません)。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したカラム名が存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：140008/145008<br>
+    【内容】(不明なカラム名)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたカラムが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl695062 width=85 style='height:93.75pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値に制約違反がある場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：70002<br>
+    【内容】（キー制約違反）<br>
+    【書式】以下のエラー内容<br>
+    文字列型の制限オーバー<br>
+    時刻型のサポート範囲外値</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>キー値が型の制約から外れないよう、エラーメッセージを確認し、設定を変更ください。設定してください。値については、『
+  APIリファレンス』の「概要」の「型」を参照ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl695062 width=85 style='height:56.25pt;width:64pt'></td>
+  <td rowspan=2 class=xl795062 width=213 style='border-top:none;width:160pt'>ロウの集約関数に失敗する<br>
+    TimeSeries::aggregate()</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定の演算方法で許可されていない型のカラムを指定した場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】：60100<br>
+    【内容】(許可されていないカラム操作)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>演算式を見直し、適用可能なカラムに設定を変更してください。各演算の条件は、『APIリファレンス』の「条件式構文・演算機能
+  」を参照ください。</td>
+ </tr>
+ <tr height=50 style='height:37.5pt'>
+  <td height=50 class=xl695062 width=85 style='height:37.5pt;width:64pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定したカラム名が存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【サーバ】： 140008/145008<br>
+    【内容】(不明なカラム名)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたカラムが存在しません。設定をご確認ください。</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td class=xl865062 width=213 style='width:160pt'>(*1)</td>
+  <td class=xl875062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td class=xl895062 colspan=3>gs_node.jsonファイルの/dataStore/resultSetMemoryLimit：検索結果(ResultSet)のメモリ上限サイズ。デフォルト値は10240MB。単位省略時はMB</td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td class=xl895062 colspan=4>gs_node.jsonファイルの/transaction/totalMemoryLimit：トランザクション処理メモリのプールが保持する空きメモリの上限サイズ。デフォルト値は1024MB。単位省略時はMB</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl695062 width=85 style='height:18.75pt;width:64pt'></td>
+  <td class=xl895062 colspan=2>将来、本パラメータは名前の変更や削除される可能性があります。</td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=26 style='height:19.5pt'>
+  <td height=26 class=xl905062 colspan=2 style='height:19.5pt'>　　　TQLに関するトラブル</td>
+  <td class=xl685062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+  <td class=xl695062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td colspan=2 class=xl995062 width=658 style='width:494pt'>原因</td>
+  <td rowspan=2 class=xl1015062 width=445 style='width:334pt'>症状</td>
+  <td rowspan=2 class=xl1025062 width=445 style='width:334pt'>対策</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl1115062 width=213 style='border-top:none;width:160pt'>分類1</td>
+  <td class=xl1125062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>分類2</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td rowspan=5 class=xl815062 width=213 style='border-bottom:.5pt solid black;
+  width:160pt'>TQLの記述で共通した記述誤りで失敗する</td>
+  <td class=xl1165062 style='border-left:none'>指定したカラムが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>【エラーコード】：
+  150012<br>
+    【内容】(カラムが見つからない)<br>
+    【書式】以下のエラー内容<br>
+    カラムが見つからない<br>
+    カラムIDが見つからない</td>
+  <td class=xl795062 width=445 style='border-left:none;width:334pt'>エラーメッセージを確認しカラム名やカラムIDをご確認ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl665062 style='height:56.25pt'></td>
+  <td rowspan=3 class=xl1185062 style='border-bottom:.5pt solid black;
+  border-top:none'>TQLの解釈に失敗する</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 151001<br>
+    【内容】(シンタックスエラー)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>シンタックスエラーが発生しました。TQL構文をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=75 style='height:56.25pt'>
+  <td height=75 class=xl665062 style='height:56.25pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 151002<br>
+    【内容】(トークンが不正)</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>不正なキーワードが検出されました。TQL構文をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 151003<br>
+    【内容】(ダブルコーテーションで囲われていない)<br>
+    【書式】以下のエラー内容<br>
+    dequoteできない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ダブルコーテーションが不正です。TQL構文をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl1225062 style='border-left:none'>データが存在しない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152009<br>
+    【内容】(配列のインデックスが範囲外)<br>
+    【書式】以下のエラー内容<br>
+    配列に指定したインデックスが範囲外</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>配列のインデックスが不正です。TQL構文をご確認ください。配列(複合型)については『
+  APIリファレンス』の「型」を参照ください。</td>
+ </tr>
+ <tr height=100 style='page-break-before:always;height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl785062 width=213 style='border-top:none;width:160pt'><br>
+    FROM節の記述誤りで失敗する<br>
+    </td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>コンテナ名が正しくない場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150010<br>
+    【内容】(コンテナ名が不正)<br>
+    【書式】以下のエラー内容<br>
+    APIで与えられたコンテナ名がFROM節と等しくない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたコンテナが存在しません。コンテナ名をご確認下さい。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td rowspan=5 class=xl1185062 style='border-top:none'>WHERE節の記述誤りで失敗する</td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>TQLの解釈に失敗するの制約違反の場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150013<br>
+    【内容】(WHERE条件に*が使用されている)<br>
+    【書式】以下のエラー内容<br>
+    WHERE条件に*は使用できない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>WHERE条件に*は使用できません。TQL構文をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>0で除算しようとした場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150016<br>
+    【内容】(0で除算している)<br>
+    【書式】以下のエラー内容<br>
+    0で除算している</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>0で除算はできません。TQL構文をご確認ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td rowspan=3 class=xl1185062 style='border-bottom:.5pt solid black;
+  border-top:none'>データ型の制約違反の場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150018<br>
+    【内容】(バイナリ演算が未サポート)<br>
+    【書式】以下のエラー内容<br>
+    バイナリ演算が定義されていない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>指定されたデータ型同士のバイナリ演算は実行できません。TQL構文を見直してください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150019<br>
+    【内容】(カラム条件検索での制約違反)<br>
+    【書式】以下のエラー内容<br>
+    WHERE条件に使用されたカラムがboolean型でない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>WHERE条件にカラムが単独で使用されている場合、そのカラムはbooleanである必要があります。TQL構文を見直してください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152010<br>
+    【内容】(空間検索での制約違反)<br>
+    【書式】以下のエラー内容<br>
+    空間範囲条件に指定されたカラムが空間型でない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>空間範囲検索では空間型のカラムを使って条件を指定します。TQL構文をご確認ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td rowspan=2 class=xl815062 width=213 style='border-bottom:.5pt solid black;
+  width:160pt'>ORDER BY節の記述誤りで失敗する</td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>整列方法の表現に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 151004<br>
+    【内容】(ORDER BY節の整列方法の制約違反)<br>
+    【書式】以下のエラー内容<br>
+    ORDER BY節にはカラム名のみ許可されている</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>ORDER BY節に指定した整列方法をご確認ください。ORDER BY節については『
+  APIリファレンス』の「TQL構文・演算機能」の「検索結果の並び替え (ORDER BY)」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>使用条件に違反する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 151005<br>
+    【内容】(ORDER BY節の使用条件の制約違反)<br>
+    【書式】以下のエラー内容<br>
+    集約関数とORDER BYが同時に使用されている</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>集約関数とORDER BY節は同時に使用できません。TQL構文をご確認ください。ORDER BY節については『
+  APIリファレンス』の「TQL構文・演算機能」の「検索結果の並び替え (ORDER BY)」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td rowspan=5 class=xl815062 width=213 style='border-top:none;width:160pt'>関数の記述誤りで失敗する</td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>関数名に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 150014<br>
+    【内容】(関数が見つからない)<br>
+    【書式】以下のエラー内容<br>
+    そのような関数はない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>関数名をご確認ください。TQL構文については『 APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=150 style='height:112.5pt'>
+  <td height=150 class=xl665062 style='height:112.5pt'></td>
+  <td class=xl1235062 style='border-top:none;border-left:none'>関数の使用条件に違反する場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152003/152004<br>
+    【内容】(コレクション/時系列コンテナ専用の関数の不正使用)<br>
+    【書式】以下のエラー内容<br>
+    コレクション用の選択関数が時系列コンテナに対して使用された<br>
+    時系列コンテナ用の選択関数がコレクションに対して使用された<br>
+    時系列コンテナ用の集約関数がコレクションに対して使用された</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>コレクションに対して時系列コンテナ専用の関数が使用されていないかご確認ください。または、時系列コンテナに対してコレクション専用の関数が使用されていないかご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=125 style='page-break-before:always;height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td class=xl1165062 style='border-left:none'>引数の数に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152002/152007/152011<br>
+    【内容】(引数の数が不正)<br>
+    【書式】以下のエラー内容<br>
+    関数の引数の数が不正<br>
+    引数が空を期待する関数で引数が空でない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>関数の引数をご確認ください。TQL構文については『 APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=175 style='height:131.25pt'>
+  <td height=175 class=xl665062 style='height:131.25pt'></td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>引数のデータ型に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152002/152007/152010/152020<br>
+    【内容】(引数の型が不正)<br>
+    【書式】以下のエラー内容<br>
+    関数の引数の型が不正<br>
+    補間対象がカラムではない<br>
+    数値でないカラムに対して補間かけようとした<br>
+    カラムではない引数が使用された</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>関数の引数に与えたデータの型をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl665062 style='height:187.5pt'></td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>引数値に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    【エラーコード】： 150005/152010/152012<br>
+    【内容】(引数の値が不正)<br>
+    【書式】以下のエラー内容<br>
+    範囲外の時刻データが使用された<br>
+    座標値が不正<br>
+    エスケープ文字が1文字でない<br>
+    自然数を期待するが0以下の値が使用されている<br>
+    文字列を時刻型に変換できない<br>
+    </td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>関数の引数に与えたデータが正しくありません。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=125 style='height:93.75pt'>
+  <td height=125 class=xl665062 style='height:93.75pt'></td>
+  <td rowspan=2 class=xl815062 width=213 style='border-bottom:.5pt solid black;
+  width:160pt'>空間型データの記述誤りで失敗する</td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>引数の数に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152007/152010<br>
+    【内容】(引数の数が不正)<br>
+    【書式】以下のエラー内容<br>
+    引数を必要とするが空である<br>
+    1つの点を指定して線分を作成しようとした</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>空間型データ表現の引数をご確認ください。TQL構文については『 APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=100 style='height:75.0pt'>
+  <td height=100 class=xl665062 style='height:75.0pt'></td>
+  <td class=xl1165062 style='border-top:none;border-left:none'>引数のデータ型に起因する失敗</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 152010<br>
+    【内容】(引数の型が不正)<br>
+    【書式】以下のエラー内容<br>
+    引数の型が不正</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>空間型データ表現の引数の型をご確認ください。TQL構文については『
+  APIリファレンス』の「TQL構文・演算機能」を参照ください。</td>
+ </tr>
+ <tr height=250 style='height:187.5pt'>
+  <td height=250 class=xl665062 style='height:187.5pt'></td>
+  <td class=xl1245062 width=213 style='border-top:none;width:160pt'>TQLの実行に失敗する</td>
+  <td class=xl1255062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>メモリが確保できなかった場合</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'>【エラーコード】： 1001<br>
+    【内容】(メモリ確保エラー)<br>
+    【書式】以下のエラー内容<br>
+    TQLパーサのメモリを確保できない<br>
+    WKTパーサのメモリを確保できない</td>
+  <td class=xl795062 width=445 style='border-top:none;border-left:none;
+  width:334pt'><br>
+    使用可能メモリサイズの上限を上げる場合は、gs_node.jsonファイルに<br>
+   
+  /dataStore/resultSetMemoryLimitまたは/transaction/totalMemoryLimitを追記し、値をデフォルト値より大きくしてください(*1)。<br>
+    メモリサイズオーバーが検索時に発生しているのならば、ヒット件数を抑えることでメモリの使用量を減らすようにクエリを調整することも可能です。<br>
+    </td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl865062 width=213 style='width:160pt'>(*1)</td>
+  <td class=xl875062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='page-break-before:always;height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=3>gs_node.jsonファイルの/dataStore/resultSetMemoryLimit：検索結果(ResultSet)のメモリ上限サイズ。デフォルト値は10240MB。単位省略時はMB</td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=4>gs_node.jsonファイルの/transaction/totalMemoryLimit：トランザクション処理メモリのプールが保持する空きメモリの上限サイズ。デフォルト値は1024MB。単位省略時はMB</td>
+ </tr>
+ <tr height=25 style='height:18.75pt'>
+  <td height=25 class=xl665062 style='height:18.75pt'></td>
+  <td class=xl895062 colspan=2>将来、本パラメータは名前の変更や削除される可能性があります。</td>
+  <td class=xl1265062></td>
+  <td class=xl885062 width=445 style='width:334pt'></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=20 style='height:15.0pt'>
+  <td height=20 class=xl1535062 style='height:15.0pt'>参考　互換<span
+  style='display:none'>性</span></td>
+  <td class=xl1275062 colspan=2>サーバのバージョンに対応するクライアントバージョンとデータベースバージョンは、以下になります。</td>
+  <td class=xl1275062></td>
+  <td class=xl1275062></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td rowspan=2 height=37 class=xl1285062 style='border-bottom:1.0pt solid black;
+  height:27.75pt'>サーバのバージョン</td>
+  <td colspan=2 class=xl1295062 style='border-right:.5pt solid black;
+  border-left:none'>クライアント</td>
+  <td colspan=2 class=xl1315062 style='border-right:1.0pt solid black;
+  border-left:none'>データベース</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl1345062 style='height:14.25pt;border-left:none'>内部バージョン</td>
+  <td class=xl1355062>クライアントのバージョン</td>
+  <td class=xl1365062 style='border-left:none'>内部バージョン</td>
+  <td class=xl1375062>DB作成時のサーバーのバージョン</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1385062 style='height:13.5pt'>v1.0</td>
+  <td class=xl1395062 style='border-top:none'>1</td>
+  <td class=xl1405062 style='border-top:none'>v1.0/1.1</td>
+  <td class=xl1415062 style='border-top:none;border-left:none'>1</td>
+  <td class=xl1425062 style='border-top:none'>v1.0</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1435062 style='height:13.5pt;border-top:none'>v1.1</td>
+  <td class=xl1445062 style='border-top:none'>1</td>
+  <td class=xl1455062 style='border-top:none'>v1.0/1.1</td>
+  <td class=xl1465062>1、2</td>
+  <td class=xl1475062 style='border-top:none'>v1.0/1.1</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1435062 style='height:13.5pt;border-top:none'>v1.5</td>
+  <td class=xl1445062 style='border-top:none'>2</td>
+  <td class=xl1455062 style='border-top:none'>v1.5</td>
+  <td class=xl1465062 style='border-top:none'>1、2、3</td>
+  <td class=xl1475062 style='border-top:none'>v1.0/1.1/1.5</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1435062 style='height:13.5pt;border-top:none'>v2.0</td>
+  <td class=xl1445062 style='border-top:none'>3</td>
+  <td class=xl1455062 style='border-top:none'>v2.0</td>
+  <td class=xl1465062 style='border-top:none'>4</td>
+  <td class=xl1475062 style='border-top:none'>v2.0</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1435062 style='height:13.5pt;border-top:none'>v2.1</td>
+  <td class=xl1445062 style='border-top:none'>4</td>
+  <td class=xl1455062 style='border-top:none'>v2.1</td>
+  <td class=xl1465062 style='border-top:none'>5</td>
+  <td class=xl1475062 style='border-top:none'>v2.1</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1435062 style='height:13.5pt;border-top:none'>v2.5</td>
+  <td class=xl1445062 style='border-top:none'>5</td>
+  <td class=xl1455062 style='border-top:none'>v2.5</td>
+  <td class=xl1465062 style='border-top:none'>5</td>
+  <td class=xl1475062 style='border-top:none'>v2.1/v2.5</td>
+ </tr>
+ <tr height=19 style='height:14.25pt'>
+  <td height=19 class=xl1485062 style='height:14.25pt'>v2.7</td>
+  <td class=xl1495062>5,6</td>
+  <td class=xl1505062 style='border-top:none'>v2.5/v2.7</td>
+  <td class=xl1515062 style='border-left:none'>5、6</td>
+  <td class=xl1525062 style='border-top:none'>v2.1/v2.5/v2.7</td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl1275062 style='height:13.5pt'></td>
+  <td class=xl1275062 colspan=2>&lt;メモ&gt;・内部バージョンは、内部処理で使用しているバージョンでエラーメッセージに表示されます。</td>
+  <td class=xl1275062></td>
+  <td class=xl1275062></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 class=xl155062 style='height:13.5pt'></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+  <td class=xl155062></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=85 style='width:64pt'></td>
+  <td width=213 style='width:160pt'></td>
+  <td width=445 style='width:334pt'></td>
+  <td width=445 style='width:334pt'></td>
+  <td width=445 style='width:334pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</div>
+
+
+<!----------------------------->
+<!--Excel の Web ページとして発行 ウィザードのアウトプットの終わり-->
+<!----------------------------->
+</body>
+
+</html>
