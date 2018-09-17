@@ -38,7 +38,7 @@ By raising the checkpoint execution cycle figure, data perpetuation can be set t
 
 Data that is updated in a checkpoint execution is pooled and maintained in a memory separate from the checkpoint writing block. Set checkpoint concurrent execution for the checkpoint to carry out the checkpoint quickly. If concurrent execution is set, concurrent processing is carried out until the number of transactions executed simultaneously is the same.
 
-![](img/data%20pepetuation.png)
+![](/images/data%20pepetuation.png)
 
 ### In-Memory Data Overflow
 

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>GridDB トラブルシューティングガイド</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2016-04-04 09:33:35 JST"/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+
+<style type="text/css">
+html { font-family: Verdana, "メイリオ", Meiryo, sans-serif; font-size: 10pt; } h2 { border-left: 7px solid #00C; padding: 0 0 0 7px; } h3 { border-left: 5px solid #00A; padding: 0 0 0 5px; } h4 { border-left: 3px solid #008; padding: 0 0 0 3px; } pre { font-family: courier, monospace; border: 1pt solid #AEBDCC; background-color: #F3F5F7; padding: 5pt; width:auto; overflow-x:auto; overflow-y:hidden; }
+code { margin: 0 2px; padding: 0 5px; white-space: nowrap; border: 1px solid #cacaea; background-color: #f0f0ff; border-radius: 3px; }
+a { text-decoration: none; color: #2233AA; } a:visited { text-decoration: none; color: #2233AA; } a:hover { text-decoration: underline; color: #2288FF; } table { margin: 0 auto; border-collapse: collapse; border-spacing: 0px; empty-cells: show; margin-bottom: 6px; }
+th, tr, td { vertical-align: top; padding: 5px; border-collapse: collapse; }
+tr > td:first-child { white-space: nowrap; }
+div.figure { padding: 0.5em; } div.figure p { text-align: center; } #table-of-contents { width: 23%; height: 100%; top: 0px; left: 0px; font-size: 70%; position: fixed; overflow: auto; }
+#table-of-contents ul { margin: 1pt 0 1pt 1.5em; padding: 0; list-style-type: none; }
+#table-of-contents li { margin: 1pt 0; }
+#content { width: 76%; float: right; }
+#postamble { display: none; }
+.revision { text-align: right; font-size: 8pt; }
+@media print { #table-of-contents { display: none; }
+#content { padding: 0px; width:100%; float: none; }
+pre { font-size: 7pt; }
+}
+</style>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">GridDB<sup>&reg;</sup> トラブルシューティングガイド</h1>
+
+
+
+
+
+
+
+
+<p class="revision">Revision: 1309</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 はじめに </a>
+<ul>
+<li><a href="#sec-1.1">1.1 本書の目的と構成 </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 問題発生状況の確認 </a>
+<ul>
+<li><a href="#sec-2.1">2.1 GridDBサーバのイベントログファイルの確認 </a></li>
+<li><a href="#sec-2.2">2.2 クライアントのログファイルの確認 </a></li>
+<li><a href="#sec-2.3">2.3 JDBCドライバのログファイルの確認 </a></li>
+<li><a href="#sec-2.4">2.4 運用コマンドのログファイルの確認 </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 問題発生時の対策 </a>
+<ul>
+<li><a href="#sec-3.1">3.1 発生状況毎の問題点と対策 </a>
+<ul>
+<li><a href="#sec-3.1.1">3.1.1 クラスタ構成に関する問題点への対処 </a></li>
+<li><a href="#sec-3.1.2">3.1.2 クラスタ拡張、縮小に関する問題点 </a></li>
+<li><a href="#sec-3.1.3">3.1.3 クライアントフェイルオーバーに関する問題点 </a></li>
+<li><a href="#sec-3.1.4">3.1.4 クラスタ障害に関する問題点 </a></li>
+<li><a href="#sec-3.1.5">3.1.5 リカバリ処理に関する問題点 </a></li>
+<li><a href="#sec-3.1.6">3.1.6 コンテナ操作に関する問題点 </a></li>
+<li><a href="#sec-3.1.7">3.1.7 TQLに関する問題点 </a></li>
+</ul>
+</li>
+<li><a href="#sec-3.2">3.2 問題点と対策一覧 </a>
+<ul>
+<li><a href="#sec-3.2.1">3.2.1 GridDB全般の問題点 </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> はじめに </h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> 本書の目的と構成 </h3>
+<div class="outline-text-3" id="text-1.1">
+
+
+<p>
+<span style="text-decoration:underline;">本書は、GridDB のトラブルシューティングに関して説明したものです。</span> GridDBを用いたシステムの構築時やシステムの使用時に問題が発生した場合の対処方法を記載しています。
+</p>
+<p>
+本書は、GridDBの運用管理を行う管理者およびGridDBを用いたシステムの開発者や利用者の方を対象としています。
+</p>
+<p>
+本書は、以下のような構成となっています。
+</p><ul>
+<li>
+はじめに
+</li>
+<li>
+問題発生状況の確認　： 詳細な状況(ログファイル)を確認する方法を説明します。
+</li>
+<li>
+問題発生時の対策　　： 想定される問題点とその対策の一覧を記載します。
+
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 問題発生状況の確認 </h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+どのような問題がどのような状況で発生したか、処理(動作)やエラーコードなどから確認します。状況確認後、「対策(対処方法)」を検討/実行します。
+</p>
+<p>
+状況の確認方法としては、大きく処理(動作)から確認する方法とエラーコードから確認する方法があります。
+</p><ul>
+<li>
+問題発生時に実行していた処理(動作)や通知されたエラーから、<a href="#shoot">問題発生時の対策</a>の「原因」より適切なものを選択し、対策を検討します。
+
+</li>
+<li>
+通知されたエラーコードから、<a href="#shoot">問題発生時の対策</a>の「症状」より適切なものを選し、【内容】や「原因」を確認、対策を検討します。
+
+</li>
+</ul>
+
+<p>通知されたエラーや実行していた処理(動作)から状況が絞り込めない場合は、ログファイルよりGridDBの状況を確認します。イベントログやクライアントログなどのログファイルについては、以下を参照ください。
+</p>
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1"><span class="section-number-3">2.1</span> GridDBサーバのイベントログファイルの確認 </h3>
+<div class="outline-text-3" id="text-2.1">
+
+
+<p>
+サーバのイベントログファイルより、エラー発生の有無およびその内容を確認します。
+</p>
+<p>
+最新のイベントログは、"gs_logs"コマンドで内容を確認することができます。
+</p>
+<p>
+【例】
+</p>
+
+
+<pre class="example">$ gs_logs -u admin/admin
+2015-03-20T10:07:47.219+0900 host01 22962 INFO CHECKPOINT_SERVICE [30902:CP_STATUS] [CP_START] mode=NORMAL_CHECKPOINT, backupPath=
+</pre>
+
+
+
+
+<p>
+イベントログファイルの形式は、以下のようになっています。時刻データ等からエラー発生時のサーバの状況を確認します。
+</p>
+<p>
+(日付時刻) (ホスト名) (スレッド番号) (ログレベル) (カテゴリ) [(エラー・トレース番号):(エラー・トレース番号名)] (メッセージ) &lt;(詳細情報: ソースコード位置など。エラーの場合のみ)&gt;
+</p>
+<p>
+以前のイベントログファイルは、イベントログ格納ディレクトリ(デフォルト："/var/lib/gridstore/log")に出力されています。ファイル名はgridstore-ログ採取日(YYYYMMDD).logです。ログ採取日が重複する場合は、シーケンシャル番号が付加されます。
+</p>
+<p>
+【メモ】
+</p><ul>
+<li>
+イベントログの出力レベルを確認する場合や変更する場合は、"gs_logconf"コマンドを実行します。
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><span class="section-number-3">2.2</span> クライアントのログファイルの確認 </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+<p>
+アプリケーションプログラム等のクライアントプログラムでエラーを検出した場合、発生したエラーの内容を確認します。
+</p>
+<p>
+Java APIを用いたクライアントプログラムでは、実行環境のクラスパスにロギングライブラリを含め、ログ出力を設定することでクライアントログをファイル出力することができます。
+</p>
+<p>
+例えば、下記のようなログが記録されます。
+</p>
+<p>
+【例】
+</p>
+
+
+<pre class="example">15/03/25 13:07:56 INFO GridStoreLogger.Transaction: Repairing session (context=7c469c48, statement=PUT_MULTIPLE_ROWS, partition=11, statementId=1, containerId=0, sessionId=1, trialCount=0, transactionStarted=false)
+com.toshiba.mwcloud.gs.common.GSStatementException: [110016:TM_SESSION_UUID_UNMATCHED] Failed to operate session or transaction status (pId=11, clientId=87a89588-b6e1-4dac-bf42-92fa596b7efb:1, sessionMode=1, txnMode=1, reason=) (address=/192.168.10.10:10001, partitionId=11)
+        ...
+</pre>
+
+
+
+
+<p>
+クライアントログにエラーが記録された時刻のサーバのイベントログを参照し、周辺のログを確認することでエラー発生時のサーバの状況を確認します。
+</p>
+
+<p>
+【メモ】
+</p><ul>
+<li>
+通知時にエラーが発生した場合やトリガ処理に失敗した場合、イベントログにエラーメッセージが記録されることがあります。
+</li>
+<li>
+クライアントロギングの設定については、『GridDB APIリファレンス』(<a href="GridDB_API_Reference.html">GridDB_API_Reference.html</a>)のGridStoreFactoryクラスの項を参照ください。
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3"><span class="section-number-3">2.3</span> JDBCドライバのログファイルの確認 </h3>
+<div class="outline-text-3" id="text-2.3">
+
+
+<p>
+SQLの実行など、GridDB Advanced Edition NewSQLインターフェースでエラーが発生した場合、発生したエラーの内容を確認します。
+</p>
+<p>
+アプリケーションの実行ディレクトリの下、もしくは、アプリケーションで指定しているログ出力ディレクトリの下に、以下のログファイルが作成されます。
+</p><ul>
+<li>
+JDBCドライバのログファイルは、"/NewSQLJDBC.log"です。
+</li>
+<li>
+エンジンのログファイルは、"/newsql-ログ採取日時(YYYYMMDDHHMMSS).log"です
+
+</li>
+</ul>
+
+<p>デフォルトではログは出力されません。ログファイルが作成されていない場合、ログの出力レベルや出力先を設定してください。
+</p>
+<p>
+ログの出力レベルや出力先の設定は、gs.util.Debugより行います。
+</p>
+<p>
+①gs.util.Debugをimportします。
+</p>
+<p>
+②setLogLevel()を用いてログの出力レベルを変更します。
+</p>
+
+
+
+<pre class="example">　　setLogLevel(int ログレベル)
+</pre>
+
+
+
+
+<p>
+ログの出力レベルには以下の4つがあります。
+</p><ul>
+<li>
+3：ERROR(エラー)
+</li>
+<li>
+2：WARNING(警告)
+</li>
+<li>
+1：INFO(情報) 
+</li>
+<li>
+0：DEBUG(デバッグ)
+
+</li>
+</ul>
+
+<p>低いレベルを設定した場合、そのレベルよりも高いレベルのログもすべて出力されます。
+</p>
+<p>
+③setLogFilePath()を用いてログの出力先を設定します。　デフォルトは、カレントディレクトリです。
+</p>
+
+
+
+<pre class="example">　　Debug.setLogFilePath(String 出力ディレクトリ)
+</pre>
+
+
+
+
+<p>
+【例】ログの出力レベルがデバッグで、ログの出力先がカレントディレクトリのjdbcLogフォルダの下の場合
+</p>
+
+
+
+<pre class="example">import java.sql.*;
+import gs.util.Debug;
+
+// usage: java SampleJDBC (multicastAddress) (port) (clusterName)
+
+public class Sample {
+ public static void main(String[] args) {
+  Debug.setLogFilePath("jdbcLog");
+  Debug.setLevel(0)
+
+       ・・・
+
+}
+</pre>
+
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4"><span class="section-number-3">2.4</span> 運用コマンドのログファイルの確認 </h3>
+<div class="outline-text-3" id="text-2.4">
+
+
+<p>
+運用ツール(gs_admin)でエラーが発生した場合、運用コマンドのログファイルより発生したエラーの内容を確認します。
+</p>
+<p>
+運用コマンドのログファイルは、"&lt;ログ情報出力先(デフォルトは"/var/lib/gridstore/log")&gt; /運用コマンド名.log"です。　<br/>
+例)　"運用コマンド名.log"は、gs_startnode.logやgs_stopcluster.log、gs_stat.logなどです。
+</p>
+<p>
+【例】gs_startnodeコマンドのログファイル　　　　ファイル名：gs_startnode.log
+</p>
+
+
+<pre class="example">2014-10-20 15:25:16,876 [25444] [INFO] &lt;module&gt;(56) /usr/bin/gs_startnode start.
+2014-10-20 15:25:16,877 [25444] [DEBUG] &lt;module&gt;(105) command: ['/usr/bin/gsserver', '--conf', '/var/lib/gridstore/conf']
+2014-10-20 15:25:17,889 [25444] [INFO] &lt;module&gt;(156) wait for starting node. (node=127.0.0.1:10040 waitTime=0)
+2014-10-20 15:25:18,905 [25444] [INFO] &lt;module&gt;(192) /usr/bin/gs_startnode end.
+</pre>
+
+
+
+
+<p>
+【メモ】
+</p><ul>
+<li>
+運用コマンドの情報と併せてサーバのイベントログ情報も確認することをお勧めします。
+
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><a name="shoot" id="shoot"></a><span class="section-number-2">3</span> 問題発生時の対策 </h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+サーバやアプリケーションから通知されたエラーや実行していた処理(動作)等から状況を把握し、
+<a href="#errorList">問題点と対策一覧</a>より適切なものを選択、対策を検討します。
+</p>
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1"><span class="section-number-3">3.1</span> 発生状況毎の問題点と対策 </h3>
+<div class="outline-text-3" id="text-3.1">
+
+
+
+<p>
+想定される問題点を以下のように発生状況で分類し、問題解決の対策をまとめました。
+</p>
+<ul>
+<li>
+クラスタ構成に関する問題点
+</li>
+<li>
+クラスタ拡張、縮小に関する問題点
+</li>
+<li>
+クライアントフェイルオーバーに関する問題点
+</li>
+<li>
+クラスタ障害に関する問題点
+</li>
+<li>
+リカバリ処理に関する問題点
+</li>
+<li>
+コンテナ操作に関する問題点
+</li>
+<li>
+TQLに関する問題点
+
+
+</li>
+</ul>
+
+</div>
+
+<div id="outline-container-3.1.1" class="outline-4">
+<h4 id="sec-3.1.1"><span class="section-number-4">3.1.1</span> クラスタ構成に関する問題点への対処 </h4>
+<div class="outline-text-4" id="text-3.1.1">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_1.html">クラスタ構成に関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.2" class="outline-4">
+<h4 id="sec-3.1.2"><span class="section-number-4">3.1.2</span> クラスタ拡張、縮小に関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.2">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_2.html">クラスタ拡張、縮小に関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.3" class="outline-4">
+<h4 id="sec-3.1.3"><span class="section-number-4">3.1.3</span> クライアントフェイルオーバーに関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.3">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_3.html">クライアントフェイルオーバーに関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.4" class="outline-4">
+<h4 id="sec-3.1.4"><span class="section-number-4">3.1.4</span> クラスタ障害に関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.4">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_4.html">クラスタ障害に関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.5" class="outline-4">
+<h4 id="sec-3.1.5"><span class="section-number-4">3.1.5</span> リカバリ処理に関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.5">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_5.html">リカバリ処理に関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.6" class="outline-4">
+<h4 id="sec-3.1.6"><span class="section-number-4">3.1.6</span> コンテナ操作に関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.6">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_6.html">コンテナ操作に関するトラブル一覧</a>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.7" class="outline-4">
+<h4 id="sec-3.1.7"><span class="section-number-4">3.1.7</span> TQLに関する問題点 </h4>
+<div class="outline-text-4" id="text-3.1.7">
+
+
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_7.html">TQLに関するトラブル一覧</a>
+
+
+</li>
+</ul>
+
+<p>【参考】互換性
+</p>
+<ul>
+<li>
+<a href="img/trouble_guide_troubleList_8.html">クライアントとＤＢの互換性</a>
+
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2"><a name="errorList" id="errorList"></a><span class="section-number-3">3.2</span> 問題点と対策一覧 </h3>
+<div class="outline-text-3" id="text-3.2">
+
+
+
+</div>
+
+<div id="outline-container-3.2.1" class="outline-4">
+<h4 id="sec-3.2.1"><span class="section-number-4">3.2.1</span> GridDB全般の問題点 </h4>
+<div class="outline-text-4" id="text-3.2.1">
+
+
+<p>
+本シートは、上記、発生状況毎の問題点一覧を1つにしたものです。発生している問題点の分野が明確に分類できない場合などに、キーとなる用語(エラーコードなど)を用いて検索します。
+</p>
+<p>
+<a href="img/trouble_guide_troubleList.html">GridDB全般のトラブル一覧(HTML)</a>
+</p>
+<p>
+<a href="img/trouble_guide_troubleList.pdf">GridDB全般のトラブル一覧(PDF)</a>
+</p>
+<p>
+【メモ】
+</p><ul>
+<li>
+発生状況ごとの問題点一覧のすべての文書を１つの文書にしたものが、GridDB全般のトラブル一覧です。
+
+
+
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble">
+</div>
+</div>
+</body>
+</html>

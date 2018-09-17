@@ -66,7 +66,7 @@ ID  Name            Longitude   Latitude    Camera
 5   Akita-Akita         39.71861    140.1025    true
 (Snip)
 
-![](img/containers.png)
+![](/images/containers.png)
 
 ### 3.2.2 TimeSeries Container
 

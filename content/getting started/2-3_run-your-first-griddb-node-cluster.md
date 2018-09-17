@@ -10,9 +10,12 @@ We will be taking a quick look at running your first GridDB node/cluster. Please
 
 ### Start a Server
 
+```
 $ export GS_HOME=$PWD
 $ export GS_LOG=$PWD/log
+```
 
+```
 $ bin/gs_passwd admin
 #input your_password
 $ vi conf/gs_cluster.json
@@ -20,3 +23,4 @@ $ vi conf/gs_cluster.json
 $ export no_proxy=127.0.0.1
 $ bin/gs_startnode
 $ bin/gs\_joincluster -c your\_clustername -u admin/your_password
+```

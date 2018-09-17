@@ -109,7 +109,7 @@ MVCC is a processing method that refers to the data prior to being updated inste
 
 When the transaction process under execution is committed, other transactions can also refer to the latest data.
 
-![](img/mvcc.png)
+![](/images/mvcc.png)
 
 ### Lock
 

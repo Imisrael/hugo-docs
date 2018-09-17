@@ -13,7 +13,7 @@ In a GridDB cluster, container data is automatically arranged in a node within a
 
 There is also no need to be aware of the arrangement position in data extraction and registration during export/import as well. The export/import configuration is as follows.
 
-![ Export/import configuration](img/expimp.png)
+![ Export/import configuration](/images/expimp.png)
 
 Export/import configuration
 
@@ -64,7 +64,7 @@ In addition, there are 2 types of container data files as shown below depending 
 
 Hereinafter, container data files of various configurations will be written as single container data file and multi-container data file.
 
-![Container data file](https://www.griddb.net/en/docs/img/cDatafile.png)
+![Container data file](https://www.griddb.net/en/docs/images/cDatafile.png)
 
 Container data file
 
@@ -678,7 +678,7 @@ Summary
 
 Basically, importing from RDB is simply done by connecting to the Oracle database, collecting data with a SQL command from the specified table, and registering the data in a GridDB container.
 
-![](https://www.griddb.net/en/docs/img/gs_expimp-rdb.png)
+![](https://www.griddb.net/en/docs/images/gs_expimp-rdb.png)
 
 Import from RDB
 
@@ -1003,7 +1003,7 @@ There are 2 types of 1-to-many association as shown below.
     \[Example\] Split the list of sensor data into containers according to the sensor ID
     
 
-![img/gs_expimp-colsplit.png](https://www.griddb.net/en/docs/img/gs_expimp-colsplit.png)
+![/images/gs_expimp-colsplit.png](https://www.griddb.net/en/docs/images/gs_expimp-colsplit.png)
 
 1-to-many: Column value split
 
@@ -1016,7 +1016,7 @@ There are 2 types of 1-to-many association as shown below.
     \[Example\] Split the list of sensor data into containers with 10,000 rows each
     
 
-![img/gs_expimp-numsplit.png](https://www.griddb.net/en/docs/img/gs_expimp-numsplit.png)
+![/images/gs_expimp-numsplit.png](https://www.griddb.net/en/docs/images/gs_expimp-numsplit.png)
 
 1-to-many: Record number split
 

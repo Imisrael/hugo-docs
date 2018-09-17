@@ -3,3 +3,4 @@
     console.log("running some javascript");
 </script>
 -->
+<script src="{{"js/newitemstoggle.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>

@@ -149,43 +149,43 @@ Expected problems have been classified as follows according to the circumstances
 
 #### Problems Related to Cluster Configuration
 
-*   [List of problems related to cluster configuration](img/trouble_guide_troubleList_1.html)
+*   [List of problems related to cluster configuration](/images/trouble_guide_troubleList_1.html)
 
 #### Problems Related to Cluster Expansion, Reduction
 
-*   [List of problems related to cluster expansion, reduction](img/trouble_guide_troubleList_2.html)
+*   [List of problems related to cluster expansion, reduction](/images/trouble_guide_troubleList_2.html)
 
 #### Problems Related to Client Failover
 
-*   [List of problems related to client failover](img/trouble_guide_troubleList_3.html)
+*   [List of problems related to client failover](/images/trouble_guide_troubleList_3.html)
 
 #### Problems Related to Cluster Failure
 
-*   [List of problems related to cluster failure](img/trouble_guide_troubleList_4.html)
+*   [List of problems related to cluster failure](/images/trouble_guide_troubleList_4.html)
 
 #### Problems Related to Recovery Processing
 
-*   [List of problems related to recovery processing](img/trouble_guide_troubleList_5.html)
+*   [List of problems related to recovery processing](/images/trouble_guide_troubleList_5.html)
 
 #### Problems Related to Container Operation
 
-*   [List of problems related to container operations](img/trouble_guide_troubleList_6.html)
+*   [List of problems related to container operations](/images/trouble_guide_troubleList_6.html)
 
 #### TQL-Related Problems
 
-*   [List of TQL-related problems](img/trouble_guide_troubleList_7.html)
+*   [List of TQL-related problems](/images/trouble_guide_troubleList_7.html)
 
 \[Reference\] Compatibility
 
-*   [Compatibility between client and DB](img/trouble_guide_troubleList_8.html)
+*   [Compatibility between client and DB](/images/trouble_guide_troubleList_8.html)
 
 #### General GridDB problems
 
 This sheet summarizes the list of problems above according to the circumstances under which the problems occurred. If the area of the problem which occurred can be clearly classified, use key words such as the error code etc. to conduct a search.
 
-[List of general GridDB problems (HTML)](img/trouble_guide_troubleList.html)
+[List of general GridDB problems (HTML)](/images/trouble_guide_troubleList.html)
 
-[List of general GridDB problems (PDF)](img/trouble_guide_troubleList.pdf)
+[List of general GridDB problems (PDF)](/images/trouble_guide_troubleList.pdf)
 
 **\[Memo\]**
 

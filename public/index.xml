@@ -174,9 +174,8 @@ One set of operating commands except start node is included.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://example.org/getting-started/2-3_run-your-first-griddb-node-cluster/</guid>
-      <description>Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.
-Start a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log
-$ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #&amp;ldquo;clusterName&amp;rdquo;:&amp;ldquo;your_clustername&amp;rdquo; #&amp;lt;&amp;ndash; input your_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs_joincluster -c your_clustername -u admin/your_password</description>
+      <description> Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.
+Start a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log  $ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #&amp;quot;clusterName&amp;quot;:&amp;quot;your\_clustername&amp;quot; #&amp;lt;-- input your\_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs\_joincluster -c your\_clustername -u admin/your_password  </description>
     </item>
     
     <item>

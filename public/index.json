@@ -116,7 +116,7 @@
 	"title": "Run your First GridDB Node/Cluster",
 	"tags": [],
 	"description": "",
-	"content": " Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.\nStart a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log\n$ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #\u0026ldquo;clusterName\u0026rdquo;:\u0026ldquo;your_clustername\u0026rdquo; #\u0026lt;\u0026ndash; input your_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs_joincluster -c your_clustername -u admin/your_password\n"
+	"content": " Quickstart We will be taking a quick look at running your first GridDB node/cluster. Please take a look at the example below.\nStart a Server $ export GS_HOME=$PWD $ export GS_LOG=$PWD/log  $ bin/gs_passwd admin #input your_password $ vi conf/gs_cluster.json #\u0026quot;clusterName\u0026quot;:\u0026quot;your\\_clustername\u0026quot; #\u0026lt;-- input your\\_clustername $ export no_proxy=127.0.0.1 $ bin/gs_startnode $ bin/gs\\_joincluster -c your\\_clustername -u admin/your_password  "
 },
 {
 	"uri": "http://example.org/technical-architecture-and-guide/3-3_tql/",

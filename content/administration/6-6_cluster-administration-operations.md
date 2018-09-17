@@ -575,7 +575,7 @@ An example of the change in the node status and cluster status due to a gs_sh su
 A cluster is composed of 4 nodes.  
 When the nodes constituting the cluster are started (startnode), the node status changes to “Start”. When the cluster is started after starting the nodes (startcluster), each node status changes to “Join”, and the cluster status also changes to “In Operation”.
 
-![Status example](img/statusSample.png)
+![Status example](/images/statusSample.png)
 
 Status example
 
@@ -587,7 +587,7 @@ A detailed explanation of the node status and cluster status is given below.
 Node status changes to “Stop”, “Start” or “Join” depending on whether a node is being started, stopped, joined or detached.  
 If a node has joined a cluster, there are 2 types of node status depending on the status of the joined cluster.
 
-![Node status](img/nodeStatus.png)
+![Node status](/images/nodeStatus.png)
 
 Node status
 
@@ -635,7 +635,7 @@ Stopping node
     
     GridDB cluster status changes to “Stop”, “Halted” or “In Operation” depending on the operation start/stop status of the GridDB cluster or the join/leave operation of the GridDB node. Data operations from the client can be accepted only when the GridDB cluster status is “In Operation”.
     
-    ![Cluster status](img/clusterStatus.png)
+    ![Cluster status](/images/clusterStatus.png)
     
     Cluster status
     

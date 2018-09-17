@@ -29,7 +29,7 @@ The Key Container model allows high speed access to data through Java and C APIs
 
 Two types of containers are prominent in GridDB: Collection-Container, a general-purpose container; and TimeSeries-Container which is for managing time series data.
 
-![containers](./img/containers_intro.gif)
+![containers](/images/containers_intro.gif)
 
 TimeSeries-Container is apt for IoT scenarios where the data is associated with a time-stamp. GridDB supports numerous time-series functions such as
 
@@ -41,7 +41,7 @@ TimeSeries-Container is apt for IoT scenarios where the data is associated with 
 
 #### GridDB’s hybrid composition of In-Memory and Disk architecture is designed for maximum performance
 
-![architecture](./img/hybrid_intro.gif)
+![architecture](/images/hybrid_intro.gif)
 
 I/O is a common bottleneck in any DBMS that can cause the CPU to be under-utilized. GridDB overcomes this bottleneck with the ‘Memory first, Storage second’ structure where the ‘primary’ data that is frequently accessed resides in memory and the rest is passed on to disks (SSD and HDD). High performance is achieved in GridDB by:
 
@@ -55,7 +55,7 @@ Parallel Processing – GridDB achieves high performance through parallel proces
 
 #### GridDB scales linearly and horizontally on commodity hardware maintaining excellent performance
 
-![high scalability](./img/scaling_intro.gif)
+![high scalability](/images/scaling_intro.gif)
 
 Traditional RDBMS are built on Scale-Up architecture (add more capacity to existing server/node). Transactions and data consistency are excellent on RDBMS. On the other hand, NoSQL databases focus on Scale-Out architecture (add smaller nodes to form a large cluster) but fair poorly on transactions and data consistency.
 
@@ -65,7 +65,7 @@ GridDB scales out horizontally with commodity hardware maintaining the same leve
 
 #### Hybrid cluster management and high fault-tolerant system of GridDB is exceptional for mission-critical applications
 
-![high relability and availability](./img/relability_intro.gif)
+![high relability and availability](/images/relability_intro.gif)
 
 Network partitions, node failures, and maintaining consistency are some of the major problems that arise when data is distributed across nodes. Typically, distributed systems adopt ‘Master-Slave’ or ‘Peer-to-Peer’ architectures. Master-Slave option is good at maintaining data consistency but a master node redundancy is required to avoid having a Single Point of Failure (SPOF). Peer-to-Peer, though avoids SPOF, has a huge problem of communication overhead among the nodes.
 
